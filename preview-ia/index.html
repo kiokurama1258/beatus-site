@@ -158,6 +158,10 @@ section { padding:96px 80px; }
 .planos .section-title { margin-left:auto; margin-right:auto; }
 .planos-sub { font-size:17px; color:var(--mid); max-width:520px; margin:0 auto 12px; }
 .planos-note { font-size:13px; color:var(--muted); margin-bottom:48px; }
+.preco-toggle { display:inline-flex; background:var(--white); border:1px solid var(--border); border-radius:99px; padding:5px; gap:4px; margin-bottom:44px; }
+.pt-opt { font-family:var(--body); font-weight:700; font-size:14px; color:var(--mid); background:transparent; border:none; padding:11px 22px; border-radius:99px; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:all .2s; }
+.pt-opt.active { background:var(--dark); color:#fff; }
+.pt-off { background:var(--red); color:#fff; font-size:10px; font-weight:700; letter-spacing:.04em; padding:3px 8px; border-radius:99px; }
 .planos-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:1040px; margin:0 auto; text-align:left; }
 .plano-card { background:var(--white); border:1px solid var(--border); border-radius:12px; padding:32px 30px; display:flex; flex-direction:column; position:relative; }
 .plano-card.popular { border:2px solid var(--red); box-shadow:0 8px 24px rgba(172,0,47,.10); }
@@ -336,10 +340,14 @@ footer { background:#111; padding:40px 80px; display:flex; justify-content:space
   <div class="section-label reveal">Planos</div>
   <h2 class="section-title reveal reveal-delay-1">O preço justo pra você<br/>vender mais no WhatsApp.</h2>
   <p class="planos-sub reveal reveal-delay-2">Escolha o plano do tamanho do seu negócio.</p>
-  <p class="planos-note reveal reveal-delay-2">Valores no plano anual. Cancele quando quiser, sem fidelidade.</p>
+  <p class="planos-note reveal reveal-delay-2">Cancele quando quiser, sem fidelidade.</p>
+  <div class="preco-toggle reveal reveal-delay-2">
+    <button class="pt-opt" data-mode="mensal">Mensal</button>
+    <button class="pt-opt active" data-mode="anual">Anual <span class="pt-off">-20%</span></button>
+  </div>
   <div class="planos-grid">
 
-    <div class="plano-card reveal">
+    <div class="plano-card reveal" data-mensal="397,00" data-anual="317,60" data-total="3.811,20">
       <div class="plano-nome">Básico</div>
       <div class="plano-tag">Pra começar com o pé direito</div>
       <div class="plano-preco"><span class="cifra">R$</span><span class="val">317,60</span><span class="per">/mês</span></div>
@@ -354,7 +362,7 @@ footer { background:#111; padding:40px 80px; display:flex; justify-content:space
       </ul>
     </div>
 
-    <div class="plano-card popular reveal reveal-delay-1">
+    <div class="plano-card popular reveal reveal-delay-1" data-mensal="597,00" data-anual="477,60" data-total="5.731,20">
       <div class="plano-flag">Mais popular</div>
       <div class="plano-nome">Pro</div>
       <div class="plano-tag">O escolhido pela maioria</div>
@@ -371,7 +379,7 @@ footer { background:#111; padding:40px 80px; display:flex; justify-content:space
       </ul>
     </div>
 
-    <div class="plano-card reveal reveal-delay-2">
+    <div class="plano-card reveal reveal-delay-2" data-mensal="797,00" data-anual="637,60" data-total="7.651,20">
       <div class="plano-nome">Business</div>
       <div class="plano-tag">Pra quem precisa de escala</div>
       <div class="plano-preco"><span class="cifra">R$</span><span class="val">637,60</span><span class="per">/mês</span></div>
@@ -431,6 +439,18 @@ var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInte
 document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
 document.querySelectorAll('.hero .reveal').forEach(function(el){el.classList.add('visible')});
 setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible')})},700);
+
+(function(){
+  function setMode(mode){
+    document.querySelectorAll('.pt-opt').forEach(function(b){ b.classList.toggle('active', b.dataset.mode===mode); });
+    document.querySelectorAll('.plano-card').forEach(function(c){
+      var val=c.querySelector('.plano-preco .val'); var ann=c.querySelector('.plano-anual');
+      if(mode==='mensal'){ val.textContent=c.dataset.mensal; ann.textContent='cobrado mensalmente'; }
+      else { val.textContent=c.dataset.anual; ann.textContent='cobrado R$ '+c.dataset.total+' por ano'; }
+    });
+  }
+  document.querySelectorAll('.pt-opt').forEach(function(b){ b.addEventListener('click', function(){ setMode(b.dataset.mode); }); });
+})();
 </script>
 </body>
 </html>
