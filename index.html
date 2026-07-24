@@ -760,7 +760,7 @@ setTimeout(revealAll, 800);
       });
       fetch(endpoint, { method: 'POST', mode: 'no-cors', keepalive: true, body: dados }).catch(function () {});
     }
-    if (window.dataLayer) { window.dataLayer.push({ event: 'lead_agencia', empresa: empresa }); }
+    if (window.dataLayer) { window.dataLayer.push({ event: 'lead_agencia', empresa: empresa }); window.dataLayer.push({ event: 'generate_lead' }); }
     document.getElementById('wa-fallback').href = url;
     form.style.display = 'none';
     ok.style.display = 'block';
@@ -793,6 +793,19 @@ setTimeout(revealAll, 800);
   var a = document.getElementById('bc-aceitar'), r = document.getElementById('bc-recusar');
   if (a) a.addEventListener('click', function(){ decidir('granted'); });
   if (r) r.addEventListener('click', function(){ decidir('denied'); });
+})();
+</script>
+<!-- Beatus: conversao WhatsApp (click_whatsapp -> GTM) -->
+<script>
+(function(){
+  if (window.__beatusConvWa) return; window.__beatusConvWa = true;
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    var a = (t && t.closest) ? t.closest('a[href*="wa.me"],a[href*="api.whatsapp.com"],a[href*="whatsapp.com/send"]') : null;
+    if (!a) return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event:'click_whatsapp'});
+  }, true);
 })();
 </script>
 </body>
