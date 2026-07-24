@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Consent Mode v2 (LGPD): nega por padrao, libera so apos aceite -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function(){
+  var c = null;
+  try { c = localStorage.getItem('beatus_consent'); } catch(e) {}
+  if (c === 'granted') {
+    gtag('consent','default',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+  } else {
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});
+  }
+})();
+</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-586Z8BLT');</script>
 <!-- End Google Tag Manager -->
@@ -429,6 +443,7 @@ footer { background:#111; padding:40px 80px; display:flex; justify-content:space
     <a href="#planos">Planos</a>
     <a href="https://beatusmidias.com.br/">Agência</a>
   </div>
+  <div style="position:relative;text-align:center;font-size:12.5px;opacity:.6;padding-top:14px"><a href="https://beatusmidias.com.br/politica-de-privacidade/">Privacidade</a></div>
 </footer>
 
 <a class="wa-float" href="https://wa.me/5521975340783?text=Ol%C3%A1!%20Quero%20conhecer%20a%20Secret%C3%A1ria%20IA" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg><span>WhatsApp</span></a>
@@ -450,6 +465,33 @@ setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){
     });
   }
   document.querySelectorAll('.pt-opt').forEach(function(b){ b.addEventListener('click', function(){ setMode(b.dataset.mode); }); });
+})();
+</script>
+<!-- Banner de cookies (LGPD) -->
+<div id="beatus-cookies" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:760px;margin:0 auto;background:#1d1d1d;color:#fff;border-radius:14px;padding:20px 22px;box-shadow:0 8px 32px rgba(0,0,0,.28);font-family:'Satoshi','Segoe UI',system-ui,sans-serif">
+  <p style="margin:0 0 14px;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.82)">Usamos cookies para entender como o site é usado e melhorar a sua experiência. Você escolhe. <a href="https://beatusmidias.com.br/politica-de-privacidade/" style="color:#f0a0b0;text-decoration:underline">Política de Privacidade</a>.</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <button id="bc-aceitar" style="background:#ac002f;color:#fff;border:none;font-family:inherit;font-weight:700;font-size:14px;padding:11px 22px;border-radius:4px;cursor:pointer">Aceitar</button>
+    <button id="bc-recusar" style="background:transparent;color:rgba(255,255,255,.75);border:1.5px solid rgba(255,255,255,.25);font-family:inherit;font-weight:600;font-size:14px;padding:11px 22px;border-radius:4px;cursor:pointer">Recusar</button>
+  </div>
+</div>
+<script>
+(function(){
+  var box = document.getElementById('beatus-cookies');
+  var salvo = null;
+  try { salvo = localStorage.getItem('beatus_consent'); } catch(e) {}
+  if (!salvo && box) box.style.display = 'block';
+  function decidir(v){
+    try { localStorage.setItem('beatus_consent', v); } catch(e) {}
+    if (typeof gtag === 'function') {
+      var g = (v === 'granted') ? 'granted' : 'denied';
+      gtag('consent','update',{'ad_storage':g,'ad_user_data':g,'ad_personalization':g,'analytics_storage':g});
+    }
+    if (box) box.style.display = 'none';
+  }
+  var a = document.getElementById('bc-aceitar'), r = document.getElementById('bc-recusar');
+  if (a) a.addEventListener('click', function(){ decidir('granted'); });
+  if (r) r.addEventListener('click', function(){ decidir('denied'); });
 })();
 </script>
 </body>

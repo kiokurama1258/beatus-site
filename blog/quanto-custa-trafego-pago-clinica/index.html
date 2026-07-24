@@ -145,8 +145,28 @@
     @media(max-width:620px){article{padding:30px 22px;border-radius:12px}h1{font-size:1.65rem}}
     @media(max-width:620px){table{min-width:0}thead{display:none}tbody tr{display:block;border:1px solid var(--border);border-radius:10px;margin-bottom:10px;padding:8px 14px;background:#faf7f7}td{display:block;border:none;padding:5px 0}td:first-child{white-space:normal;padding-bottom:2px}}
   </style>
+<!-- Consent Mode v2 (LGPD): nega por padrao, libera so apos aceite -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function(){
+  var c = null;
+  try { c = localStorage.getItem('beatus_consent'); } catch(e) {}
+  if (c === 'granted') {
+    gtag('consent','default',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+  } else {
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});
+  }
+})();
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-586Z8BLT');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-586Z8BLT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <header class="site">
     <div class="wrap">
       <a class="brand" href="https://beatusmidias.com.br/">Beatus <span>Mídias</span></a>
@@ -245,5 +265,32 @@
       <span><a href="https://beatusmidias.com.br/">beatusmidias.com.br</a></span>
     </div>
   </footer>
+<!-- Banner de cookies (LGPD) -->
+<div id="beatus-cookies" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:760px;margin:0 auto;background:#1d1d1d;color:#fff;border-radius:14px;padding:20px 22px;box-shadow:0 8px 32px rgba(0,0,0,.28);font-family:'Satoshi','Segoe UI',system-ui,sans-serif">
+  <p style="margin:0 0 14px;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.82)">Usamos cookies para entender como o site é usado e melhorar a sua experiência. Você escolhe. <a href="https://beatusmidias.com.br/politica-de-privacidade/" style="color:#f0a0b0;text-decoration:underline">Política de Privacidade</a>.</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <button id="bc-aceitar" style="background:#ac002f;color:#fff;border:none;font-family:inherit;font-weight:700;font-size:14px;padding:11px 22px;border-radius:4px;cursor:pointer">Aceitar</button>
+    <button id="bc-recusar" style="background:transparent;color:rgba(255,255,255,.75);border:1.5px solid rgba(255,255,255,.25);font-family:inherit;font-weight:600;font-size:14px;padding:11px 22px;border-radius:4px;cursor:pointer">Recusar</button>
+  </div>
+</div>
+<script>
+(function(){
+  var box = document.getElementById('beatus-cookies');
+  var salvo = null;
+  try { salvo = localStorage.getItem('beatus_consent'); } catch(e) {}
+  if (!salvo && box) box.style.display = 'block';
+  function decidir(v){
+    try { localStorage.setItem('beatus_consent', v); } catch(e) {}
+    if (typeof gtag === 'function') {
+      var g = (v === 'granted') ? 'granted' : 'denied';
+      gtag('consent','update',{'ad_storage':g,'ad_user_data':g,'ad_personalization':g,'analytics_storage':g});
+    }
+    if (box) box.style.display = 'none';
+  }
+  var a = document.getElementById('bc-aceitar'), r = document.getElementById('bc-recusar');
+  if (a) a.addEventListener('click', function(){ decidir('granted'); });
+  if (r) r.addEventListener('click', function(){ decidir('denied'); });
+})();
+</script>
 </body>
 </html>
