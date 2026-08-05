@@ -512,6 +512,33 @@ function gtag(){dataLayer.push(arguments);}
   </div>
 </section>
 
+<!-- PRODUTO: DASHBOARD EM TEMPO REAL -->
+<style>
+.dashband{background:#161616;padding:clamp(64px,9vw,104px) 24px;position:relative;overflow:hidden}
+.dashband .glow{position:absolute;top:32%;left:50%;transform:translate(-50%,-50%);width:min(860px,92vw);height:440px;background:radial-gradient(ellipse at center,rgba(172,0,47,0.30),transparent 68%);pointer-events:none;z-index:0}
+.dashband-inner{max-width:1080px;margin:0 auto;position:relative;z-index:1;text-align:center}
+.dashband .lbl{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#e86f8a;margin-bottom:14px}
+.dashband h2{font-family:var(--display);font-size:clamp(30px,4.4vw,50px);font-weight:700;line-height:1.05;letter-spacing:-0.03em;color:#fff;margin:0}
+.dashband .db-sub{max-width:600px;margin:18px auto 0;color:rgba(255,255,255,0.62);font-size:clamp(15px,1.6vw,17px);line-height:1.6}
+.dashshot{margin:44px auto 0;max-width:1040px;border-radius:14px;border:1px solid rgba(255,255,255,0.10);box-shadow:0 34px 90px rgba(0,0,0,0.55);overflow:hidden;line-height:0}
+.dashshot img{width:100%;height:auto;display:block}
+.dashcap{margin-top:20px;font-size:12.5px;color:rgba(255,255,255,0.42)}
+.step-ic{width:46px;height:46px;border-radius:12px;background:rgba(172,0,47,0.14);border:1px solid rgba(172,0,47,0.32);display:flex;align-items:center;justify-content:center;margin-bottom:22px;position:relative;z-index:1}
+.step-ic svg{width:22px;height:22px;stroke:#e86f8a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+</style>
+<section class="dashband" aria-label="Dashboard em tempo real">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="dashband-inner">
+    <div class="lbl reveal">Transpar&ecirc;ncia total</div>
+    <h2 class="reveal reveal-delay-1">Cada real que entra e sai,<br/>num painel s&oacute;.</h2>
+    <p class="db-sub reveal reveal-delay-2">Voc&ecirc; n&atilde;o recebe "confia em mim". Recebe um dashboard em tempo real com investimento, leads, custo por lead e faturamento atribu&iacute;do. D&aacute; pra ver de onde vem cada cliente.</p>
+    <figure class="dashshot reveal reveal-delay-2">
+      <img src="/assets/dashboard-beatus.png" alt="Dashboard da Beatus mostrando investimento em ads, leads gerados, custo por lead, faturamento atribu&iacute;do e campanhas ativas em tempo real" loading="lazy" width="1600" height="1074"/>
+    </figure>
+    <div class="dashcap">Exemplo de painel Beatus. Cada cliente tem o seu, atualizado em tempo real.</div>
+  </div>
+</section>
+
 <!-- MANIFESTO -->
 <div class="manifesto" style="position:relative;overflow:hidden">
   <img src="/assets/simbolo-vinho.png" alt="" aria-hidden="true" style="position:absolute;right:40px;top:50%;transform:translateY(-50%);width:200px;opacity:0.06;pointer-events:none">
@@ -584,18 +611,21 @@ function gtag(){dataLayer.push(arguments);}
   <h2 class="section-title reveal reveal-delay-1">Como transformamos<br/>cliques em vendas.</h2>
   <div class="metodo-grid" style="margin-top: 56px;">
     <div class="metodo-step reveal">
+      <div class="step-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V18h6v-1.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg></div>
       <div class="step-num" aria-hidden="true">01</div>
       <h3 class="step-title">Pensar</h3>
       <div class="step-sub">Diagnóstico estratégico</div>
       <p class="step-desc">Toda ação é antes pensada. Analisamos seu negócio, público-alvo e funil antes de investir um real em ads. Estratégia não é opcional: é o ponto de partida.</p>
     </div>
     <div class="metodo-step reveal reveal-delay-1">
+      <div class="step-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div>
       <div class="step-num" aria-hidden="true">02</div>
       <h3 class="step-title">Criar</h3>
       <div class="step-sub">Execução com propósito</div>
       <p class="step-desc">Com o caminho definido, a execução ganha força. Criamos campanhas, fluxos e comunicações que alcançam as pessoas certas, no momento certo, com a mensagem certa.</p>
     </div>
     <div class="metodo-step reveal reveal-delay-2">
+      <div class="step-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
       <div class="step-num" aria-hidden="true">03</div>
       <h3 class="step-title">Realizar</h3>
       <div class="step-sub">Otimização contínua</div>
@@ -627,6 +657,31 @@ function gtag(){dataLayer.push(arguments);}
         <tr><th scope="row" class="feat" style="text-align:left">Contrato</th><td class="normal"><span class="cross">✗</span>Fidelidade obrigatória</td><td class="beatus"><span class="check">✓</span>Sem contrato de amarração</td></tr>
       </tbody>
     </table>
+  </div>
+</section>
+
+<!-- PRODUTO: CRM / FUNIL -->
+<style>
+.crmband{background:#111112;padding:clamp(60px,8vw,96px) 24px;position:relative;overflow:hidden}
+.crmband .glow{position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:min(900px,92vw);height:420px;background:radial-gradient(ellipse at center,rgba(172,0,47,0.22),transparent 68%);pointer-events:none;z-index:0}
+.crmband-inner{max-width:1120px;margin:0 auto;position:relative;z-index:1;text-align:center}
+.crmband .lbl{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#e86f8a;margin-bottom:14px}
+.crmband h2{font-family:var(--display);font-size:clamp(28px,4.2vw,46px);font-weight:700;line-height:1.06;letter-spacing:-0.03em;color:#fff;margin:0}
+.crmband .cb-sub{max-width:640px;margin:18px auto 0;color:rgba(255,255,255,0.62);font-size:clamp(15px,1.6vw,17px);line-height:1.6}
+.crmshot{margin:42px auto 0;max-width:1100px;border-radius:14px;border:1px solid rgba(255,255,255,0.10);box-shadow:0 34px 90px rgba(0,0,0,0.55);overflow:hidden;line-height:0}
+.crmshot img{width:100%;height:auto;display:block}
+.crmcap{margin-top:20px;font-size:12.5px;color:rgba(255,255,255,0.42)}
+</style>
+<section class="crmband" aria-label="CRM e funil de vendas">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="crmband-inner">
+    <div class="lbl reveal">Do clique ao cliente</div>
+    <h2 class="reveal reveal-delay-1">Seu lead n&atilde;o se perde<br/>numa planilha.</h2>
+    <p class="cb-sub reveal reveal-delay-2">Cada lead que os an&uacute;ncios trazem cai no CRM, a IA qualifica quem est&aacute; pronto pra comprar e o seu time recebe s&oacute; quem interessa. Voc&ecirc; enxerga o funil inteiro, do primeiro clique ao contrato fechado.</p>
+    <figure class="crmshot reveal reveal-delay-2">
+      <img src="/assets/crm-beatus.png" alt="CRM da Beatus com o funil de vendas: leads novos, qualificados pela IA, em atendimento, proposta e ganho" loading="lazy" width="1600" height="583"/>
+    </figure>
+    <div class="crmcap">Exemplo de funil no CRM Beatus. A IA separa o lead quente do curioso antes do seu time gastar tempo.</div>
   </div>
 </section>
 
