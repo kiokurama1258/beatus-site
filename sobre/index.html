@@ -34,6 +34,15 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Person",
+      "@id": "https://beatusmidias.com.br/sobre/#bruno-lucas",
+      "name": "Bruno Lucas",
+      "url": "https://beatusmidias.com.br/sobre/",
+      "image": "https://beatusmidias.com.br/assets/autor-bruno-lucas.jpg",
+      "jobTitle": "Sócio",
+      "worksFor": { "@id": "https://beatusmidias.com.br/#organization" }
+    },
+    {
       "@type": "AboutPage",
       "@id": "https://beatusmidias.com.br/sobre/#page",
       "url": "https://beatusmidias.com.br/sobre/",
@@ -50,6 +59,10 @@
       "url": "https://beatusmidias.com.br/",
       "foundingDate": "2022",
       "slogan": "Chega de marketing no escuro",
+      "member": [
+        { "@id": "https://beatusmidias.com.br/sobre/#bruno" },
+        { "@id": "https://beatusmidias.com.br/sobre/#bruno-lucas" }
+      ],
       "founder": {
         "@type": "Person",
       "@id": "https://beatusmidias.com.br/sobre/#bruno",
@@ -587,6 +600,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 .hero-badge-dot{animation:pulse 2s ease-in-out 6}
 @media (prefers-reduced-motion:reduce){.hero-badge-dot{animation:none}}
 
+
+/* beatus-time: quem esta por tras, com rosto */
+.time-beatus{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:780px;margin:26px 0 4px}
+.time-card{display:flex;gap:16px;align-items:flex-start;background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:20px}
+.time-card img{flex:0 0 auto;width:72px;height:72px;border-radius:99px;object-fit:cover;background:#fff}
+.time-nome{font-family:var(--display);font-weight:700;font-size:17px;color:var(--dark);margin:0 0 3px}
+.time-papel{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#ac002f;margin:0 0 8px}
+.time-linha{font-size:14px;line-height:1.6;color:var(--mid);margin:0}
+@media (max-width:680px){.time-beatus{grid-template-columns:1fr;gap:14px}.time-card img{width:60px;height:60px}}
 </style>
 </head>
 <body>
@@ -674,6 +696,24 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
     <h2 class="section-title reveal reveal-delay-1" style="text-align:left">Quem está por trás da Beatus Mídias?</h2>
     <p style="max-width:780px;font-size:17px;color:var(--mid);line-height:1.75;margin:0 0 18px">A Beatus foi fundada e é liderada por <strong style="color:var(--dark)">Bruno Vasconcellos</strong>, que responde pela estratégia dos clientes. À frente da agência, Bruno já conduziu campanhas e estruturas de vendas para mais de 40 negócios do Rio de Janeiro, além de administrar dezenas de perfis de empresas no Google.</p>
     <p style="max-width:780px;font-size:17px;color:var(--mid);line-height:1.75;margin:0 0 18px">O contato é direto: quem fala com a Beatus fala com quem decide.</p>
+<div class="time-beatus">
+<div class="time-card">
+<img src="/assets/autor-bruno.jpg" alt="Bruno Vasconcellos, fundador da Beatus Mídias" width="320" height="320" loading="lazy" decoding="async">
+<div>
+<p class="time-nome">Bruno Vasconcellos</p>
+<p class="time-papel">Fundador</p>
+<p class="time-linha">Responde pela estratégia dos clientes e pela operação de mídia.</p>
+</div>
+</div>
+<div class="time-card">
+<img src="/assets/autor-bruno-lucas.jpg" alt="Bruno Lucas, sócio da Beatus Mídias" width="320" height="320" loading="lazy" decoding="async">
+<div>
+<p class="time-nome">Bruno Lucas</p>
+<p class="time-papel">Sócio</p>
+</div>
+</div>
+</div>
+
   </div>
 </section>
 
