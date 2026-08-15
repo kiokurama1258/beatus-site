@@ -22,6 +22,14 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+      "@type": "Person",
+      "@id": "https://beatusmidias.com.br/sobre/#bruno",
+      "name": "Bruno Vasconcellos",
+      "url": "https://beatusmidias.com.br/sobre/",
+      "jobTitle": "Fundador",
+      "worksFor": { "@id": "https://beatusmidias.com.br/#organization" }
+    },
+    {
         "@type": "BlogPosting",
         "@id": "https://beatusmidias.com.br/blog/google-ads-ou-meta-ads/#article",
         "headline": "Google Ads ou Meta Ads: qual traz mais cliente para o seu negócio?",
@@ -30,7 +38,7 @@
         "datePublished": "2026-07-11",
         "dateModified": "2026-07-11",
         "mainEntityOfPage": { "@id": "https://beatusmidias.com.br/blog/google-ads-ou-meta-ads/" },
-        "author": { "@id": "https://beatusmidias.com.br/#organization" },
+        "author": { "@id": "https://beatusmidias.com.br/sobre/#bruno" },
         "publisher": { "@id": "https://beatusmidias.com.br/#organization" },
         "about": ["Google Ads", "Meta Ads", "Tráfego pago", "Marketing para negócios locais"]
       },
@@ -189,6 +197,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 .form-submit[disabled],.form-submit[aria-busy="true"]{opacity:.62;cursor:progress;pointer-events:none}
 .hero-badge-dot{animation:pulse 2s ease-in-out 6}
 @media (prefers-reduced-motion:reduce){.hero-badge-dot{animation:none}}
+
+/* beatus-autoria: assinatura visivel, para o dado estruturado refletir o que se ve */
+.assinatura{display:flex;gap:16px;align-items:flex-start;margin:38px 0 0;padding:22px 0 0;border-top:1px solid var(--border)}
+.assinatura-sigla{flex:0 0 auto;width:46px;height:46px;border-radius:99px;background:#ac002f;color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:0.01em}
+.assinatura-nome{font-family:var(--display);font-weight:700;font-size:16px;margin:0 0 4px}
+.assinatura-cred{font-size:13.5px;line-height:1.6;color:#5c5c5c;margin:0 0 8px;max-width:62ch}
+.assinatura a{font-size:13.5px;font-weight:600;color:#ac002f;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:560px){.assinatura{gap:13px}.assinatura-sigla{width:40px;height:40px;font-size:14px}}
 </style>
 <!-- Consent Mode v2 (LGPD): nega por padrao, libera so apos aceite -->
 <script>
@@ -225,7 +241,7 @@ function gtag(){dataLayer.push(arguments);}
     <article>
       <span class="kicker">Tráfego pago</span>
       <h1>Google Ads ou Meta Ads: qual traz mais cliente para o seu negócio?</h1>
-      <p class="meta">Beatus Mídias · Rio de Janeiro · Atualizado em julho de 2026 · leitura de 6 min</p>
+      <p class="meta">Por <a href="https://beatusmidias.com.br/sobre/" rel="author">Bruno Vasconcellos</a> · Beatus Mídias · Rio de Janeiro · Atualizado em julho de 2026 · leitura de 6 min</p>
 
       <div class="lead">
         <strong>Resposta rápida:</strong> o <strong>Google Ads</strong> é melhor para capturar quem <em>já está procurando</em> o seu serviço (demanda existente). Ideal para clínicas, advogados e urgências. O <strong>Meta Ads</strong> (Instagram e Facebook) é melhor para <em>criar desejo</em> e alcançar quem ainda não procura. Ideal para restaurantes, imobiliárias e produtos visuais. Para a maioria dos negócios locais no Rio, o certo é usar os dois; mas, se você só pode começar por um, escolha pelo <strong>momento do seu cliente</strong>.
@@ -307,7 +323,15 @@ function gtag(){dataLayer.push(arguments);}
           <p>Para um negócio local no Rio, um teste sério começa na faixa de R$ 30 a R$ 50 por dia por plataforma, mais a gestão. O segredo não é o valor inicial, e sim medir o custo por cliente nas primeiras semanas e realocar o orçamento para o que traz venda.</p>
         </details>
       </div>
-    </article>
+    <div class="assinatura">
+<div class="assinatura-sigla" aria-hidden="true">BV</div>
+<div>
+<p class="assinatura-nome">Bruno Vasconcellos</p>
+<p class="assinatura-cred">Fundador da Beatus Mídias, agência de tráfego pago, CRM e inteligência artificial para vendas, com sede em Maricá (RJ). Opera mídia para negócios locais no Rio de Janeiro desde 2022.</p>
+<a href="https://beatusmidias.com.br/sobre/">Sobre o autor</a>
+</div>
+</div>
+</article>
   </div>
 
   <footer class="site">
