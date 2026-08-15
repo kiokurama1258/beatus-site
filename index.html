@@ -619,6 +619,67 @@ function gtag(){dataLayer.push(arguments);}
 </section>
 
 <!-- PRODUTO: DASHBOARD EM TEMPO REAL -->
+
+<style>
+/* painel vivo: substitui o PNG de 263KB, reflui no celular e prova o "tempo real" da copy */
+.pnl{background:#0d0d0d;color:#fff;text-align:left;font-family:var(--body);padding:clamp(14px,2vw,20px);line-height:1.4}
+.pnl-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:clamp(12px,1.6vw,16px)}
+.pnl-id{display:flex;align-items:center;gap:10px;min-width:0}
+.pnl-mark{width:30px;height:30px;border-radius:7px;background:#ac002f;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:16px;flex:0 0 auto}
+.pnl-h{font-weight:700;font-size:clamp(13px,1.5vw,15px);letter-spacing:-.01em}
+.pnl-s{font-size:clamp(11px,1.15vw,12px);color:rgba(255,255,255,.56)}
+.pnl-chips{display:flex;gap:8px;flex:0 0 auto}
+.pnl-chip{font-size:11px;padding:6px 10px;border-radius:7px;border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.72);white-space:nowrap}
+.pnl-chip.vivo{display:flex;align-items:center;gap:6px;color:#4ade80;border-color:rgba(74,222,128,.3)}
+.pnl-dot{width:6px;height:6px;border-radius:99px;background:#4ade80}
+.pnl.on .pnl-dot{animation:pnl-bat 2s ease-in-out infinite}
+@keyframes pnl-bat{0%,100%{opacity:1}50%{opacity:.35}}
+.pnl-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px}
+.pnl-card{background:#141414;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:clamp(10px,1.3vw,14px)}
+.pnl-lab{font-size:clamp(11px,1.1vw,12px);color:rgba(255,255,255,.58);margin-bottom:6px}
+.pnl-val{font-family:var(--display);font-weight:700;font-size:clamp(17px,2.5vw,27px);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.pnl-delta{display:inline-block;margin-top:7px;font-size:clamp(11px,1vw,11.5px);font-weight:600;padding:3px 7px;border-radius:5px;background:rgba(74,222,128,.14);color:#7fe0a0}
+.pnl-mid{display:grid;grid-template-columns:1.9fr 1fr;gap:10px;margin-bottom:10px}
+.pnl-box{background:#141414;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:clamp(11px,1.4vw,15px)}
+.pnl-bh{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:10px}
+.pnl-bt{font-weight:700;font-size:clamp(12.5px,1.35vw,14px)}
+.pnl-leg{display:flex;gap:12px;font-size:11px;color:rgba(255,255,255,.58)}
+.pnl-leg i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.pnl-x{display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.45);margin-top:6px}
+.pnl-ch{margin-bottom:11px}
+.pnl-cr{display:flex;justify-content:space-between;gap:8px;font-size:clamp(11px,1.2vw,12px);margin-bottom:6px}
+.pnl-cn{font-weight:600}
+.pnl-cv{color:rgba(255,255,255,.62);white-space:nowrap}
+.pnl-bar{height:5px;border-radius:5px;background:rgba(255,255,255,.09);overflow:hidden}
+.pnl-bar i{display:block;height:100%;border-radius:5px;background:#ac002f;transform-origin:left;transform:scaleX(1);transition:transform 1s cubic-bezier(0.16,1,0.3,1)}
+.pnl-hr{height:1px;background:rgba(255,255,255,.09);margin:13px 0}
+.pnl-q{font-size:clamp(11px,1.15vw,12px);color:rgba(255,255,255,.58);margin-bottom:4px}
+.pnl-qv{font-family:var(--display);font-weight:700;font-size:clamp(20px,2.6vw,28px);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.pnl-qv small{font-size:.55em;font-weight:600}
+.pnl-qs{font-size:clamp(11px,1.1vw,11.5px);color:rgba(255,255,255,.5);margin-top:3px}
+.pnl-tbl{background:#141414;border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:clamp(11px,1.4vw,15px)}
+.pnl-tbl table{width:100%;border-collapse:collapse;font-size:clamp(11px,1.2vw,12.5px)}
+.pnl-tbl th{text-align:right;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.62);font-weight:600;padding:0 0 9px}
+.pnl-tbl th:first-child,.pnl-tbl td:first-child{text-align:left}
+.pnl-tbl td{text-align:right;padding:9px 0;border-top:1px solid rgba(255,255,255,.07);font-variant-numeric:tabular-nums}
+.pnl-tbl td:first-child{font-weight:600}
+.pnl-st{display:inline-block;font-size:11px;font-weight:600;padding:3px 8px;border-radius:5px}
+.pnl-st.esc{background:rgba(74,222,128,.14);color:#7fe0a0}
+.pnl-st.oti{background:rgba(245,190,80,.14);color:#f0c674}
+.pnl-svg{display:block;width:100%;height:auto}
+.pnl-line{fill:none;stroke:#e85c7d;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}
+.pnl-area{fill:url(#pnlg)}
+.pnl-meta{stroke:rgba(255,255,255,.28);stroke-width:1;stroke-dasharray:5 5}
+@media (max-width:760px){
+  .pnl-kpis{grid-template-columns:repeat(2,1fr)}
+  .pnl-mid{grid-template-columns:1fr}
+  .pnl-tbl .op{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .pnl.on .pnl-dot{animation:none}
+  .pnl-bar i{transition:none}
+}
+</style>
 <style>
 .dashband{background:#161616;padding:clamp(64px,9vw,104px) 24px;position:relative;overflow:hidden}
 .dashband .glow{position:absolute;top:32%;left:50%;transform:translate(-50%,-50%);width:min(860px,92vw);height:440px;background:radial-gradient(ellipse at center,rgba(172,0,47,0.30),transparent 68%);pointer-events:none;z-index:0}
@@ -639,8 +700,59 @@ function gtag(){dataLayer.push(arguments);}
     <h2 class="reveal reveal-delay-1">Cada real que entra e sai,<br/>num painel só.</h2>
     <p class="db-sub reveal reveal-delay-2">Você não recebe "confia em mim". Recebe um dashboard em tempo real com investimento, leads, custo por lead e faturamento atribuído. Dá pra ver de onde vem cada cliente.</p>
     <figure class="dashshot reveal reveal-delay-2">
-      <img src="/assets/dashboard-beatus.png" alt="Dashboard da Beatus mostrando investimento em ads, leads gerados, custo por lead, faturamento atribuído e campanhas ativas em tempo real" loading="lazy" width="1600" height="1074"/>
-    </figure>
+<div class="pnl" role="img" aria-label="Dashboard da Beatus mostrando investimento em ads, leads gerados, custo por lead, faturamento atribuído e campanhas ativas em tempo real">
+  <div class="pnl-top">
+    <div class="pnl-id">
+      <div class="pnl-mark">B</div>
+      <div><div class="pnl-h">Painel de performance</div><div class="pnl-s">Cliente: Clínica Vitalis · Maricá / RJ</div></div>
+    </div>
+    <div class="pnl-chips">
+      <span class="pnl-chip">Últimos 30 dias</span>
+      <span class="pnl-chip vivo"><i class="pnl-dot"></i>ao vivo</span>
+    </div>
+  </div>
+  <div class="pnl-kpis">
+    <div class="pnl-card"><div class="pnl-lab">Investido em ads</div><div class="pnl-val" data-n="24380" data-pre="R$ ">R$ 24.380</div><div class="pnl-delta">▲ 12% vs. mês anterior</div></div>
+    <div class="pnl-card"><div class="pnl-lab">Leads gerados</div><div class="pnl-val" data-n="512">512</div><div class="pnl-delta">▲ 34% vs. mês anterior</div></div>
+    <div class="pnl-card"><div class="pnl-lab">Custo por lead</div><div class="pnl-val" data-n="47.60" data-dec="2" data-pre="R$ ">R$ 47,60</div><div class="pnl-delta">▼ 18% mais barato</div></div>
+    <div class="pnl-card"><div class="pnl-lab">Faturamento atribuído</div><div class="pnl-val" data-n="151200" data-pre="R$ ">R$ 151.200</div><div class="pnl-delta">▲ 6,2x o investido</div></div>
+  </div>
+  <div class="pnl-mid">
+    <div class="pnl-box">
+      <div class="pnl-bh"><div class="pnl-bt">Leads por dia</div>
+        <div class="pnl-leg"><span><i style="background:#e85c7d"></i>Leads</span><span><i style="background:rgba(255,255,255,.32)"></i>Meta diária</span></div></div>
+      <svg class="pnl-svg" viewBox="0 0 600 210" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs><linearGradient id="pnlg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ac002f" stop-opacity=".55"/><stop offset="1" stop-color="#ac002f" stop-opacity="0"/></linearGradient></defs>
+        <line class="pnl-meta" x1="8" y1="117.5" x2="592" y2="117.5"/>
+        <path class="pnl-area" d="M8.0 156.0 L28.1 150.5 L48.3 139.5 L68.4 145.0 L88.6 134.0 L108.7 134.0 L128.8 128.5 L149.0 128.5 L169.1 123.0 L189.2 123.0 L209.4 117.5 L229.5 117.5 L249.7 112.0 L269.8 112.0 L289.9 117.5 L310.1 106.5 L330.2 101.0 L350.3 101.0 L370.5 95.5 L390.6 95.5 L410.8 90.0 L430.9 90.0 L451.0 84.5 L471.2 84.5 L491.3 79.0 L511.4 79.0 L531.6 68.0 L551.7 68.0 L571.9 57.0 L592.0 46.0 L592.0 200.0 L8.0 200.0 Z"/>
+        <path class="pnl-line" d="M8.0 156.0 L28.1 150.5 L48.3 139.5 L68.4 145.0 L88.6 134.0 L108.7 134.0 L128.8 128.5 L149.0 128.5 L169.1 123.0 L189.2 123.0 L209.4 117.5 L229.5 117.5 L249.7 112.0 L269.8 112.0 L289.9 117.5 L310.1 106.5 L330.2 101.0 L350.3 101.0 L370.5 95.5 L390.6 95.5 L410.8 90.0 L430.9 90.0 L451.0 84.5 L471.2 84.5 L491.3 79.0 L511.4 79.0 L531.6 68.0 L551.7 68.0 L571.9 57.0 L592.0 46.0"/>
+      </svg>
+      <div class="pnl-x"><span>1 jul</span><span>8 jul</span><span>15 jul</span><span>22 jul</span><span>30 jul</span></div>
+    </div>
+    <div class="pnl-box">
+      <div class="pnl-bh"><div class="pnl-bt">Por canal</div><div class="pnl-leg">leads · custo/lead</div></div>
+      <div class="pnl-ch"><div class="pnl-cr"><span class="pnl-cn">Meta Ads</span><span class="pnl-cv">268 · R$ 41,20</span></div><div class="pnl-bar"><i style="background:#ac002f" data-w="0.86"></i></div></div>
+      <div class="pnl-ch"><div class="pnl-cr"><span class="pnl-cn">Google Ads</span><span class="pnl-cv">171 · R$ 52,90</span></div><div class="pnl-bar"><i style="background:#cc2a50" data-w="0.55"></i></div></div>
+      <div class="pnl-ch"><div class="pnl-cr"><span class="pnl-cn">TikTok Ads</span><span class="pnl-cv">73 · R$ 58,10</span></div><div class="pnl-bar"><i style="background:#e85c7d" data-w="0.24"></i></div></div>
+      <div class="pnl-hr"></div>
+      <div class="pnl-q">Taxa de qualificação (IA)</div>
+      <div class="pnl-qv" data-n="73" data-suf="%">73<small>%</small></div>
+      <div class="pnl-qs">dos leads chegam prontos ao comercial</div>
+    </div>
+  </div>
+  <div class="pnl-tbl">
+    <div class="pnl-bh"><div class="pnl-bt">Campanhas ativas</div><div class="pnl-leg">atualizado agora</div></div>
+    <table><thead><tr><th>Campanha</th><th class="op">Investido</th><th>Leads</th><th class="op">Custo/lead</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Maricá · Avaliação gratuita</td><td class="op">R$ 8.940</td><td>214</td><td class="op">R$ 41,80</td><td><span class="pnl-st esc">escalando</span></td></tr>
+      <tr><td>Niterói · Remarketing site</td><td class="op">R$ 5.120</td><td>128</td><td class="op">R$ 40,00</td><td><span class="pnl-st esc">escalando</span></td></tr>
+      <tr><td>Google · Pesquisa marca+serviço</td><td class="op">R$ 6.480</td><td>109</td><td class="op">R$ 59,40</td><td><span class="pnl-st oti">otimizando</span></td></tr>
+      <tr><td>TikTok · Topo de funil</td><td class="op">R$ 3.840</td><td>61</td><td class="op">R$ 62,90</td><td><span class="pnl-st oti">otimizando</span></td></tr>
+    </tbody></table>
+  </div>
+</div>
+</figure>
     <div class="dashcap">Exemplo de painel Beatus. Cada cliente tem o seu, atualizado em tempo real.</div>
   </div>
 </section>
@@ -1082,6 +1194,61 @@ setTimeout(revealAll, 800);
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({event:'click_whatsapp'});
   }, true);
+})();
+</script>
+<script id="pnl-vivo">
+/* painel vivo: sem JS o painel ja aparece completo. O JS so recua para o estado
+   inicial quando VAI animar, e o laco do "ao vivo" para fora da tela. */
+(function () {
+  var pnl = document.querySelector('.pnl');
+  if (!pnl) return;
+  var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduz || !('IntersectionObserver' in window)) { pnl.classList.add('on'); return; }
+
+  var nums = [].slice.call(pnl.querySelectorAll('[data-n]'));
+  var bars = [].slice.call(pnl.querySelectorAll('.pnl-bar i'));
+  var linha = pnl.querySelector('.pnl-line');
+  var area = pnl.querySelector('.pnl-area');
+
+  nums.forEach(function (el) { el.dataset.fim = el.innerHTML; });
+  bars.forEach(function (b) { b.style.transform = 'scaleX(0)'; });
+  var comp = linha.getTotalLength();
+  linha.style.strokeDasharray = comp;
+  linha.style.strokeDashoffset = comp;
+  area.style.opacity = 0;
+
+  var rodou = false;
+  function anima() {
+    rodou = true;
+    linha.style.transition = 'stroke-dashoffset 1.2s cubic-bezier(0.16,1,0.3,1)';
+    linha.style.strokeDashoffset = 0;
+    area.style.transition = 'opacity .9s ease .3s';
+    area.style.opacity = 1;
+    bars.forEach(function (b, i) {
+      setTimeout(function () { b.style.transform = 'scaleX(' + b.dataset.w + ')'; }, 280 + i * 110);
+    });
+    var t0 = null, dur = 1000;
+    (function passo(t) {
+      if (!t0) t0 = t;
+      var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      nums.forEach(function (el) {
+        var dec = parseInt(el.dataset.dec || 0, 10);
+        var v = (parseFloat(el.dataset.n) * e).toLocaleString('pt-BR', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+        var txt = (el.dataset.pre || '') + v;
+        if (el.dataset.suf) el.innerHTML = txt + '<small>' + el.dataset.suf + '</small>';
+        else el.textContent = txt;
+      });
+      if (p < 1) requestAnimationFrame(passo);
+      else nums.forEach(function (el) { el.innerHTML = el.dataset.fim; });
+    })(performance.now());
+  }
+
+  new IntersectionObserver(function (ent) {
+    ent.forEach(function (e) {
+      if (e.isIntersecting) { pnl.classList.add('on'); if (!rodou) anima(); }
+      else pnl.classList.remove('on');
+    });
+  }, { threshold: 0.25 }).observe(pnl);
 })();
 </script>
 </body>
