@@ -826,6 +826,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   .faq summary::after,details > summary::after{transition-duration:.12s !important}
   details::details-content{transition:none !important}
 }
+
+/* beatus-delight: a confirmacao se desenha, e a recuperacao deixa de ser letra miuda */
+@keyframes bts-traco{to{stroke-dashoffset:0}}
+#form-success .bts-chk-c{stroke-dasharray:114;stroke-dashoffset:114;animation:bts-traco .42s cubic-bezier(0.16,1,0.3,1) .06s both}
+#form-success .bts-chk-p{stroke-dasharray:26;stroke-dashoffset:26;animation:bts-traco .3s cubic-bezier(0.16,1,0.3,1) .4s both}
+#form-success #wa-fallback{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px;padding:3px 0;transition:color .18s ease,text-decoration-thickness .18s ease}
+#form-success #wa-fallback:hover,#form-success #wa-fallback:focus-visible{color:#ffd4de;text-decoration-thickness:2.5px}
 </style>
 <section class="crmband" aria-label="CRM e funil de vendas">
   <div class="glow" aria-hidden="true"></div>
@@ -939,8 +946,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
     <div id="form-success" style="display:none" class="form-card">
       <div style="text-align:center; padding: 32px 0;">
         <svg width="56" height="56" viewBox="0 0 80 80" fill="none" style="margin:0 auto 20px" aria-hidden="true">
-          <circle cx="40" cy="40" r="18" stroke="#ac002f" stroke-width="2.5" fill="none"/>
-          <path d="M32 40 l6 6 l12 -12" stroke="#ac002f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle class="bts-chk-c" cx="40" cy="40" r="18" stroke="#e85c7d" stroke-width="2.5" fill="none"/>
+          <path class="bts-chk-p" d="M32 40 l6 6 l12 -12" stroke="#e85c7d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
         <div style="font-family:'Clash Display',Georgia,serif; font-size:26px; font-weight:700; color:#fff; margin-bottom:12px; letter-spacing:-0.02em">Abrimos seu WhatsApp!</div>
         <p style="color:rgba(255,255,255,0.62); font-size:15px; line-height:1.6">Se a janela não abriu, <a id="wa-fallback" href="https://wa.me/5521975340783?text=Quero%20o%20diagn%C3%B3stico%20do%20meu%20neg%C3%B3cio%20em%20Niter%C3%B3i" target="_blank" rel="noopener" style="color:#f0a0b0">toque aqui para falar com a gente</a>.</p>
