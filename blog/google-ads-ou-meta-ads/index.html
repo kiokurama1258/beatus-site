@@ -156,7 +156,7 @@
     @media(max-width:620px){table{min-width:0}thead{display:none}tbody tr{display:block;border:1px solid var(--border);border-radius:10px;margin-bottom:10px;padding:8px 14px;background:#faf7f7}td{display:block;border:none;padding:5px 0}td:first-child{white-space:normal;padding-bottom:2px}}
   
 /* beatus-focus */
-a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #e0466a;outline-offset:3px;border-radius:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #e85c7d;outline-offset:3px;border-radius:3px}
 ::selection{background:#ac002f;color:#fff}
 
 /* beatus-motion */
@@ -184,6 +184,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   .faq summary::after,details > summary::after{transition-duration:.12s !important}
   details::details-content{transition:none !important}
 }
+
+/* beatus-polish */
+.form-submit[disabled],.form-submit[aria-busy="true"]{opacity:.62;cursor:progress;pointer-events:none}
+.hero-badge-dot{animation:pulse 2s ease-in-out 6}
+@media (prefers-reduced-motion:reduce){.hero-badge-dot{animation:none}}
 </style>
 <!-- Consent Mode v2 (LGPD): nega por padrao, libera so apos aceite -->
 <script>
