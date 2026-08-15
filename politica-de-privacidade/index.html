@@ -127,9 +127,8 @@
     .faq{margin-top:1rem}
     .faq details{border:1px solid var(--border);border-radius:10px;padding:2px 16px;margin:10px 0;background:#fff}
     .faq summary{font-weight:700;cursor:pointer;padding:12px 0;list-style:none}
-    .faq summary::-webkit-details-marker{display:none}
-    .faq summary::after{content:"+";float:right;color:var(--red);font-weight:700}
-    .faq details[open] summary::after{content:"–"}
+    .faq summary::-webkit-details-marker{display:none}.faq summary::before{content:"";position:absolute;top:50%;right:2px;width:15px;height:2px;margin-top:-1px;background:var(--red);border-radius:1px;transform:none}
+.faq summary::after{content:"";position:absolute;top:50%;right:8.5px;width:2px;height:15px;margin-top:-7.5px;background:var(--red);border-radius:1px;transform:none;transition:transform .32s cubic-bezier(0.16,1,0.3,1)}.faq details[open] summary::after{content:"";transform:rotate(90deg)}
     .faq details p{padding-bottom:12px;color:var(--mid)}
     footer.site{border-top:1px solid var(--border);background:var(--white);color:var(--muted);font-size:.85rem}
     footer.site .wrap{padding:26px 22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
@@ -140,6 +139,32 @@
 /* beatus-focus */
 a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #e0466a;outline-offset:3px;border-radius:3px}
 ::selection{background:#ac002f;color:#fff}
+
+/* beatus-motion */
+@keyframes bts-resolver{from{opacity:0;filter:blur(16px)}to{opacity:1;filter:blur(0)}}
+@keyframes bts-surgir{from{opacity:0}to{opacity:1}}
+/* momento focal: a promessa em vinho sai do escuro e entra em foco. Roda uma vez. */
+.hero h1.visible em{animation:bts-resolver .9s .1s cubic-bezier(0.16,1,0.3,1) both}
+/* entradas de secao mais curtas, para nao competir com o momento focal */
+.reveal{transform:translateY(14px);transition:opacity .5s cubic-bezier(0.16,1,0.3,1),transform .5s cubic-bezier(0.16,1,0.3,1)}
+/* resposta ao toque no caminho de conversao */
+.btn-primary,.btn-secondary,.wa-float{transition:background .18s ease,color .18s ease,border-color .18s ease,transform .13s cubic-bezier(0.16,1,0.3,1),box-shadow .18s ease}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(172,0,47,0.34)}
+.btn-primary:active,.btn-secondary:active,.wa-float:active{transform:translateY(0) scale(0.985);transition-duration:.08s}
+.btn-primary:active{box-shadow:0 2px 7px rgba(172,0,47,0.3)}
+.wa-float:active{box-shadow:0 3px 12px rgba(37,211,102,0.45)}
+.opt:active,.servico-item:active{transform:scale(0.99);transition-duration:.08s}
+/* FAQ: o + vira - com movimento, e o painel deixa de dar salto */
+@supports (interpolate-size:allow-keywords){
+  :root{interpolate-size:allow-keywords}
+  details::details-content{block-size:0;overflow:hidden;transition:block-size .34s cubic-bezier(0.16,1,0.3,1),content-visibility .34s allow-discrete;transition-behavior:allow-discrete}
+  details[open]::details-content{block-size:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero h1.visible em{animation:bts-surgir .45s ease both !important;filter:none !important}
+  .faq summary::after,details > summary::after{transition-duration:.12s !important}
+  details::details-content{transition:none !important}
+}
 </style>
 <!-- Consent Mode v2 (LGPD): nega por padrao, libera so apos aceite -->
 <script>
