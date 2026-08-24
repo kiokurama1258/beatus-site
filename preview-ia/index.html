@@ -44,22 +44,53 @@ function gtag(){dataLayer.push(arguments);}
       "@type": "Organization",
       "@id": "https://beatusmidias.online/#organization",
       "name": "Beatus Mídias",
+      "alternateName": [
+        "Beatus",
+        "Beatus Midias"
+      ],
       "url": "https://beatusmidias.online/",
-      "logo": { "@type": "ImageObject", "url": "https://beatusmidias.online/logo.png" },
-      "sameAs": ["https://www.instagram.com/beatusmidias/", "https://www.facebook.com/profile.php?id=61581759567596", "https://www.google.com/maps?cid=15477965544910107472"]
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://beatusmidias.online/logo.png"
+      },
+      "sameAs": [
+        "https://www.instagram.com/beatusmidias/",
+        "https://www.facebook.com/profile.php?id=61581759567596",
+        "https://www.google.com/maps?cid=15477965544910107472"
+      ]
     },
     {
       "@type": "Service",
       "@id": "https://beatusmidias.online/#servico",
       "name": "Secretária IA para WhatsApp",
       "serviceType": "Atendente virtual com inteligência artificial no WhatsApp",
-      "provider": { "@id": "https://beatusmidias.online/#organization" },
-      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "provider": {
+        "@id": "https://beatusmidias.online/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
       "description": "Atendente virtual com IA que agenda, confirma, faz follow-up com cadência, cobra via Pix e responde no WhatsApp do negócio 24 horas por dia, no número que a empresa já usa.",
       "offers": [
-        { "@type": "Offer", "name": "Básico", "price": "317.60", "priceCurrency": "BRL" },
-        { "@type": "Offer", "name": "Pro", "price": "477.60", "priceCurrency": "BRL" },
-        { "@type": "Offer", "name": "Business", "price": "637.60", "priceCurrency": "BRL" }
+        {
+          "@type": "Offer",
+          "name": "Básico",
+          "price": "317.60",
+          "priceCurrency": "BRL"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro",
+          "price": "477.60",
+          "priceCurrency": "BRL"
+        },
+        {
+          "@type": "Offer",
+          "name": "Business",
+          "price": "637.60",
+          "priceCurrency": "BRL"
+        }
       ]
     },
     {
@@ -67,12 +98,54 @@ function gtag(){dataLayer.push(arguments);}
       "@id": "https://beatusmidias.online/#faq",
       "inLanguage": "pt-BR",
       "mainEntity": [
-        { "@type": "Question", "name": "Preciso trocar meu número de WhatsApp?", "acceptedAnswer": { "@type": "Answer", "text": "Não. A Secretária IA é integrada ao número que a sua empresa já usa. Os clientes continuam mandando mensagem para o mesmo contato de sempre, e a IA responde na hora." } },
-        { "@type": "Question", "name": "Serve para o meu segmento?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A IA é personalizada por negócio. Já atende clínicas, dentistas, imobiliárias, lojas de iPhone e de motos elétricas. Você cadastra os seus serviços, preços e regras e ela aprende o seu atendimento." } },
-        { "@type": "Question", "name": "Quanto tempo demora para instalar?", "acceptedAnswer": { "@type": "Answer", "text": "A instalação completa leva de 5 a 7 dias úteis. Inclui a personalização da IA para o seu negócio, a integração com o Google Calendar e o treinamento com os seus serviços e regras." } },
-        { "@type": "Question", "name": "A IA cobra pelo Pix?", "acceptedAnswer": { "@type": "Answer", "text": "Sim, quando você quiser. A IA gera o Pix (via integração com o Asaas), envia para o cliente e confirma o pagamento automaticamente antes de fechar o agendamento." } },
-        { "@type": "Question", "name": "Ela entende áudios dos clientes?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A IA transcreve os áudios com a tecnologia Whisper da OpenAI e responde normalmente, mesmo com ruído de fundo ou sotaques." } },
-        { "@type": "Question", "name": "Tem contrato de fidelidade?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Você cancela quando quiser, sem multa. A gente prefere manter o cliente pelo resultado, não por cláusula." } }
+        {
+          "@type": "Question",
+          "name": "Preciso trocar meu número de WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. A Secretária IA é integrada ao número que a sua empresa já usa. Os clientes continuam mandando mensagem para o mesmo contato de sempre, e a IA responde na hora."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Serve para o meu segmento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A IA é personalizada por negócio. Já atende clínicas, dentistas, imobiliárias, lojas de iPhone e de motos elétricas. Você cadastra os seus serviços, preços e regras e ela aprende o seu atendimento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo demora para instalar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A instalação completa leva de 5 a 7 dias úteis. Inclui a personalização da IA para o seu negócio, a integração com o Google Calendar e o treinamento com os seus serviços e regras."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A IA cobra pelo Pix?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, quando você quiser. A IA gera o Pix (via integração com o Asaas), envia para o cliente e confirma o pagamento automaticamente antes de fechar o agendamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ela entende áudios dos clientes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A IA transcreve os áudios com a tecnologia Whisper da OpenAI e responde normalmente, mesmo com ruído de fundo ou sotaques."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tem contrato de fidelidade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Você cancela quando quiser, sem multa. A gente prefere manter o cliente pelo resultado, não por cláusula."
+          }
+        }
       ]
     }
   ]
