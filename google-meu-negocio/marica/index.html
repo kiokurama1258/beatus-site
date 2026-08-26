@@ -767,7 +767,147 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
     <h2 class="reveal reveal-delay-1">A diferen&ccedil;a entre sumir<br/>e aparecer no mapa.</h2>
     <p class="cb-sub reveal reveal-delay-2">N&atilde;o &eacute; sorteio. O Google compara os perfis e mostra primeiro quem est&aacute; completo, ativo e bem avaliado. Esse &eacute; o checklist que a gente executa no seu.</p>
     <figure class="crmshot reveal reveal-delay-2">
-      <img src="/assets/perfil-google-beatus.png" alt="Comparação entre um perfil abandonado no Google, com categoria genérica e sem posts, e um perfil gerenciado pela Beatus, com categoria certa, fotos atualizadas e avaliações respondidas" loading="lazy" width="1600" height="640"/>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" style="width:100%;height:auto;display:block" role="img"
+     aria-label="Animação: um perfil do Google gp-sobe da sétima para a primeira posição do mapa conforme categoria, fotos, avaliações e horário são preenchidos">
+<defs>
+  <style><![CDATA[
+    .gp-bg{fill:#0b0b0b}
+    .gp-card{fill:#131313;stroke:rgba(255,255,255,.08)}
+    .gp-lbl{font-family:'Satoshi',system-ui,sans-serif;font-size:15px;fill:rgba(255,255,255,.5)}
+    .gp-nm{font-family:'Satoshi',system-ui,sans-serif;font-size:18px;font-weight:700;fill:#fff}
+    .gp-sm{font-family:'Satoshi',system-ui,sans-serif;font-size:14px;fill:rgba(255,255,255,.45)}
+    .gp-ttl{font-family:'Clash Display',Georgia,serif;font-size:26px;font-weight:700;fill:#fff}
+    .gp-sub{font-family:'Satoshi',system-ui,sans-serif;font-size:15px;fill:rgba(255,255,255,.45)}
+    .gp-pos{font-family:'Clash Display',Georgia,serif;font-size:19px;font-weight:700;fill:rgba(255,255,255,.35)}
+
+    /* o card da empresa gp-sobe da posicao 7 ate a 1 */
+    .gp-meu{animation:gp-sobe 9s cubic-bezier(.5,0,.2,1) infinite}
+    @keyframes gp-sobe{
+      0%,14%   {transform:translateY(0)}
+      26%,36%  {transform:translateY(-104px)}
+      48%,58%  {transform:translateY(-208px)}
+      70%,96%  {transform:translateY(-312px)}
+      100%     {transform:translateY(0)}
+    }
+    /* concorrentes descem enquanto ela gp-sobe */
+    .gp-c1{animation:gp-desce1 9s cubic-bezier(.5,0,.2,1) infinite}
+    .gp-c2{animation:gp-desce2 9s cubic-bezier(.5,0,.2,1) infinite}
+    .gp-c3{animation:gp-desce3 9s cubic-bezier(.5,0,.2,1) infinite}
+    @keyframes gp-desce1{0%,58%{transform:translateY(0)}70%,96%{transform:translateY(104px)}100%{transform:translateY(0)}}
+    @keyframes gp-desce2{0%,36%{transform:translateY(0)}48%,96%{transform:translateY(104px)}100%{transform:translateY(0)}}
+    @keyframes gp-desce3{0%,14%{transform:translateY(0)}26%,96%{transform:translateY(104px)}100%{transform:translateY(0)}}
+
+    /* o card ganha destaque quando chega ao topo */
+    .gp-aro{opacity:0;animation:gp-acende 9s linear infinite}
+    @keyframes gp-acende{0%,66%{opacity:0}72%,94%{opacity:1}100%{opacity:0}}
+
+    /* checklist gp-marca um item por vez, na mesma cadencia da subida */
+    .gp-tick{opacity:0;transform-origin:center}
+    .gp-t1{animation:gp-marca 9s linear infinite;animation-delay:0s}
+    .gp-t2{animation:gp-marca 9s linear infinite;animation-delay:1.05s}
+    .gp-t3{animation:gp-marca 9s linear infinite;animation-delay:2.1s}
+    .gp-t4{animation:gp-marca 9s linear infinite;animation-delay:3.15s}
+    @keyframes gp-marca{0%,12%{opacity:0}18%,94%{opacity:1}100%{opacity:0}}
+    .gp-txt1{animation:gp-clareia 9s linear infinite;animation-delay:0s}
+    .gp-txt2{animation:gp-clareia 9s linear infinite;animation-delay:1.05s}
+    .gp-txt3{animation:gp-clareia 9s linear infinite;animation-delay:2.1s}
+    .gp-txt4{animation:gp-clareia 9s linear infinite;animation-delay:3.15s}
+    @keyframes gp-clareia{0%,12%{fill:rgba(255,255,255,.3)}18%,94%{fill:#fff}100%{fill:rgba(255,255,255,.3)}}
+
+    /* estrelas preenchem */
+    .gp-st{opacity:.18;animation:gp-brilha 9s linear infinite}
+    .gp-s2{animation-delay:.25s}.gp-s3{animation-delay:.5s}.gp-s4{animation-delay:.75s}.gp-s5{animation-delay:1s}
+    @keyframes gp-brilha{0%,20%{opacity:.18}30%,94%{opacity:1}100%{opacity:.18}}
+
+
+    /* So a empresa carrega numero: concorrente numerado fica incoerente
+       durante a subida, mostrando 1 2 4 7 no meio da transicao. */
+    @keyframes gp-someA{0%,64%{opacity:1}70%,96%{opacity:0}100%{opacity:1}}
+    @keyframes gp-surgeA{0%,64%{opacity:0}70%,96%{opacity:1}100%{opacity:0}}
+    .gp-de-m{animation:gp-someA 9s linear infinite}   .gp-para-m{opacity:0;animation:gp-surgeA 9s linear infinite}
+
+    @media (prefers-reduced-motion:reduce){
+      .gp-meu,.gp-c1,.gp-c2,.gp-c3,.gp-aro,.gp-tick,.gp-st,[class^=txt],[class^=de-],[class^=para-]{animation:none}
+      [class^=de-]{opacity:0} [class^=para-]{opacity:1}
+      .gp-meu{transform:translateY(-312px)} .gp-c1,.gp-c2,.gp-c3{transform:translateY(104px)}
+      .gp-aro,.gp-tick{opacity:1} .gp-st{opacity:1}
+    }
+  ]]></style>
+  <clipPath id="gp-cut"><rect x="700" y="128" width="856" height="440" rx="14"/></clipPath>
+</defs>
+
+<rect class=" gp-bg" width="1600" height="640"/>
+
+<!-- cabecalho -->
+<g transform="translate(56,52)">
+  <rect width="46" height="46" rx="12" fill="#ac002f"/>
+  <text x="23" y="32" text-anchor="middle" font-family="Clash Display,Georgia,serif" font-size="24" font-weight="700" font-style="italic" fill="#fff">B</text>
+  <text class=" gp-ttl" x="62" y="20">Como o perfil gp-sobe no mapa</text>
+  <text class=" gp-sub" x="62" y="42">O trabalho aparece na posição, não no discurso</text>
+</g>
+
+<!-- checklist -->
+<g transform="translate(56,150)">
+  <text class=" gp-lbl" y="0">O que é feito no perfil</text>
+  <g transform="translate(0,34)">
+    <circle cx="14" cy="14" r="14" fill="rgba(63,191,127,.14)"/>
+    <path class="gp-tick gp-t1" d="M8 14l4 4 8-8" stroke="#3fbf7f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="gp-nm gp-txt1" x="42" y="20">Categoria principal certa</text>
+  </g>
+  <g transform="translate(0,90)">
+    <circle cx="14" cy="14" r="14" fill="rgba(63,191,127,.14)"/>
+    <path class="gp-tick gp-t2" d="M8 14l4 4 8-8" stroke="#3fbf7f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="gp-nm gp-txt2" x="42" y="20">Fotos reais e recentes</text>
+  </g>
+  <g transform="translate(0,146)">
+    <circle cx="14" cy="14" r="14" fill="rgba(63,191,127,.14)"/>
+    <path class="gp-tick gp-t3" d="M8 14l4 4 8-8" stroke="#3fbf7f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="gp-nm gp-txt3" x="42" y="20">Avaliações pedidas e respondidas</text>
+  </g>
+  <g transform="translate(0,202)">
+    <circle cx="14" cy="14" r="14" fill="rgba(63,191,127,.14)"/>
+    <path class="gp-tick gp-t4" d="M8 14l4 4 8-8" stroke="#3fbf7f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="gp-nm gp-txt4" x="42" y="20">Horário e feriado atualizados</text>
+  </g>
+  <g transform="translate(0,272)">
+    <text class=" gp-lbl" y="0">Avaliação do perfil</text>
+    <g transform="translate(0,16)">
+      <path class=" gp-st" d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#e6a83c"/>
+      <path class="gp-st gp-s2" transform="translate(30,0)" d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#e6a83c"/>
+      <path class="gp-st gp-s3" transform="translate(60,0)" d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#e6a83c"/>
+      <path class="gp-st gp-s4" transform="translate(90,0)" d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#e6a83c"/>
+      <path class="gp-st gp-s5" transform="translate(120,0)" d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#e6a83c"/>
+    </g>
+  </g>
+</g>
+
+<!-- mapa -->
+<text class=" gp-lbl" x="700" y="112">Resultado do mapa para a busca do seu cliente</text>
+<rect x="700" y="128" width="856" height="440" rx="14" class=" gp-card" stroke-width="1"/>
+
+<g clip-path="url(#gp-cut)">
+  <g class=" gp-c3"><rect x="716" y="144" width="824" height="88" rx="11" fill="#1a1a1a"/>
+    <text class=" gp-nm" x="748" y="180">Concorrente A</text>
+    <text class=" gp-sm" x="748" y="204">4,6 · 212 avaliações · 1,2 km</text></g>
+  <g class=" gp-c2"><rect x="716" y="248" width="824" height="88" rx="11" fill="#1a1a1a"/>
+    <text class=" gp-nm" x="748" y="284">Concorrente B</text>
+    <text class=" gp-sm" x="748" y="308">4,4 · 168 avaliações · 2,0 km</text></g>
+  <g class=" gp-c1"><rect x="716" y="352" width="824" height="88" rx="11" fill="#1a1a1a"/>
+    <text class=" gp-nm" x="748" y="388">Concorrente C</text>
+    <text class=" gp-sm" x="748" y="412">4,2 · 94 avaliações · 2,6 km</text></g>
+
+  <g class=" gp-meu">
+    <rect x="716" y="456" width="824" height="88" rx="11" fill="#1d1315"/>
+    <rect class=" gp-aro" x="716" y="456" width="824" height="88" rx="11" fill="rgba(172,0,47,.14)" stroke="#ac002f" stroke-width="1.6"/>
+    <circle cx="748" cy="500" r="17" fill="rgba(172,0,47,.22)"/><text class="gp-pos gp-de-m" x="748" y="507" text-anchor="middle" fill="#e0416a">7</text><text class="gp-pos gp-para-m" x="748" y="507" text-anchor="middle" fill="#e0416a">1</text>
+    <text class=" gp-nm" x="782" y="492">Sua empresa</text>
+    <text class=" gp-sm" x="782" y="516">4,8 · avaliações recentes · aqui perto</text>
+    <circle cx="1500" cy="500" r="7" fill="#e0416a"/>
+  </g>
+</g>
+
+<text class=" gp-sub" x="700" y="600">Ilustração do efeito que o trabalho de perfil produz. Não é promessa de posição.</text>
+</svg>
     </figure>
     <div class="crmcap">Ilustra&ccedil;&atilde;o do checklist de otimiza&ccedil;&atilde;o que aplicamos em cada perfil.</div>
   </div>
