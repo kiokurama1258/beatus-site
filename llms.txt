@@ -81,6 +81,14 @@ Cada segmento tem página própria com estratégia e regra de publicidade espec�
 - [Empresas de Limpeza e Diaristas](https://beatusmidias.com.br/empresas-de-limpeza/): Trafego pago para empresas de limpeza e diaristas no Rio de Janeiro: Google Ads e Meta Ads que vendem confianca, nao so preco de diaria contra marketplace de leads.
 - [Segurança Patrimonial e Portaria](https://beatusmidias.com.br/empresas-de-seguranca-patrimonial/): A Beatus Mídias faz tráfego pago para empresas de segurança patrimonial e portaria no Rio de Janeiro, focado em quem assina contrato, não no morador curioso.
 - [Motofrete e Entrega Expressa](https://beatusmidias.com.br/motofrete-e-entrega-expressa/): Trafego pago para motofrete e entrega expressa focado no cliente recorrente: cartorio, clinica, grafica e e-commerce que fecham motoboy dedicado todo mes.
+- [Serralherias](https://beatusmidias.com.br/serralherias/): Tráfego pago para serralheria no Rio de Janeiro: campanha que separa conserto urgente de projeto novo e usa foto real do trabalho pronto como prova de confiança.
+- [Vidraçarias](https://beatusmidias.com.br/vidracarias/): Tráfego pago para vidraçaria no Rio: campanha de emergência para vidro quebrado e campanha de projeto para box, sacada e guarda-corpo, cada uma com seu criativo.
+- [Construção e Manutenção de Piscinas](https://beatusmidias.com.br/empresas-de-piscina/): Tráfego pago para quem constrói e para quem cuida de piscina no Rio de Janeiro: funil de obra e funil de manutenção tratados como dois negócios bem distintos.
+- [Oficinas Mecânicas](https://beatusmidias.com.br/oficinas-mecanicas/): Anúncio para oficina mecânica que mostra orçamento por escrito, foto do defeito e garantia documentada, para atrair quem decide rápido e tem medo de ser enganado.
+- [Borracharias](https://beatusmidias.com.br/borracharias/): Trafego pago para borracharia no Rio de Janeiro: Google Ads e Google Meu Negocio para captar quem busca socorro de pneu furado perto de voce, agora mesmo.
+- [Floriculturas](https://beatusmidias.com.br/floriculturas/): Trafego pago para floricultura no Rio de Janeiro: campanhas para quem busca entrega de flores hoje e para os picos de Dia das Maes, Namorados e Natal.
+- [Clínicas de Podologia](https://beatusmidias.com.br/clinicas-de-podologia/): Tráfego pago para clínicas de podologia no Rio de Janeiro: campanha de dor aguda no Google Ads e cuidado preventivo com pé diabético e idosos no Meta Ads.
+- [Escolas de Informática e Tecnologia](https://beatusmidias.com.br/escolas-de-informatica/): Tráfego pago para escola de informática e tecnologia que compete com SENAI, SENAC e YouTube. Google Ads e Meta Ads focados em matrícula paga, sem prometer emprego.
 
 ## Cidades atendidas no Rio de Janeiro
 Página própria por cidade, cada uma com tese econômica local, não template repetido trocando o nome.
