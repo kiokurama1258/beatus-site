@@ -49,6 +49,14 @@ Cada segmento tem página própria com estratégia e regra de publicidade espec�
 - [Personal Trainers](https://beatusmidias.com.br/personal-trainer/): A Beatus faz trafego pago para personal trainer: Google Ads e Meta Ads segmentados por bairro e por publico, com aula experimental como proximo passo do anuncio.
 - [Escolas de Música](https://beatusmidias.com.br/escolas-de-musica/): Segmentamos por bairro e raio de deslocamento para lotar a agenda de aulas experimentais da sua escola de música no Rio, sem gastar com quem mora longe demais.
 - [Casas de Repouso e Home Care](https://beatusmidias.com.br/casas-de-repouso-e-home-care/): A Beatus Mídias cria e gerencia campanhas de tráfego pago para casas de repouso e home care no Rio de Janeiro, focadas em quem decide pela família idosa.
+- [Hotéis e Pousadas](https://beatusmidias.com.br/hoteis-e-pousadas/): Anúncios de alta intenção para hotéis e pousadas: cauda longa por bairro e ocasião, retargeting de quem não reservou e investimento sincronizado com a temporada.
+- [Agências de Turismo](https://beatusmidias.com.br/agencias-de-turismo/): Tráfego pago para agências de turismo no Rio de Janeiro: campanhas por ocasião e data específica, sem competir direto com CVC, Decolar e 123Milhas no mesmo leilão.
+- [Estúdios de Tatuagem](https://beatusmidias.com.br/estudios-de-tatuagem/): Tráfego pago para estúdio de tatuagem que vende o traço do tatuador, não o espaço: portfólio por estilo, peças já cicatrizadas e segmentação por bairro no Rio de Janeiro.
+- [Administradoras de Condomínio](https://beatusmidias.com.br/administradoras-de-condominio/): Tráfego pago para administradoras de condomínio: campanhas voltadas a síndico e conselho fiscal, acompanhando o lead até a assembleia que decide o contrato.
+- [Empresas de Consórcio](https://beatusmidias.com.br/empresas-de-consorcio/): Tráfego pago para consórcio no Rio de Janeiro: anúncio que educa sobre taxa e prazo de contemplação, gera lead qualificado para o funil comercial fechar.
+- [Despachantes](https://beatusmidias.com.br/despachantes/): Tráfego pago para despachante veicular e documentalista no Rio de Janeiro: campanha segmentada por evento (transferência, CNH, multa), não por palavra genérica.
+- [Farmácias e Drogarias](https://beatusmidias.com.br/farmacias-e-drogarias/): Farmácia e drogaria aparecendo no momento certo da busca, com campanha por bairro e raio, Perfil da Empresa atualizado e anúncio dentro da política de saúde.
+- [Assistência Técnica de Celular e Eletrodomésticos](https://beatusmidias.com.br/assistencia-tecnica/): Anúncio para assistência técnica de celular e eletrodomésticos: apareça no Google Search no exato momento da pane, com raio geográfico certo e resposta rápida.
 
 ## Cidades atendidas no Rio de Janeiro
 Página própria por cidade, cada uma com tese econômica local, não template repetido trocando o nome.
