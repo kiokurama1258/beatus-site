@@ -65,6 +65,14 @@ Cada segmento tem página própria com estratégia e regra de publicidade espec�
 - [Toldos, Coberturas e Esquadrias](https://beatusmidias.com.br/toldos-e-esquadrias/): Tráfego pago para empresas de toldos, coberturas e esquadrias de alumínio no Rio de Janeiro. Anúncio que enche a agenda de visita técnica, não só o chat.
 - [Locação de Equipamentos e Caçambas](https://beatusmidias.com.br/locacao-de-equipamentos/): Tráfego pago para locação de equipamentos e caçambas no Rio de Janeiro: campanhas por raio de entrega que capturam quem já precisa alugar hoje.
 - [Consultoria Financeira](https://beatusmidias.com.br/consultoria-financeira/): Tráfego pago para consultoria financeira e planejamento patrimonial no Rio de Janeiro: capte quem passou por evento de vida, sem promessa de rentabilidade.
+- [Autoescolas](https://beatusmidias.com.br/autoescolas/): Trafego pago para autoescolas segmentado por bairro, pensado pra atrair aluno que consegue ir as aulas praticas e fechar matricula rapido no WhatsApp.
+- [Clínicas de Fisioterapia](https://beatusmidias.com.br/clinicas-de-fisioterapia/): Tráfego pago para clínicas de fisioterapia no Rio de Janeiro: campanhas por especialidade e bairro, agendamento via WhatsApp e anúncio dentro das normas do COFFITO.
+- [Controle de Pragas e Dedetização](https://beatusmidias.com.br/dedetizadoras/): Anúncio para dedetizadora no Rio de Janeiro: separamos emergência residencial de contrato comercial recorrente. Sem apelo ao medo, dentro da RDC 622/2022 da Anvisa.
+- [Marcenarias e Móveis Planejados](https://beatusmidias.com.br/marcenarias/): Tráfego pago para marcenaria e móveis planejados: Google Ads e Meta Ads para agendar visita técnica e orçamento qualificado, sem lotar a agenda de curioso.
+- [Hotéis e Creches para Pets](https://beatusmidias.com.br/hoteis-para-pets/): Anúncios para hotel e creche de pets no Rio de Janeiro. Geolocalização de raio curto, prova de cuidado ao vivo e foco nas janelas sazonais de viagem do tutor.
+- [Empresas de Mudança](https://beatusmidias.com.br/empresas-de-mudanca/): Tráfego pago para empresas de mudança residencial e comercial no Rio de Janeiro. Campanhas focadas em velocidade de resposta e prova de confiança no orçamento.
+- [Escolas de Dança](https://beatusmidias.com.br/escolas-de-danca/): Anúncios para escola de dança segmentados por modalidade, faixa etária e raio do bairro, com foco em aula experimental agendada, não em mensagem solta.
+- [Cerimonialistas e Assessoria de Eventos](https://beatusmidias.com.br/cerimonialistas/): Tráfego pago para cerimonialistas e assessoria de eventos no Rio de Janeiro: campanha que vende prova real de execução, não lead barato e curioso demais.
 
 ## Cidades atendidas no Rio de Janeiro
 Página própria por cidade, cada uma com tese econômica local, não template repetido trocando o nome.
