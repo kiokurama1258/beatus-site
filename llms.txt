@@ -89,6 +89,14 @@ Cada segmento tem página própria com estratégia e regra de publicidade espec�
 - [Floriculturas](https://beatusmidias.com.br/floriculturas/): Trafego pago para floricultura no Rio de Janeiro: campanhas para quem busca entrega de flores hoje e para os picos de Dia das Maes, Namorados e Natal.
 - [Clínicas de Podologia](https://beatusmidias.com.br/clinicas-de-podologia/): Tráfego pago para clínicas de podologia no Rio de Janeiro: campanha de dor aguda no Google Ads e cuidado preventivo com pé diabético e idosos no Meta Ads.
 - [Escolas de Informática e Tecnologia](https://beatusmidias.com.br/escolas-de-informatica/): Tráfego pago para escola de informática e tecnologia que compete com SENAI, SENAC e YouTube. Google Ads e Meta Ads focados em matrícula paga, sem prometer emprego.
+- [Clínicas de Transplante e Estética Capilar](https://beatusmidias.com.br/transplante-capilar-e-estetica-capilar/): Gestão de Google Ads e Meta Ads para clínica de transplante capilar no Rio de Janeiro, focada em lotar a agenda de avaliação dentro do que o CFM permite anunciar.
+- [Funilaria e Pintura Automotiva](https://beatusmidias.com.br/funilaria-e-pintura/): Trafego pago para funilaria e pintura automotiva no Rio: campanhas que miram quem bateu o carro agora, nao o curioso so comparando preco de orcamento online.
+- [Manutenção de Elevadores](https://beatusmidias.com.br/manutencao-de-elevadores/): Tráfego pago para empresas de manutenção de elevadores que querem fechar contrato com síndicos e administradoras, não brigar com Otis ou Schindler pelo morador.
+- [Transporte Escolar](https://beatusmidias.com.br/transporte-escolar/): Trafego pago para transporte escolar segmentado por bairro e raio de rota, com foco na janela de matricula e rematricula do calendario letivo no Rio de Janeiro.
+- [Locação de Trajes para Festa](https://beatusmidias.com.br/locacao-de-trajes/): Anúncios para locação de trajes e fantasias no Rio focados em quem já tem data marcada: filtramos bairro, tamanho e prazo de retirada antes do clique.
+- [Automação Residencial](https://beatusmidias.com.br/automacao-residencial/): Tráfego pago para empresas de automação residencial no Rio de Janeiro: Google Ads e Meta Ads segmentados por projeto, não por busca de produto avulso.
+- [Escolas de Culinária e Gastronomia](https://beatusmidias.com.br/escolas-de-culinaria/): Tráfego pago para escolas de culinária e gastronomia no Rio de Janeiro: campanhas que vendem a turma certa, com data e vaga marcada, não a escola genérica.
+- [Locação de Som e Iluminação para Eventos](https://beatusmidias.com.br/locacao-de-som-e-iluminacao/): Tráfego pago para locação de som e iluminação de eventos no Rio de Janeiro: campanha segmentada por tipo de evento e data, focada em fechamento, não catálogo.
 
 ## Cidades atendidas no Rio de Janeiro
 Página própria por cidade, cada uma com tese econômica local, não template repetido trocando o nome.
