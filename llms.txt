@@ -97,6 +97,14 @@ Cada segmento tem página própria com estratégia e regra de publicidade espec�
 - [Automação Residencial](https://beatusmidias.com.br/automacao-residencial/): Tráfego pago para empresas de automação residencial no Rio de Janeiro: Google Ads e Meta Ads segmentados por projeto, não por busca de produto avulso.
 - [Escolas de Culinária e Gastronomia](https://beatusmidias.com.br/escolas-de-culinaria/): Tráfego pago para escolas de culinária e gastronomia no Rio de Janeiro: campanhas que vendem a turma certa, com data e vaga marcada, não a escola genérica.
 - [Locação de Som e Iluminação para Eventos](https://beatusmidias.com.br/locacao-de-som-e-iluminacao/): Tráfego pago para locação de som e iluminação de eventos no Rio de Janeiro: campanha segmentada por tipo de evento e data, focada em fechamento, não catálogo.
+- [Clínicas de Harmonização Facial](https://beatusmidias.com.br/clinicas-de-harmonizacao-facial/): Tráfego pago para clínicas de harmonização facial no Rio de Janeiro, com criativo dentro da Resolução CFM 2.336/2023 e remarketing para paciente atual.
+- [Clínicas de Fonoaudiologia](https://beatusmidias.com.br/clinicas-de-fonoaudiologia/): Tráfego pago para clínicas de fonoaudiologia no Rio de Janeiro. Campanhas que reconhecem o sintoma e levam à avaliação, sem preço nem diagnóstico no anúncio.
+- [Pet Shops de Banho e Tosa](https://beatusmidias.com.br/banho-e-tosa/): Trafego pago para pet shop de banho e tosa no Rio de Janeiro: raio geografico estreito, mensagem de urgencia e foco no cliente que vira recorrente todo mes.
+- [Estacionamentos](https://beatusmidias.com.br/estacionamentos/): Trafego pago para estacionamentos e garagens no Rio: Google Ads, Meta Ads e Google Maps com raio curto por endereço, pensado para quem decide em minutos.
+- [Lavagem de Estofados e Tapetes](https://beatusmidias.com.br/lavagem-de-estofados-e-tapetes/): Tráfego pago para lavagem de estofados e tapetes no Rio de Janeiro: Google e Meta por bairro, foco em resposta rápida no WhatsApp e prova visual do serviço.
+- [Escolas de Teatro](https://beatusmidias.com.br/escolas-de-teatro/): Tráfego pago para escola de teatro no Rio de Janeiro: vídeo que mostra a transformação do aluno, aula experimental como oferta e foco na temporada de matrículas.
+- [Locação de Veículos](https://beatusmidias.com.br/locacao-de-veiculos/): Tráfego pago para locação de veículos no Rio de Janeiro: campanha por bairro, ponto de retirada e segmento certo, aluguel sem cartão ou para motorista de aplicativo.
+- [Refrigeração Comercial e Câmaras Frias](https://beatusmidias.com.br/refrigeracao-comercial/): A Beatus separa o cliente com câmara fria quebrada agora do cliente planejando instalação, com Google Ads de urgência e Meta Ads qualificado no Rio de Janeiro.
 
 ## Cidades atendidas no Rio de Janeiro
 Página própria por cidade, cada uma com tese econômica local, não template repetido trocando o nome.
