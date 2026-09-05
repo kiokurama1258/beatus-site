@@ -113,6 +113,14 @@ Cada segmento tem página própria com estratégia e regra de publicidade espec�
 - [Limpeza Pós-Obra](https://beatusmidias.com.br/limpeza-pos-obra/): Tráfego pago para limpeza pós-obra no Rio de Janeiro: campanhas focadas em quem tem prazo de entrega, não em quem busca faxina recorrente. Fale com a Beatus.
 - [Distribuidoras de Água e Gás](https://beatusmidias.com.br/distribuidoras-de-agua-e-gas/): Campanhas geolocalizadas para distribuidora de água e gás no Rio: raio de entrega curto, clique direto pro WhatsApp e prioridade para quem responde primeiro.
 - [Manutenção Predial e Zeladoria](https://beatusmidias.com.br/manutencao-predial/): Anúncios para empresa de manutenção predial e zeladoria no Rio de Janeiro, segmentados por síndico e administradora, não por morador em busca de reparo avulso.
+- [Clínicas de Terapia Ocupacional](https://beatusmidias.com.br/clinicas-de-terapia-ocupacional/): Tráfego pago para clínicas de terapia ocupacional no Rio de Janeiro: campanhas segmentadas por público (infantil, TEA, geriátrico) dentro das regras do COFFITO.
+- [Estúdios de Manicure e Pedicure](https://beatusmidias.com.br/estudios-de-manicure-e-pedicure/): Tráfego pago para estúdios de manicure e pedicure no Rio de Janeiro: campanha hiperlocal que mostra a unha de perto e mede quem volta para manutenção.
+- [Design de Interiores](https://beatusmidias.com.br/design-de-interiores/): Trafego pago para design de interiores no Rio de Janeiro: campanhas por bairro e momento de vida que levam intencao real de projeto ate o portfolio certo.
+- [Escolas e Estúdios de Yoga](https://beatusmidias.com.br/escolas-de-yoga/): Anúncios locais para levar quem busca yoga perto de casa ou do trabalho até a aula experimental do seu estúdio, sem depender só de indicação ou Instagram.
+- [Locação de Brinquedos Infantis para Festa](https://beatusmidias.com.br/locacao-de-brinquedos-infantis/): Tráfego pago para locação de brinquedos infantis focado no raio de entrega real, prova social de segurança e resposta rápida na data que a família já marcou.
+- [Escolas de Canto e Técnica Vocal](https://beatusmidias.com.br/escolas-de-canto/): Tráfego pago para escolas de canto e professores de técnica vocal: campanhas que separam quem quer aprender de quem quer contratar um cantor para evento.
+- [Clínicas de Massoterapia](https://beatusmidias.com.br/clinicas-de-massoterapia/): Tráfego pago para clínica de massoterapia no Rio de Janeiro: campanhas que miram quem sente dor agora, não curiosos de spa genérico. Fale com a Beatus Mídias.
+- [Vistoria e Inspeção Veicular](https://beatusmidias.com.br/vistoria-veicular/): Tráfego pago para empresas de vistoria e inspeção veicular no Rio de Janeiro: campanhas separadas por cautelar, transferência e vistoria anual do Detran-RJ.
 
 ## Cidades atendidas no Rio de Janeiro
 Página própria por cidade, cada uma com tese econômica local, não template repetido trocando o nome.
