@@ -177,6 +177,14 @@ Cada segmento tem página própria com estratégia e regra de publicidade espec�
 - [Lojas de Produtos Naturais e Suplementos](https://beatusmidias.com.br/lojas-de-produtos-naturais-e-suplementos/): Trafego pago para loja de produtos naturais e suplementos com foco em catalogo de produto, busca por marca especifica e remarketing para quem ja comprou antes.
 - [Escolas de Surf e Esportes Aquáticos](https://beatusmidias.com.br/escolas-de-surf-e-esportes-aquaticos/): A Beatus gerencia anuncios de Google Ads e Meta Ads para escolas de surf e esportes aquaticos, com raio restrito a praia certa e video real da aula com o instrutor.
 - [Lojas de Artigos de Escritório](https://beatusmidias.com.br/lojas-de-artigos-de-escritorio/): Trafego pago para lojas de artigos de escritorio no Rio de Janeiro: campanha local para quem busca papelaria e oferta separada para pedido corporativo recorrente.
+- [Padarias](https://beatusmidias.com.br/padarias/): Trafego pago para padaria funciona com raio curto e horario certo. A Beatus separa consumo diario de encomendas de bolo e festa, cada frente com sua campanha.
+- [Açougues](https://beatusmidias.com.br/acougues/): Tráfego pago para açougue: campanha hiperlocal que transforma quem busca açougue perto de mim ou carne para churrasco em pedido fechado no WhatsApp, perto da loja.
+- [Peixarias](https://beatusmidias.com.br/peixarias/): Tráfego pago para peixaria: capture quem busca peixe fresco perto de casa toda semana e reforce o investimento na janela de bacalhau, salmão e camarão de fim de ano.
+- [Sorveterias e Geladinho Gourmet](https://beatusmidias.com.br/sorveterias/): A Beatus faz trafego pago para sorveteria e geladinho gourmet: Meta Ads por raio de bairro, criativo de produto e calendario de calor, nao busca no Google.
+- [Brechós e Lojas de Roupas Usadas](https://beatusmidias.com.br/brechos-e-lojas-de-roupas-usadas/): Tráfego pago para brechó e loja de roupa usada no Rio de Janeiro: anúncio de peça específica, foto real, preço visível e raio geográfico bem localizado.
+- [Hortifrutis e Sacolões](https://beatusmidias.com.br/hortifruti-e-sacoloes/): Gestão de tráfego pago para hortifruti e sacolão com foco no raio real de entrega da loja, pensada para virar recompra pelo WhatsApp e não venda isolada.
+- [Lojas de Som e Acessórios Automotivos](https://beatusmidias.com.br/lojas-de-som-e-acessorios-automotivos/): Tráfego pago para loja de som e acessórios automotivos no Rio de Janeiro: raio local, criativo de instalação real e campanha separada por faixa de ticket.
+- [Mercearias e Minimercados](https://beatusmidias.com.br/mercearias-e-minimercados/): Tráfego pago para mercearia e minimercado no Rio de Janeiro, com raio de entrega curto, criativo de velocidade e foco total em pedido por WhatsApp ou app.
 
 ## Cidades atendidas no Rio de Janeiro
 Página própria por cidade, cada uma com tese econômica local, não template repetido trocando o nome.
