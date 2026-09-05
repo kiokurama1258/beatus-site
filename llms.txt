@@ -185,6 +185,14 @@ Cada segmento tem página própria com estratégia e regra de publicidade espec�
 - [Hortifrutis e Sacolões](https://beatusmidias.com.br/hortifruti-e-sacoloes/): Gestão de tráfego pago para hortifruti e sacolão com foco no raio real de entrega da loja, pensada para virar recompra pelo WhatsApp e não venda isolada.
 - [Lojas de Som e Acessórios Automotivos](https://beatusmidias.com.br/lojas-de-som-e-acessorios-automotivos/): Tráfego pago para loja de som e acessórios automotivos no Rio de Janeiro: raio local, criativo de instalação real e campanha separada por faixa de ticket.
 - [Mercearias e Minimercados](https://beatusmidias.com.br/mercearias-e-minimercados/): Tráfego pago para mercearia e minimercado no Rio de Janeiro, com raio de entrega curto, criativo de velocidade e foco total em pedido por WhatsApp ou app.
+- [Lojas de Bicicletas](https://beatusmidias.com.br/lojas-de-bicicletas/): Trafego pago para loja de bicicleta no Rio de Janeiro: campanha de busca local para conserto e peca, e campanha de catalogo para quem pesquisa bike nova.
+- [Escolas de Tênis](https://beatusmidias.com.br/escolas-de-tenis/): Aula de tênis é semanal e recorrente: anúncio amplo demais traz aluno distante da quadra. Campanha hiperlocal com aula experimental como isca de matrícula.
+- [Academias de Escalada](https://beatusmidias.com.br/academias-de-escalada/): Sua academia de escalada nao aparece no Google porque quase ninguem pesquisa isso. Trafego pago certo usa Instagram e TikTok para virar aula experimental.
+- [Escolas de Vela e Remo](https://beatusmidias.com.br/escolas-de-vela-e-remo/): Tráfego pago para escolas de vela e remo no Rio de Janeiro: separe quem busca o curso de Arrais Amador de quem quer só uma aula avulsa de lazer no verão.
+- [Lojas de Artigos de Camping e Trilha](https://beatusmidias.com.br/lojas-de-artigos-de-camping-e-trilha/): Tráfego pago para loja de camping e trilha no Rio de Janeiro, focado em quem já tem viagem marcada e busca o equipamento certo antes do prazo da saída.
+- [Escolas de Equitação](https://beatusmidias.com.br/escolas-de-equitacao/): Anúncio para escola de equitação não vende matrícula, vende a primeira aula experimental. Tráfego pago da Beatus Mídias mira quem mora perto do haras.
+- [Lojas de Artigos para Motociclistas](https://beatusmidias.com.br/lojas-de-artigos-para-motociclistas/): Campanha para loja de artigos para motociclistas separada por avatar, motociclista de lazer ou motoboy, em vez de competir em preço genérico com marketplace.
+- [Lojas de Artigos para Cozinha Profissional](https://beatusmidias.com.br/lojas-de-artigos-para-cozinha-profissional/): Trafego pago para lojas de equipamento de cozinha profissional no Rio de Janeiro: campanhas que miram quem ja decidiu comprar, nao o curioso de cozinha domestica.
 
 ## Cidades atendidas no Rio de Janeiro
 Página própria por cidade, cada uma com tese econômica local, não template repetido trocando o nome.
