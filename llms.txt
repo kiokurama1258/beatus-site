@@ -129,6 +129,14 @@ Cada segmento tem página própria com estratégia e regra de publicidade espec�
 - [Consultoria de Recursos Humanos](https://beatusmidias.com.br/consultoria-de-rh/): Campanhas de Google Ads e Meta Ads para consultoria de recursos humanos atrair empresa que contrata, não candidato que procura vaga, no Rio de Janeiro.
 - [Escritórios de Engenharia Civil](https://beatusmidias.com.br/escritorios-de-engenharia-civil/): Tráfego pago para escritórios de engenharia civil no Rio: campanhas por tipo de demanda e prova técnica real, sem orçamento genérico ou promessa vazia.
 - [Personal Organizer](https://beatusmidias.com.br/personal-organizer/): Tráfego pago para personal organizer: leve o antes e depois do portfólio até quem já decidiu contratar organização residencial no gatilho de vida certo.
+- [Escolas de Pilotagem de Drone](https://beatusmidias.com.br/escolas-de-pilotagem-de-drone/): Trafego pago para escolas de pilotagem de drone: anuncios que atraem quem busca credencial ANAC e carreira, nao hobbista atras de drone bonito para postar.
+- [Lojas de Materiais de Construção](https://beatusmidias.com.br/lojas-de-materiais-de-construcao/): Anúncios segmentados por bairro e por produto (cimento, tinta, telha, areia) para loja de material de construção, com pedido de orçamento direto pelo WhatsApp.
+- [Transportadoras e Fretes](https://beatusmidias.com.br/transportadoras-e-fretes/): Trafego pago para transportadora e frete no Rio de Janeiro: campanha segmentada por rota e regiao, separando pessoa fisica de empresa com contrato recorrente.
+- [Locação de Máquinas Pesadas](https://beatusmidias.com.br/locacao-de-maquinas-pesadas/): Tráfego pago para locação de máquinas pesadas no Rio de Janeiro: campanha segmentada por tipo de máquina e por região, com foco em orçamento via WhatsApp.
+- [Segurança Eletrônica e CFTV](https://beatusmidias.com.br/seguranca-eletronica-cftv/): Trafego pago para segurança eletrônica e CFTV no Rio de Janeiro: Google Ads para quem já decidiu instalar câmera, alarme monitorado ou cerca elétrica.
+- [Adestramento de Cães](https://beatusmidias.com.br/adestramento-de-caes/): Tráfego pago para adestramento de cães no Rio de Janeiro: campanha por incidente (mordida, latido, filhote novo), não por interesse genérico em animais de estimação.
+- [Consultoria Tributária](https://beatusmidias.com.br/consultoria-tributaria/): Tráfego pago para consultoria tributária no Rio de Janeiro: campanha que nomeia a dor fiscal do setor do lead e gera agenda de diagnóstico qualificado.
+- [Tinturaria e Lavagem a Seco](https://beatusmidias.com.br/tinturaria-e-lavagem-a-seco/): Trafego pago para tinturaria e lavagem a seco: campanha de Google Pesquisa e Google Local em raio curto, focada em quem decide comprar rapido, em poucos dias.
 
 ## Cidades atendidas no Rio de Janeiro
 Página própria por cidade, cada uma com tese econômica local, não template repetido trocando o nome.
