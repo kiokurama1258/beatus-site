@@ -169,6 +169,14 @@ Cada segmento tem página própria com estratégia e regra de publicidade espec�
 - [Lojas de Pneus](https://beatusmidias.com.br/lojas-de-pneus/): Tráfego pago para loja de pneus com foco em busca de fundo de funil: medida, aro, furo e alinhamento perto do cliente, com o Perfil da Empresa otimizado no Google.
 - [Lojas de Artigos de Pesca](https://beatusmidias.com.br/lojas-de-artigos-de-pesca/): Tráfego pago para loja de artigos de pesca: campanha separada para consumível de reposição e equipamento de ticket alto, segmentada por bairro e ponto de pesca.
 - [Lojas de Cama, Mesa e Banho](https://beatusmidias.com.br/lojas-de-cama-mesa-e-banho/): Tráfego pago para loja de cama, mesa e banho no Rio de Janeiro: campanha amarrada ao calendário do lar e criativo que mostra tecido, não catálogo de fornecedor.
+- [Lojas de Bebidas e Adegas](https://beatusmidias.com.br/lojas-de-bebidas-e-adegas/): Trafego pago para lojas de bebidas e adegas no Rio de Janeiro: geossegmentacao por raio de entrega, sinal de estoque e velocidade, dentro das regras do CONAR.
+- [Confeitarias e Docerias](https://beatusmidias.com.br/confeitarias-e-docerias/): Anuncio de confeitaria e doceria que vende o bolo certo, com foto, preco de referencia e prazo minimo de encomenda, para quem ja tem a data marcada na cabeca.
+- [Relojoarias](https://beatusmidias.com.br/relojoarias/): Tráfego pago para relojoarias no Rio de Janeiro: campanha separada para conserto e para venda de relógio, com garantia e nota fiscal como argumento central.
+- [Lojas de Artigos para Bebê](https://beatusmidias.com.br/lojas-de-artigos-para-bebe/): A Beatus Mídias estrutura tráfego pago para lojas de artigos para bebê no Rio de Janeiro, segmentando por trimestre de gestação para gerar visita e recompra reais.
+- [Lojas de Informática e Games](https://beatusmidias.com.br/lojas-de-informatica-e-games/): Tráfego pago para lojas de informática e games no Rio de Janeiro: campanha local para conserto urgente e conteúdo de prova social para montagem de PC gamer.
+- [Lojas de Produtos Naturais e Suplementos](https://beatusmidias.com.br/lojas-de-produtos-naturais-e-suplementos/): Trafego pago para loja de produtos naturais e suplementos com foco em catalogo de produto, busca por marca especifica e remarketing para quem ja comprou antes.
+- [Escolas de Surf e Esportes Aquáticos](https://beatusmidias.com.br/escolas-de-surf-e-esportes-aquaticos/): A Beatus gerencia anuncios de Google Ads e Meta Ads para escolas de surf e esportes aquaticos, com raio restrito a praia certa e video real da aula com o instrutor.
+- [Lojas de Artigos de Escritório](https://beatusmidias.com.br/lojas-de-artigos-de-escritorio/): Trafego pago para lojas de artigos de escritorio no Rio de Janeiro: campanha local para quem busca papelaria e oferta separada para pedido corporativo recorrente.
 
 ## Cidades atendidas no Rio de Janeiro
 Página própria por cidade, cada uma com tese econômica local, não template repetido trocando o nome.
