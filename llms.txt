@@ -258,6 +258,14 @@ Cada segmento tem página própria com estratégia e regra de publicidade espec�
 - [Clínicas de Geriatria](https://beatusmidias.com.br/clinicas-de-geriatria/): Anúncio que fala com quem decide a consulta do idoso: o filho ou o cuidador da família. Tráfego pago para geriatra e clínica de geriatria no Rio de Janeiro.
 - [Clínicas de Angiologia e Cirurgia Vascular](https://beatusmidias.com.br/clinicas-de-angiologia-e-cirurgia-vascular/): Tráfego pago para clínicas de angiologia e cirurgia vascular no Rio de Janeiro, com anúncio dentro da Resolução CFM 2.336/2023 sobre publicidade médica.
 - [Clínicas de Oncologia](https://beatusmidias.com.br/clinicas-de-oncologia/): Tráfego pago para clínica de oncologia no Rio de Janeiro: campanha pensada para o momento do diagnóstico, com credencial médica e filtro de convênio antes do clique.
+- [Clínicas de Hematologia](https://beatusmidias.com.br/clinicas-de-hematologia/): Tráfego pago para clínicas de hematologia no Rio de Janeiro: Google Ads segmentado por bairro, convênio e busca por sintoma, sem sensacionalismo médico.
+- [Clínicas de Infectologia](https://beatusmidias.com.br/clinicas-de-infectologia/): Tráfego pago para clínicas de infectologia no Rio de Janeiro: campanha que responde prazo e sigilo, dentro da Resolução CFM, sem depoimento nem promessa de cura.
+- [Clínicas de Nefrologia](https://beatusmidias.com.br/clinicas-de-nefrologia/): Tráfego pago para clínicas de nefrologia no Rio de Janeiro, focado no paciente particular e no momento de exame alterado, dentro das regras de publicidade do CFM.
+- [Clínicas de Reumatologia](https://beatusmidias.com.br/clinicas-de-reumatologia/): Tráfego pago para reumatologia no Rio de Janeiro: campanha que nomeia o sintoma certo, segue a norma do CFM e atrai paciente que precisa de especialista.
+- [Clínicas de Pneumologia](https://beatusmidias.com.br/clinicas-de-pneumologia/): Anúncios que separam quem busca por sintoma agudo de quem já tem asma, DPOC ou apneia diagnosticada, para marcar consulta e exame na sua clínica no Rio de Janeiro.
+- [Clínicas de Medicina do Esporte](https://beatusmidias.com.br/clinicas-de-medicina-do-esporte/): Tráfego pago para clínica de medicina do esporte no Rio de Janeiro, focado em dor aguda, laudo esportivo e convênio, não na palavra genérica da especialidade médica.
+- [Clínicas de Medicina do Trabalho](https://beatusmidias.com.br/clinicas-de-medicina-do-trabalho/): Tráfego pago para clínica de medicina do trabalho: Google Ads por bairro e tipo de exame, oferta recorrente de PCMSO e PGR, foco em RH e DP que decidem.
+- [Clínicas de Proctologia](https://beatusmidias.com.br/clinicas-de-proctologia/): Tráfego pago para clínicas de proctologia no Rio de Janeiro: anúncios discretos, com CRM e RQE visíveis, sem remarketing invasivo e sem promessa de cura.
 
 ## Cidades atendidas no Rio de Janeiro
 Página própria por cidade, cada uma com tese econômica local, não template repetido trocando o nome.
