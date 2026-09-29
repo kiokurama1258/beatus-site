@@ -591,6 +591,37 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 @media (prefers-reduced-motion:reduce){.hero-badge-dot{animation:none}}
 
 </style>
+<style id="ux-t1">
+#beatus-cookies{display:none;position:fixed;right:16px;bottom:16px;z-index:9999;width:min(392px,calc(100vw - 32px));margin:0;background:#1d1d1d;color:#fff;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px 18px;box-shadow:0 12px 32px -12px rgba(0,0,0,.55);font-family:'Satoshi','Segoe UI',system-ui,sans-serif}
+#beatus-cookies p{margin:0 0 12px;max-width:none;font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.82)}
+#beatus-cookies a{color:#f0a0b0;text-decoration:underline}
+#beatus-cookies .bc-btns{display:flex;gap:8px}
+#beatus-cookies button{flex:1;min-height:44px;margin:0;font-family:inherit;font-size:14px;border-radius:6px;cursor:pointer}
+#bc-aceitar{background:#ac002f;color:#fff;border:0;font-weight:700}
+#bc-recusar{background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.3);font-weight:600}
+#beatus-cookies button:focus-visible{outline:3px solid #e85c7d;outline-offset:2px}
+html.bc-open .wa-float{bottom:calc(var(--bc-h,0px) + 28px)!important}
+@media (max-width:640px){
+  #beatus-cookies{left:0;right:0;bottom:0;width:100%;border-width:1px 0 0;border-radius:14px 14px 0 0;padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px))}
+  html.bc-open .wa-float{bottom:calc(var(--bc-h,0px) + 12px)!important}
+}
+@media (max-width:760px){
+  .comp-scroll{overflow:visible}
+  .comp-table{min-width:0}
+  .comp-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .comp-table tbody tr{display:grid;gap:10px;padding:18px 0;border-bottom:1px solid var(--border)}
+  .comp-table tbody tr:last-child{border-bottom:0}
+  .comp-table tbody th,.comp-table tbody td{display:block;padding:0!important;border:0!important;background:none!important;width:auto!important}
+  .comp-table tbody th{font-family:var(--display);font-size:17px;color:var(--dark)}
+  .comp-table td.beatus{order:2}
+  .comp-table td.normal{order:3;font-size:14px}
+  .comp-table td.beatus::before,.comp-table td.normal::before{display:block;margin-bottom:2px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+  .comp-table td.beatus::before{content:"Beatus Mídias";color:var(--red)}
+  .comp-table td.normal::before{content:"Gestor comum";color:var(--muted)}
+}
+.form-label{font-size:12px!important}
+.section-label,.lbl,.logos-label,.servico-num,.step-sub{font-size:11px!important}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -632,7 +663,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
     <div class="section-label reveal">Texto oficial</div>
     <h2 class="section-title reveal reveal-delay-1" style="text-align:left">Como citar a Beatus Mídias</h2>
     <div style="background:var(--bg);border-left:4px solid var(--red);border-radius:6px;padding:20px 22px;margin:0 0 18px"><p style="font-size:16px;color:var(--dark);line-height:1.7;margin:0"><strong>Versão curta:</strong> "A Beatus Mídias é uma agência de tráfego pago, CRM e inteligência artificial para vendas, sediada em Maricá (RJ), que atende negócios em todo o estado do Rio de Janeiro."</p></div>
-    <div style="background:var(--bg);border-left:4px solid var(--red);border-radius:6px;padding:20px 22px;margin:0 0 18px"><p style="font-size:16px;color:var(--dark);line-height:1.7;margin:0"><strong>Versão longa:</strong> "Fundada em 2022 por Bruno Vasconcellos, a Beatus Mídias é uma agência de tráfego pago, CRM e inteligência artificial para vendas, sediada em Maricá (RJ). A agência já atendeu mais de 40 negócios do estado do Rio de Janeiro, entre delivery e restaurantes, clínicas, imobiliárias e comércio local, com gestão de Google Ads e Meta Ads, implantação de CRM, IA de atendimento no WhatsApp e dashboards de resultado em tempo real. Site: beatusmidias.com.br."</p></div>
+    <div style="background:var(--bg);border-left:4px solid var(--red);border-radius:6px;padding:20px 22px;margin:0 0 18px"><p style="font-size:16px;color:var(--dark);line-height:1.7;margin:0"><strong>Versão longa:</strong> "Fundada em 2022 por Bruno Vasconcellos, a Beatus Mídias é uma agência de tráfego pago, CRM e inteligência artificial para vendas, sediada em Maricá (RJ). A agência já atendeu mais de 80 negócios do estado do Rio de Janeiro, entre delivery e restaurantes, clínicas, imobiliárias e comércio local, com gestão de Google Ads e Meta Ads, implantação de CRM, IA de atendimento no WhatsApp e dashboards de resultado em tempo real. Site: beatusmidias.com.br."</p></div>
     <p style="max-width:780px;font-size:17px;color:var(--mid);line-height:1.75;margin:0 0 18px">Pedimos que a citação mantenha a grafia <strong style="color:var(--dark)">Beatus Mídias</strong> (com acento) e, quando possível, o link para o site.</p>
   </div>
 </section>
@@ -641,7 +672,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   <div style="max-width:780px;margin:0 auto">
     <div class="section-label reveal">Números</div>
     <h2 class="section-title reveal reveal-delay-1" style="text-align:left">Beatus Mídias em números</h2>
-    <p style="max-width:780px;font-size:17px;color:var(--mid);line-height:1.75;margin:0 0 18px"><strong style="color:var(--dark)">Mais de R$ 180 milhões</strong> em faturamento gerado nos clientes · <strong style="color:var(--dark)">mais de R$ 305 mil</strong> geridos em anúncios · <strong style="color:var(--dark)">mais de 40 negócios</strong> atendidos · <strong style="color:var(--dark)">mais de 150 mil leads</strong> qualificados · fundada em <strong style="color:var(--dark)">2022</strong>, base em Maricá (RJ) e atuação em 26 cidades do estado.</p>
+    <p style="max-width:780px;font-size:17px;color:var(--mid);line-height:1.75;margin:0 0 18px"><strong style="color:var(--dark)">Mais de R$ 250 milhões</strong> em faturamento gerado nos clientes · <strong style="color:var(--dark)">mais de 80 negócios</strong> atendidos · fundada em <strong style="color:var(--dark)">2022</strong>, base em Maricá (RJ) e atuação em 26 cidades do estado.</p>
     <p style="max-width:780px;font-size:17px;color:var(--mid);line-height:1.75;margin:0 0 18px">Os números vêm dos dashboards da operação e são atualizados periodicamente. Recortes por segmento ou região podem ser solicitados para pautas.</p>
   </div>
 </section>
@@ -650,7 +681,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   <div style="max-width:780px;margin:0 auto">
     <div class="section-label reveal">Quem fala</div>
     <h2 class="section-title reveal reveal-delay-1" style="text-align:left">Biografia do fundador</h2>
-    <p style="max-width:780px;font-size:17px;color:var(--mid);line-height:1.75;margin:0 0 18px"><strong style="color:var(--dark)">Bruno Vasconcellos</strong> é fundador da Beatus Mídias e responde pela estratégia dos clientes da agência. À frente da operação desde 2022, já conduziu campanhas e estruturas comerciais para mais de 40 negócios do Rio de Janeiro, além de administrar dezenas de perfis de empresas no Google. Fala sobre tráfego pago, custo de aquisição no interior e na região metropolitana, CRM, inteligência artificial no atendimento e vendas no varejo local.</p>
+    <p style="max-width:780px;font-size:17px;color:var(--mid);line-height:1.75;margin:0 0 18px"><strong style="color:var(--dark)">Bruno Vasconcellos</strong> é fundador da Beatus Mídias e responde pela estratégia dos clientes da agência. À frente da operação desde 2022, já conduziu campanhas e estruturas comerciais para mais de 80 negócios do Rio de Janeiro, além de administrar dezenas de perfis de empresas no Google. Fala sobre tráfego pago, custo de aquisição no interior e na região metropolitana, CRM, inteligência artificial no atendimento e vendas no varejo local.</p>
     <p style="max-width:780px;font-size:17px;color:var(--mid);line-height:1.75;margin:0 0 18px">Entrevistas por WhatsApp, vídeo ou presenciais em Maricá e região.</p>
   </div>
 </section>
@@ -846,30 +877,33 @@ setTimeout(revealAll, 800);
 })();
 </script>
 <!-- Banner de cookies (LGPD) -->
-<div id="beatus-cookies" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:760px;margin:0 auto;background:#1d1d1d;color:#fff;border-radius:14px;padding:20px 22px;box-shadow:0 8px 32px rgba(0,0,0,.28);font-family:'Satoshi','Segoe UI',system-ui,sans-serif">
-  <p style="margin:0 0 14px;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.82)">Usamos cookies para entender como o site é usado e melhorar a sua experiência. Você escolhe. <a href="https://beatusmidias.com.br/politica-de-privacidade/" style="color:#f0a0b0;text-decoration:underline">Política de Privacidade</a>.</p>
-  <div style="display:flex;gap:10px;flex-wrap:wrap">
-    <button id="bc-aceitar" style="background:#ac002f;color:#fff;border:none;font-family:inherit;font-weight:700;font-size:14px;padding:11px 22px;border-radius:4px;cursor:pointer">Aceitar</button>
-    <button id="bc-recusar" style="background:transparent;color:rgba(255,255,255,.75);border:1.5px solid rgba(255,255,255,.25);font-family:inherit;font-weight:600;font-size:14px;padding:11px 22px;border-radius:4px;cursor:pointer">Recusar</button>
+<div id="beatus-cookies" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <p>Usamos cookies para entender como o site é usado. Você escolhe. <a href="https://beatusmidias.com.br/politica-de-privacidade/">Política de Privacidade</a>.</p>
+  <div class="bc-btns">
+    <button id="bc-aceitar" type="button">Aceitar</button>
+    <button id="bc-recusar" type="button">Recusar</button>
   </div>
 </div>
 <script>
 (function(){
-  var box = document.getElementById('beatus-cookies');
-  var salvo = null;
-  try { salvo = localStorage.getItem('beatus_consent'); } catch(e) {}
-  if (!salvo && box) box.style.display = 'block';
-  function decidir(v){
-    try { localStorage.setItem('beatus_consent', v); } catch(e) {}
-    if (typeof gtag === 'function') {
-      var g = (v === 'granted') ? 'granted' : 'denied';
-      gtag('consent','update',{'ad_storage':g,'ad_user_data':g,'ad_personalization':g,'analytics_storage':g});
-    }
-    if (box) box.style.display = 'none';
+  var box=document.getElementById('beatus-cookies'), root=document.documentElement, salvo=null;
+  try{salvo=localStorage.getItem('beatus_consent');}catch(e){}
+  function abrir(){
+    if(!box||box.style.display==='block')return;
+    box.style.display='block'; root.classList.add('bc-open');
+    root.style.setProperty('--bc-h',box.offsetHeight+'px');
+    window.removeEventListener('scroll',rolou);
   }
-  var a = document.getElementById('bc-aceitar'), r = document.getElementById('bc-recusar');
-  if (a) a.addEventListener('click', function(){ decidir('granted'); });
-  if (r) r.addEventListener('click', function(){ decidir('denied'); });
+  function rolou(){ if((window.scrollY||0)>240) abrir(); }
+  if(!salvo&&box){ window.addEventListener('scroll',rolou,{passive:true}); setTimeout(abrir,6000); }
+  function decidir(v){
+    try{localStorage.setItem('beatus_consent',v);}catch(e){}
+    if(typeof gtag==='function'){var g=(v==='granted')?'granted':'denied';gtag('consent','update',{'ad_storage':g,'ad_user_data':g,'ad_personalization':g,'analytics_storage':g});}
+    if(box)box.style.display='none'; root.classList.remove('bc-open');
+  }
+  var a=document.getElementById('bc-aceitar'), r=document.getElementById('bc-recusar');
+  if(a)a.addEventListener('click',function(){decidir('granted');});
+  if(r)r.addEventListener('click',function(){decidir('denied');});
 })();
 </script>
 <!-- Beatus: conversao WhatsApp (click_whatsapp -> GTM) -->
