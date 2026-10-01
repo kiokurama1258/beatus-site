@@ -164,105 +164,107 @@
 </script>
 
 <style>
-    :root{
-      --bg:#f4f4f4;--white:#fff;--dark:#1d1d1d;--mid:#4a4a4a;--muted:#5f5f5f;
-      --border:#e2e2e2;--red:#ac002f;--red-dark:#6E001B;--red-light:#fce8ed;--purple-lt:#e3e2ff;
-      --display:'Clash Display',Georgia,serif;--body:'Satoshi','Segoe UI',system-ui,sans-serif;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:var(--body);color:var(--dark);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
-    a{color:var(--red);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:760px;margin:0 auto;padding:0 22px}
-    header.site{background:var(--white);border-bottom:1px solid var(--border)}
-    header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .brand{font-family:var(--display);font-weight:600;font-size:1.25rem;color:var(--dark)}
-    .brand span{color:var(--red)}
-    header.site nav a{color:var(--mid);font-weight:500;margin-left:20px}
-    .crumbs{font-size:.82rem;color:var(--muted);padding:20px 0 0}
-    .crumbs a{color:var(--muted)}
-    article{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:44px 46px;margin:16px 0 40px}
-    .kicker{color:var(--red);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
-    h1{font-family:var(--display);font-weight:600;font-size:2.1rem;line-height:1.15;margin:.35rem 0 .2rem}
-    .meta{color:var(--muted);font-size:.85rem;margin-bottom:1.4rem}
-    .lead{background:var(--red-light);border-left:4px solid var(--red);border-radius:10px;padding:16px 20px;margin:1.4rem 0;font-size:1.05rem}
-    .lead strong{color:var(--red-dark)}
-    h2{font-family:var(--display);font-weight:600;font-size:1.45rem;margin:2.1rem 0 .7rem;line-height:1.2}
-    h3{font-weight:700;font-size:1.1rem;margin:1.4rem 0 .4rem}
-    p{margin:.7rem 0}
-    ul{margin:.6rem 0 .6rem 1.1rem}
-    li{margin:.3rem 0}
-    .tablewrap{overflow-x:auto;margin:1.2rem 0}
-    table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:520px}
-    th,td{border:1px solid var(--border);padding:11px 13px;text-align:left;vertical-align:top}
-    th{background:var(--dark);color:#fff;font-weight:600}
-    tbody tr:nth-child(even){background:#fafafa}
-    td:first-child{font-weight:600}
-    .note{font-size:.85rem;color:var(--muted);margin-top:.4rem}
-    .verdict{background:#1d1d1d;color:#fff;border-radius:14px;padding:26px 28px;margin:2rem 0}
-    .verdict h2{color:#fff;margin-top:0}
-    .verdict a{color:#f0a0b0}
-    .cta{background:var(--red);color:#fff;border-radius:14px;padding:26px 28px;margin:2.2rem 0 .5rem;text-align:center}
-    .cta h2{color:#fff;margin:0 0 .3rem}
-    .cta p{color:#ffdbe3;margin:.2rem 0 1rem}
-    .btn{display:inline-block;background:#fff;color:var(--red);font-weight:700;padding:13px 26px;border-radius:999px}
-    .btn:hover{text-decoration:none;opacity:.92}
-    .related{background:var(--purple-lt);border-radius:12px;padding:16px 20px;margin:1.6rem 0;font-size:.95rem}
-    .related strong{color:var(--dark)}
-    .faq{margin-top:1rem}
-    .faq details{border:1px solid var(--border);border-radius:10px;padding:2px 16px;margin:10px 0;background:#fff}
-    .faq summary{font-weight:700;cursor:pointer;padding:12px 0;list-style:none}
-    .faq summary::-webkit-details-marker{display:none}.faq summary::before{content:"";position:absolute;top:50%;right:2px;width:15px;height:2px;margin-top:-1px;background:var(--red);border-radius:1px;transform:none}
-.faq summary::after{content:"";position:absolute;top:50%;right:8.5px;width:2px;height:15px;margin-top:-7.5px;background:var(--red);border-radius:1px;transform:none;transition:transform .32s cubic-bezier(0.16,1,0.3,1)}.faq details[open] summary::after{content:"";transform:rotate(90deg)}
-    .faq details p{padding-bottom:12px;color:var(--mid)}
-    footer.site{border-top:1px solid var(--border);background:var(--white);color:var(--muted);font-size:.85rem}
-    footer.site .wrap{padding:26px 22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-    footer.site a{color:var(--mid)}
-    @media(max-width:620px){article{padding:30px 22px;border-radius:12px}h1{font-size:1.65rem}}
-    @media(max-width:620px){table{min-width:0}thead{display:none}tbody tr{display:block;border:1px solid var(--border);border-radius:10px;margin-bottom:10px;padding:8px 14px;background:#faf7f7}td{display:block;border:none;padding:5px 0}td:first-child{white-space:normal;padding-bottom:2px}}
-  
-/* beatus-focus */
-a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #e85c7d;outline-offset:3px;border-radius:3px}
-::selection{background:#ac002f;color:#fff}
-
-/* beatus-motion */
-@keyframes bts-resolver{from{opacity:0;filter:blur(16px)}to{opacity:1;filter:blur(0)}}
-@keyframes bts-surgir{from{opacity:0}to{opacity:1}}
-/* momento focal: a promessa em vinho sai do escuro e entra em foco. Roda uma vez. */
-.hero h1.visible em{animation:bts-resolver .9s .1s cubic-bezier(0.16,1,0.3,1) both}
-/* entradas de secao mais curtas, para nao competir com o momento focal */
-.reveal{transform:translateY(14px);transition:opacity .5s cubic-bezier(0.16,1,0.3,1),transform .5s cubic-bezier(0.16,1,0.3,1)}
-/* resposta ao toque no caminho de conversao */
-.btn-primary,.btn-secondary,.wa-float{transition:background .18s ease,color .18s ease,border-color .18s ease,transform .13s cubic-bezier(0.16,1,0.3,1),box-shadow .18s ease}
-.btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(172,0,47,0.34)}
-.btn-primary:active,.btn-secondary:active,.wa-float:active{transform:translateY(0) scale(0.985);transition-duration:.08s}
-.btn-primary:active{box-shadow:0 2px 7px rgba(172,0,47,0.3)}
-.wa-float:active{box-shadow:0 3px 12px rgba(37,211,102,0.45)}
-.opt:active,.servico-item:active{transform:scale(0.99);transition-duration:.08s}
-/* FAQ: o + vira - com movimento, e o painel deixa de dar salto */
-@supports (interpolate-size:allow-keywords){
-  :root{interpolate-size:allow-keywords}
-  details::details-content{block-size:0;overflow:hidden;transition:block-size .34s cubic-bezier(0.16,1,0.3,1),content-visibility .34s allow-discrete;transition-behavior:allow-discrete}
-  details[open]::details-content{block-size:auto}
+:root{
+  --papel:#F6F1F2;--papel-2:#EFE6E8;--tinta:#1B1014;--vinho:#AC002F;--vinho-fundo:#5C0A22;--linha:#E2D3D7;--cinza:#6B5A60;
+  --disp:'Clash Display',Georgia,serif;--corpo:'Satoshi','Helvetica Neue',Arial,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  /* nomes antigos usados em estilos inline dos posts */
+  --bg:var(--papel);--white:#fff;--dark:var(--tinta);--mid:#4a3d42;--muted:var(--cinza);--border:var(--linha);
+  --red:var(--vinho);--red-dark:var(--vinho-fundo);--red-light:#FBF3F5;--purple-lt:var(--papel-2);--display:var(--disp);--body:var(--corpo);
 }
-@media (prefers-reduced-motion:reduce){
-  .hero h1.visible em{animation:bts-surgir .45s ease both !important;filter:none !important}
-  .faq summary::after,details > summary::after{transition-duration:.12s !important}
-  details::details-content{transition:none !important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--corpo);color:var(--tinta);background:var(--papel);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto}
+a{color:var(--vinho);text-decoration:underline;text-underline-offset:2px}
+:focus-visible{outline:3px solid var(--vinho);outline-offset:3px;border-radius:4px}
+::selection{background:var(--vinho);color:#fff}
+.wrap{max-width:820px;margin:0 auto;padding:0 clamp(20px,4vw,32px)}
+.nav .wrap,footer .wrap{max-width:1200px;padding:0 clamp(20px,4vw,40px)}
+
+/* NAV (igual à home) */
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,241,242,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.nav img{height:38px;width:auto;display:block}
+.nav nav{display:flex;gap:clamp(14px,2.4vw,30px)}
+.nav nav a{font-size:15px;font-weight:500;text-decoration:none;color:var(--cinza)}
+.nav nav a:hover{color:var(--tinta)}
+.btn-vinho{display:inline-flex;align-items:center;font-weight:700;font-size:14px;text-decoration:none;border-radius:999px;padding:11px 20px;background:var(--vinho);color:#fff;transition:background .2s,transform .15s}
+.btn-vinho:hover{background:var(--vinho-fundo);transform:translateY(-1px)}
+
+/* ARTIGO */
+.crumbs{font-family:var(--mono);font-size:12.5px;color:var(--cinza);padding:28px 0 0}
+.crumbs a{color:var(--cinza);text-decoration:none}
+.crumbs a:hover{color:var(--vinho)}
+article{background:#fff;border:1px solid var(--linha);border-radius:20px;padding:clamp(28px,5vw,52px);margin:16px 0 56px;box-shadow:0 30px 60px -40px rgba(27,16,20,.25)}
+.kicker{font-family:var(--mono);color:var(--vinho);font-weight:500;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(32px,4.6vw,48px);line-height:1.04;letter-spacing:-.03em;margin:10px 0 16px;text-wrap:balance}
+.meta{color:var(--cinza);font-size:14px;margin-bottom:8px}
+.meta a{color:var(--tinta)}
+.lead{background:var(--papel);border-left:3px solid var(--vinho);border-radius:12px;padding:18px 22px;margin:26px 0;font-size:18px;line-height:1.6}
+.lead strong:first-child{display:block;font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--vinho);margin-bottom:4px}
+.lead strong{color:var(--tinta)}
+h2{font-family:var(--disp);font-weight:700;font-size:clamp(24px,2.8vw,30px);line-height:1.12;letter-spacing:-.02em;margin:44px 0 12px;text-wrap:balance}
+h3{font-family:var(--disp);font-weight:600;font-size:20px;letter-spacing:-.01em;margin:26px 0 8px}
+p{margin:12px 0;color:#2b2226}
+ul,ol{margin:12px 0 12px 22px}
+li{margin:6px 0;color:#2b2226}
+.tablewrap{overflow-x:auto;margin:22px 0}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:520px;border:1px solid var(--linha);border-radius:12px;overflow:hidden}
+th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--papel-2)}
+th{background:var(--tinta);color:#fff;font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+tbody tr:nth-child(even){background:#FCF9FA}
+td:first-child{font-weight:700}
+.note{font-size:13.5px;color:var(--cinza);margin-top:6px}
+.verdict{background:var(--tinta);color:var(--papel);border-radius:16px;padding:28px 30px;margin:36px 0}
+.verdict h2{color:#fff;margin-top:0}
+.verdict p{color:rgba(246,241,242,.82)}
+.verdict a{color:#F07C97}
+.cta{background:var(--vinho-fundo);color:#fff;border-radius:16px;padding:32px 30px;margin:40px 0 8px;text-align:center}
+.cta h2{color:#fff;margin:0 0 8px}
+.cta p{color:rgba(255,255,255,.8);margin:6px auto 18px;max-width:560px}
+.btn{display:inline-block;background:#fff;color:var(--vinho);font-weight:700;padding:14px 28px;border-radius:999px;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.nav .btn{background:var(--vinho);color:#fff;padding:11px 20px;font-size:14px}
+.nav .btn:hover{background:var(--vinho-fundo)}
+.related{background:var(--papel);border:1px solid var(--linha);border-radius:12px;padding:18px 22px;margin:28px 0;font-size:16px}
+.related strong{color:var(--tinta)}
+.faq{margin-top:8px;border-top:1px solid var(--linha)}
+.faq details{border-bottom:1px solid var(--linha)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:18px 0;font-family:var(--disp);font-weight:600;font-size:18px;letter-spacing:-.01em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--vinho);font-weight:600;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--cinza);padding:0 0 18px;margin-top:0}
+.assinatura{display:flex;gap:16px;align-items:flex-start;margin:40px 0 0;padding:24px 0 0;border-top:1px solid var(--linha)}
+.assinatura-foto{flex:0 0 auto;width:56px;height:56px;border-radius:99px;object-fit:cover}
+.assinatura-nome{font-family:var(--disp);font-weight:700;font-size:17px;margin:0 0 4px}
+.assinatura-cred{font-size:14px;line-height:1.6;color:var(--cinza);margin:0 0 8px;max-width:62ch}
+.assinatura a{font-size:14px;font-weight:700}
+
+/* RODAPÉ (igual à home) */
+footer{background:var(--tinta);color:rgba(246,241,242,.66);padding:56px 0 40px;font-size:14px}
+footer .wrap{display:grid;gap:28px}
+footer .l1{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{color:rgba(246,241,242,.8);text-decoration:none}
+footer a:hover{color:#fff}
+footer .footer-copy{line-height:1.9}
+footer .footer-copy a{text-decoration:underline;text-underline-offset:2px}
+footer .legal{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;font-size:12.5px;color:rgba(246,241,242,.45)}
+footer .legal .footer-copy{line-height:1.7}
+footer img{display:block}
+
+@media (max-width:960px){.nav nav{display:none}}
+@media (max-width:620px){
+  body{font-size:16px}
+  .nav .wrap{height:64px}.nav img{height:32px}
+  article{padding:24px 18px;border-radius:16px}
+  .lead{font-size:16px;padding:14px 16px;margin:20px 0}
+  .verdict,.cta{padding:24px 20px}
+  table{min-width:0}thead{display:none}
+  tbody tr{display:block;border:1px solid var(--linha);border-radius:10px;margin-bottom:10px;padding:8px 14px;background:#FCF9FA}
+  td{display:block;border:none;padding:5px 0}
 }
-
-/* beatus-polish */
-.form-submit[disabled],.form-submit[aria-busy="true"]{opacity:.62;cursor:progress;pointer-events:none}
-.hero-badge-dot{animation:pulse 2s ease-in-out 6}
-@media (prefers-reduced-motion:reduce){.hero-badge-dot{animation:none}}
-
-/* beatus-autoria: assinatura visivel, para o dado estruturado refletir o que se ve */
-.assinatura{display:flex;gap:16px;align-items:flex-start;margin:38px 0 0;padding:22px 0 0;border-top:1px solid var(--border)}
-.assinatura-foto{flex:0 0 auto;width:56px;height:56px;border-radius:99px;object-fit:cover;background:#f0f0f0}
-.assinatura-nome{font-family:var(--display);font-weight:700;font-size:16px;margin:0 0 4px}
-.assinatura-cred{font-size:13.5px;line-height:1.6;color:#5c5c5c;margin:0 0 8px;max-width:62ch}
-.assinatura a{font-size:13.5px;font-weight:600;color:#ac002f;text-decoration:underline;text-underline-offset:3px}
-@media (max-width:560px){.assinatura{gap:13px}.assinatura-foto{width:48px;height:48px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 <!-- Consent Mode v2 (LGPD): nega por padrao, libera so apos aceite -->
 <script>
@@ -312,17 +314,27 @@ html.bc-open .wa-float{bottom:calc(var(--bc-h,0px) + 28px)!important}
 .form-label{font-size:12px!important}
 .section-label,.lbl,.logos-label,.servico-num,.step-sub{font-size:11px!important}
 </style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-586Z8BLT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  <header class="site">
-    <div class="wrap">
-      <a class="brand" href="https://beatusmidias.com.br/">Beatus <span>Mídias</span></a>
-      <nav><a href="https://beatusmidias.com.br/">Início</a></nav>
-    </div>
-  </header>
+  <header class="nav" id="nav">
+  <div class="wrap">
+    <a href="/" aria-label="Beatus Mídias, página inicial"><img src="/assets/logo-tinta.png" alt="Beatus Mídias" width="600" height="309"></a>
+    <nav aria-label="Principal">
+      <a href="/sobre/">Sobre</a>
+      <a href="/#servicos">Serviços</a>
+      <a href="/#metodo">Método</a>
+      <a href="/#resultados">Resultados</a>
+      <a href="/blog/">Blog</a>
+      <a href="/imprensa/">Imprensa</a>
+      <a href="/#contato">Contato</a>
+    </nav>
+    <a href="/#contato" class="btn btn-vinho">Diagnóstico grátis</a>
+  </div>
+</header>
 
   <div class="wrap">
     <div class="crumbs"><a href="https://beatusmidias.com.br/">Início</a> › <a href="https://beatusmidias.com.br/blog/">Blog</a> › Blog / Marketing imobiliário</div>
@@ -367,12 +379,24 @@ html.bc-open .wa-float{bottom:calc(var(--bc-h,0px) + 28px)!important}
 </article>
   </div>
 
-  <footer class="site">
-    <div class="wrap">
-      <span>© 2026 Beatus Mídias · Agência de tráfego pago e IA · Maricá, RJ</span>
-      <span><a href="https://beatusmidias.com.br/">beatusmidias.com.br</a> · Bruno Lucas Marketing LTDA · CNPJ 48.414.383/0001-70 · <a href="https://beatusmidias.com.br/politica-de-privacidade/">Política de Privacidade</a> · <a href="https://beatusmidias.com.br/termos-de-uso/">Termos de Uso</a></span>
+  <footer>
+  <div class="wrap">
+    <div class="l1">
+      <a href="/"><img src="/assets/logo-branco.png" alt="Beatus Mídias" width="1200" height="619" style="height:40px;width:auto"></a>
+      <div class="footer-copy">© 2026 Beatus Mídias · Agência de tráfego pago e IA · Maricá, RJ</div>
     </div>
-  </footer>
+    <div class="footer-copy">Atendemos <a href="/marica/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Maricá</a>, <a href="/niteroi/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Niterói</a>, <a href="/sao-goncalo/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">São Gonçalo</a>, <a href="/rio-de-janeiro/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Rio de Janeiro</a>, <a href="/itaborai/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Itaboraí</a>, <a href="/rio-bonito/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Rio Bonito</a>, <a href="/tangua/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Tanguá</a>, <a href="/saquarema/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Saquarema</a>, <a href="/araruama/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Araruama</a>, <a href="/cabo-frio/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Cabo Frio</a>, <a href="/duque-de-caxias/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Duque de Caxias</a>, <a href="/sao-joao-de-meriti/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">São João de Meriti</a>, <a href="/macae/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Macaé</a>, <a href="/rio-das-ostras/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Rio das Ostras</a>, <a href="/campos-dos-goytacazes/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Campos dos Goytacazes</a>, <a href="/sao-pedro-da-aldeia/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">São Pedro da Aldeia</a>, <a href="/arraial-do-cabo/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Arraial do Cabo</a>, <a href="/buzios/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Búzios</a>, <a href="/iguaba-grande/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Iguaba Grande</a>, <a href="/belford-roxo/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Belford Roxo</a>, <a href="/nilopolis/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Nilópolis</a>, <a href="/mesquita/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Mesquita</a>, <a href="/mage/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Magé</a>, <a href="/petropolis/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Petrópolis</a>, <a href="/teresopolis/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Teresópolis</a> e <a href="/nova-friburgo/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Nova Friburgo</a> · WhatsApp (21) 97534-0783, <a href="/angra-dos-reis/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Angra dos Reis</a>, <a href="/barra-mansa/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Barra Mansa</a>, <a href="/itaperuna/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Itaperuna</a>, <a href="/nova-iguacu/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Nova Iguaçu</a>, <a href="/resende/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Resende</a>, <a href="/tres-rios/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Três Rios</a>, <a href="/volta-redonda/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Volta Redonda</a>, <a href="/cachoeiras-de-macacu/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Cachoeiras de Macacu</a>, <a href="/casimiro-de-abreu/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Casimiro de Abreu</a>, <a href="/guapimirim/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Guapimirim</a>, <a href="/itaguai/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Itaguaí</a>, <a href="/japeri/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Japeri</a>, <a href="/paracambi/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Paracambi</a>, <a href="/queimados/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Queimados</a>, <a href="/seropedica/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Seropédica</a>, <a href="/barra-do-pirai/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Barra do Piraí</a>, <a href="/bom-jesus-do-itabapoana/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Bom Jesus do Itabapoana</a>, <a href="/itatiaia/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Itatiaia</a>, <a href="/mangaratiba/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Mangaratiba</a>, <a href="/paraty/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Paraty</a>, <a href="/sao-joao-da-barra/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">São João da Barra</a>, <a href="/valenca/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Valença</a>, <a href="/vassouras/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Vassouras</a></div>
+    <div class="footer-copy">Serviços: <a href="/google-ads/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Google Ads</a> · <a href="/meta-ads/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Meta Ads</a> · <a href="/crm-e-automacao/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">CRM e Automação</a> · <a href="/ia-para-vendas/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">IA para Vendas</a> · <a href="/consultoria-de-vendas/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Consultoria de Vendas</a> · <a href="/google-meu-negocio/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Google Meu Negócio</a></div>
+    <div class="footer-copy">Especialidades: <a href="/energia-solar/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Energia solar</a> · <a href="/salao-de-beleza/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Salão de beleza</a> · <a href="/clinicas/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Clínicas e estética</a> · <a href="/imobiliarias/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Imobiliárias</a> · <a href="/advogados/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Advogados</a> · <a href="/bikes-e-scooters-eletricas/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Bikes e scooters elétricas</a></div>
+    <div class="legal"><div class="footer-copy">
+    Beatus Mídias · Bruno Lucas Marketing LTDA · CNPJ 48.414.383/0001-70 · Maricá, RJ ·
+    <a href="/politica-de-privacidade/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Política de Privacidade</a> ·
+    <a href="/termos-de-uso/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Termos de Uso</a> ·
+    <a href="https://www.instagram.com/beatusmidias/" rel="noopener" target="_blank" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Instagram</a> ·
+    <a href="https://www.facebook.com/profile.php?id=61581759567596" rel="noopener" target="_blank" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Facebook</a>
+  </div></div>
+  </div>
+</footer>
 <!-- Banner de cookies (LGPD) -->
 <div id="beatus-cookies" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
   <p>Usamos cookies para entender como o site é usado. Você escolhe. <a href="https://beatusmidias.com.br/politica-de-privacidade/">Política de Privacidade</a>.</p>
