@@ -678,6 +678,34 @@ fieldset.faixas legend{display:block;font-size:13.5px;font-weight:700;margin-bot
 .serv-grupo{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--vinho);padding:22px 0 6px;border-bottom:1px solid var(--linha)}
 .serv-grupo:first-child{padding-top:14px}
 @media (max-width:720px){.metodo.recibo .passo{border-right:none;border-bottom:1.5px dashed var(--linha)}.metodo.recibo .passo:last-child{border-bottom:none}.depois li{grid-template-columns:92px 1fr}}
+
+/* polish-2026-10b */
+#lead-form,#contato{scroll-margin-top:92px}
+.so-mob{display:none}
+@media (max-width:720px){.ctas .so-desk{display:none}.ctas .so-mob{display:inline-flex}}
+.prova-nota{font-size:12.5px;line-height:1.5;color:var(--cinza);max-width:560px;margin-top:10px}
+@media (prefers-reduced-motion:no-preference){.hero .prova-nota{opacity:0;animation:sobe .7s 1.6s cubic-bezier(.2,.8,.2,1) forwards}}
+input,select,.form-input{border-color:#9C8A90}
+.chips span{border-color:#9C8A90}
+.wa-icon{fill:#0b3d2e}
+.pular{position:absolute;left:-9999px;top:12px;z-index:200;background:var(--tinta);color:#fff;font-weight:700;padding:12px 16px;border-radius:10px;text-decoration:none}
+.pular:focus{left:16px}
+.pergunta{padding:clamp(56px,8vw,104px) 0}
+.pergunta p.q{font-size:clamp(30px,4.6vw,60px)}
+details.atendemos{margin:14px 0 6px;border:1px solid var(--linha);border-radius:12px;background:#fff;max-width:860px}
+details.atendemos summary{cursor:pointer;list-style:none;padding:14px 18px;font-weight:700;font-size:15px;display:flex;justify-content:space-between;gap:16px;min-height:44px;align-items:center}
+details.atendemos summary::-webkit-details-marker{display:none}
+details.atendemos summary::after{content:"+";font-family:var(--mono);color:var(--vinho);font-weight:600}
+details.atendemos[open] summary::after{content:"−"}
+details.atendemos > p{padding:0 18px 16px;margin:0;font-size:15px;line-height:1.9}
+@media (max-width:720px){
+  .rotulo,.ex-lista li .k,.prova span,.serv-grupo,.depois .k,.plataformas span,.tela-dica{font-size:13px}
+  .local-lp table thead{display:none}
+  .local-lp table,.local-lp table tbody,.local-lp table tr,.local-lp table td{display:block;width:100%}
+  .local-lp table tr{background:#fff;border:1px solid var(--linha);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+  .local-lp table td{border:none!important;padding:3px 0!important}
+  .local-lp table td:first-child{font-weight:700;color:var(--tinta)}
+}
 </style>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -698,11 +726,12 @@ function gtag(){dataLayer.push(arguments);}
 <link rel="apple-touch-icon" href="/assets/favicon-180.png">
 </head>
 <body>
+<a class="pular" href="#topo">Pular para o conteúdo</a>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-586Z8BLT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="/" aria-label="Beatus Mídias, página inicial"><img src="/assets/logo-tinta.png" alt="Beatus Mídias" width="600" height="309"></a>
+    <a href="/" aria-label="Beatus Mídias, página inicial"><img src="/assets/logo-tinta-160.png" alt="Beatus Mídias" width="600" height="309"></a>
     <nav aria-label="Principal">
       <a href="/sobre/">Sobre</a>
       <a href="#servicos">Serviços</a>
@@ -710,7 +739,7 @@ function gtag(){dataLayer.push(arguments);}
       <a href="/blog/">Blog</a>
       <a href="#contato">Contato</a>
     </nav><details class="menu-m"><summary>Menu</summary><nav class="menu-lista" aria-label="Menu"><a href="/sobre/">Sobre</a><a href="#servicos">Serviços</a><a href="#metodo">Método</a><a href="/blog/">Blog</a><a href="#contato">Contato</a></nav></details>
-    <a href="#contato" class="btn btn-vinho">Diagnóstico grátis</a>
+    <a href="#lead-form" class="btn btn-vinho">Diagnóstico grátis</a>
   </div>
 </header>
 
@@ -722,14 +751,15 @@ function gtag(){dataLayer.push(arguments);}
       <h1><span class="l1">Tráfego pago para </span><span class="escuro">lojas de pneus.</span></h1>
       <p class="lead">Enquanto você ainda está calculando o desconto do jogo de quatro pneus, o motorista com o pneu furado já fechou com quem apareceu primeiro no Google perto dele.</p>
       <div class="ctas">
-        <a href="#contato" class="btn btn-vinho">Quero um diagnóstico grátis →</a>
-        <a href="#metodo" class="btn btn-linha">Como funciona</a>
-      </div>
+        <a href="#lead-form" class="btn btn-vinho">Quero um diagnóstico grátis →</a>
+        <a href="#metodo" class="btn btn-linha so-desk">Como funciona</a>
+      <a class="btn btn-linha so-mob" href="https://wa.me/5521975340783?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
       <div class="provas" id="resultados">
         <div class="prova"><b data-conta="250" data-pre="R$ " data-pos=" mi">R$ 250 mi</b><span>faturamento gerado para clientes</span></div>
         <div class="prova"><b data-conta="80" data-pre="+" data-pos="">+80</b><span>negócios atendidos</span></div>
         <div class="prova"><b data-conta="5" data-pre="" data-pos=" anos">5 anos</b><span>de mercado</span></div>
       </div>
+      <p class="prova-nota">Somado de toda a carteira de clientes desde 2022, medido nos painéis de cada cliente.</p>
       <p class="selo" aria-label="3 anos na Subido Pro, a maior e melhor mentoria e comunidade de gestores de tráfego da América Latina"><img class="sp-logo" src="/assets/subido-pro.png" alt="" aria-hidden="true" width="113" height="34"><span aria-hidden="true"><strong>3 anos</strong> na maior e melhor mentoria e comunidade de gestores de tráfego da América Latina.</span></p>
     </div>
 
@@ -961,7 +991,7 @@ function gtag(){dataLayer.push(arguments);}
 <footer>
   <div class="wrap">
     <div class="l1">
-      <a href="#topo"><img src="/assets/logo-branco.png" alt="Beatus Mídias" width="1200" height="619" style="height:40px;width:auto"></a>
+      <a href="#topo"><img src="/assets/logo-branco-160.png" alt="Beatus Mídias" width="1200" height="619" style="height:40px;width:auto"></a>
       <div class="footer-copy">© 2026 Beatus Mídias · Agência de tráfego pago e IA · Maricá, RJ · <a class="tel" href="https://wa.me/5521975340783" target="_blank" rel="noopener">WhatsApp (21) 97534-0783</a></div>
     </div>
     <div class="footer-copy">Atendemos <a href="/marica/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Maricá</a>, <a href="/niteroi/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Niterói</a>, <a href="/sao-goncalo/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">São Gonçalo</a>, <a href="/rio-de-janeiro/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Rio de Janeiro</a>, <a href="/itaborai/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Itaboraí</a>, <a href="/rio-bonito/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Rio Bonito</a>, <a href="/tangua/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Tanguá</a>, <a href="/saquarema/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Saquarema</a>, <a href="/araruama/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Araruama</a>, <a href="/cabo-frio/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Cabo Frio</a>, <a href="/duque-de-caxias/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Duque de Caxias</a>, <a href="/sao-joao-de-meriti/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">São João de Meriti</a>, <a href="/macae/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Macaé</a>, <a href="/rio-das-ostras/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Rio das Ostras</a>, <a href="/campos-dos-goytacazes/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Campos dos Goytacazes</a>, <a href="/sao-pedro-da-aldeia/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">São Pedro da Aldeia</a>, <a href="/arraial-do-cabo/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Arraial do Cabo</a>, <a href="/buzios/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Búzios</a>, <a href="/iguaba-grande/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Iguaba Grande</a>, <a href="/belford-roxo/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Belford Roxo</a>, <a href="/nilopolis/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Nilópolis</a>, <a href="/mesquita/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Mesquita</a>, <a href="/mage/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Magé</a>, <a href="/petropolis/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Petrópolis</a>, <a href="/teresopolis/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Teresópolis</a>, <a href="/nova-friburgo/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Nova Friburgo</a>, <a href="/angra-dos-reis/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Angra dos Reis</a>, <a href="/barra-mansa/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Barra Mansa</a>, <a href="/itaperuna/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Itaperuna</a>, <a href="/nova-iguacu/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Nova Iguaçu</a>, <a href="/resende/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Resende</a>, <a href="/tres-rios/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Três Rios</a>, <a href="/volta-redonda/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Volta Redonda</a>, <a href="/cachoeiras-de-macacu/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Cachoeiras de Macacu</a>, <a href="/casimiro-de-abreu/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Casimiro de Abreu</a>, <a href="/guapimirim/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Guapimirim</a>, <a href="/itaguai/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Itaguaí</a>, <a href="/japeri/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Japeri</a>, <a href="/paracambi/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Paracambi</a>, <a href="/queimados/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Queimados</a>, <a href="/seropedica/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Seropédica</a>, <a href="/barra-do-pirai/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Barra do Piraí</a>, <a href="/bom-jesus-do-itabapoana/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Bom Jesus do Itabapoana</a>, <a href="/itatiaia/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Itatiaia</a>, <a href="/mangaratiba/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Mangaratiba</a>, <a href="/paraty/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Paraty</a>, <a href="/sao-joao-da-barra/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">São João da Barra</a>, <a href="/valenca/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Valença</a> e <a href="/vassouras/" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Vassouras</a></div>
@@ -1103,9 +1133,23 @@ function gtag(){dataLayer.push(arguments);}
 </script>
 <script>/* polish-2026-10 */
 (function(){
-  var wa=document.querySelector('.wa-float'), alvo=document.getElementById('lead-form')||document.getElementById('contato');
-  if(!wa||!alvo||!('IntersectionObserver' in window)) return;
-  new IntersectionObserver(function(es){ es.forEach(function(e){ wa.classList.toggle('wa-longe', e.isIntersecting); }); }, {rootMargin:'0px 0px -20% 0px'}).observe(alvo);
+  var wa=document.querySelector('.wa-float'); if(!wa||!('IntersectionObserver' in window)) return;
+  var alvos=[document.querySelector('.hero'), document.getElementById('lead-form')||document.getElementById('contato')].filter(Boolean), dentro=new Set();
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ e.isIntersecting?dentro.add(e.target):dentro.delete(e.target); }); wa.classList.toggle('wa-longe', dentro.size>0); }, {rootMargin:'0px 0px -20% 0px'});
+  alvos.forEach(function(a){ io.observe(a); });
+})();
+</script>
+<script>/* polish-2026-10b */
+(function(){
+  var form=document.getElementById('lead-form'); if(!form) return;
+  form.addEventListener('submit', function(){ setTimeout(function(){
+    var e=document.getElementById('form-erro'), ruim=e && !e.hidden;
+    [['f-nome',function(v){return !v.trim();}],['f-whats',function(v){return v.replace(/\D/g,'').length<10;}]].forEach(function(p){
+      var f=document.getElementById(p[0]); if(!f) return;
+      var inv=ruim && p[1](f.value); f.setAttribute('aria-invalid', inv?'true':'false');
+      if(inv) f.setAttribute('aria-describedby','form-erro'); else f.removeAttribute('aria-describedby');
+    });
+  },0); });
 })();
 </script>
 </body>
