@@ -3594,4 +3594,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://beatusmidias.com.br/cases/hamburgueria-127-pedidos-em-7-dias/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
