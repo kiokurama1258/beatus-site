@@ -331,3 +331,53 @@ Guias sobre como negócios locais são encontrados no Google e citados por IAs c
 - [Sitemap completo](https://beatusmidias.com.br/sitemap.xml): todas as URLs do site
 - [Política de Privacidade](https://beatusmidias.com.br/politica-de-privacidade/)
 - [Termos de Uso](https://beatusmidias.com.br/termos-de-uso/)
+
+## Ferramentas gratuitas
+Calculadoras e geradores abertos, sem cadastro. Índice em [Ferramentas](https://beatusmidias.com.br/ferramentas/).
+- [Calculadora de CMV](https://beatusmidias.com.br/calculadora-cmv/): CMV do mês (estoque inicial + compras − estoque final) e CMV de cada prato, com embalagem e comissão do app.
+- [Calculadora de preço de venda do prato](https://beatusmidias.com.br/calculadora-preco-de-venda/): Preço certo no balcão e no app, com imposto, cartão, comissão e a margem que paga a operação.
+- [Simulador iFood x canal próprio](https://beatusmidias.com.br/simulador-ifood-canal-proprio/): Quanto sobra por mês trazendo parte dos pedidos do app para o seu WhatsApp, já pagando o anúncio.
+- [Calculadora de ponto de equilíbrio](https://beatusmidias.com.br/calculadora-ponto-de-equilibrio/): Quanto faturar e quantos pedidos por dia vender para pagar os custos fixos do mês.
+- [Calculadora de taxa de entrega por km](https://beatusmidias.com.br/calculadora-taxa-de-entrega/): Taxa por distância com valor fixo e valor por km, tabela por faixa e quanto ela cobre do entregador.
+- [Gerador de link e QR Code de avaliação do Google](https://beatusmidias.com.br/gerador-link-avaliacao-google/): Link direto para o cliente avaliar a sua empresa e QR Code pronto para imprimir no balcão.
+- [Gerador de link do WhatsApp com mensagem](https://beatusmidias.com.br/gerador-link-whatsapp/): Link do WhatsApp com mensagem pronta para bio, Google e anúncio, e QR Code para imprimir.
+- [Diagnóstico do Google Meu Negócio](https://beatusmidias.com.br/diagnostico-google-meu-negocio/): Dez perguntas, uma nota de 0 a 100 e a lista do que corrigir primeiro no seu perfil.
+- [Calculadora de verba de anúncio](https://beatusmidias.com.br/calculadora-verba-de-anuncio/): Quanto investir por mês para conquistar os clientes que você quer e qual custo por lead cabe no negócio.
+- [Calculadora do custo das faltas na clínica](https://beatusmidias.com.br/calculadora-faltas-clinica/): Quanto a agenda furada leva do faturamento por mês e por ano, e quanto dá para recuperar.
+- [Calculadora da taxa do iFood](https://beatusmidias.com.br/calculadora-taxa-ifood/): Quanto o aplicativo leva do seu faturamento por mês e por ano, e quanto voltaria pelo canal próprio.
+
+## Delivery (Maricá, Niterói e Rio de Janeiro)
+- [Tráfego pago para delivery](https://beatusmidias.com.br/delivery/): campanha por raio de entrega, pedido direto no WhatsApp com IA, custo por pedido medido.
+- [Delivery em Maricá](https://beatusmidias.com.br/delivery/marica/), [Niterói](https://beatusmidias.com.br/delivery/niteroi/) e [Rio de Janeiro](https://beatusmidias.com.br/delivery/rio-de-janeiro/)
+- [Pizzarias](https://beatusmidias.com.br/pizzarias/): Maricá, Niterói e Rio de Janeiro em páginas próprias.
+- [Hamburguerias e lanchonetes](https://beatusmidias.com.br/lanchonetes-e-hamburguerias/): Maricá, Niterói e Rio de Janeiro em páginas próprias.
+- [Case Euro Burguer](https://beatusmidias.com.br/cases/euro-burguer/): hamburgueria em Itaipuaçu (Maricá); faturamento dobrou em seis meses com anúncio direto para o cardápio próprio e verba igual à metade do que a loja pagava de comissão ao iFood. Divulgação autorizada pelo dono.
+
+## Serviços técnicos, varejo e locação
+- [Aluguel de andaimes](https://beatusmidias.com.br/aluguel-de-andaimes/): busca no raio de entrega, orçamento qualificado no WhatsApp e carteira de construtoras e condomínios.
+- [Lojas de pneus](https://beatusmidias.com.br/lojas-de-pneus/), [Oficinas mecânicas](https://beatusmidias.com.br/oficinas-mecanicas/), [Lojas de ferragens e ferramentas](https://beatusmidias.com.br/lojas-de-ferragens-e-ferramentas/), [Limpeza de sofá e estofados](https://beatusmidias.com.br/lavagem-de-estofados-e-tapetes/), [Eletricistas](https://beatusmidias.com.br/eletricistas/)
+
+## Matérias recentes
+- [Como vender mais pneus na sua loja](https://beatusmidias.com.br/blog/como-vender-mais-pneus/)
+- [Google Ads para loja de pneus: como anunciar por medida](https://beatusmidias.com.br/blog/google-ads-para-loja-de-pneus/)
+- [Google Meu Negócio para oficina mecânica](https://beatusmidias.com.br/blog/google-meu-negocio-para-oficina-mecanica/)
+- [Quanto investir em anúncio para oficina mecânica](https://beatusmidias.com.br/blog/quanto-investir-anuncio-oficina-mecanica/)
+- [Como divulgar loja de ferragens e ferramentas](https://beatusmidias.com.br/blog/como-divulgar-loja-de-ferragens/)
+- [Como vender mais para profissionais e construtoras](https://beatusmidias.com.br/blog/loja-de-ferragens-vender-para-profissionais/)
+- [Como conseguir clientes para aluguel de andaime](https://beatusmidias.com.br/blog/como-conseguir-clientes-aluguel-de-andaime/)
+- [Google Ads para aluguel de andaime](https://beatusmidias.com.br/blog/google-ads-para-aluguel-de-andaime/)
+- [Como conseguir clientes para limpeza de sofá](https://beatusmidias.com.br/blog/como-conseguir-clientes-limpeza-de-sofa/)
+- [Antes e depois na limpeza de sofá: como usar no anúncio](https://beatusmidias.com.br/blog/antes-e-depois-limpeza-de-sofa-anuncio/)
+- [Como conseguir clientes como eletricista](https://beatusmidias.com.br/blog/como-conseguir-clientes-eletricista/)
+- [Google Ads para eletricista](https://beatusmidias.com.br/blog/google-ads-para-eletricista/)
+- [Como calcular o preço de venda de um prato](https://beatusmidias.com.br/blog/como-calcular-preco-de-venda-prato/)
+- [Vale a pena sair do iFood?](https://beatusmidias.com.br/blog/vale-a-pena-sair-do-ifood/)
+- [Ponto de equilíbrio do restaurante: como calcular](https://beatusmidias.com.br/blog/ponto-de-equilibrio-restaurante/)
+- [Como calcular a taxa de entrega do delivery](https://beatusmidias.com.br/blog/como-calcular-taxa-de-entrega/)
+- [QR Code de avaliação do Google: como fazer e onde colocar](https://beatusmidias.com.br/blog/qr-code-avaliacao-google/)
+- [Como criar link do WhatsApp com mensagem pronta](https://beatusmidias.com.br/blog/como-criar-link-do-whatsapp/)
+- [Por que meu negócio não aparece no Google Maps?](https://beatusmidias.com.br/blog/por-que-meu-negocio-nao-aparece-no-google-maps/)
+- [Custo por lead ideal: como calcular](https://beatusmidias.com.br/blog/custo-por-lead-ideal/)
+- [Quanto custa a falta de paciente para a clínica](https://beatusmidias.com.br/blog/quanto-custa-falta-de-paciente/)
+- [iFood Ads vale a pena?](https://beatusmidias.com.br/blog/ifood-ads-vale-a-pena/)
+- [Como calcular o CMV do restaurante e do delivery](https://beatusmidias.com.br/blog/como-calcular-cmv/)
