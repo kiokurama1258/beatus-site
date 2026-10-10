@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Studio Aurora Beauty · São Gonçalo, RJ · Modelo demonstrativo</title>
+<meta name="description" content="Modelo demonstrativo da Beatus Mídias para studio de beleza. Marca fictícia.">
+<meta name="theme-color" content="#0e0d10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230e0d10'/%3E%3Cpath d='M5 17q11-11 22 0q-11 11-22 0z' fill='none' stroke='%23ff2e88' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='17' r='4' fill='%23ff2e88'/%3E%3C/svg%3E">
+<script>if(/[?&]thumb=1/.test(location.search))document.documentElement.classList.add('thumb');</script>
+<style>
+@font-face{font-family:"Anton";src:url("fontes/anton-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Cormorant";src:url("fontes/cormorant-latin-wght-italic.woff2") format("woff2");font-weight:300 700;font-style:italic;font-display:swap}
+@font-face{font-family:"Outfit";src:url("fontes/outfit-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap}
+:root{
+  --ink:#0e0d10; --ink-2:#18161b; --ink-3:#242128; --off:#f2ede6; --off-2:#e6dfd5; --mute:#a7a1a9; --mute-d:#5d5761;
+  --pink:#ff2e88; --pink-ink:#c2005c; --lilac:#a98bff;
+  --line:rgba(242,237,230,.16); --line-l:rgba(14,13,16,.16);
+  --demo-h:44px; --head-h:64px;
+  --disp:"Anton","Impact","Arial Narrow",sans-serif; --ser:"Cormorant",Georgia,serif; --sans:"Outfit",system-ui,sans-serif;
+  --out:cubic-bezier(.22,1,.36,1); --spring:cubic-bezier(.34,1.56,.64,1);
+}
+@media (min-width:760px){:root{--demo-h:36px;--head-h:72px}}
+.thumb{--demo-h:0px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--demo-h) + var(--head-h) + 10px);-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--off);font:400 17px/1.6 var(--sans);overflow-x:hidden;padding-top:var(--demo-h)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:300;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+p{text-wrap:pretty}
+:focus-visible{outline:2px solid var(--pink);outline-offset:4px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:12px;top:-70px;z-index:400;background:var(--pink);color:var(--ink);padding:12px 18px;border-radius:99px;font-weight:600;transition:transform .2s}
+.skip:focus{transform:translateY(calc(70px + var(--demo-h) + 8px))}
+.wrap{max-width:1240px;margin:0 auto;padding:0 18px}
+@media (min-width:760px){.wrap{padding:0 36px}}
+@media (min-width:1500px){.wrap{max-width:1340px}}
+.disp{font-family:var(--disp);font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:.005em}
+.ser{font-family:var(--ser);font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.01em}
+.pinkt{color:var(--pink)}
+.tag{display:inline-flex;align-items:center;gap:6px;font:600 11.5px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;border:1px solid currentColor;border-radius:99px;padding:5px 9px}
+
+/* faixa demo */
+.demo-bar{position:fixed;inset:0 0 auto 0;z-index:250;height:var(--demo-h);display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 6px 0 14px;background:var(--off);color:var(--ink);font:500 12px/1.25 var(--sans)}
+.demo-bar p{display:flex;flex-direction:column}
+.demo-bar a{flex:none;display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:36px;max-width:8.6em;padding:3px 14px;border-radius:14px;background:var(--ink);color:var(--off);font-weight:600;line-height:1.1;text-decoration:none}
+.demo-bar a:hover{background:var(--pink);color:var(--ink)}
+.demo-bar a{position:relative}.demo-bar a::after{content:"";position:absolute;inset:-5px -3px}
+@media (min-width:760px){.demo-bar{padding:0 8px 0 22px;font-size:13px}.demo-bar p{flex-direction:row;gap:.5em}.demo-bar p span+span::before{content:"· "}.demo-bar a{min-height:28px;max-width:none;white-space:nowrap;border-radius:99px}}
+.thumb .demo-bar{display:none}
+
+/* cabecalho */
+.head{position:sticky;top:var(--demo-h);z-index:200;background:rgba(14,13,16,.72);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid transparent;transition:border-color .3s}
+.head.scrolled{border-bottom-color:var(--line)}
+.head .wrap{height:var(--head-h);display:flex;align-items:center;gap:14px}
+.logo{display:flex;align-items:center;gap:8px;min-height:44px;text-decoration:none;margin-right:auto;font:400 22px/1 var(--disp);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.logo .ser{font-size:1.1em;color:var(--pink);letter-spacing:0;text-transform:none;margin-left:2px}
+.nav{display:none}
+.nav a{font:500 15px var(--sans);text-decoration:none;padding:10px 12px;border-radius:99px;transition:background .2s,color .2s;color:#d8d2d9}
+.nav a:hover,.nav a.active{background:var(--ink-3);color:var(--off)}
+.pill{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 10px 0 26px;border-radius:99px;background:var(--pink);color:var(--ink);font:600 16px/1 var(--sans);text-decoration:none;white-space:nowrap;transition:background .25s,color .25s;will-change:transform}
+.pill .dot{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--pink);transition:transform .35s var(--spring)}
+.pill:hover .dot{transform:rotate(-45deg) scale(1.06)}
+.pill.light{background:var(--off);color:var(--ink)}
+.pill.light .dot{background:var(--ink);color:var(--off)}
+.pill.dark{background:var(--ink);color:var(--off)}
+.pill.dark .dot{background:var(--pink);color:var(--ink)}
+.pill.ghost{background:transparent;color:var(--off);box-shadow:inset 0 0 0 1.5px var(--line);padding:0 24px}
+.pill.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--off)}
+.pill.sm{min-height:44px;font-size:14.5px;padding:0 8px 0 18px;gap:8px}
+.pill.sm .dot{width:30px;height:30px}
+.menu-btn{width:44px;height:44px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--line);display:grid;place-items:center}
+.menu-btn i{display:block;width:16px;height:1.5px;background:var(--off);box-shadow:0 5px 0 var(--off),0 -5px 0 var(--off)}
+.mnav{position:fixed;left:10px;right:10px;top:calc(var(--demo-h) + var(--head-h) + 6px);z-index:190;background:var(--ink-2);border:1px solid var(--line);border-radius:22px;padding:10px;display:none}
+.mnav.open{display:grid}
+.mnav a{display:flex;justify-content:space-between;align-items:center;padding:14px 14px;border-radius:14px;text-decoration:none;font:400 30px/1 var(--disp);text-transform:uppercase}
+.mnav a span{font:italic 400 20px var(--ser);color:var(--pink)}
+.mnav a:hover{background:var(--ink-3)}
+@media (min-width:1000px){.nav{display:flex;gap:4px}.menu-btn,.mnav{display:none!important}}
+@media (max-width:420px){.head .pill.sm .lbl-l{display:none}}
+
+/* palavra a palavra */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.2em .03em .12em;margin:-.2em -.03em -.12em}
+.wi{display:inline-block}
+.js .split.pre .wi{transform:translateY(112%) rotate(4deg);opacity:0}
+.split .wi{transition:transform .9s var(--out),opacity .5s ease;transition-delay:calc(var(--d,0)*55ms)}
+
+/* HERO */
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:26px 0 40px;min-height:calc(100dvh - var(--demo-h) - var(--head-h))}
+.aurora{position:absolute;inset:-35% -30%;z-index:-1;pointer-events:none;background:radial-gradient(30% 34% at 34% 40%,rgba(255,46,136,.42),transparent 70%),radial-gradient(28% 30% at 66% 58%,rgba(169,139,255,.32),transparent 70%),radial-gradient(22% 24% at 52% 30%,rgba(255,150,90,.16),transparent 70%);filter:blur(10px);animation:aur 26s linear infinite}
+@keyframes aur{to{transform:rotate(360deg)}}
+.hero-row{display:flex;justify-content:space-between;gap:12px;font:500 12.5px/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:#cfc8d0;border-bottom:1px solid var(--line);padding-bottom:14px}
+.hero h1{margin:28px 0 0;font-size:clamp(4.1rem,19.5vw,13.4rem);text-align:center;line-height:.86}
+.hero h1 .ln{display:block;white-space:nowrap}
+.hero h1 .ser{font-size:1.02em;color:var(--pink);font-weight:500;line-height:.7;letter-spacing:-.03em}
+.hero h1 .ln .ser{display:inline-block;transform:translateY(-.1em)}
+.hero>.wrap{position:relative}
+.eye-pill{display:inline-flex;align-items:center;justify-content:center;width:1.42em;height:.74em;border-radius:99px;background:var(--ink);box-shadow:inset 0 0 0 .03em var(--pink),0 .08em .3em rgba(255,46,136,.25);vertical-align:.04em;margin:0 .04em}
+.eye-pill svg{width:78%;height:auto;overflow:visible}
+.eye-lid{transform-box:fill-box;transform-origin:center;animation:piscar 6s infinite}
+@keyframes piscar{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.08)}}
+.iris{transition:transform .25s var(--out)}
+@media (hover:none){.iris{animation:olhar 9s ease-in-out infinite}}
+@keyframes olhar{0%,100%{transform:translate(0,0)}25%{transform:translate(-9px,2px)}55%{transform:translate(8px,-2px)}80%{transform:translate(3px,3px)}}
+.hero-sub{display:grid;gap:22px;margin-top:34px;align-items:end}
+.hero-sub p{font-size:clamp(1.05rem,.98rem + .35vw,1.25rem);line-height:1.5;color:#ddd6de;max-width:36ch}
+.hero-sub p .ser{font-size:1.35em;color:var(--off);line-height:1}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.stickers{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.stk small{font-size:12px;font-weight:500}
+.stk{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:99px;font:600 13px/1.1 var(--sans);letter-spacing:.02em}
+.stk.p{background:var(--pink);color:var(--ink)}
+.stk.o{background:var(--off);color:var(--ink)}
+.stk.l{box-shadow:inset 0 0 0 1.5px var(--line);color:var(--off)}
+@media (min-width:900px){
+  .hero{padding-top:36px}
+  .hero-sub{grid-template-columns:1fr auto;margin-top:46px}
+  .stickers{position:absolute;inset:0;margin:0;pointer-events:none;display:block}
+  .stk{position:absolute;padding:0;border-radius:50%;width:132px;height:132px;justify-content:center;text-align:center;flex-direction:column;gap:2px;font-size:13px;box-shadow:0 20px 40px -20px rgba(0,0,0,.8)}
+  .stk b{font:400 34px/1 var(--disp)}
+  .stk small{font-size:12px}
+  .stk.p{right:3%;top:150px;transform:rotate(12deg)}
+  .stk.o{left:2%;top:410px;transform:rotate(-10deg);border-radius:18px;width:150px;height:auto;padding:16px 12px}
+  .stk.l{display:none}
+}
+.anim .hero .hin{animation:sobe .8s var(--out) both;animation-delay:calc(var(--i,0)*90ms + 700ms)}
+@keyframes sobe{from{opacity:0;transform:translateY(22px)}}
+.anim .stk{animation:pop .7s var(--spring) both;animation-delay:calc(var(--i,0)*120ms + 1100ms)}
+@keyframes pop{from{opacity:0;scale:.6}}
+.anim-done .hero .hin,.anim-done .stk{animation:none}
+
+/* fitas */
+.ribbons{position:relative;z-index:3;padding:46px 0;overflow-x:clip;overflow-y:visible;pointer-events:none}
+.ribbon{pointer-events:auto;margin-inline:-4%;padding:14px 0;overflow:hidden}
+.ribbon.r1{background:var(--pink);color:var(--ink);transform:rotate(-3deg);position:relative;z-index:2;box-shadow:0 24px 40px -24px rgba(0,0,0,.8)}
+.ribbon.r2{background:var(--off);color:var(--ink);transform:rotate(2.6deg);margin-top:-22px}
+@media (min-width:900px){.ribbon.r2{margin-top:-46px;transform:rotate(2.2deg)}}
+.ribbon-track{display:flex;width:max-content;animation:fita 32s linear infinite}
+.ribbon.r2 .ribbon-track{animation-direction:reverse;animation-duration:40s}
+.ribbon ul{display:flex;flex:none;list-style:none}
+.ribbon li{display:flex;align-items:center;gap:.7em;padding:0 .7em;white-space:nowrap;font:400 clamp(1.4rem,1.1rem + 1.4vw,2.3rem)/1 var(--disp);text-transform:uppercase;letter-spacing:.01em}
+.ribbon li .ser{text-transform:none;font-size:1.12em;font-weight:500}
+.ribbon li::after{content:"";width:.55em;height:.55em;background:currentColor;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+.ribbon:hover .ribbon-track{animation-play-state:paused}
+@keyframes fita{to{transform:translateX(-50%)}}
+
+/* secoes */
+.sec{padding:88px 0;position:relative}
+@media (min-width:760px){.sec{padding:130px 0}}
+.light{background:var(--off);color:var(--ink)}
+.h2{font-size:clamp(3.2rem,13vw,8.6rem)}
+.h2 .ser{font-size:1.04em;color:var(--pink);font-weight:500}
+.light .h2 .ser{color:var(--pink-ink)}
+.kicker{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;font:500 13px/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-bottom:22px}
+.light .kicker{color:var(--mute-d)}
+.lead{font-size:1.12rem;line-height:1.55;color:#d6cfd7;max-width:44ch}
+.light .lead{color:#3c3740}
+
+/* numeros */
+.nums{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:10px}
+.num{padding:22px 16px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.num b{display:block;font:400 clamp(3rem,13vw,6rem)/.9 var(--disp);font-variant-numeric:tabular-nums}
+.num b sup{font-size:.45em;vertical-align:.9em;color:var(--pink);margin-left:.04em}
+.num span{display:block;margin-top:10px;font:italic 400 1.3rem/1.15 var(--ser);color:#e6dfe6}
+.num .tag{display:inline-flex;margin-top:12px;color:var(--pink);font:600 11.5px/1 var(--sans);letter-spacing:.08em}
+.nums-note{margin-top:12px;font-size:13.5px;color:var(--mute)}
+@media (min-width:900px){.nums{grid-template-columns:repeat(4,1fr)}}
+
+/* bento colado */
+.bento{display:grid;grid-template-columns:1fr;border:1px solid var(--line);margin-top:48px}
+.tile{position:relative;overflow:hidden;min-height:340px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);text-decoration:none;isolation:isolate}
+.tile:last-child{border-bottom:0}
+.tile{container-type:inline-size}
+.tile h3{font-size:clamp(3.2rem,14vw,7rem);font-size:clamp(3rem,24cqi,7.4rem)}
+.t-sob h3{font-size:3.4rem;font-size:15.5cqi}
+.tile .ser{font-size:1.45rem;line-height:1.15;color:#e5dee6;max-width:20ch;display:block;margin-top:8px}
+.tile .from{display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:500}
+.tile .from b{font:400 1.6rem/1 var(--disp);letter-spacing:.02em}
+.tile .arr{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 0 1.5px currentColor;transition:transform .45s var(--spring),background .3s,color .3s;flex:none}
+.tile .art{position:absolute;z-index:-1;pointer-events:none;transition:transform .9s var(--out)}
+.tile:hover .art{transform:scale(1.06) rotate(-2deg)}
+.tile:hover .arr{transform:rotate(-45deg);background:var(--off);color:var(--ink)}
+.tile.pinkt-bg{background:var(--pink);color:var(--ink)}
+.tile.pinkt-bg .ser{color:var(--ink)}
+.tile.pinkt-bg:hover .arr{background:var(--ink);color:var(--pink)}
+@media (max-width:899px){.tile .art{position:relative;z-index:0;order:1;width:100%;max-width:340px;align-self:flex-end;margin:-6px -12px -6px 0}.tile .from{order:2}.t-unh .art{max-width:250px;margin-right:-24px}.t-sob .art{max-width:290px}}
+@media (min-width:900px){
+.t-cil .art{right:-40px;bottom:30px;width:min(440px,92%)}
+.t-sob .art{right:-10px;bottom:84px;width:min(330px,80%)}
+.t-unh .art{right:-10px;bottom:-24px;width:min(280px,62%)}
+.t-mak .art{right:-30px;top:10px;width:min(420px,88%)}}
+@media (min-width:900px){
+  .bento{grid-template-columns:repeat(12,1fr)}
+  .tile{border-bottom:0;min-height:420px;padding:34px}
+  .t-cil{grid-column:1/8;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .t-sob{grid-column:8/13;border-bottom:1px solid var(--line)}
+  .t-unh{grid-column:1/6;border-right:1px solid var(--line)}
+  .t-mak{grid-column:6/13}
+}
+
+/* menu de precos */
+.menu-head{display:grid;gap:20px;margin-bottom:46px}
+@media (min-width:900px){.menu-head{grid-template-columns:7fr 5fr;align-items:end}}
+.menu{display:grid;gap:44px}
+.cat h3{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:6px;font-size:clamp(2.4rem,9vw,3.6rem)}
+.cat h3 .ser{font-size:.55em;color:var(--pink-ink)}
+.it{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:15px 0;border-bottom:1px solid var(--line-l)}
+.it .nm{display:flex;align-items:baseline;gap:10px;font-weight:600;font-size:1.08rem;min-width:0}
+.it .nm::after{content:"";flex:1;border-bottom:1.5px dotted rgba(14,13,16,.35);transform:translateY(-4px);min-width:20px}
+.it .pr{font:400 1.45rem/1.2 var(--disp);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.it .ds{grid-column:1/-1;font:italic 400 1.12rem/1.3 var(--ser);color:#4a444e}
+.it .hot{font:600 11px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--off);border-radius:99px;padding:4px 7px;flex:none;align-self:center}
+.menu-note{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;margin-top:46px;padding-top:22px;border-top:2px solid var(--ink)}
+.menu-note p{font-size:15px;color:#3c3740;max-width:52ch}
+.menu-note .tag{color:var(--pink-ink)}
+@media (min-width:900px){.menu{grid-template-columns:1fr 1fr;column-gap:64px;row-gap:56px}}
+
+/* reels */
+.reels{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 18px 24px;margin:44px -18px 0;scrollbar-width:thin;scrollbar-color:var(--pink) transparent}
+.reel{flex:none;width:72%;max-width:300px;scroll-snap-align:center;position:relative;aspect-ratio:9/16;border-radius:26px;overflow:hidden;background:var(--ink-3);box-shadow:inset 0 0 0 1px var(--line);transition:transform .6s var(--out)}
+.reel svg{position:absolute;inset:0;width:100%;height:100%}
+.reel .rtop{position:absolute;left:14px;right:14px;top:14px;display:flex;justify-content:space-between;font:600 11.5px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.reel .rtop span{background:rgba(14,13,16,.7);padding:6px 9px;border-radius:99px}
+.reel .rbot{position:absolute;left:14px;right:14px;bottom:14px}
+.reel .rbot b{display:block;font:400 1.7rem/1 var(--disp);text-transform:uppercase}
+.reel .rbot i{font:italic 400 1.1rem var(--ser);color:#efe8ef}
+.reel .play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(242,237,230,.92);display:grid;place-items:center;transition:transform .4s var(--spring)}
+.reel:hover .play{transform:scale(1.12)}
+.reels-cap{margin-top:8px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;color:var(--mute);font-size:14.5px}
+@media (min-width:900px){
+  .reels{overflow:visible;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .reel{width:auto;max-width:none}
+  .reel:nth-child(odd){transform:translateY(34px) rotate(-2deg)}
+  .reel:nth-child(even){transform:rotate(1.5deg)}
+  .reel:hover{transform:translateY(-8px) rotate(0)}
+  .reels-cap{margin-top:72px}
+}
+
+/* diferenciais em linhas */
+.rows{margin-top:44px;border-top:1px solid var(--line-l)}
+.row{position:relative;display:grid;grid-template-columns:44px 1fr;gap:4px 12px;padding:24px 0;border-bottom:1px solid var(--line-l);isolation:isolate}
+.row::before{content:"";position:absolute;inset:0 -18px;z-index:-1;background:var(--ink);transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--out)}
+.row .n{font:italic 500 1.5rem/1 var(--ser);color:var(--pink-ink);padding-top:6px}
+.row h3{font-size:clamp(2rem,8vw,4.2rem);transition:color .3s}
+.row p{grid-column:2;color:#3c3740;max-width:44ch;transition:color .3s}
+@media (hover:hover){.row:hover::before{transform:none}.row:hover h3,.row:hover p{color:var(--off)}.row:hover .n{color:var(--pink)}}
+@media (min-width:900px){.row{grid-template-columns:90px 1fr 380px;align-items:center;padding:30px 0}.row p{grid-column:auto}}
+
+/* passos */
+.steps{display:grid;gap:0;margin-top:50px;border-top:1px solid var(--line);list-style:none}
+.step{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:start}
+.step .big{font:400 5rem/.8 var(--disp);color:transparent;-webkit-text-stroke:1.5px var(--pink);grid-row:1/3}
+.step h3{font-size:2.4rem}
+.step p{color:#d1cad2;font-size:16px}
+@media (min-width:900px){.steps{grid-template-columns:repeat(4,1fr);border-top:0}.step{grid-template-columns:1fr;padding:0 26px 0 0;border-bottom:0;border-left:1px solid var(--line);padding-left:22px}.step .big{font-size:8rem;grid-row:auto;margin-bottom:10px}}
+
+/* agenda */
+.ag{display:grid;gap:26px;margin-top:44px}
+.days{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.days [role=tab]{min-height:64px;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;box-shadow:inset 0 0 0 1.5px var(--line-l);transition:background .25s,color .25s,transform .3s var(--spring)}
+.days [role=tab] b{font:400 1.35rem/1 var(--disp);letter-spacing:.03em}
+.days [role=tab] small{font-size:12px;color:#5d5761}
+.days [role=tab][aria-selected=true]{background:var(--ink);color:var(--off);transform:translateY(-3px)}
+.days [role=tab][aria-selected=true] small{color:var(--pink)}
+@media (max-width:599px){.days{gap:5px}.days [role=tab] small{display:none}.days [role=tab]{min-height:52px;border-radius:14px}}
+.slots{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.slot{min-height:64px;border-radius:16px;padding:10px 14px;text-align:left;background:#fff;box-shadow:inset 0 0 0 1px var(--line-l);display:flex;flex-direction:column;justify-content:center;transition:background .2s,color .2s,transform .3s var(--spring)}
+.slot b{font:400 1.4rem/1 var(--disp);letter-spacing:.03em}
+.slot span{font-size:13.5px;color:#4a444e}
+.slot:hover{transform:translateY(-2px)}
+.slot[aria-pressed=true]{background:var(--pink);color:var(--ink)}
+.slot[aria-pressed=true] span{color:var(--ink)}
+.slot:disabled{background:transparent;cursor:not-allowed;opacity:.55;transform:none}
+.slot:disabled b{text-decoration:line-through}
+.ag-box{border-radius:26px;background:var(--ink);color:var(--off);padding:26px;display:grid;gap:16px;align-content:start}
+.ag-box .ser{font-size:1.5rem;color:#efe8ef;line-height:1.2}
+.ag-box .sel{font:400 2.4rem/1 var(--disp);text-transform:uppercase}
+.ag-box .sel em{font:italic 500 1.05em var(--ser);text-transform:none;color:var(--pink)}
+.ag-box p{color:#cfc8d0;font-size:15px}
+.ag-box .tag{color:var(--pink);justify-self:start}
+@media (min-width:900px){.ag{grid-template-columns:7fr 4fr;align-items:start}.slots{grid-template-columns:repeat(3,1fr)}.ag-box{position:sticky;top:calc(var(--demo-h) + var(--head-h) + 24px)}}
+
+/* depoimentos */
+.qs{display:grid;gap:0;margin-top:46px;border-top:1px solid var(--line)}
+.q{padding:30px 0;border-bottom:1px solid var(--line);display:grid;gap:16px}
+.q blockquote{font:italic 400 clamp(1.7rem,1.3rem + 1.6vw,2.5rem)/1.12 var(--ser);color:var(--off)}
+.q blockquote::before{content:"“";color:var(--pink);font-size:1.4em;line-height:0;vertical-align:-.3em;margin-right:.05em}
+.q .who{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;font-size:15px;color:var(--mute)}
+.q .who b{color:var(--off);font-weight:600}
+.q .tag{color:var(--pink)}
+.rate{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:24px}
+.rate b{font:400 4.4rem/1 var(--disp)}
+.rate .st{color:var(--pink);font-size:20px;letter-spacing:3px}
+@media (min-width:900px){.qs{grid-template-columns:repeat(3,1fr);border-top:0}.q{padding:0 28px;border-bottom:0;border-left:1px solid var(--line)}.q:first-child{padding-left:0;border-left:0}}
+
+/* faq */
+.faq{display:grid;gap:34px}
+.faq-l{border-top:1.5px solid var(--ink)}
+.faq-l details{border-bottom:1px solid var(--line-l)}
+.faq-l summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:22px 0;font:600 1.15rem/1.3 var(--sans);min-height:44px}
+.faq-l summary::-webkit-details-marker{display:none}
+.faq-l summary i{flex:none;width:40px;height:40px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--line-l);position:relative;transition:transform .4s var(--spring),background .2s}
+.faq-l summary i::before,.faq-l summary i::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:currentColor;translate:-50% -50%}
+.faq-l summary i::after{rotate:90deg;transition:rotate .3s}
+.faq-l details[open] summary i{background:var(--pink);box-shadow:none;transform:rotate(180deg)}
+.faq-l details[open] summary i::after{rotate:0deg}
+.faq-l details p{padding:0 56px 24px 0;color:#3c3740;max-width:60ch}
+.faq-card{border-radius:26px;background:var(--ink);color:var(--off);padding:26px;display:grid;gap:16px;align-content:start;align-self:start}
+.faq-card .ser{font-size:1.7rem;line-height:1.1}
+@media (min-width:900px){.faq{grid-template-columns:4fr 8fr;gap:56px}.faq-card{position:sticky;top:calc(var(--demo-h) + var(--head-h) + 24px)}}
+
+/* local */
+.loc{display:grid;gap:22px;margin-top:44px}
+.map{position:relative;border-radius:26px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);background:var(--ink-2)}
+.map svg{width:100%;height:auto}
+@media (max-width:640px){.map svg text{font-size:24px}}
+.map .tag{position:absolute;left:14px;top:14px;color:var(--off);background:rgba(14,13,16,.7)}
+.info{display:grid;gap:0;border-top:1px solid var(--line)}
+.info div{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:110px 1fr;gap:12px}
+.info dt{font:italic 400 1.25rem/1.2 var(--ser);color:var(--pink)}
+.info dd{color:#e2dbe3;line-height:1.5}
+@media (min-width:900px){.loc{grid-template-columns:7fr 5fr;align-items:start}}
+
+/* cta final */
+.final{background:var(--pink);color:var(--ink);padding:90px 0;position:relative;overflow:hidden;text-align:center}
+.final h2{font-size:clamp(4rem,17vw,13rem);line-height:.86}
+.final h2 .ser{color:var(--ink);font-weight:400}
+.final p{max-width:40ch;margin:24px auto 30px;font-size:1.12rem;font-weight:500}
+.final .hero-cta{justify-content:center}
+.final .pill.ghost{color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(14,13,16,.5)}
+.final .pill.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--ink)}
+
+/* rodape */
+.foot{padding:64px 0 28px;color:var(--mute);overflow:hidden}
+.foot-g{display:grid;gap:28px;grid-template-columns:1fr 1fr}
+.foot-g>div:first-child{grid-column:1/-1}
+.foot h3{font:400 1.3rem var(--disp);text-transform:uppercase;letter-spacing:.04em;color:var(--off);margin-bottom:10px}
+.foot a,.foot .lnk{display:flex;align-items:center;min-height:44px;text-decoration:none;color:var(--mute);text-align:left}
+.foot a:hover,.foot .lnk:hover{color:var(--pink)}
+.giant{font:400 clamp(5rem,30vw,25rem)/.8 var(--disp);text-transform:uppercase;letter-spacing:.01em;color:transparent;-webkit-text-stroke:1.5px rgba(242,237,230,.5);text-align:center;margin:56px 0 26px;white-space:nowrap;transition:-webkit-text-stroke-color .4s}
+.giant:hover{-webkit-text-stroke-color:var(--pink)}
+.foot-l{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;border-top:1px solid var(--line);padding-top:18px;font-size:13.5px}
+@media (min-width:900px){.foot-g{grid-template-columns:5fr 2fr 2fr 2fr}.foot-g>div:first-child{grid-column:auto}}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:18px;z-index:260;width:min(92vw,470px);background:var(--off);color:var(--ink);border-radius:20px;padding:14px 18px;font-size:15px;line-height:1.45;box-shadow:0 20px 50px -18px rgba(0,0,0,.7);transform:translate(-50%,140%);opacity:0;transition:transform .5s var(--spring),opacity .3s}
+.toast.show{transform:translate(-50%,0);opacity:1}
+.toast b{color:var(--pink-ink)}
+
+/* reveal */
+.js .rv.hide{opacity:0;transform:translateY(26px)}
+.rv{transition:opacity .7s ease,transform .9s var(--out)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv.hide{opacity:1;transform:none}
+  .js .split.pre .wi{opacity:1;transform:none}
+  .ribbon-track{width:auto;flex-wrap:wrap;justify-content:center;row-gap:.4rem}
+  .ribbon ul[aria-hidden]{display:none}.ribbon ul{flex-wrap:wrap;justify-content:center;row-gap:.5rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="demo-bar" role="note" aria-label="Aviso de modelo demonstrativo">
+  <p><span>Modelo demonstrativo da Beatus Mídias</span><span>marca fictícia</span></p>
+  <a href="https://wa.me/5521975340783?text=Ol%C3%A1!%20Gostei%20do%20modelo%20de%20studio%20de%20beleza%20e%20quero%20uma%20p%C3%A1gina%20assim." target="_blank" rel="noopener">Quero uma página assim</a>
+</div>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a class="logo" href="#topo" aria-label="Studio Aurora Beauty, início">Studio <span class="ser">Aurora</span></a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#servicos">Serviços</a><a href="#valores">Valores</a><a href="#reels">Resultados</a><a href="#agenda">Agenda</a><a href="#duvidas">Dúvidas</a><a href="#local">Onde fica</a>
+    </nav>
+    <button class="pill sm mag" type="button" data-demo><span>Agendar<span class="lbl-l"> horário</span></span><span class="dot" aria-hidden="true">↗</span></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menu"><i></i></button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Menu">
+    <a href="#servicos">Serviços <span>cílios e mais</span></a><a href="#valores">Valores <span>tabela</span></a><a href="#reels">Resultados <span>reels</span></a><a href="#agenda">Agenda <span>horários</span></a><a href="#duvidas">Dúvidas <span>faq</span></a><a href="#local">Onde fica <span>mapa</span></a>
+  </nav>
+</header>
+
+<main id="conteudo">
+<section class="hero" id="topo">
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-row hin" style="--i:0"><span>Studio de beleza · São Gonçalo, RJ</span><span>Seg a sáb</span></div>
+    <h1 class="disp split" id="h1" aria-label="Seu olhar em alta definição">
+      <span class="ln">Seu olhar</span>
+      <span class="ln"><span class="eye-pill" aria-hidden="true"><svg viewBox="0 0 120 60" id="eye"><defs><clipPath id="almond"><path d="M10 32Q60-4 110 32Q60 68 10 32Z"/></clipPath></defs><g class="eye-lid"><path d="M10 32Q60-4 110 32Q60 68 10 32Z" fill="#f2ede6"/><g clip-path="url(#almond)"><g class="iris" id="iris"><circle cx="60" cy="32" r="17" fill="#ff2e88"/><circle cx="60" cy="32" r="8" fill="#0e0d10"/><circle cx="65" cy="27" r="3" fill="#fff"/></g></g><path d="M10 32Q60-4 110 32" fill="none" stroke="#0e0d10" stroke-width="3"/><g stroke="#f2ede6" stroke-width="3" stroke-linecap="round" fill="none"><path d="M24 22Q16 14 14 6M38 15Q34 6 34-2M52 12Q51 2 54-6M66 12Q68 2 72-5M80 15Q85 6 90 0M94 22Q102 15 108 9"/></g></g></svg></span> em <span class="ser">alta</span></span>
+      <span class="ln">definição</span>
+    </h1>
+    <div class="stickers" aria-hidden="false">
+      <span class="stk p" style="--i:0"><b>4,9</b>★★★★★<small>nota (exemplo)</small></span>
+      <span class="stk o" style="--i:1">Hora marcada, sem fila e sem correria</span>
+      <span class="stk l">Material descartável</span>
+    </div>
+    <div class="hero-sub">
+      <p class="hin" style="--i:1">Cílios, sobrancelhas, unhas e maquiagem com <span class="ser">acabamento que dura.</span> Um studio pequeno em São Gonçalo, com hora marcada e atendimento de uma cliente por vez.</p>
+      <div class="hero-cta hin" style="--i:2">
+        <button class="pill mag" type="button" data-demo>Agendar meu horário<span class="dot" aria-hidden="true">↗</span></button>
+        <a class="pill ghost" href="#valores">Ver valores</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbons" role="region" aria-label="Destaques do studio">
+  <div class="ribbon r1"><div class="ribbon-track">
+    <ul><li>Cílios fio a fio</li><li>Volume <span class="ser">brasileiro</span></li><li>Brow lamination</li><li>Design com henna</li><li>Esmaltação em gel</li><li>Make <span class="ser">para festas</span></li></ul>
+    <ul aria-hidden="true"><li>Cílios fio a fio</li><li>Volume <span class="ser">brasileiro</span></li><li>Brow lamination</li><li>Design com henna</li><li>Esmaltação em gel</li><li>Make <span class="ser">para festas</span></li></ul>
+  </div></div>
+  <div class="ribbon r2" aria-hidden="true"><div class="ribbon-track">
+    <ul><li>Hora marcada</li><li><span class="ser">sem fila</span></li><li>Alcântara</li><li>São Gonçalo</li><li><span class="ser">uma cliente por vez</span></li></ul>
+    <ul><li>Hora marcada</li><li><span class="ser">sem fila</span></li><li>Alcântara</li><li>São Gonçalo</li><li><span class="ser">uma cliente por vez</span></li></ul>
+  </div></div>
+</div>
+
+<section class="sec" id="servicos" aria-labelledby="sv-t" style="padding-top:40px">
+  <div class="wrap">
+    <div class="nums rv" aria-label="Números do studio (ilustrativos)">
+      <div class="num"><b>4,9</b><span>média das avaliações</span><span class="tag">exemplo</span></div>
+      <div class="num"><b>3.200<sup>+</sup></b><span>atendimentos feitos*</span></div>
+      <div class="num"><b>4</b><span>especialistas na equipe*</span></div>
+      <div class="num"><b>6</b><span>anos de studio*</span></div>
+    </div>
+    <p class="nums-note">* Números ilustrativos de uma marca fictícia.</p>
+
+    <div style="margin-top:96px">
+      <div class="kicker rv"><span>Serviços</span><span>04 especialidades</span></div>
+      <h2 class="disp h2 split" id="sv-t">O que a gente <span class="ser">faz melhor</span></h2>
+    </div>
+    <div class="bento">
+      <a class="tile t-cil rv" href="#valores">
+        <svg class="art" viewBox="0 0 440 300" aria-hidden="true" id="lashfan"><path d="M30 250Q220 120 410 250" fill="none" stroke="#f2ede6" stroke-width="3"/></svg>
+        <div><h3 class="disp">Cílios</h3><span class="ser">fio a fio, volume brasileiro e volume russo</span></div>
+        <div class="from"><span>a partir de <b>R$ 160</b></span><span class="arr" aria-hidden="true">↗</span></div>
+      </a>
+      <a class="tile t-sob rv" href="#valores">
+        <svg class="art" viewBox="0 0 330 160" aria-hidden="true" id="brow"></svg>
+        <div><h3 class="disp">Sobrancelha</h3><span class="ser">design, henna e brow lamination</span></div>
+        <div class="from"><span>a partir de <b>R$ 45</b></span><span class="arr" aria-hidden="true">↗</span></div>
+      </a>
+      <a class="tile t-unh pinkt-bg rv" href="#valores">
+        <svg class="art" viewBox="0 0 300 220" aria-hidden="true"><g fill="#0e0d10"><rect x="20" y="70" width="44" height="150" rx="22"/><rect x="76" y="30" width="46" height="190" rx="23"/><rect x="134" y="14" width="46" height="206" rx="23"/><rect x="192" y="34" width="46" height="186" rx="23"/><rect x="250" y="86" width="40" height="134" rx="20"/></g><g fill="#f2ede6"><path d="M26 92a16 16 0 0 1 32 0v34H26Z"/><path d="M83 52a16 16 0 0 1 32 0v36H83Z"/><path d="M141 36a16 16 0 0 1 32 0v36h-32Z"/><path d="M199 56a16 16 0 0 1 32 0v36h-32Z"/><path d="M255 106a15 15 0 0 1 30 0v30h-30Z"/></g><g fill="#ff2e88"><path d="M30 94a12 12 0 0 1 24 0v28H30Z"/><path d="M87 54a12 12 0 0 1 24 0v30H87Z"/><path d="M145 38a12 12 0 0 1 24 0v30h-24Z"/><path d="M203 58a12 12 0 0 1 24 0v30h-24Z"/><path d="M259 108a11 11 0 0 1 22 0v24h-22Z"/></g><g fill="#fff" opacity=".8"><rect x="34" y="92" width="4" height="16" rx="2"/><rect x="91" y="52" width="4" height="18" rx="2"/><rect x="149" y="36" width="4" height="18" rx="2"/><rect x="207" y="56" width="4" height="18" rx="2"/></g></svg>
+        <div><h3 class="disp">Unhas</h3><span class="ser">esmaltação em gel, fibra e cuidado completo</span></div>
+        <div class="from"><span>a partir de <b>R$ 35</b></span><span class="arr" aria-hidden="true">↗</span></div>
+      </a>
+      <a class="tile t-mak rv" href="#valores">
+        <svg class="art" viewBox="0 0 420 260" aria-hidden="true"><defs><linearGradient id="mk" x1="0" x2="1"><stop offset="0" stop-color="#ff2e88"/><stop offset=".55" stop-color="#a98bff"/><stop offset="1" stop-color="#ff9a5c"/></linearGradient></defs><path d="M40 190C120 120 210 220 300 140S390 90 400 80" fill="none" stroke="url(#mk)" stroke-width="46" stroke-linecap="round" opacity=".95"/><path d="M60 230C150 180 250 240 360 190" fill="none" stroke="#f2ede6" stroke-width="10" stroke-linecap="round" opacity=".5"/><g transform="rotate(-32 300 70)"><rect x="210" y="60" width="160" height="18" rx="9" fill="#f2ede6"/><rect x="190" y="56" width="34" height="26" rx="6" fill="#a7a1a9"/><path d="M190 56C160 50 140 62 132 69C140 76 160 88 190 82Z" fill="#ff2e88"/></g></svg>
+        <div><h3 class="disp">Make</h3><span class="ser">social, festa e noiva, com prova antes do grande dia</span></div>
+        <div class="from"><span>a partir de <b>R$ 150</b></span><span class="arr" aria-hidden="true">↗</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec light" id="valores" aria-labelledby="vl-t">
+  <div class="wrap">
+    <div class="menu-head">
+      <div><div class="kicker rv"><span>Tabela de valores</span><span>Valores de exemplo</span></div>
+      <h2 class="disp h2 split" id="vl-t">Valores <span class="ser">sem surpresa</span></h2></div>
+      <p class="lead rv">Tudo escrito antes de você sentar na cadeira. O tempo de cada serviço ajuda a planejar o seu dia.</p>
+    </div>
+    <div class="menu">
+      <div class="cat rv"><h3 class="disp">Cílios <span class="ser">extensão</span></h3>
+        <div class="it"><span class="nm">Fio a fio</span><span class="pr">R$ 160</span><span class="ds">efeito natural, 2h</span></div>
+        <div class="it"><span class="nm">Volume brasileiro <span class="hot">mais pedido</span></span><span class="pr">R$ 180</span><span class="ds">fios em Y, mais preenchido, 2h</span></div>
+        <div class="it"><span class="nm">Volume russo</span><span class="pr">R$ 220</span><span class="ds">leques feitos à mão, 2h30</span></div>
+        <div class="it"><span class="nm">Manutenção</span><span class="pr">R$ 110</span><span class="ds">até 21 dias depois da aplicação, 1h15</span></div>
+      </div>
+      <div class="cat rv"><h3 class="disp">Sobrancelha <span class="ser">design</span></h3>
+        <div class="it"><span class="nm">Design personalizado</span><span class="pr">R$ 45</span><span class="ds">medição pelo seu rosto, 40 min</span></div>
+        <div class="it"><span class="nm">Design com henna</span><span class="pr">R$ 60</span><span class="ds">preenche falhas por até 10 dias, 1h</span></div>
+        <div class="it"><span class="nm">Brow lamination <span class="hot">tendência</span></span><span class="pr">R$ 120</span><span class="ds">fios alinhados por 6 a 8 semanas, 1h10</span></div>
+        <div class="it"><span class="nm">Buço na linha</span><span class="pr">R$ 20</span><span class="ds">15 min</span></div>
+      </div>
+      <div class="cat rv"><h3 class="disp">Unhas <span class="ser">mãos e pés</span></h3>
+        <div class="it"><span class="nm">Mão completa</span><span class="pr">R$ 35</span><span class="ds">cutícula e esmaltação comum, 45 min</span></div>
+        <div class="it"><span class="nm">Pé completo</span><span class="pr">R$ 40</span><span class="ds">50 min</span></div>
+        <div class="it"><span class="nm">Esmaltação em gel</span><span class="pr">R$ 90</span><span class="ds">brilho de até 3 semanas, 1h</span></div>
+        <div class="it"><span class="nm">Alongamento em fibra</span><span class="pr">R$ 180</span><span class="ds">formato e comprimento a combinar, 2h30</span></div>
+      </div>
+      <div class="cat rv"><h3 class="disp">Make <span class="ser">ocasiões</span></h3>
+        <div class="it"><span class="nm">Maquiagem social</span><span class="pr">R$ 150</span><span class="ds">aniversário, formatura, ensaio, 1h</span></div>
+        <div class="it"><span class="nm">Make e penteado</span><span class="pr">R$ 230</span><span class="ds">1h40</span></div>
+        <div class="it"><span class="nm">Noiva com prova</span><span class="pr">R$ 650</span><span class="ds">prova no studio e atendimento no dia</span></div>
+        <div class="it"><span class="nm">Aula de automaquiagem</span><span class="pr">R$ 280</span><span class="ds">individual, 2h, com lista de produtos</span></div>
+      </div>
+    </div>
+    <div class="menu-note rv"><p>Pagamento em Pix, débito ou crédito em até 3 vezes sem juros. Valores ilustrativos de uma marca fictícia.</p><span class="tag">Valores de exemplo</span></div>
+  </div>
+</section>
+
+<section class="sec" id="reels" aria-labelledby="rl-t">
+  <div class="wrap">
+    <div class="kicker rv"><span>Antes e depois</span><span>Direto dos reels</span></div>
+    <h2 class="disp h2 split" id="rl-t">Resultado <span class="ser">que aparece</span></h2>
+    <div class="reels" role="list">
+      <article class="reel" role="listitem">
+        <svg viewBox="0 0 270 480" aria-hidden="true"><use href="#bg-split"/><g transform="translate(135 150)"><use href="#olho-a"/></g><g transform="translate(135 330)"><use href="#olho-d"/></g></svg>
+        <div class="rtop"><span>Reel 01</span><span>Antes · Depois</span></div><span class="play" aria-hidden="true"><svg width="18" height="20" viewBox="0 0 18 20"><path d="M2 1l15 9-15 9z" fill="#0e0d10"/></svg></span>
+        <div class="rbot"><b>Volume brasileiro</b><i>suas fotos entram aqui</i></div>
+      </article>
+      <article class="reel" role="listitem">
+        <svg viewBox="0 0 270 480" aria-hidden="true"><use href="#bg-split"/><g transform="translate(135 150)"><use href="#sob-a"/></g><g transform="translate(135 330)"><use href="#sob-d"/></g></svg>
+        <div class="rtop"><span>Reel 02</span><span>Antes · Depois</span></div><span class="play" aria-hidden="true"><svg width="18" height="20" viewBox="0 0 18 20"><path d="M2 1l15 9-15 9z" fill="#0e0d10"/></svg></span>
+        <div class="rbot"><b>Brow lamination</b><i>suas fotos entram aqui</i></div>
+      </article>
+      <article class="reel" role="listitem">
+        <svg viewBox="0 0 270 480" aria-hidden="true"><use href="#bg-split"/><g transform="translate(135 150)"><use href="#unha-a"/></g><g transform="translate(135 330)"><use href="#unha-d"/></g></svg>
+        <div class="rtop"><span>Reel 03</span><span>Antes · Depois</span></div><span class="play" aria-hidden="true"><svg width="18" height="20" viewBox="0 0 18 20"><path d="M2 1l15 9-15 9z" fill="#0e0d10"/></svg></span>
+        <div class="rbot"><b>Gel nude rosado</b><i>suas fotos entram aqui</i></div>
+      </article>
+      <article class="reel" role="listitem">
+        <svg viewBox="0 0 270 480" aria-hidden="true"><use href="#bg-split"/><g transform="translate(135 150)"><use href="#make-a"/></g><g transform="translate(135 330)"><use href="#make-d"/></g></svg>
+        <div class="rtop"><span>Reel 04</span><span>Antes · Depois</span></div><span class="play" aria-hidden="true"><svg width="18" height="20" viewBox="0 0 18 20"><path d="M2 1l15 9-15 9z" fill="#0e0d10"/></svg></span>
+        <div class="rbot"><b>Make de formatura</b><i>suas fotos entram aqui</i></div>
+      </article>
+    </div>
+    <p class="reels-cap rv"><span class="tag" style="color:var(--pink)">Composição ilustrativa</span><span>No site real, cada quadro abre o vídeo do Instagram da cliente que autorizou.</span></p>
+  </div>
+</section>
+
+<section class="sec light" aria-labelledby="df-t">
+  <div class="wrap">
+    <div class="kicker rv"><span>Por que a Aurora</span><span>04 compromissos</span></div>
+    <h2 class="disp h2 split" id="df-t">Cuidado <span class="ser">nos detalhes</span></h2>
+    <div class="rows">
+      <div class="row rv"><span class="n">01</span><h3 class="disp">Hora marcada</h3><p>Uma cliente por vez, com tolerância de 10 minutos. Seu horário é seu.</p></div>
+      <div class="row rv"><span class="n">02</span><h3 class="disp">Material seguro</h3><p>Lixas e escovinhas descartáveis, pinças esterilizadas em autoclave na sua frente.</p></div>
+      <div class="row rv"><span class="n">03</span><h3 class="disp">Teste antes</h3><p>Teste de sensibilidade para cola e henna em quem faz pela primeira vez.</p></div>
+      <div class="row rv"><span class="n">04</span><h3 class="disp">Lembrete gentil</h3><p>Aviso no WhatsApp quando chega a hora da manutenção. Sem spam.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="cf-t">
+  <div class="wrap">
+    <div class="kicker rv"><span>Como funciona</span><span>Do agendamento à manutenção</span></div>
+    <h2 class="disp h2 split" id="cf-t">Simples <span class="ser">assim</span></h2>
+    <ol class="steps">
+      <li class="step rv"><span class="big">01</span><h3 class="disp">Escolha</h3><p>Veja os serviços e valores aqui na página, sem precisar perguntar preço.</p></li>
+      <li class="step rv"><span class="big">02</span><h3 class="disp">Agende</h3><p>Escolha o dia e o horário livre. A confirmação chega no seu WhatsApp.</p></li>
+      <li class="step rv"><span class="big">03</span><h3 class="disp">Relaxe</h3><p>Chegue no horário, tome um café e deixe o resto com a gente.</p></li>
+      <li class="step rv"><span class="big">04</span><h3 class="disp">Mantenha</h3><p>A gente lembra da manutenção para o resultado continuar bonito.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec light" id="agenda" aria-labelledby="ag-t">
+  <div class="wrap">
+    <div class="kicker rv"><span>Agenda da semana</span><span>Horários de exemplo</span></div>
+    <h2 class="disp h2 split" id="ag-t">Escolha <span class="ser">o seu horário</span></h2>
+    <div class="ag">
+      <div class="rv">
+        <div class="days" role="tablist" aria-label="Dias da semana" id="days"></div>
+        <div id="slots-panel" role="tabpanel" style="margin-top:14px"><div class="slots" id="slots"></div></div>
+        <noscript><p style="margin-top:14px">Atendimento de segunda a sexta, 9h às 20h, e sábado, 8h às 17h.</p></noscript>
+      </div>
+      <aside class="ag-box rv" aria-live="polite">
+        <span class="tag">Horários de exemplo</span>
+        <span class="ser">Seu horário</span>
+        <div class="sel" id="sel">Escolha <em>um horário</em></div>
+        <p id="sel-p">Toque em um horário livre. Os riscados já estão ocupados.</p>
+        <button class="pill mag" type="button" data-demo>Agendar meu horário<span class="dot" aria-hidden="true">↗</span></button>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="dp-t">
+  <div class="wrap">
+    <div class="kicker rv"><span>Quem já veio</span><span>Depoimentos de exemplo</span></div>
+    <h2 class="disp h2 split" id="dp-t">Elas <span class="ser">voltaram</span></h2>
+    <div class="rate rv"><b>4,9</b><span class="st" aria-label="Nota 4,9 de 5">★★★★★</span><span style="color:var(--mute)">média das avaliações</span><span class="tag" style="color:var(--pink)">exemplo</span></div>
+    <div class="qs">
+      <figure class="q rv"><blockquote>Fiz o volume brasileiro para o casamento da minha irmã e durou o mês inteiro, bonito do início ao fim.</blockquote><figcaption class="who"><b>Thaís P.</b><span>Cílios</span><span class="tag">exemplo</span></figcaption></figure>
+      <figure class="q rv"><blockquote>Pela primeira vez saí de um design de sobrancelha sem cara de assustada. Ela mediu tudo antes.</blockquote><figcaption class="who"><b>Bruna L.</b><span>Sobrancelha</span><span class="tag">exemplo</span></figcaption></figure>
+      <figure class="q rv"><blockquote>Horário respeitado, cafezinho e a unha em gel intacta depois de três semanas.</blockquote><figcaption class="who"><b>Camila R.</b><span>Unhas</span><span class="tag">exemplo</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec light" id="duvidas" aria-labelledby="fq-t">
+  <div class="wrap">
+    <div class="kicker rv"><span>Dúvidas</span><span>05 perguntas</span></div>
+    <h2 class="disp h2 split" id="fq-t">Antes <span class="ser">de vir</span></h2>
+    <div class="faq" style="margin-top:44px">
+      <aside class="faq-card rv"><span class="ser">Ficou alguma dúvida?</span><p style="color:#cfc8d0">Mande uma mensagem e a gente responde no horário de atendimento.</p><button class="pill sm mag" type="button" data-demo>Chamar no WhatsApp<span class="dot" aria-hidden="true">↗</span></button></aside>
+      <div class="faq-l">
+        <details open class="rv"><summary>Quanto tempo dura a extensão de cílios?<i aria-hidden="true"></i></summary><p>Em média de 3 a 4 semanas, acompanhando o ciclo natural dos seus fios. A manutenção entre 15 e 21 dias mantém o volume completo.</p></details>
+        <details class="rv"><summary>Posso molhar os cílios no mesmo dia?<i aria-hidden="true"></i></summary><p>O ideal é esperar 24 horas para a cola curar por completo. Depois disso, lave normalmente com espuma própria para cílios, que indicamos no atendimento.</p></details>
+        <details class="rv"><summary>Preciso ir com a sobrancelha crescida?<i aria-hidden="true"></i></summary><p>Se puder, deixe crescer por 2 a 3 semanas. Assim a designer tem mais fios para desenhar o formato que combina com o seu rosto.</p></details>
+        <details class="rv"><summary>Vocês atendem noivas fora do studio?<i aria-hidden="true"></i></summary><p>Sim, com prova no studio antes e taxa de deslocamento conforme o local. Reserve com antecedência, principalmente para datas de fim de semana.</p></details>
+        <details class="rv"><summary>E se eu precisar remarcar?<i aria-hidden="true"></i></summary><p>Avise com até 12 horas de antecedência pelo WhatsApp e a gente encontra outro horário sem custo.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="local" aria-labelledby="lc-t">
+  <div class="wrap">
+    <div class="kicker rv"><span>Onde fica</span><span>Alcântara, São Gonçalo</span></div>
+    <h2 class="disp h2 split" id="lc-t">Venha <span class="ser">nos visitar</span></h2>
+    <div class="loc">
+      <figure class="map rv" aria-label="Mapa ilustrativo do studio">
+        <svg viewBox="0 0 700 430" aria-hidden="true">
+          <rect width="700" height="430" fill="#18161b"/>
+          <g stroke="#2c2930" stroke-width="18" fill="none" stroke-linecap="round"><path d="M-20 140C160 120 300 170 720 110"/><path d="M-20 300L720 270"/><path d="M200 -20L250 450"/><path d="M470 -20C440 120 520 260 480 450"/></g>
+          <g stroke="#3a363f" stroke-width="7" fill="none"><path d="M0 60H700M0 380H700M90 0V430M610 0V430M330 0L380 430"/></g>
+          <path d="M520 330q60-40 130 0t0 80h-130z" fill="#221f26"/>
+          <g fill="#a7a1a9" font-family="Outfit, sans-serif" font-size="15" letter-spacing="1"><text x="30" y="128">RUA DAS PALMEIRAS</text><text x="30" y="290">AV. PRINCIPAL</text><text x="540" y="372">PRAÇA</text></g>
+          <g transform="translate(362 148)"><circle r="60" fill="#ff2e88" opacity=".14"><animate attributeName="r" values="30;70;30" dur="3s" repeatCount="indefinite"/></circle><path d="M0 18C-22-6-26-18-26-28a26 26 0 0 1 52 0c0 10-4 22-26 46Z" fill="#ff2e88" transform="translate(0 -26)"/><circle cy="-54" r="9" fill="#0e0d10"/></g>
+        </svg>
+        <span class="tag">Mapa ilustrativo</span>
+      </figure>
+      <dl class="info rv">
+        <div><dt>Endereço</dt><dd>Rua das Palmeiras, 120, sala 3<br>Alcântara, São Gonçalo, RJ</dd></div>
+        <div><dt>Horário</dt><dd>Segunda a sexta, 9h às 20h<br>Sábado, 8h às 17h<br>Domingo, fechado</dd></div>
+        <div><dt>Chegando</dt><dd>A duas quadras do terminal de Alcântara. Estacionamento na rua.</dd></div>
+        <div><dt>Contato</dt><dd><button class="pill sm mag" type="button" data-demo>Chamar no WhatsApp<span class="dot" aria-hidden="true">↗</span></button></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="fn-t">
+  <div class="wrap">
+    <h2 class="disp split" id="fn-t">Seu horário <span class="ser">te espera</span></h2>
+    <p class="rv">Escolha o serviço, o dia e a hora. A confirmação chega no seu WhatsApp em poucos minutos.</p>
+    <div class="hero-cta rv"><button class="pill dark mag" type="button" data-demo>Agendar meu horário<span class="dot" aria-hidden="true">↗</span></button><a class="pill ghost" href="#valores">Ver valores</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-g">
+      <div><h3>Studio Aurora Beauty</h3><p style="max-width:34ch">Cílios, sobrancelhas, unhas e maquiagem em São Gonçalo, RJ. Marca fictícia criada pela Beatus Mídias para demonstração.</p></div>
+      <div><h3>Studio</h3><a href="#servicos">Serviços</a><a href="#valores">Valores</a><a href="#reels">Resultados</a></div>
+      <div><h3>Agenda</h3><a href="#agenda">Horários</a><a href="#duvidas">Dúvidas</a><a href="#local">Onde fica</a></div>
+      <div><h3>Legal</h3><button class="lnk" type="button" data-demo="link">Privacidade</button><button class="lnk" type="button" data-demo="link">Termos de uso</button></div>
+    </div>
+    <div class="giant" aria-hidden="true">Aurora</div>
+    <div class="foot-l"><span>Modelo demonstrativo · marca, valores e depoimentos fictícios</span><a href="https://wa.me/5521975340783?text=Ol%C3%A1!%20Gostei%20do%20modelo%20de%20studio%20de%20beleza%20e%20quero%20uma%20p%C3%A1gina%20assim." target="_blank" rel="noopener" style="display:inline-flex;color:var(--pink)">Site feito pela Beatus Mídias</a></div>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a363f"/><stop offset="1" stop-color="#242128"/></linearGradient>
+    <linearGradient id="gD" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff2e88"/><stop offset="1" stop-color="#a98bff"/></linearGradient>
+    <symbol id="bg-split" viewBox="0 0 270 480"><rect width="270" height="240" fill="url(#gA)"/><rect y="240" width="270" height="240" fill="url(#gD)"/><path d="M0 240H270" stroke="#f2ede6" stroke-width="2"/><text x="16" y="226" font-family="Outfit, sans-serif" font-size="13" font-weight="600" letter-spacing="2" fill="#cfc8d0">ANTES</text><text x="16" y="264" font-family="Outfit, sans-serif" font-size="13" font-weight="600" letter-spacing="2" fill="#0e0d10">DEPOIS</text></symbol>
+    <symbol id="olho-a" viewBox="-80 -40 160 80" width="160" height="80" x="-80" y="-40"><path d="M-70 4Q0-40 70 4Q0 44-70 4Z" fill="#cfc8d0"/><circle r="16" cy="4" fill="#5d5761"/><circle r="7" cy="4" fill="#0e0d10"/><path d="M-70 4Q0-40 70 4" fill="none" stroke="#0e0d10" stroke-width="3"/><g stroke="#0e0d10" stroke-width="2" stroke-linecap="round"><path d="M-30-14l-3-8M0-18v-8M30-14l3-8"/></g></symbol>
+    <symbol id="olho-d" viewBox="-80 -40 160 80" width="160" height="80" x="-80" y="-40"><path d="M-70 4Q0-40 70 4Q0 44-70 4Z" fill="#f2ede6"/><circle r="16" cy="4" fill="#0e0d10"/><circle r="6" cy="4" fill="#ff2e88"/><path d="M-70 4Q0-40 70 4" fill="none" stroke="#0e0d10" stroke-width="4"/><g stroke="#0e0d10" stroke-width="2.6" stroke-linecap="round" fill="none"><path d="M-62-2q-10-6-14-16M-50-9q-6-10-8-20M-38-14q-4-11-4-22M-26-17q-2-12 0-23M-13-19q0-12 3-23M0-20q2-12 6-22M13-19q3-11 8-21M26-17q5-10 11-18M38-14q6-9 13-15M50-9q7-7 15-11M62-2q7-4 14-6"/></g></symbol>
+    <symbol id="sob-a" viewBox="-80 -40 160 80" width="160" height="80" x="-80" y="-40"><g stroke="#5d5761" stroke-width="2" stroke-linecap="round"><path d="M-60 10l6-10M-48 4l6-10M-30-2l5-10M-10-4l4-10M14-2l3-9M34 4l2-8"/></g></symbol>
+    <symbol id="sob-d" viewBox="-80 -40 160 80" width="160" height="80" x="-80" y="-40"><path d="M-66 14C-40-14 10-22 66 6C30-6-20-6-66 14Z" fill="#0e0d10"/><g stroke="#0e0d10" stroke-width="2.4" stroke-linecap="round"><path d="M-62 10l8-12M-52 6l8-13M-42 2l8-14M-32-1l7-14M-22-4l7-14M-12-6l6-14M-2-7l6-13M8-7l5-12M18-6l5-12M28-4l4-11M38-1l4-10M48 2l3-9M58 5l3-8"/></g></symbol>
+    <symbol id="unha-a" viewBox="-80 -50 160 100" width="160" height="100" x="-80" y="-50"><g fill="#cfc8d0"><rect x="-62" y="-20" width="26" height="70" rx="13"/><rect x="-30" y="-36" width="26" height="86" rx="13"/><rect x="2" y="-40" width="26" height="90" rx="13"/><rect x="34" y="-30" width="26" height="80" rx="13"/></g><g fill="#a7a1a9"><path d="M-58-8a9 9 0 0 1 18 0v18h-18Z"/><path d="M-26-24a9 9 0 0 1 18 0v18h-18Z"/><path d="M6-28a9 9 0 0 1 18 0v18H6Z"/><path d="M38-18a9 9 0 0 1 18 0v18H38Z"/></g></symbol>
+    <symbol id="unha-d" viewBox="-80 -50 160 100" width="160" height="100" x="-80" y="-50"><g fill="#f2ede6"><rect x="-62" y="-20" width="26" height="70" rx="13"/><rect x="-30" y="-36" width="26" height="86" rx="13"/><rect x="2" y="-40" width="26" height="90" rx="13"/><rect x="34" y="-30" width="26" height="80" rx="13"/></g><g fill="#0e0d10"><path d="M-58-8a9 9 0 0 1 18 0v22h-18Z"/><path d="M-26-24a9 9 0 0 1 18 0v22h-18Z"/><path d="M6-28a9 9 0 0 1 18 0v22H6Z"/><path d="M38-18a9 9 0 0 1 18 0v22H38Z"/></g><g fill="#fff"><rect x="-55" y="-6" width="3" height="10" rx="1.5"/><rect x="-23" y="-22" width="3" height="10" rx="1.5"/><rect x="9" y="-26" width="3" height="10" rx="1.5"/><rect x="41" y="-16" width="3" height="10" rx="1.5"/></g></symbol>
+    <symbol id="make-a" viewBox="-80 -60 160 120" width="160" height="120" x="-80" y="-60"><ellipse rx="44" ry="56" fill="#a7a1a9"/><g fill="#5d5761"><ellipse cx="-16" cy="-8" rx="7" ry="3"/><ellipse cx="16" cy="-8" rx="7" ry="3"/><path d="M-12 26q12 6 24 0" stroke="#5d5761" stroke-width="3" fill="none"/></g></symbol>
+    <symbol id="make-d" viewBox="-80 -60 160 120" width="160" height="120" x="-80" y="-60"><ellipse rx="44" ry="56" fill="#f2ede6"/><g fill="#0e0d10"><path d="M-26-8q10-8 20 0q-10 4-20 0Z"/><path d="M6-8q10-8 20 0q-10 4-20 0Z"/></g><g fill="#ff2e88" opacity=".55"><ellipse cx="-24" cy="12" rx="10" ry="6"/><ellipse cx="24" cy="12" rx="10" ry="6"/></g><path d="M-13 26q13 9 26 0q-13 4-26 0Z" fill="#c2005c"/><path d="M-30-18q10-8 22-4M8-22q12-4 22 4" stroke="#0e0d10" stroke-width="3" fill="none" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+var D=document,H=D.documentElement,REDUZ=matchMedia('(prefers-reduced-motion: reduce)').matches,HOVER=matchMedia('(hover:hover)').matches,VIS=D.visibilityState==='visible';
+H.classList.add('js');
+if(!REDUZ&&VIS){H.classList.add('anim');setTimeout(function(){H.classList.add('anim-done')},3200);}
+
+/* toast */
+var T=D.getElementById('toast'),tt;
+function toast(m){T.innerHTML=m;T.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){T.classList.remove('show')},4200);}
+D.addEventListener('click',function(e){var b=e.target.closest('[data-demo]');if(!b)return;e.preventDefault();
+  toast(b.dataset.demo==='link'?'<b>Modelo demonstrativo:</b> no seu site, este link abre a página correspondente.':'<b>Modelo demonstrativo:</b> no seu site, este botão abre o seu WhatsApp com a mensagem pronta.');});
+
+/* cabecalho e menu */
+var head=D.getElementById('head');addEventListener('scroll',function(){head.classList.toggle('scrolled',scrollY>20);},{passive:true});
+var mb=D.querySelector('.menu-btn'),mn=D.getElementById('mnav');
+function setMenu(o){mn.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');}
+mb.addEventListener('click',function(e){e.stopPropagation();setMenu(!mn.classList.contains('open'));});
+mn.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false);});
+D.addEventListener('click',function(e){if(mn.classList.contains('open')&&!mn.contains(e.target))setMenu(false);});
+D.addEventListener('keydown',function(e){if(e.key==='Escape'&&mn.classList.contains('open')){setMenu(false);mb.focus();}});
+
+/* titulos palavra a palavra: quebra o texto em palavras (elementos filhos viram uma unidade) */
+var splits=[].slice.call(D.querySelectorAll('.split'));
+splits.forEach(function(el){
+  var i=0;
+  function wrapUnit(node,parent){var w=D.createElement('span');w.className='w';var wi=D.createElement('span');wi.className='wi';wi.style.setProperty('--d',i++);w.appendChild(wi);parent.insertBefore(w,node);wi.appendChild(node);}
+  function walk(parent){[].slice.call(parent.childNodes).forEach(function(n){
+    if(n.nodeType===3){var parts=n.textContent.split(/(\s+)/);var frag=D.createDocumentFragment();
+      parts.forEach(function(p){if(!p)return;if(/^\s+$/.test(p)){frag.appendChild(D.createTextNode(' '));return;}var t=D.createTextNode(p);frag.appendChild(t);});
+      var nodes=[].slice.call(frag.childNodes);parent.replaceChild(frag,n);nodes.forEach(function(t){if(t.nodeType===3&&/\S/.test(t.textContent))wrapUnit(t,parent);});}
+    else if(n.nodeType===1){if(n.classList.contains('ln'))walk(n);else wrapUnit(n,parent);}
+  });}
+  walk(el);
+});
+function inView(el,f){return el.getBoundingClientRect().top<innerHeight*(f||.9);}
+if(!REDUZ&&VIS){splits.forEach(function(el){el.classList.add('pre');});
+  var h1=D.getElementById('h1');requestAnimationFrame(function(){requestAnimationFrame(function(){setTimeout(function(){h1.classList.remove('pre');},150);});});
+}
+function splitSweep(){splits.forEach(function(el){if(el.classList.contains('pre')&&el.id!=='h1'&&inView(el,.88))el.classList.remove('pre');});}
+addEventListener('scroll',splitSweep,{passive:true});addEventListener('resize',splitSweep);addEventListener('load',splitSweep);setTimeout(splitSweep,400);
+setTimeout(function(){splits.forEach(function(el){el.classList.remove('pre');});},6500);
+
+/* reveal por topo */
+var els=[].slice.call(D.querySelectorAll('.rv'));
+if(!REDUZ&&VIS){
+  var vh=innerHeight;els.forEach(function(el){if(el.getBoundingClientRect().top>vh*.92)el.classList.add('hide');});
+  var sweep=function(){els.forEach(function(el){if(el.classList.contains('hide')&&el.getBoundingClientRect().top<innerHeight*.92)el.classList.remove('hide');});};
+  addEventListener('scroll',sweep,{passive:true});addEventListener('resize',sweep);addEventListener('load',sweep);
+  setTimeout(function(){els.forEach(function(el){el.classList.remove('hide');});},6000);
+}
+
+/* hover magnetico nos CTAs */
+if(HOVER&&!REDUZ){[].slice.call(D.querySelectorAll('.mag')).forEach(function(b){
+  var raf=0,tx=0,ty=0;
+  b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();tx=(e.clientX-r.left-r.width/2)*.28;ty=(e.clientY-r.top-r.height/2)*.38;
+    if(!raf)raf=requestAnimationFrame(function(){raf=0;b.style.transition='transform .15s ease-out';b.style.transform='translate('+tx.toFixed(1)+'px,'+ty.toFixed(1)+'px)';});});
+  b.addEventListener('pointerleave',function(){b.style.transition='transform .6s cubic-bezier(.34,1.56,.64,1)';b.style.transform='';});
+});}
+
+/* olho que segue o cursor */
+(function(){var iris=D.getElementById('iris'),eye=D.getElementById('eye');if(!HOVER||REDUZ)return;
+  var raf=0,mx=0,my=0;addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;if(!raf)raf=requestAnimationFrame(function(){raf=0;var r=eye.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,dx=mx-cx,dy=my-cy,d=Math.hypot(dx,dy)||1,k=Math.min(1,d/400);
+    iris.style.transform='translate('+(dx/d*16*k).toFixed(1)+'px,'+(dy/d*7*k).toFixed(1)+'px)';});},{passive:true});
+})();
+
+/* ilustracoes: leque de cilios e fios da sobrancelha */
+(function(){var NS='http://www.w3.org/2000/svg';
+  var fan=D.getElementById('lashfan');for(var k=0;k<=26;k++){var t=k/26,x=30+380*t,y=250-130*4*t*(1-t)*.5-0,ang=-Math.PI/2+(t-.5)*1.9,len=70+60*Math.sin(Math.PI*t),
+    x2=x+Math.cos(ang)*len,y2=y+Math.sin(ang)*len,cx=x+Math.cos(ang-.35)*len*.55,cy=y+Math.sin(ang-.35)*len*.55,p=D.createElementNS(NS,'path');
+    p.setAttribute('d','M'+x.toFixed(1)+' '+y.toFixed(1)+'Q'+cx.toFixed(1)+' '+cy.toFixed(1)+' '+x2.toFixed(1)+' '+y2.toFixed(1));
+    p.setAttribute('stroke',k%5===2?'#ff2e88':'#f2ede6');p.setAttribute('stroke-width',k%5===2?3.2:2.2);p.setAttribute('fill','none');p.setAttribute('stroke-linecap','round');p.setAttribute('opacity',(.55+.45*Math.sin(Math.PI*t)).toFixed(2));fan.appendChild(p);}
+  var br=D.getElementById('brow');for(var j=0;j<46;j++){var u=j/45,bx=20+290*u,by=120-80*Math.sin(Math.PI*Math.min(1,u*1.25))*(u<.8?1:1-(u-.8)*2.2),th=-1.2+u*1.1,l=26-14*u,
+    q=D.createElementNS(NS,'path');q.setAttribute('d','M'+bx.toFixed(1)+' '+by.toFixed(1)+'l'+(Math.cos(th)*l).toFixed(1)+' '+(Math.sin(th)*l).toFixed(1));
+    q.setAttribute('stroke',j%7===3?'#ff2e88':'#f2ede6');q.setAttribute('stroke-width',2.4);q.setAttribute('stroke-linecap','round');q.setAttribute('opacity',(.5+.5*Math.sin(Math.PI*u)).toFixed(2));br.appendChild(q);}
+})();
+
+/* agenda por dias (abas acessiveis) */
+(function(){
+  var dias=[['Seg','segunda'],['Ter','terça'],['Qua','quarta'],['Qui','quinta'],['Sex','sexta'],['Sáb','sábado']];
+  var base=[['09:00','Cílios'],['10:30','Sobrancelha'],['11:30','Unhas'],['13:30','Cílios'],['15:00','Make'],['16:30','Unhas'],['18:00','Sobrancelha'],['19:00','Cílios']];
+  var ocup={0:[1,4],1:[0,3,6],2:[2,5],3:[1,2,7],4:[0,4,5],5:[0,1,3]};
+  var tl=D.getElementById('days'),box=D.getElementById('slots'),sel=D.getElementById('sel'),selp=D.getElementById('sel-p'),tabs=[],cur=0;
+  dias.forEach(function(d,i){var b=D.createElement('button');b.type='button';b.setAttribute('role','tab');b.id='dia-'+i;b.setAttribute('aria-controls','slots-panel');b.innerHTML='<b>'+d[0]+'</b><small>'+(i===5?'8h às 17h':'9h às 20h')+'</small>';tl.appendChild(b);tabs.push(b);
+    b.addEventListener('click',function(){pick(i);});
+    b.addEventListener('keydown',function(e){var n=null;if(e.key==='ArrowRight')n=(i+1)%6;else if(e.key==='ArrowLeft')n=(i+5)%6;else if(e.key==='Home')n=0;else if(e.key==='End')n=5;if(n!==null){e.preventDefault();pick(n);tabs[n].focus();}});});
+  function pick(i){cur=i;tabs.forEach(function(t,k){t.setAttribute('aria-selected',k===i);t.tabIndex=k===i?0:-1;});D.getElementById('slots-panel').setAttribute('aria-labelledby','dia-'+i);
+    box.textContent='';var lista=i===5?base.slice(0,6):base;
+    lista.forEach(function(s,k){var b=D.createElement('button');b.type='button';b.className='slot';b.setAttribute('aria-pressed','false');var busy=ocup[i].indexOf(k)>-1;b.disabled=busy;
+      b.innerHTML='<b>'+s[0]+'</b><span>'+s[1]+(busy?' · ocupado':'')+'</span>';
+      b.addEventListener('click',function(){[].forEach.call(box.children,function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');
+        sel.innerHTML=dias[i][1]+', '+s[0]+' <em>'+s[1].toLowerCase()+'</em>';selp.textContent='Horário de exemplo. No seu site, a cliente confirma e recebe a mensagem pronta no WhatsApp.';});
+      box.appendChild(b);});}
+  var hoje=new Date().getDay();pick(hoje>=1&&hoje<=6?hoje-1:0);
+})();
+
+/* scrollspy */
+(function(){var links=[].slice.call(D.querySelectorAll('.nav a')),secs=links.map(function(a){return D.querySelector(a.getAttribute('href'));}),tk=0;
+  function up(){tk=0;var cur=null;secs.forEach(function(s){if(s&&s.getBoundingClientRect().top<=200)cur=s.id;});
+    links.forEach(function(a){var on=a.getAttribute('href')==='#'+cur;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});}
+  addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(up);}},{passive:true});up();})();
+})();
+</script>
+</body>
+</html>

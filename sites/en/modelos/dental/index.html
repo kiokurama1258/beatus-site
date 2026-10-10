@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Brightside Family Dental · Gentle family dentistry in Austin, TX (demo template)</title>
+<meta name="description" content="Demo dental practice landing page by Beatus Mídias for a fictional family dentist in Austin, TX: services, new patient special, insurance and first visit.">
+<meta name="theme-color" content="#f6f9fc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%232563a6'/%3E%3Cpath d='M11 20a9 9 0 0 1 18 0z' fill='%23fff'/%3E%3Cpath d='M9 26c6 6 16 6 22 0' stroke='%235fd3b0' stroke-width='3.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Young Serif";src:url("fontes/young-serif-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"M PLUS Rounded 1c";src:url("fontes/m-plus-rounded-1c-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"M PLUS Rounded 1c";src:url("fontes/m-plus-rounded-1c-latin-500-normal.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"M PLUS Rounded 1c";src:url("fontes/m-plus-rounded-1c-latin-700-normal.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"M PLUS Rounded 1c";src:url("fontes/m-plus-rounded-1c-latin-800-normal.woff2") format("woff2");font-weight:800;font-display:swap}
+:root{
+  --bg:#f6f9fc;--white:#fff;--sky:#e7f1fb;--sky2:#d3e4f6;--blue:#2563a6;--blue2:#3d7fc4;--navy:#15325a;--ink2:#4a5d78;--line:#dbe6f2;
+  --mint:#5fd3b0;--mint-d:#0f7a5e;--mint-l:#dcf6ee;--err:#b42318;
+  --serif:"Young Serif",Georgia,serif;--round:"M PLUS Rounded 1c",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);--spring:cubic-bezier(.34,1.56,.64,1);
+  --shadow:0 24px 48px -28px rgba(21,50,90,.35),0 2px 6px -2px rgba(21,50,90,.08);--wrap:1160px
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:120px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--navy);font:400 1.0625rem/1.75 var(--round);min-height:100dvh}
+svg{display:block;max-width:100%}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{width:min(100% - 2.5rem,var(--wrap));margin-inline:auto}
+@media (min-width:1500px){:root{--wrap:1280px}}
+.skip{position:fixed;left:12px;top:-60px;z-index:100;background:var(--navy);color:#fff;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;transition:top .2s}
+.skip:focus{top:12px}
+[tabindex="-1"]:focus{outline:none}
+:focus-visible{outline:3px solid var(--blue2);outline-offset:3px;border-radius:8px}
+.tag{display:inline-block;vertical-align:middle;font:700 .72rem/1 var(--round);letter-spacing:.04em;text-transform:uppercase;padding:5px 9px 4px;border-radius:999px;background:var(--mint-l);color:var(--mint-d);white-space:nowrap}
+
+/* top: demo strip + header */
+.top{position:sticky;top:0;z-index:40}
+.demo{background:var(--navy);color:#e3ecf7;font-size:.8125rem;line-height:1.35;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2px 14px;padding:7px 16px;text-align:center}
+.demo a{color:#a8f0d9;font-weight:700;text-underline-offset:3px;padding:4px 0}
+.demo a:hover{color:#fff}
+.thumb .demo{display:none}
+.nav{background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:12px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-height:44px}
+.brand svg{width:40px;height:40px;flex:none}
+.brand b{display:block;font:400 1.2rem/1 var(--serif);color:var(--navy)}
+.brand small{display:block;font-size:.78rem;line-height:1.2;color:var(--ink2);font-weight:500;margin-top:3px}
+.links{display:none;list-style:none;gap:2px}
+.links a{display:block;padding:10px 13px;border-radius:999px;text-decoration:none;font-weight:500;color:var(--ink2);transition:background-color .2s,color .2s}
+.links a:hover{background:var(--sky);color:var(--navy)}
+.links a.active{background:var(--sky);color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:50px;padding:0 1.5em;border:0;border-radius:999px;font:700 1rem/1.1 var(--round);text-decoration:none;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background-color .2s,color .2s}
+.btn svg{width:18px;height:18px}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 12px 24px -12px rgba(37,99,166,.7)}
+.btn-blue:hover{transform:translateY(-2px);background:#1f5793;box-shadow:0 18px 30px -14px rgba(37,99,166,.75)}
+.btn-soft{background:#fff;color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--sky2)}
+.btn-soft:hover{box-shadow:inset 0 0 0 1.5px var(--blue2);transform:translateY(-2px)}
+.btn-sm{min-height:44px;padding:0 1.1em;font-size:.95rem}
+.burger{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:#fff;display:grid;place-items:center;cursor:pointer}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:2px;border-radius:2px;background:var(--navy);transition:transform .25s var(--ease),opacity .2s}
+.burger span{position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.open .burger span{transform:rotate(45deg)}
+.open .burger span::before{transform:translateY(6px) rotate(90deg)}
+.open .burger span::after{opacity:0}
+.drawer{background:#fff;border-bottom:1px solid var(--line);padding:6px 20px 20px}
+.drawer a{display:block;padding:13px 4px;font:400 1.35rem/1.2 var(--serif);text-decoration:none;border-bottom:1px solid var(--line)}
+@media (min-width:940px){.links{display:flex}.burger{display:none}.drawer{display:none!important}}
+@media (max-width:420px){.brand small{display:none}.nav-in{gap:8px}.brand svg{width:34px;height:34px}.brand b{font-size:1.08rem}.nav .btn-sm{padding:0 .85em;font-size:.86rem}}
+.nav .btn-sm{white-space:nowrap}
+
+/* hero */
+.hero{position:relative;padding:clamp(30px,5vw,64px) 0 clamp(70px,8vw,110px);overflow-x:clip;background:radial-gradient(60% 70% at 85% 10%,#e3f0fc 0,transparent 70%),radial-gradient(40% 50% at 0% 90%,#e6f8f2 0,transparent 70%)}
+.hero-grid{display:grid;gap:38px;align-items:center}
+.hero-grid>*{min-width:0}
+@media (min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:56px}}
+.kicker{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 8px;font-weight:500;font-size:.92rem;color:var(--ink2)}
+.kicker i{width:24px;height:24px;border-radius:50%;background:var(--mint-l);display:grid;place-items:center}
+.kicker i::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--mint-d)}
+.hero h1{font-size:clamp(2.45rem,1.5rem + 4vw,4.4rem);line-height:1.06;margin:22px 0 18px}
+.lede{font-size:clamp(1.06rem,1rem + .3vw,1.2rem);color:var(--ink2);max-width:34em}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.mini{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:30px;color:var(--ink2);font-size:.95rem}
+.faces{display:flex}
+.faces span{width:38px;height:38px;border-radius:50%;border:3px solid #fff;display:grid;place-items:center;font:800 .8rem/1 var(--round);color:#fff;margin-left:-10px}
+.faces span:first-child{margin-left:0}
+.stars{display:inline-flex;gap:2px;color:var(--blue2)}
+.stars svg{width:15px;height:15px}
+.u{position:relative;display:inline-block;white-space:nowrap}
+.u svg{position:absolute;left:-3%;width:106%;bottom:-.26em;height:.42em;overflow:visible}
+.u path{fill:none;stroke:var(--mint);stroke-width:5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0}
+.js .u path{transition:stroke-dashoffset 1.1s var(--ease) .3s}
+.reveal.hide .u path,.pre-u .u path{stroke-dashoffset:1}
+
+/* hero visual */
+.hv{position:relative;margin:34px 0 46px}
+@media (min-width:960px){.hv{margin:0}}
+.hv-art{position:relative;border-radius:36px;overflow:hidden;aspect-ratio:560/520;background:linear-gradient(165deg,#dcebfa 0,#eef6fd 55%,#f8fcff 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.9),var(--shadow)}
+.hv-art svg{position:absolute;inset:0;width:100%;height:100%}
+.rays{transform-box:fill-box;transform-origin:center;animation:spin 90s linear infinite}
+.bubs circle{transform-box:fill-box;animation:drift 7s ease-in-out infinite alternate}
+.bubs circle:nth-child(2n){animation-duration:9s;animation-delay:-3s}
+.bubs circle:nth-child(3n){animation-duration:11s;animation-delay:-5s}
+@keyframes drift{to{transform:translateY(-16px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.smile{stroke-dasharray:1;stroke-dashoffset:0}
+.js .smile{transition:stroke-dashoffset 1.5s var(--ease) .45s}
+.js .smile2{transition-delay:.95s}
+.spark{transform-box:fill-box;transform-origin:center}
+.js .spark{transition:transform .6s var(--spring) 1.7s,opacity .3s 1.7s}
+.hv.pre .smile{stroke-dashoffset:1}
+.hv.pre .spark{transform:scale(0);opacity:0}
+.chip-pos{position:absolute;z-index:2;width:min(244px,66%)}
+.js .chip-pos{transition:opacity .6s var(--ease),transform .8s var(--spring);transition-delay:var(--d)}
+.hv.pre .chip-pos{opacity:0;transform:translateY(18px) scale(.94)}
+.chip{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid #fff;border-radius:18px;padding:12px 14px;box-shadow:var(--shadow);font-size:.88rem;line-height:1.45}
+.hv.go .chip{animation:bob 6s ease-in-out infinite;animation-delay:var(--b,0s)}
+@keyframes bob{50%{transform:translateY(-9px)}}
+.chip q{display:block;font-weight:500;color:var(--navy);margin:6px 0 8px;quotes:"\201C" "\201D"}
+.chip .who{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.82rem;color:var(--ink2);font-weight:700}
+.c1{top:-24px;left:-8px}
+.c2{bottom:-38px;right:-6px}
+.c3,.c4{display:none}
+@media (min-width:700px){.c1{top:7%;left:-6%}.c2{bottom:4%;right:-6%}.c3{display:block;bottom:-6%;left:5%}.c4{display:flex;top:4%;right:5%;width:auto}}
+.c4{align-items:center;gap:8px;background:var(--navy);color:#fff;border-radius:999px;padding:9px 14px 9px 10px;font-weight:700;font-size:.85rem;box-shadow:var(--shadow)}
+.c4 svg{width:20px;height:20px;color:var(--mint)}
+
+/* trust strip */
+.trust{position:relative;z-index:3;margin-top:-44px}
+.trust ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:24px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden}
+@media (min-width:900px){.trust ul{grid-template-columns:repeat(4,1fr)}}
+.trust li{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:18px 16px;font-weight:700;font-size:.95rem;line-height:1.3;border-bottom:1px solid var(--line)}
+.trust li:nth-child(odd){border-right:1px solid var(--line)}
+.trust li:nth-child(n+3){border-bottom:0}
+@media (min-width:900px){.trust li{flex-direction:row;align-items:center;border-bottom:0;border-right:1px solid var(--line);padding:22px 22px}.trust li:last-child{border-right:0}}
+.trust i{width:44px;height:44px;flex:none;border-radius:14px;background:var(--sky);display:grid;place-items:center;color:var(--blue)}
+.trust svg{width:24px;height:24px}
+
+/* sections */
+.sec{padding:clamp(70px,9vw,124px) 0}
+.eyebrow{font-weight:700;color:var(--mint-d);font-size:.95rem;margin-bottom:10px}
+.h2{font-size:clamp(2rem,1.35rem + 2.6vw,3.25rem)}
+.sub{color:var(--ink2);font-size:1.08rem;max-width:38em;margin-top:16px}
+.head-c{text-align:center;max-width:760px;margin-inline:auto}
+.head-c .sub{margin-inline:auto}
+
+/* services bento */
+.bento{display:grid;gap:16px;margin-top:44px}
+@media (min-width:860px){.bento{grid-template-columns:1.15fr 1fr;grid-template-rows:auto auto auto}.sv-big{grid-row:span 2}.sv-wide{grid-column:1/-1}}
+.sv{position:relative;background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px 26px;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.sv:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.sv h3{font-size:1.55rem;margin:18px 0 8px}
+.sv p{color:var(--ink2)}
+.sv .ill{width:72px;height:72px;border-radius:22px;background:var(--sky);display:grid;place-items:center}
+.sv .ill svg{width:44px;height:44px}
+.sv-big{background:linear-gradient(170deg,#fff 0,#f1f7fe 100%)}
+.sv-big .scene{margin-top:22px;border-radius:22px;background:var(--sky);overflow:hidden}
+.sv-big .scene svg{width:100%;height:auto}
+.sv ul{list-style:none;margin-top:14px;display:grid;gap:6px}
+.sv li{display:flex;gap:10px;align-items:flex-start;color:var(--ink2);font-size:.98rem}
+.sv li svg{width:20px;height:20px;flex:none;margin-top:4px;color:var(--mint-d)}
+.sv-wide{background:var(--blue);color:#fff;border-color:var(--blue);display:grid;gap:18px;align-items:center}
+@media (min-width:700px){.sv-wide{grid-template-columns:auto 1fr auto;gap:26px}}
+.sv-wide h3{margin:0 0 6px;color:#fff}
+.sv-wide p{color:#dbe8f7}
+.sv-wide .ill{background:rgba(255,255,255,.14)}
+.sv-wide .btn{background:#fff;color:var(--blue)}
+.sv-wide .btn:hover{background:var(--mint-l)}
+.same{display:inline-block;font:800 .75rem/1 var(--round);letter-spacing:.06em;text-transform:uppercase;color:var(--navy);background:var(--mint);padding:6px 10px 5px;border-radius:999px;margin-bottom:8px}
+.also{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;justify-content:center}
+.also span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:500;font-size:.95rem;color:var(--ink2)}
+
+/* special */
+.special{background:linear-gradient(180deg,var(--bg) 0,#eef5fc 100%)}
+.sp-grid{display:grid;gap:40px;align-items:center}
+@media (min-width:960px){.sp-grid{grid-template-columns:1fr 1fr;gap:64px}}
+.coupon{position:relative;background:#fff;border-radius:28px;padding:34px 30px 30px;box-shadow:var(--shadow);border:2px dashed var(--sky2)}
+.coupon::before,.coupon::after{content:"";position:absolute;top:58%;width:34px;height:34px;border-radius:50%;background:#eaf2fb;border:2px dashed var(--sky2)}
+.coupon::before{left:-19px;clip-path:inset(0 0 0 50%)}
+.coupon::after{right:-19px;clip-path:inset(0 50% 0 0)}
+.cp-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.cp-top b{font-weight:800;color:var(--mint-d);font-size:.95rem}
+.coupon h3{font-size:clamp(1.6rem,1.3rem + 1.2vw,2.1rem);margin-top:14px}
+.price-big{display:flex;align-items:flex-start;gap:6px;margin:14px 0 6px;color:var(--blue)}
+.price-big span{font:400 2rem/1 var(--serif);margin-top:12px}
+.price-big b{font:400 clamp(5rem,4rem + 4vw,7rem)/.9 var(--serif);letter-spacing:-.03em}
+.cp-note{font-size:.92rem;color:var(--ink2);border-top:2px dashed var(--line);margin-top:20px;padding-top:16px}
+.coupon .btn{margin-top:20px;width:100%}
+.incl{list-style:none;display:grid;gap:14px;margin-top:26px}
+.incl li{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px 18px}
+.incl i{width:36px;height:36px;flex:none;border-radius:12px;background:var(--mint-l);display:grid;place-items:center;color:var(--mint-d)}
+.incl i svg{width:20px;height:20px}
+.incl b{display:block;font-weight:700}
+.incl span{color:var(--ink2);font-size:.96rem}
+
+/* insurance */
+.ins-grid{display:grid;gap:36px}
+@media (min-width:960px){.ins-grid{grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--sky);padding:5px;border-radius:999px;width:100%}
+.seg [role=tab]{border:0;background:none;cursor:pointer;min-height:46px;padding:4px 8px;line-height:1.2;border-radius:999px;font-weight:700;font-size:.88rem;color:var(--ink2);transition:background-color .25s,color .25s,box-shadow .25s}
+@media (min-width:560px){.seg{display:flex;width:max-content}.seg [role=tab]{padding:0 18px;font-size:.95rem}}
+.seg [role=tab][aria-selected=true]{background:#fff;color:var(--blue);box-shadow:0 6px 14px -8px rgba(21,50,90,.4)}
+.ins-panel{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px 26px}
+.ins-panel[hidden]{display:none}
+.ins-panel.enter{animation:fadeUp .5s var(--ease) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}}
+.ins-panel h3{font-size:1.5rem;margin-bottom:8px}
+.ins-panel p{color:var(--ink2)}
+.ins-panel ul{list-style:none;display:grid;gap:10px;margin-top:16px}
+.ins-panel li{display:flex;gap:10px;align-items:flex-start}
+.ins-panel li svg{width:20px;height:20px;flex:none;margin-top:5px;color:var(--mint-d)}
+.icard{margin-top:30px;max-width:420px}
+.icard svg{width:100%;height:auto}
+.icard figcaption{margin-top:10px;color:var(--ink2);font-size:.95rem}
+@media (max-width:959px){.icard{display:none}}
+.plans{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.plans span{background:var(--sky);color:var(--navy);border-radius:999px;padding:8px 14px;font-weight:500;font-size:.92rem}
+.member{margin-top:18px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;background:var(--mint-l);border-radius:18px;padding:16px 18px}
+.member b{font:400 2rem/1 var(--serif);color:var(--mint-d)}
+
+/* timeline */
+.tl{position:relative;list-style:none;display:grid;gap:26px;margin-top:50px;counter-reset:t}
+.tl::before{content:"";position:absolute;left:27px;top:10px;bottom:10px;width:3px;border-radius:3px;background:linear-gradient(180deg,var(--mint),var(--blue2));transform-origin:top;transition:transform 1.6s var(--ease) .2s}
+.reveal.hide.tl::before{transform:scaleY(0)}
+.tl li{position:relative;padding-left:76px}
+.tl-n{position:absolute;left:0;top:0;width:57px;height:57px;border-radius:50%;background:#fff;border:3px solid var(--mint);display:grid;place-items:center;font:400 1.5rem/1 var(--serif);color:var(--blue);box-shadow:0 10px 20px -12px rgba(21,50,90,.4);transition:transform .6s var(--spring),opacity .4s;transition-delay:calc(var(--i) * 140ms + 300ms)}
+.reveal.hide .tl-n{transform:scale(.3);opacity:0}
+.tl b{display:block;font:400 1.3rem/1.25 var(--serif);padding-top:4px}
+.tl small{display:inline-block;margin:6px 0 4px;font-weight:700;font-size:.8rem;color:var(--mint-d);background:var(--mint-l);border-radius:999px;padding:3px 10px}
+.tl p{color:var(--ink2);font-size:.97rem}
+@media (min-width:960px){
+  .tl{grid-template-columns:repeat(5,1fr);gap:22px}
+  .tl::before{left:6%;right:6%;top:27px;bottom:auto;width:auto;height:3px;transform-origin:left;background:linear-gradient(90deg,var(--mint),var(--blue2))}
+  .reveal.hide.tl::before{transform:scaleX(0)}
+  .tl li{padding:76px 0 0;text-align:center}
+  .tl-n{left:50%;margin-left:-28px}
+}
+.tl-foot{text-align:center;margin-top:40px;color:var(--ink2)}
+.tl-foot b{color:var(--navy)}
+
+/* comfort + team */
+.comfort{background:#fff;border-block:1px solid var(--line)}
+.cf-grid{display:grid;gap:40px}
+@media (min-width:960px){.cf-grid{grid-template-columns:1fr 1fr;gap:64px;align-items:center}}
+.cmenu{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.cmenu div{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:16px;transition:background-color .25s,transform .3s var(--ease)}
+.cmenu div:hover{background:var(--mint-l);transform:translateY(-3px)}
+.cmenu svg{width:28px;height:28px;color:var(--blue);margin-bottom:8px}
+.cmenu b{display:block;font-weight:700;line-height:1.3}
+.cmenu span{font-size:.9rem;color:var(--ink2);line-height:1.45;display:block;margin-top:4px}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.team figure{text-align:center}
+.team .ph{aspect-ratio:3/4;border-radius:999px 999px 28px 28px;overflow:hidden;position:relative}
+.team .ph svg{width:100%;height:100%}
+.team figcaption{margin-top:10px;font-weight:700;font-size:.95rem;line-height:1.3}
+.team figcaption span{display:block;font-weight:500;color:var(--ink2);font-size:.85rem}
+.photo-note{margin-top:16px;text-align:center;font-size:.9rem;color:var(--ink2)}
+
+/* reviews */
+.rv-grid{display:grid;gap:18px;margin-top:44px}
+@media (min-width:900px){.rv-grid{grid-template-columns:.8fr 1fr 1fr 1fr}}
+.score{background:var(--navy);color:#fff;border-radius:28px;padding:28px 24px}
+.score b{display:block;font:400 4.2rem/1 var(--serif)}
+.score .stars{color:var(--mint);margin:8px 0 12px}
+.score p{color:#c9d7ea;font-size:.95rem}
+.bars{display:grid;gap:7px;margin-top:16px;font-size:.82rem;color:#c9d7ea}
+.bars div{display:grid;grid-template-columns:14px 1fr;gap:8px;align-items:center}
+.bars i{height:7px;border-radius:7px;background:rgba(255,255,255,.14);overflow:hidden;position:relative}
+.bars i::after{content:"";position:absolute;inset:0;background:var(--mint);border-radius:7px;transform-origin:left;transform:scaleX(var(--w));transition:transform 1.2s var(--ease) .3s}
+.reveal.hide .bars i::after{transform:scaleX(0)}
+.rv{background:#fff;border:1px solid var(--line);border-radius:28px;padding:26px 24px;display:flex;flex-direction:column;transition:transform .35s var(--ease),box-shadow .35s}
+.rv:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.rv q{display:block;font:400 1.18rem/1.45 var(--serif);margin:12px 0 18px;flex:1;quotes:"\201C" "\201D"}
+.rv footer{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:700;font-size:.95rem}
+.rv footer>span:first-child{display:flex;align-items:center;gap:10px}
+.av{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.8rem}
+.nums{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+@media (min-width:900px){.nums{grid-template-columns:repeat(4,1fr)}}
+.nums div{background:var(--sky);border-radius:22px;padding:20px 20px 16px}
+.nums b{display:block;font:400 clamp(2.2rem,1.6rem + 2vw,3rem)/1 var(--serif);color:var(--blue)}
+.nums span{font-size:.92rem;color:var(--ink2)}
+.illus{margin-top:12px}
+
+/* visit */
+.visit-grid{display:grid;gap:36px}
+@media (min-width:960px){.visit-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:center}}
+.map{border-radius:32px;overflow:hidden;background:#eaf2fb;box-shadow:var(--shadow);border:1px solid var(--line)}
+.map svg{width:100%;height:auto}
+.map text{font-family:var(--round);font-weight:700}
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.6}100%{transform:scale(1.8);opacity:0}}
+.addr{display:flex;gap:14px;align-items:flex-start;margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px}
+.addr i{width:44px;height:44px;flex:none;border-radius:14px;background:var(--sky);display:grid;place-items:center;color:var(--blue)}
+.addr svg{width:22px;height:22px}
+.addr b{display:block;font-size:1.05rem}
+.addr span{color:var(--ink2);font-size:.95rem}
+.hours{list-style:none;margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:8px 18px}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.hours li:last-child{border-bottom:0}
+.hours li span:last-child{color:var(--ink2);text-align:right;white-space:nowrap}
+.hours li.today{font-weight:700}
+.hours li.today span:last-child{color:var(--mint-d)}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font:800 .72rem/1 var(--round);letter-spacing:.04em;text-transform:uppercase;background:var(--mint-l);color:var(--mint-d);padding:4px 8px 3px;border-radius:999px;vertical-align:2px}
+.v-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+/* faq */
+.faq-wrap{max-width:860px;margin:44px auto 0;display:grid;gap:12px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:22px;transition:box-shadow .3s}
+.faq details[open]{box-shadow:var(--shadow);border-color:#fff}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;min-height:44px;font-weight:700;font-size:1.08rem;line-height:1.4}
+.faq summary::-webkit-details-marker{display:none}
+.chev{width:34px;height:34px;flex:none;border-radius:50%;background:var(--sky);display:grid;place-items:center;color:var(--blue);transition:transform .35s var(--ease),background-color .25s}
+.chev svg{width:18px;height:18px}
+details[open] .chev{transform:rotate(180deg);background:var(--mint-l);color:var(--mint-d)}
+.faq details p{padding:0 22px 22px;color:var(--ink2)}
+
+/* final + form */
+.final{padding:0 0 clamp(70px,9vw,120px)}
+.final-card{position:relative;overflow:hidden;background:var(--navy);color:#fff;border-radius:40px;padding:clamp(30px,5vw,64px);display:grid;gap:36px}
+@media (min-width:960px){.final-card{grid-template-columns:1fr 1fr;align-items:center;gap:56px}}
+.final-card::before{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-220px;border-radius:50%;background:radial-gradient(circle,rgba(95,211,176,.28),transparent 65%)}
+.final-card h2{font-size:clamp(2.1rem,1.4rem + 2.8vw,3.4rem);position:relative}
+.final-card .lead{color:#c9d7ea;margin-top:14px;font-size:1.08rem;position:relative}
+.final-card .u path{stroke:var(--mint)}
+.fsmile{width:220px;margin-top:26px;position:relative}
+.form{position:relative;background:#fff;color:var(--navy);border-radius:28px;padding:26px 22px}
+@media (min-width:600px){.form{padding:30px}}
+.form h3{font-size:1.4rem;margin-bottom:4px}
+.form>p{color:var(--ink2);font-size:.95rem}
+.field{display:grid;gap:6px;margin-top:16px}
+.field label,.field legend{font-weight:700;font-size:.92rem}
+.field input,.field select{width:100%;min-height:50px;border:1.5px solid var(--line);border-radius:14px;padding:0 14px;background:var(--bg);transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus{outline:0;border-color:var(--blue2);box-shadow:0 0 0 4px rgba(61,127,196,.18)}
+.field.bad input{border-color:var(--err)}
+.err{display:none;color:var(--err);font-size:.88rem;font-weight:700}
+.field.bad .err{display:block}
+fieldset.field{border:0;min-width:0}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills label{position:relative}
+.pills input{position:absolute;inset:0;opacity:0;cursor:pointer;margin:0;min-height:0}
+.pills span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);font-weight:500;font-size:.95rem;transition:background-color .2s,border-color .2s,color .2s}
+.pills input:checked+span{background:var(--blue);border-color:var(--blue);color:#fff}
+.pills input:focus-visible+span{outline:3px solid var(--blue2);outline-offset:2px}
+.form .btn{width:100%;margin-top:20px}
+.form small{display:block;margin-top:10px;color:var(--ink2);font-size:.85rem}
+.ok{display:none;text-align:center;padding:26px 6px}
+.ok.show{display:block}
+.ok svg{width:64px;height:64px;margin:0 auto 12px}
+.ok b{display:block;font:400 1.5rem/1.3 var(--serif)}
+.ok p{color:var(--ink2);margin-top:8px}
+
+/* footer */
+.foot{background:#fff;border-top:1px solid var(--line);padding:52px 0 26px;font-size:.95rem}
+.foot-grid{display:grid;gap:28px}
+@media (min-width:860px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.foot h3{font:800 .8rem/1 var(--round);letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);margin-bottom:10px}
+.foot ul{list-style:none}
+.foot p{color:var(--ink2)}
+.foot a,.linkish{display:inline-flex;align-items:center;min-height:44px;color:var(--navy);text-decoration:none;background:none;border:0;cursor:pointer;padding:0;font-size:.95rem}
+.foot a:hover,.linkish:hover{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.foot-bot{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;color:var(--ink2);font-size:.88rem}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:20px;z-index:90;width:max-content;max-width:min(92vw,470px);background:var(--navy);color:#fff;padding:14px 20px;border-radius:18px;font-size:.95rem;line-height:1.5;box-shadow:0 20px 40px -18px rgba(21,50,90,.6);opacity:0;transform:translate(-50%,16px);pointer-events:none;transition:opacity .3s,transform .45s var(--spring)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* hero entrance + reveal */
+.anim .hero [data-in]{animation:rise .8s var(--ease) both;animation-delay:calc(var(--i) * 90ms + 60ms)}
+.anim.settled .hero [data-in]{animation:none}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+.reveal{transition:opacity .7s ease,transform .7s var(--ease)}
+.js .reveal.hide{opacity:0;transform:translateY(24px)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal.hide{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-star" viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.8l2.4 5 5.6.8-4 3.9 1 5.5L10 14.4 5 17l1-5.5-4-3.9 5.6-.8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-tooth" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" d="M14 6C8 6 5 11 5 17c0 7 3 11 4 18 1 6 2 9 5 9s4-6 5-10c1-3 3-4 5-4s4 1 5 4c1 4 2 10 5 10s4-3 5-9c1-7 4-11 4-18 0-6-3-11-9-11-4 0-6 2-10 2s-6-2-10-2z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.3-4.4"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M13 2 4.5 13.5H11L10 22l9-12h-6.5z"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+</svg>
+
+<div class="top">
+  <div class="demo" role="note"><span>Demo template by Beatus Mídias · fictional brand</span><a href="https://wa.me/5521975340783?text=Hi!%20I%20saw%20the%20dental%20template%20and%20I%20want%20a%20page%20like%20this." target="_blank" rel="noopener">I want a page like this</a></div>
+  <header class="nav" id="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#main" aria-label="Brightside Family Dental, back to top">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="#2563a6"/><path d="M11 20a9 9 0 0 1 18 0z" fill="#fff"/><path d="M20 7v3M10.5 10.5l2 2M29.5 10.5l-2 2" stroke="#a8f0d9" stroke-width="2" stroke-linecap="round"/><path d="M9 26c6 6 16 6 22 0" stroke="#5fd3b0" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg>
+        <span><b>Brightside</b><small>Family Dental · Austin</small></span>
+      </a>
+      <ul class="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#special">New patients</a></li>
+        <li><a href="#insurance">Insurance</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <button class="btn btn-blue btn-sm" type="button" data-demo>Book your visit</button>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><span></span></button>
+    </div>
+    <nav class="drawer" id="drawer" hidden aria-label="Mobile">
+      <a href="#services">Services</a><a href="#special">New patient special</a><a href="#insurance">Insurance</a><a href="#first-visit">Your first visit</a><a href="#visit">Hours and location</a><a href="#faq">FAQ</a>
+    </nav>
+  </header>
+</div>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker" data-in style="--i:0"><i aria-hidden="true"></i>Accepting new patients in Austin, TX</p>
+        <h1 id="hero-h" data-in style="--i:1">Gentle dental care that makes the whole family <span class="u">smile<svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 3C30 14 70 14 97 3"/></svg></span></h1>
+        <p class="lede" data-in style="--i:2">Cleanings, implants, clear aligners and same-day emergency visits, with every price explained before we start. Early mornings, evenings and Saturdays for busy families.</p>
+        <div class="cta-row" data-in style="--i:3">
+          <button class="btn btn-blue" type="button" data-demo>Book your visit <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <a class="btn btn-soft" href="#special">See the $99 new patient special</a>
+        </div>
+        <div class="mini" data-in style="--i:4">
+          <span class="faces" aria-hidden="true"><span style="background:#2563a6">JM</span><span style="background:#0f7a5e">CR</span><span style="background:#2f6fb3">AL</span><span style="background:#15325a">+</span></span>
+          <span><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><br><b style="color:var(--navy)">4.9</b> from 860 local families <span class="tag">example</span></span>
+        </div>
+      </div>
+
+      <div class="hv" id="hv">
+        <div class="hv-art">
+          <svg viewBox="0 0 560 520" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration: a rising sun over a wide smile, the Brightside symbol">
+            <defs>
+              <radialGradient id="sunG" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e3f0fc"/></radialGradient>
+              <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe2f6"/><stop offset="1" stop-color="#e5f0fb"/></linearGradient>
+            </defs>
+            <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.7" fill="#a9c8e8"/></pattern><radialGradient id="fadeG" cx="50%" cy="45%" r="55%"><stop offset=".35" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></radialGradient><mask id="dm"><rect width="560" height="520" fill="url(#fadeG)"/></mask>
+            <rect width="560" height="520" fill="url(#dots)" mask="url(#dm)" opacity=".55"/>
+            <circle cx="280" cy="250" r="200" fill="#ffffff" opacity=".35"/>
+            <g class="bubs" fill="#fff"><circle cx="70" cy="120" r="10" opacity=".9"/><circle cx="500" cy="190" r="7" opacity=".8"/><circle cx="470" cy="80" r="14" opacity=".7"/><circle cx="96" cy="380" r="6" opacity=".9"/><circle cx="512" cy="360" r="9" opacity=".75"/></g>
+            <g class="rays" stroke="#b8d3ee" stroke-width="5" stroke-linecap="round">
+              <path d="M280 70v28M280 402v28M100 250h28M432 250h28M153 123l20 20M387 357l20 20M407 123l-20 20M173 357l-20 20M211 84l10 26M339 390l10 26M349 84l-10 26M221 390l-10 26M114 181l26 10M420 309l26 10M446 181l-26 10M140 309l-26 10"/>
+            </g>
+            <circle cx="280" cy="250" r="128" fill="url(#sunG)" stroke="#ffffff" stroke-width="6"/>
+            <circle cx="280" cy="250" r="146" fill="none" stroke="#5fd3b0" stroke-width="2.5" stroke-dasharray="3 12" stroke-linecap="round" opacity=".8"/>
+            <path d="M0 430C110 400 190 418 280 410S450 380 560 400V520H0Z" fill="url(#hill)"/>
+            <path d="M0 470C120 452 220 470 320 462S480 440 560 450V520H0Z" fill="#dcf6ee"/>
+            <path class="smile" pathLength="1" d="M120 300C180 400 380 400 440 300" fill="none" stroke="#5fd3b0" stroke-width="22" stroke-linecap="round"/>
+            <path class="smile smile2" pathLength="1" d="M168 318C222 374 338 374 392 318" fill="none" stroke="#2563a6" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+            <g class="spark"><path d="M462 268c3 14 6 17 20 20-14 3-17 6-20 20-3-14-6-17-20-20 14-3 17-6 20-20z" fill="#2563a6"/><path d="M98 262c2 8 4 10 12 12-8 2-10 4-12 12-2-8-4-10-12-12 8-2 10-4 12-12z" fill="#5fd3b0"/></g>
+          </svg>
+        </div>
+        <div class="chip-pos c1" style="--d:1.5s"><figure class="chip" style="--b:0s"><span class="stars" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span><q>My kids actually ask when they get to go back.</q><figcaption class="who"><span>Jenna M.</span><span class="tag">example</span></figcaption></figure></div>
+        <div class="chip-pos c2" style="--d:1.75s"><figure class="chip" style="--b:-2s"><span class="stars" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span><q>They saw me the same day for a cracked tooth.</q><figcaption class="who"><span>Amy L.</span><span class="tag">example</span></figcaption></figure></div>
+        <div class="chip-pos c3" style="--d:2s"><figure class="chip" style="--b:-4s"><span class="stars" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span><q>Prices explained before anything started.</q><figcaption class="who"><span>Carlos R.</span><span class="tag">example</span></figcaption></figure></div>
+        <div class="chip-pos c4" style="--d:2.2s"><svg aria-hidden="true"><use href="#i-shield"/></svg>Most PPO plans accepted</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap trust">
+    <ul class="reveal">
+      <li><i aria-hidden="true"><svg><use href="#i-shield"/></svg></i>Most PPO plans accepted</li>
+      <li><i aria-hidden="true"><svg><use href="#i-bolt"/></svg></i>Same-day emergency visits</li>
+      <li><i aria-hidden="true"><svg><use href="#i-moon"/></svg></i>Evenings and Saturdays</li>
+      <li><i aria-hidden="true"><svg><use href="#i-heart"/></svg></i>Kids welcome from age 1</li>
+    </ul>
+  </div>
+
+  <section class="sec" id="services" aria-labelledby="sv-h" style="padding-bottom:clamp(48px,6vw,72px)">
+    <div class="wrap">
+      <div class="head-c">
+        <p class="eyebrow reveal">Services</p>
+        <h2 class="h2 reveal" id="sv-h">Everything your family's smile needs, <span class="u">under one roof.<svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 3C30 14 70 14 97 3"/></svg></span></h2>
+        <p class="sub reveal">From a toddler's first checkup to replacing a missing tooth, one friendly team handles it all, in plain English and without the upsell.</p>
+      </div>
+      <div class="bento">
+        <article class="sv sv-big reveal">
+          <div class="ill" aria-hidden="true"><svg viewBox="0 0 48 48" style="color:var(--blue)"><use href="#i-tooth"/></svg></div>
+          <h3>Cleanings and checkups</h3>
+          <p>Twice-a-year visits for every age, with gentle hygienists who never rush you out of the chair.</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Low-radiation digital x-rays</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Oral cancer screening at every exam</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Fluoride and sealants for kids</li>
+          </ul>
+          <div class="scene" aria-hidden="true">
+            <svg viewBox="0 0 400 180">
+              <rect width="400" height="180" fill="#e7f1fb"/>
+              <circle cx="320" cy="44" r="58" fill="#fff" opacity=".7"/>
+              <g transform="translate(50 132) rotate(-14)"><rect x="0" y="0" width="176" height="16" rx="8" fill="#2563a6"/><rect x="166" y="-2" width="70" height="20" rx="7" fill="#fff" stroke="#3d7fc4" stroke-width="3"/><g stroke="#5fd3b0" stroke-width="6" stroke-linecap="round"><path d="M176-4v-20M188-4v-22M200-4v-22M212-4v-22M224-4v-20"/></g></g>
+              <g transform="translate(290 70)" fill="#fff" stroke="#2563a6" stroke-width="3" stroke-linejoin="round"><path d="M18 4C10 4 6 10 6 18c0 9 4 14 5 23 1 7 3 11 6 11s5-7 6-12c1-4 3-5 5-5s4 1 5 5c1 5 3 12 6 12s5-4 6-11c1-9 5-14 5-23 0-8-4-14-12-14-5 0-8 3-13 3s-8-3-13-3z"/></g>
+              <g fill="#5fd3b0"><path d="M362 70c2 8 4 10 12 12-8 2-10 4-12 12-2-8-4-10-12-12 8-2 10-4 12-12z"/><path d="M236 70c1.5 6 3 7.5 9 9-6 1.5-7.5 3-9 9-1.5-6-3-7.5-9-9 6-1.5 7.5-3 9-9z"/></g>
+              <g fill="#fff" opacity=".9"><circle cx="60" cy="140" r="9"/><circle cx="84" cy="150" r="6"/><circle cx="104" cy="136" r="4"/></g>
+            </svg>
+          </div>
+        </article>
+        <article class="sv reveal">
+          <div class="ill" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="#2563a6" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"><path d="M12 6C8 6 6 10 6 14c0 6 4 8 8 8h20c4 0 8-2 8-8 0-4-2-8-6-8-4 0-6 2-12 2S16 6 12 6z" fill="#fff"/><path d="M20 22v4h8v-4"/><path d="M18 27h12l-2 17h-8z" fill="#dcf6ee"/><path d="M18.5 31 29.5 33M19 36l10 2M19.5 41l8 1.5"/></svg></div>
+          <h3>Dental implants</h3>
+          <p>Replace a missing tooth with one that looks, feels and chews like your own. We plan it with a 3D scan, start to finish in one office.</p>
+        </article>
+        <article class="sv reveal">
+          <div class="ill" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="#2563a6" stroke-width="2.6" stroke-linecap="round"><path d="M8 12c0 20 8 30 16 30s16-10 16-30"/><path d="M14 12c0 15 5 23 10 23s10-8 10-23" stroke="#5fd3b0"/><path d="M8 12h6M34 12h6"/></svg></div>
+          <h3>Clear aligners</h3>
+          <p>Nearly invisible trays that straighten teeth without metal braces. Free smile scan to see if you're a good fit.</p>
+        </article>
+        <article class="sv sv-wide reveal">
+          <div class="ill" aria-hidden="true"><svg viewBox="0 0 24 24" style="color:#fff;width:40px;height:40px"><use href="#i-bolt"/></svg></div>
+          <div>
+            <span class="same">Same-day</span>
+            <h3>Emergency dental care</h3>
+            <p>Toothache, chipped tooth or a knocked-out tooth after a game? Call before 2 p.m. and we'll do our best to see you today.</p>
+          </div>
+          <button class="btn" type="button" data-demo>Get seen today</button>
+        </article>
+      </div>
+      <div class="also reveal" aria-label="More services"><span>Kids dentistry</span><span>Teeth whitening</span><span>Crowns and bridges</span><span>Root canals</span><span>Night guards</span><span>Sedation options</span></div>
+    </div>
+  </section>
+
+  <section class="sec special" id="special" aria-labelledby="sp-h" style="padding-top:clamp(56px,7vw,96px)">
+    <div class="wrap sp-grid">
+      <div>
+        <p class="eyebrow reveal">New patients</p>
+        <h2 class="h2 reveal" id="sp-h">A complete first visit, <span class="u">one simple price.<svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 3C30 14 70 14 97 3"/></svg></span></h2>
+        <p class="sub reveal">No insurance? No problem. Start with everything you need to know where your teeth stand, and leave with a clear plan.</p>
+        <ul class="incl reveal">
+          <li><i aria-hidden="true"><svg><use href="#i-check"/></svg></i><span><b>Comprehensive exam</b>A full checkup with the dentist, gums and bite included.</span></li>
+          <li><i aria-hidden="true"><svg><use href="#i-check"/></svg></i><span><b>Full set of digital x-rays</b>Low radiation, results on screen in seconds.</span></li>
+          <li><i aria-hidden="true"><svg><use href="#i-check"/></svg></i><span><b>Gentle cleaning and polish</b>Standard cleaning for healthy gums.</span></li>
+          <li><i aria-hidden="true"><svg><use href="#i-check"/></svg></i><span><b>Your plan, prices upfront</b>What's needed now, what can wait and what it costs.</span></li>
+        </ul>
+      </div>
+      <div class="coupon reveal">
+        <div class="cp-top"><b>New patient special</b><span class="tag">example offer</span></div>
+        <h3>Exam + cleaning + x-rays</h3>
+        <p class="price-big" aria-label="99 dollars"><span>$</span><b>99</b></p>
+        <p style="color:var(--ink2)">For new patients without dental insurance.</p>
+        <button class="btn btn-blue" type="button" data-demo>Book your visit <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="cp-note">Example offer for this demo. Deep cleanings and treatment are quoted separately, always before we start.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="insurance" aria-labelledby="ins-h">
+    <div class="wrap ins-grid">
+      <div>
+        <p class="eyebrow reveal">Insurance and payment</p>
+        <h2 class="h2 reveal" id="ins-h">Insurance, <span class="u">made simple.<svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 3C30 14 70 14 97 3"/></svg></span></h2>
+        <p class="sub reveal">We check your benefits before your visit and file the claims for you. Pick what fits you to see how it works.</p>
+        <figure class="icard reveal">
+          <svg viewBox="0 0 380 250" role="img" aria-label="Illustration: an insurance card with a green check, benefits verified">
+            <defs><linearGradient id="cardG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d7fc4"/><stop offset="1" stop-color="#15325a"/></linearGradient></defs>
+            <rect x="34" y="44" width="300" height="180" rx="24" fill="#d3e4f6" transform="rotate(-7 184 134)"/>
+            <rect x="40" y="30" width="300" height="180" rx="24" fill="url(#cardG)"/>
+            <circle cx="300" cy="60" r="80" fill="#fff" opacity=".07"/>
+            <rect x="66" y="60" width="46" height="34" rx="8" fill="#a8f0d9"/><path d="M66 77h46M89 60v34" stroke="#5fd3b0" stroke-width="2"/>
+            <text x="66" y="134" fill="#c9d7ea" font-size="13" font-family="M PLUS Rounded 1c,sans-serif" font-weight="700" letter-spacing="1.5">MEMBER ID</text>
+            <rect x="66" y="144" width="150" height="12" rx="6" fill="#fff" opacity=".9"/>
+            <rect x="66" y="170" width="96" height="10" rx="5" fill="#fff" opacity=".45"/>
+            <path d="M246 160c18 20 48 20 66 0" stroke="#5fd3b0" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <g transform="translate(318 204)"><circle r="32" fill="#fff"/><circle r="25" fill="#dcf6ee"/><path d="M-11 0l7 7 14-15" stroke="#0f7a5e" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+          </svg>
+          <figcaption>Benefits checked before you arrive, so the bill never surprises you.</figcaption>
+        </figure>
+      </div>
+      <div class="reveal">
+        <div class="seg" role="tablist" aria-label="Your coverage">
+          <button role="tab" id="it-1" aria-controls="ip-1" aria-selected="true">PPO insurance</button>
+          <button role="tab" id="it-2" aria-controls="ip-2" aria-selected="false" tabindex="-1">No insurance</button>
+          <button role="tab" id="it-3" aria-controls="ip-3" aria-selected="false" tabindex="-1">HSA or FSA</button>
+        </div>
+        <div class="ins-panel" id="ip-1" role="tabpanel" aria-labelledby="it-1" tabindex="0">
+          <h3>We're in network with most PPO plans</h3>
+          <p>Send us your plan details when you book and we'll tell you what's covered before you come in.</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Free benefits check before your first visit</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>We file every claim and handle the paperwork</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Most PPO plans cover cleanings at 100%</li>
+          </ul>
+          <div class="plans" aria-label="Accepted"><span>Most PPO plans</span><span>Employer dental plans</span><span>Out-of-network PPO</span></div>
+        </div>
+        <div class="ins-panel" id="ip-2" role="tabpanel" aria-labelledby="it-2" tabindex="0" hidden>
+          <h3>Our in-house membership plan</h3>
+          <p>A simple yearly plan for families without insurance. No deductibles, no waiting periods, no claim forms.</p>
+          <div class="member"><b>$29</b><span>per month, per adult</span><span class="tag">example</span></div>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Two cleanings, exams and x-rays every year</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>15% off fillings, crowns and other treatment</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>One emergency exam a year included</li>
+          </ul>
+        </div>
+        <div class="ins-panel" id="ip-3" role="tabpanel" aria-labelledby="it-3" tabindex="0" hidden>
+          <h3>Use your pre-tax dollars</h3>
+          <p>We accept HSA and FSA cards for checkups and treatment, so your dental care costs less out of pocket.</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>HSA and FSA cards accepted at the front desk</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Itemized receipts for your records</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Monthly payment plans for larger treatment, subject to approval</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="first-visit" aria-labelledby="fv-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="head-c">
+        <p class="eyebrow reveal">Your first visit</p>
+        <h2 class="h2 reveal" id="fv-h">Here's exactly <span class="u">what to expect.<svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 3C30 14 70 14 97 3"/></svg></span></h2>
+      </div>
+      <ol class="tl reveal">
+        <li style="--i:0"><span class="tl-n">1</span><b>Book online</b><small>2 minutes</small><p>Pick a time that works, including early mornings and Saturdays.</p></li>
+        <li style="--i:1"><span class="tl-n">2</span><b>Forms from home</b><small>5 minutes</small><p>Fill everything out on your phone. No clipboard in the lobby.</p></li>
+        <li style="--i:2"><span class="tl-n">3</span><b>X-rays and exam</b><small>20 minutes</small><p>Your dentist walks you through the images on screen.</p></li>
+        <li style="--i:3"><span class="tl-n">4</span><b>Gentle cleaning</b><small>30 minutes</small><p>We take our time. Numbing gel and breaks whenever you want.</p></li>
+        <li style="--i:4"><span class="tl-n">5</span><b>A clear plan</b><small>10 minutes</small><p>What's needed, what can wait and the price of each step.</p></li>
+      </ol>
+      <p class="tl-foot reveal"><b>About 70 minutes in total.</b> You're free to ask questions at every step.</p>
+    </div>
+  </section>
+
+  <section class="sec comfort" aria-labelledby="cf-h">
+    <div class="wrap cf-grid">
+      <div>
+        <p class="eyebrow reveal">Comfort first</p>
+        <h2 class="h2 reveal" id="cf-h">Nervous about the dentist? <span class="u">You're in good hands.<svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 3C30 14 70 14 97 3"/></svg></span></h2>
+        <p class="sub reveal">Lots of our patients hadn't been in years when they first came to us. Nobody here will lecture you. Pick anything from the comfort menu, any visit.</p>
+        <div class="cmenu reveal">
+          <div><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="5" height="7" rx="2"/><rect x="16" y="14" width="5" height="7" rx="2"/></g></svg><b>Noise-canceling headphones</b><span>Your playlist, not the drill.</span></div>
+          <div><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h16v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z"/><path d="M4 12h16M4 16h16"/></g></svg><b>Warm blankets</b><span>Because dental offices are always cold.</span></div>
+          <div><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 13.5c1.8 2 5.2 2 7 0M9 9.5h.01M15 9.5h.01"/></g></svg><b>Laughing gas</b><span>Available for longer visits.</span></div>
+          <div><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11V5.5a1.5 1.5 0 0 1 3 0V10M11 10V4.5a1.5 1.5 0 0 1 3 0V10M14 10V6a1.5 1.5 0 0 1 3 0v8a7 7 0 0 1-12.2 4.7L3 15.6a1.5 1.5 0 0 1 2.4-1.8L8 16"/></g></svg><b>Raise a hand, we pause</b><span>You're in control, always.</span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="team">
+          <figure><div class="ph"><svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="120" height="160" fill="#d3e4f6"/><circle cx="60" cy="62" r="24" fill="#fff" opacity=".8"/><path d="M18 160c0-30 18-50 42-50s42 20 42 50z" fill="#fff" opacity=".8"/><path d="M46 132c8 6 20 6 28 0" stroke="#5fd3b0" stroke-width="4" fill="none" stroke-linecap="round"/></svg></div><figcaption>Lead dentist<span>DDS, family dentistry</span></figcaption></figure>
+          <figure style="margin-top:28px"><div class="ph"><svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="120" height="160" fill="#dcf6ee"/><circle cx="60" cy="62" r="24" fill="#fff" opacity=".85"/><path d="M18 160c0-30 18-50 42-50s42 20 42 50z" fill="#fff" opacity=".85"/><path d="M46 132c8 6 20 6 28 0" stroke="#2563a6" stroke-width="4" fill="none" stroke-linecap="round"/></svg></div><figcaption>Kids dentist<span>Pediatric care</span></figcaption></figure>
+          <figure><div class="ph"><svg viewBox="0 0 120 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="120" height="160" fill="#e7f1fb"/><circle cx="60" cy="62" r="24" fill="#fff" opacity=".85"/><path d="M18 160c0-30 18-50 42-50s42 20 42 50z" fill="#fff" opacity=".85"/><path d="M46 132c8 6 20 6 28 0" stroke="#5fd3b0" stroke-width="4" fill="none" stroke-linecap="round"/></svg></div><figcaption>Hygienist<span>Gentle cleanings</span></figcaption></figure>
+        </div>
+        <p class="photo-note">Your team photos go here.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="reviews" aria-labelledby="rv-h">
+    <div class="wrap">
+      <div class="head-c">
+        <p class="eyebrow reveal">Reviews</p>
+        <h2 class="h2 reveal" id="rv-h">Families who <span class="u">stopped dreading<svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 3C30 14 70 14 97 3"/></svg></span> the dentist.</h2>
+      </div>
+      <div class="rv-grid">
+        <div class="score reveal">
+          <b>4.9</b>
+          <span class="stars" aria-label="Average 4.9 out of 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <p>Average from 860 reviews <span class="tag" style="background:rgba(255,255,255,.14);color:#fff">example</span></p>
+          <div class="bars" aria-hidden="true"><div>5<i style="--w:.92"></i></div><div>4<i style="--w:.06"></i></div><div>3<i style="--w:.015"></i></div><div>2<i style="--w:.005"></i></div><div>1<i style="--w:.01"></i></div></div>
+        </div>
+        <figure class="rv reveal"><span class="stars" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span><q>My kids actually ask when they get to go back. The hygienist turned the whole cleaning into a game.</q><footer><span><span class="av" style="background:#2563a6" aria-hidden="true">JM</span>Jenna M.</span><span class="tag">example</span></footer></figure>
+        <figure class="rv reveal"><span class="stars" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span><q>Cracked a tooth on a Monday morning and they saw me before lunch. Calm, quick and honest about the cost.</q><footer><span><span class="av" style="background:#0f7a5e" aria-hidden="true">AL</span>Amy L.</span><span class="tag">example</span></footer></figure>
+        <figure class="rv reveal"><span class="stars" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span><q>Every price was explained before anything started. My implant feels like it was always there.</q><footer><span><span class="av" style="background:#2f6fb3" aria-hidden="true">CR</span>Carlos R.</span><span class="tag">example</span></footer></figure>
+      </div>
+      <div class="nums reveal">
+        <div><b data-count="12">12</b><span>years caring for Austin families</span></div>
+        <div><b data-count="9800" data-sep="1">9,800</b><span>patients and counting</span></div>
+        <div><b data-count="4">4</b><span>dentists and 6 hygienists</span></div>
+        <div><b data-count="6">6</b><span>days a week, Saturdays included</span></div>
+      </div>
+      <p class="illus reveal"><span class="tag">illustrative numbers</span></p>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="vs-h" style="padding-top:0">
+    <div class="wrap visit-grid">
+      <div class="map reveal">
+        <svg viewBox="0 0 560 440" role="img" aria-label="Stylized map: the office sits on Oak Hollow Drive, next to a park, with free parking by the door.">
+          <rect width="560" height="440" fill="#eef5fc"/>
+          <path d="M380 0h180v170c-60 10-120-20-150-60S370 30 380 0z" fill="#dcf6ee"/>
+          <circle cx="470" cy="70" r="16" fill="#bfe9da"/><circle cx="500" cy="110" r="12" fill="#bfe9da"/><circle cx="440" cy="40" r="10" fill="#bfe9da"/>
+          <path d="M0 360c80-20 140 10 200 0s120-40 200-20 120 30 160 20v100H0z" fill="#d3e4f6"/>
+          <g stroke="#fff" stroke-linecap="round" fill="none"><path stroke-width="22" d="M0 230C150 220 300 240 560 210"/><path stroke-width="12" d="M150 0V440M330 0 350 440M0 110H380M0 320H560"/></g>
+          <g stroke="#d3e4f6" stroke-width="2" stroke-dasharray="10 10" fill="none"><path d="M0 230C150 220 300 240 560 210"/></g>
+          <g fill="#fff" stroke="#d3e4f6" stroke-width="2"><rect x="196" y="140" width="96" height="62" rx="10"/><rect x="40" y="140" width="80" height="60" rx="10"/><rect x="200" y="260" width="110" height="40" rx="10"/><rect x="390" y="250" width="120" height="50" rx="10"/><rect x="40" y="20" width="80" height="70" rx="10"/></g>
+          <g fill="#2563a6" opacity=".14"><rect x="208" y="150" width="24" height="16" rx="3"/><rect x="240" y="150" width="24" height="16" rx="3"/></g>
+          <text x="22" y="222" font-size="15" fill="#4a5d78">Oak Hollow Dr</text>
+          <text x="434" y="150" font-size="15" fill="#0f7a5e">Live Oak Park</text>
+          <g transform="translate(244 128)"><circle class="ping" r="34" fill="#5fd3b0"/><circle r="26" fill="#2563a6" stroke="#fff" stroke-width="5"/><path d="M-7-10c-4 0-6 3-6 7 0 4 2 6 3 10 .5 3 1 5 3 5s2-3 3-5c.5-2 1-2 2-2s1.5 0 2 2c1 2 1 5 3 5s2.5-2 3-5c1-4 3-6 3-10 0-4-2-7-6-7-2 0-3 1-5 1s-3-1-5-1z" fill="#fff"/></g>
+                    <g transform="translate(254 64)"><rect x="-6" y="-24" width="196" height="40" rx="20" fill="#15325a"/><text x="92" y="2" font-size="15" fill="#fff" text-anchor="middle">Brightside Family Dental</text></g>
+          <g transform="translate(206 186)" fill="#2563a6"><rect x="0" y="0" width="22" height="22" rx="5"/><text x="11" y="16" font-size="14" fill="#fff" text-anchor="middle">P</text></g>
+        </svg>
+      </div>
+      <div>
+        <p class="eyebrow reveal">Visit us</p>
+        <h2 class="h2 reveal" id="vs-h">Easy to find, <span class="u">easy to park.<svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 3C30 14 70 14 97 3"/></svg></span></h2>
+        <div class="addr reveal"><i aria-hidden="true"><svg><use href="#i-pin"/></svg></i><span><b>1200 Oak Hollow Drive, Suite 140</b><span>Austin, TX · free parking by the door, wheelchair accessible</span></span></div>
+        <ul class="hours reveal" aria-label="Office hours">
+          <li data-days="1,2"><span>Monday and Tuesday</span><span>7 a.m. to 4 p.m.</span></li>
+          <li data-days="3,4"><span>Wednesday and Thursday</span><span>10 a.m. to 7 p.m.</span></li>
+          <li data-days="5"><span>Friday</span><span>7 a.m. to 2 p.m.</span></li>
+          <li data-days="6"><span>Saturday</span><span>8 a.m. to 1 p.m.</span></li>
+          <li data-days="0"><span>Sunday</span><span>Closed, emergency line open</span></li>
+        </ul>
+        <div class="v-cta reveal">
+          <button class="btn btn-blue" type="button" data-demo>Book your visit</button>
+          <button class="btn btn-soft" type="button" data-demo="maps">Get directions</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq" id="faq" aria-labelledby="faq-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="head-c">
+        <p class="eyebrow reveal">FAQ</p>
+        <h2 class="h2 reveal" id="faq-h">Good questions, <span class="u">straight answers.<svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 3C30 14 70 14 97 3"/></svg></span></h2>
+      </div>
+      <div class="faq-wrap reveal">
+        <details open><summary>Do you take my insurance?<span class="chev" aria-hidden="true"><svg><use href="#i-chev"/></svg></span></summary><p>We're in network with most PPO plans and happy to file out-of-network claims too. Send us your plan when you book and we'll confirm your coverage before your visit, free of charge.</p></details>
+        <details><summary>What if I don't have dental insurance?<span class="chev" aria-hidden="true"><svg><use href="#i-chev"/></svg></span></summary><p>You can start with the $99 new patient special, then join our in-house membership plan for routine care. Larger treatment can be split into monthly payments, subject to approval.</p></details>
+        <details><summary>What's included in the new patient special?<span class="chev" aria-hidden="true"><svg><use href="#i-chev"/></svg></span></summary><p>A comprehensive exam, a full set of digital x-rays and a standard cleaning. If you need a deep cleaning or other treatment, we'll explain why and give you the price before anything starts.</p></details>
+        <details><summary>Do you see kids? From what age?<span class="chev" aria-hidden="true"><svg><use href="#i-chev"/></svg></span></summary><p>Yes, from their first tooth or first birthday, whichever comes first. Parents can stay in the room, and we book siblings back to back to save you a trip.</p></details>
+        <details><summary>What counts as a dental emergency?<span class="chev" aria-hidden="true"><svg><use href="#i-chev"/></svg></span></summary><p>Severe tooth pain, swelling, a broken or knocked-out tooth, or a lost filling or crown. Call us right away. For a knocked-out tooth, keep it in milk and come in as fast as you can.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" id="book" aria-labelledby="fin-h">
+    <div class="wrap">
+      <div class="final-card">
+        <div>
+          <h2 class="reveal" id="fin-h">Let's get you <span class="u">on the schedule.<svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 3C30 14 70 14 97 3"/></svg></span></h2>
+          <p class="lead reveal">Tell us a little about what you need and we'll text you back with a time. Most new patients are seen within the week.</p>
+          <svg class="fsmile reveal" viewBox="0 0 220 70" aria-hidden="true"><path d="M10 14c50 60 150 60 200 0" fill="none" stroke="#5fd3b0" stroke-width="10" stroke-linecap="round" opacity=".9"/><path d="M200 6c2 8 4 10 12 12-8 2-10 4-12 12-2-8-4-10-12-12 8-2 10-4 12-12z" fill="#fff"/></svg>
+        </div>
+        <form class="form reveal" id="bk" novalidate>
+          <div id="bk-fields">
+            <h3>Request an appointment</h3>
+            <p>It takes about a minute.</p>
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" aria-describedby="e-name"><span class="err" id="e-name">Please enter your name.</span></div>
+            <div class="field"><label for="f-phone">Mobile number</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(512) 555-0134" aria-describedby="e-phone"><span class="err" id="e-phone">Please enter a 10-digit phone number.</span></div>
+            <div class="field"><label for="f-why">What do you need?</label><select id="f-why" name="why"><option>New patient special</option><option>Cleaning and checkup</option><option>Emergency or tooth pain</option><option>Kids visit</option><option>Implants or aligners consult</option></select></div>
+            <fieldset class="field"><legend>Best time for you</legend>
+              <div class="pills"><label><input type="radio" name="when" value="Morning" checked><span>Morning</span></label><label><input type="radio" name="when" value="Afternoon"><span>Afternoon</span></label><label><input type="radio" name="when" value="Evening"><span>Evening</span></label><label><input type="radio" name="when" value="Saturday"><span>Saturday</span></label></div>
+            </fieldset>
+            <button class="btn btn-blue" type="submit">Book your visit <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <small>Demo form: nothing is sent. We only use your number to schedule your visit.</small>
+          </div>
+          <div class="ok" id="bk-ok" role="status" tabindex="-1">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#dcf6ee"/><path d="M20 33l8 8 16-17" fill="none" stroke="#0f7a5e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <b id="ok-t">Request received.</b>
+            <p>On your real site, this request goes straight to the front desk, and the patient gets a text to confirm the time.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#main" aria-label="Brightside Family Dental, back to top"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="#2563a6"/><path d="M11 20a9 9 0 0 1 18 0z" fill="#fff"/><path d="M9 26c6 6 16 6 22 0" stroke="#5fd3b0" stroke-width="3.4" fill="none" stroke-linecap="round"/></svg><span><b>Brightside</b><small>Family Dental · Austin</small></span></a>
+        <p style="margin-top:12px;max-width:24em">Gentle, honest dentistry for every age, in a calm office that runs on time.</p>
+      </div>
+      <div><h3>Office</h3><p>1200 Oak Hollow Drive, Suite 140<br>Austin, TX</p></div>
+      <div><h3>Patients</h3><ul><li><a href="#special">New patient special</a></li><li><a href="#insurance">Insurance</a></li><li><a href="#first-visit">First visit</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h3>Legal</h3><ul><li><button class="linkish" type="button" data-demo="page">Privacy policy</button></li><li><button class="linkish" type="button" data-demo="page">Notice of privacy practices</button></li><li><button class="linkish" type="button" data-demo="page">Accessibility</button></li></ul></div>
+    </div>
+    <div class="foot-bot"><span>© 2026 Brightside Family Dental, a fictional brand.</span><span>Demo template by Beatus Mídias</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+  root.classList.add('js');
+  var REDUZ = matchMedia('(prefers-reduced-motion: reduce)').matches, VIS = d.visibilityState === 'visible';
+  if (/[?&]thumb=1/.test(location.search)) root.classList.add('thumb');
+  if (!REDUZ && VIS) root.classList.add('anim');
+  setTimeout(function () { root.classList.add('settled'); }, 2600);
+  var $$ = function (s, c) { return [].slice.call((c || d).querySelectorAll(s)); };
+
+  /* toast: business CTAs never open a real number */
+  var toast = d.getElementById('toast'), tt;
+  var MSG = { wa: 'Demo template: on your site, this button opens your WhatsApp with a ready message.', maps: 'Demo template: on your site, this button opens the map with your address.', page: 'Demo template: on your site, this link opens your own policy page.' };
+  function say(m) { toast.textContent = m; toast.classList.add('show'); clearTimeout(tt); tt = setTimeout(function () { toast.classList.remove('show'); }, 4200); }
+  d.addEventListener('click', function (e) { var b = e.target.closest('[data-demo]'); if (!b) return; e.preventDefault(); say(MSG[b.getAttribute('data-demo')] || MSG.wa); });
+
+  /* in-page anchors: smooth scroll by JS (keeps programmatic scroll instant) and move focus */
+  d.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]'); if (!a) return;
+    var id = a.getAttribute('href'), t = id.length > 1 && d.querySelector(id); if (!t) return;
+    e.preventDefault();
+    t.scrollIntoView({ behavior: REDUZ ? 'auto' : 'smooth', block: 'start' });
+    if (history.pushState) history.pushState(null, '', id);
+    if (!t.hasAttribute('tabindex')) t.setAttribute('tabindex', '-1');
+    t.focus({ preventScroll: true });
+  });
+
+  /* mobile menu */
+  var nav = d.getElementById('nav'), burger = nav.querySelector('.burger'), drawer = d.getElementById('drawer');
+  function setMenu(o) { nav.classList.toggle('open', o); burger.setAttribute('aria-expanded', o); burger.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); drawer.hidden = !o; }
+  burger.addEventListener('click', function () { setMenu(drawer.hidden); });
+  drawer.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !drawer.hidden) { setMenu(false); burger.focus(); } });
+  d.addEventListener('click', function (e) { if (!drawer.hidden && !nav.contains(e.target)) setMenu(false); });
+
+  /* signature: smile curve draws in, review chips float in */
+  var hv = d.getElementById('hv'), h1 = d.getElementById('hero-h');
+  if (!REDUZ && VIS) {
+    hv.classList.add('pre'); h1.classList.add('pre-u'); hv.getBoundingClientRect();
+    requestAnimationFrame(function () { requestAnimationFrame(function () { hv.classList.remove('pre'); h1.classList.remove('pre-u'); }); });
+    setTimeout(function () { hv.classList.add('go'); }, 2800);
+  }
+
+  /* reveal by TOP position */
+  var els = $$('.reveal');
+  if (!REDUZ && VIS) {
+    var vh = innerHeight;
+    els.forEach(function (el) { if (el.getBoundingClientRect().top > vh * 0.92) el.classList.add('hide'); });
+    var sweep = function () { els.forEach(function (el) { if (el.classList.contains('hide') && el.getBoundingClientRect().top < innerHeight * 0.92) el.classList.remove('hide'); }); };
+    addEventListener('scroll', sweep, { passive: true }); addEventListener('resize', sweep); addEventListener('load', sweep);
+    setTimeout(function () { els.forEach(function (el) { el.classList.remove('hide'); }); }, 6000);
+  }
+
+  /* insurance tabs (WAI-ARIA) */
+  var tabs = $$('[role=tab]'), panels = tabs.map(function (t) { return d.getElementById(t.getAttribute('aria-controls')); });
+  function select(i, focus) {
+    tabs.forEach(function (t, k) { var on = k === i; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; panels[k].hidden = !on; });
+    if (!REDUZ) { panels[i].classList.remove('enter'); void panels[i].offsetWidth; panels[i].classList.add('enter'); }
+    if (focus) tabs[i].focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(i); });
+    t.addEventListener('keydown', function (e) {
+      var n = null, L = tabs.length;
+      if (e.key === 'ArrowRight') n = (i + 1) % L; else if (e.key === 'ArrowLeft') n = (i + L - 1) % L; else if (e.key === 'Home') n = 0; else if (e.key === 'End') n = L - 1;
+      if (n !== null) { e.preventDefault(); select(n, true); }
+    });
+  });
+
+  /* counters */
+  var nums = $$('[data-count]');
+  function fmt(el, v) { return el.hasAttribute('data-sep') ? v.toLocaleString('en-US') : String(v); }
+  if (!REDUZ && 'IntersectionObserver' in window) {
+    nums.forEach(function (el) { el.textContent = '0'; });
+    var io = new IntersectionObserver(function (en) {
+      en.forEach(function (x) {
+        if (!x.isIntersecting) return; io.unobserve(x.target);
+        var el = x.target, end = +el.getAttribute('data-count'), t0 = null;
+        (function step(t) { t0 = t0 || t; var p = Math.min(1, (t - t0) / 1400); el.textContent = fmt(el, Math.round(end * (1 - Math.pow(1 - p, 3)))); if (p < 1) requestAnimationFrame(step); })(performance.now());
+      });
+    });
+    nums.forEach(function (el) { io.observe(el); });
+    setTimeout(function () { nums.forEach(function (el) { el.textContent = fmt(el, +el.getAttribute('data-count')); }); }, 7000);
+  }
+
+  /* today in the hours list */
+  var today = String(new Date().getDay());
+  $$('.hours li').forEach(function (li) { if (li.getAttribute('data-days').split(',').indexOf(today) > -1) li.classList.add('today'); });
+
+  /* booking form: error per field, focus on first invalid, US phone mask, calm success */
+  var f = d.getElementById('bk'), nm = d.getElementById('f-name'), ph = d.getElementById('f-phone');
+  function mark(i, bad) { i.closest('.field').classList.toggle('bad', bad); i.setAttribute('aria-invalid', bad); }
+  ph.addEventListener('input', function () {
+    var v = ph.value.replace(/\D/g, '').replace(/^1/, '').slice(0, 10), o = v;
+    if (v.length > 0) o = '(' + v.slice(0, 3); if (v.length >= 4) o += ') ' + v.slice(3, 6); if (v.length >= 7) o += '-' + v.slice(6);
+    ph.value = o; mark(ph, false);
+  });
+  nm.addEventListener('input', function () { mark(nm, false); });
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var badN = !nm.value.trim(), badP = ph.value.replace(/\D/g, '').length !== 10;
+    mark(nm, badN); mark(ph, badP);
+    if (badN) { nm.focus(); return; } if (badP) { ph.focus(); return; }
+    d.getElementById('ok-t').textContent = 'Request received, ' + nm.value.trim().split(' ')[0] + '.';
+    d.getElementById('bk-fields').hidden = true; var ok = d.getElementById('bk-ok'); ok.classList.add('show'); ok.focus();
+    /* real site: POST the request here, e.g. fetch(endpoint, { method: 'POST', body: new FormData(f) }) */
+  });
+
+  /* scrollspy */
+  var links = $$('.links a'), secs = links.map(function (a) { return d.querySelector(a.getAttribute('href')); }), tick = false;
+  function spy() { tick = false; var cur = null; secs.forEach(function (s) { if (s && s.getBoundingClientRect().top <= 180) cur = s.id; });
+    links.forEach(function (a) { var on = a.getAttribute('href') === '#' + cur; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); }); }
+  addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true }); spy();
+})();
+</script>
+</body>
+</html>

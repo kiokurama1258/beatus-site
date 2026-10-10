@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en" data-img="../img/">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>Landing pages for $200 | Beatus Mídias</title>
+<meta name="description" content="A custom landing page for $200, with message buttons, a mobile-first layout and ad tracking installed. Multi-page websites by quote. Beatus Mídias.">
+<meta name="theme-color" content="#F6F1F2">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Your landing page, ready to sell, for $200">
+<meta property="og:description" content="A custom landing page with message buttons, mobile-first design and ad tracking installed. Beatus Mídias.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://beatusmidias.com.br/sites/en/">
+<link rel="alternate" hreflang="pt-BR" href="https://beatusmidias.com.br/sites/">
+<link rel="alternate" hreflang="en" href="https://beatusmidias.com.br/sites/en/">
+<link rel="alternate" hreflang="x-default" href="https://beatusmidias.com.br/sites/">
+<meta property="og:url" content="https://beatusmidias.com.br/sites/en/">
+<meta property="og:image" content="https://beatusmidias.com.br/sites/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:"Clash Display";src:url("../fontes/ClashDisplay-Variable.woff2") format("woff2");font-weight:200 700;font-display:swap}
+@font-face{font-family:"Satoshi";src:url("../fontes/Satoshi-Variable.woff2") format("woff2");font-weight:300 900;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url("../fontes/ibm-plex-mono-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url("../fontes/ibm-plex-mono-latin-500-normal.woff2") format("woff2");font-weight:500;font-display:swap}
+@property --mx{syntax:"<length>";inherits:true;initial-value:50%}
+@property --my{syntax:"<length>";inherits:true;initial-value:50%}
+
+:root{
+  --bg:#F6F1F2; --bg-2:#EFE7E9; --paper:#FFFFFF; --ink:#1D1D1D; --ink-2:#463F41; --mut:#675F62;
+  --wine:#AC002F; --wine-d:#6E001B; --wine-dd:#360009; --wine-t:rgba(172,0,47,.08);
+  --lav:#B9B5FF; --lav-l:#E3E2FF; --lav-d:#9088FF;
+  --line:rgba(29,29,29,.12); --line-2:rgba(29,29,29,.2);
+  --display:"Clash Display", "Satoshi", system-ui, sans-serif;
+  --sans:"Satoshi", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --ease:cubic-bezier(.22,1,.36,1); --spring:cubic-bezier(.34,1.56,.64,1);
+  --wrap:1200px; --gut:20px; --header-h:68px;
+  --sh:0 1px 2px rgba(54,0,9,.05), 0 8px 24px -8px rgba(54,0,9,.14), 0 28px 60px -28px rgba(54,0,9,.22);
+  --sh-lg:0 2px 4px rgba(54,0,9,.05), 0 18px 40px -14px rgba(54,0,9,.22), 0 50px 90px -40px rgba(54,0,9,.3);
+}
+@media (min-width:1440px){:root{--wrap:1300px}}
+@media (min-width:760px){:root{--gut:32px}}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--header-h) + 16px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4,p,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;transition:top .2s}
+.skip:focus{top:12px}
+:focus-visible{outline:2.5px solid var(--wine);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* tipografia */
+.label{font:500 .78rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--wine)}
+.label.dim{color:var(--mut)}
+.h2{font:700 clamp(2.1rem,5.4vw,4.1rem)/.98 var(--display);letter-spacing:-.04em;text-wrap:balance}
+.h2 .w{color:var(--wine)}
+.lead{font-size:clamp(1.02rem,1.5vw,1.16rem);color:var(--ink-2);max-width:60ch;text-wrap:pretty}
+.chip-k{display:inline-block;background:var(--ink);color:var(--bg);padding:.02em .2em .08em;border-radius:.16em;transform:rotate(-1.2deg)}
+
+/* botões */
+.btn{--h:52px;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:var(--h);padding:0 10px 0 24px;border-radius:999px;font:700 1rem/1 var(--sans);text-decoration:none;cursor:pointer;border:0;transition:transform .25s var(--ease),background .2s,box-shadow .25s,color .2s;white-space:nowrap;will-change:transform}
+.btn .ic{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex:none;transition:transform .3s var(--ease)}
+.btn .ic svg{width:16px;height:16px}
+.btn:hover .ic{transform:translateX(3px) rotate(-8deg)}
+.btn-wine{background:var(--wine);color:#fff;box-shadow:0 10px 24px -10px rgba(172,0,47,.7)}
+.btn-wine .ic{background:rgba(255,255,255,.18)}
+.btn-wine:hover{background:#94002a}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink .ic{background:rgba(255,255,255,.14)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);padding:0 24px}
+.btn-ghost:hover{background:var(--ink);color:var(--bg)}
+.btn-white{background:#fff;color:var(--wine)}
+.btn-white .ic{background:var(--wine-t)}
+.btn-line-w{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7);padding:0 24px}
+.btn-line-w:hover{background:#fff;color:var(--wine)}
+.btn:active{transform:scale(.97)}
+.tlink{font-weight:700;color:var(--ink);text-decoration:none;background:linear-gradient(var(--wine),var(--wine)) 0 100%/100% 2px no-repeat;padding-bottom:2px;transition:background-size .3s var(--ease)}
+.tlink:hover{background-size:0 2px;background-position:100% 100%}
+
+/* cabeçalho */
+.hdr{position:sticky;top:0;z-index:50;height:var(--header-h);display:flex;align-items:center;background:rgba(246,241,242,.82);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.hdr.scrolled{border-bottom-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;color:var(--wine);text-decoration:none;flex:none}
+.brand .logo-svg{width:92px;height:auto}
+.brand .logo-svg path,.foot .logo-svg path{fill:currentColor}
+.nav{display:none;margin:0 auto;gap:2px}
+.nav a{position:relative;text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink-2);padding:10px 14px;border-radius:999px;transition:color .2s}
+.nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:5px;height:2px;background:var(--wine);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav a:hover,.nav a.active{color:var(--ink)}
+.nav a.active::after{transform:scaleX(1)}
+.lang{display:none;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--line-2);font:500 .8rem var(--mono);letter-spacing:.06em;text-decoration:none;color:var(--ink);transition:background .2s,color .2s}
+.lang:hover{background:var(--ink);color:var(--bg)}
+.hdr-cta{margin-left:auto;--h:44px;padding:0 18px;font-size:.92rem}
+.menu-btn{width:44px;height:44px;border-radius:50%;border:0;background:var(--ink);color:#fff;display:grid;place-items:center;cursor:pointer;flex:none}
+.menu-btn span{display:block;width:16px;height:2px;background:currentColor;border-radius:2px;box-shadow:0 -5px 0 currentColor,0 5px 0 currentColor;transition:box-shadow .2s,transform .25s}
+.menu-btn[aria-expanded="true"] span{box-shadow:none;transform:rotate(45deg)}
+.mnav{position:fixed;top:calc(var(--header-h) + 6px);left:12px;right:12px;z-index:49;background:var(--paper);border-radius:22px;padding:10px;box-shadow:var(--sh-lg);display:grid;gap:2px;transform-origin:top right;animation:pop .32s var(--spring)}
+.mnav a{padding:14px 16px;border-radius:14px;text-decoration:none;font:600 1.15rem var(--display);letter-spacing:-.01em}
+.mnav a:hover{background:var(--bg)}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(-6px)}}
+@media (min-width:980px){.nav{display:flex}.menu-btn{display:none}.hdr-cta{margin-left:0}.lang{display:inline-flex}}
+
+/* HERO */
+.hero{position:relative;padding:28px 0 40px;overflow:clip}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:70vw;height:70vw;max-width:900px;max-height:900px;background:radial-gradient(closest-side,rgba(185,181,255,.35),transparent 70%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:auto auto -30% -20%;width:60vw;height:60vw;max-width:780px;max-height:780px;background:radial-gradient(closest-side,rgba(172,0,47,.10),transparent 70%);pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;gap:36px;align-items:center}
+.hero .label{display:flex;align-items:center;gap:10px}
+.hero .label .sym-mini{width:22px;color:var(--wine)}
+.h1{margin:16px 0 0;font:700 clamp(2.6rem,10.6vw,4.3rem)/.92 var(--display);letter-spacing:-.05em}
+.h1 .line3{display:block;margin-top:.06em}
+@media (min-width:1440px){.h1{font-size:4.9rem}}
+.h1 .line{display:block;overflow:clip;padding-bottom:.06em;margin-bottom:-.06em}
+.h1 .line>span{display:inline-block}
+.h1 .price{position:relative;display:inline-block;white-space:nowrap}
+.h1 .price .chip-k{font-size:1em;padding:.03em .16em .1em}
+.h1 .price .from{color:var(--wine)}
+.price-rays{position:absolute;right:-.22em;top:-.34em;width:.5em;color:var(--wine);pointer-events:none}
+.hero .lead{margin-top:22px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.alt-link{margin-top:18px;font-size:.98rem;color:var(--ink-2)}
+.note{margin-top:14px;font-size:.84rem;color:var(--mut);display:flex;gap:8px;align-items:flex-start;max-width:52ch}
+.note::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--wine);margin-top:.55em}
+
+/* montador: navegador que se monta */
+.builder{position:relative;padding:0 0 36px}
+.bwin{position:relative;background:var(--paper);border-radius:18px;box-shadow:var(--sh-lg);overflow:hidden;border:1px solid var(--line)}
+.btop{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line);background:#FBF8F9}
+.dots{display:flex;gap:6px;flex:none}
+.dots i{width:10px;height:10px;border-radius:50%;background:#E3D9DC}
+.dots i:first-child{background:#F2B8C4}
+.url{flex:1;min-width:0;height:28px;border-radius:999px;background:var(--bg);display:flex;align-items:center;gap:8px;padding:0 12px;font:500 .74rem var(--mono);color:var(--mut);white-space:nowrap;overflow:hidden}
+.url svg{width:11px;height:11px;flex:none}
+.steps-b{display:flex;gap:4px;padding:10px 12px;border-bottom:1px solid var(--line);overflow:hidden}
+.stp{flex:1;min-width:0;font:700 .74rem/1.2 var(--sans);letter-spacing:0;color:var(--mut);padding:7px 6px;border-radius:8px;background:var(--bg);position:relative;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.stp::before{content:"";position:absolute;inset:0;background:var(--wine);transform:scaleX(0);transform-origin:left}
+.stp span{position:relative}
+.stp.on{color:#fff}
+.stp.on::before{transform:scaleX(1);transition:transform .6s var(--ease)}
+.stp.done{color:var(--wine)}
+.stp.done::before{transform:scaleX(0)}
+.bstage{position:relative;aspect-ratio:1200/568;background:var(--paper);overflow:hidden}
+.wire{position:absolute;inset:0;padding:5% 7%;display:grid;grid-template-columns:1.1fr .9fr;grid-template-rows:auto 1fr;gap:6% 6%}
+.wire .wnav{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center}
+.wb{background:#EDE6E8;border-radius:6px;transform-origin:left;transition:transform .7s var(--ease),opacity .5s,background .6s}
+.wnav .wb{height:9px}
+.wnav .wb.a{width:16%}.wnav .wb.b{width:38%}.wnav .wb.c{width:13%;height:16px;border-radius:99px}
+.wcol{display:flex;flex-direction:column;gap:7%;justify-content:center}
+.wcol .wb{height:12%}
+.wcol .t1{width:92%}.wcol .t2{width:74%}.wcol .t3{width:55%;height:6%!important}.wcol .t4{width:64%;height:6%!important}
+.wcol .bt{display:flex;gap:6%}.wcol .bt .wb{height:auto;aspect-ratio:3.4/1;width:34%;border-radius:99px}
+.wimg{border-radius:12px;position:relative;overflow:hidden}
+.wimg::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-100%);animation:shimmer 1.6s infinite}
+@keyframes shimmer{to{transform:translateX(100%)}}
+.builder[data-step="0"] .wb{transform:scaleX(.08);opacity:.4}
+.builder[data-step="2"] .wnav .wb.c,.builder[data-step="2"] .bt .wb:first-child{background:var(--wine)}
+.builder[data-step="2"] .wcol .t1,.builder[data-step="2"] .wcol .t2{background:var(--ink)}
+.builder[data-step="2"] .wimg{background:linear-gradient(135deg,var(--lav-l),#F2B8C4)}
+.shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;clip-path:inset(0 0 100% 0);transition:clip-path 1.1s var(--ease)}
+.shot.show{clip-path:inset(0 0 0 0)}
+.shot.out{clip-path:inset(0 0 0 0);opacity:0;transition:opacity .5s}
+.events{position:absolute;left:10px;bottom:10px;display:flex;flex-direction:column;gap:6px;z-index:3;pointer-events:none}
+.ev{display:flex;align-items:center;gap:8px;background:rgba(29,29,29,.9);color:#fff;font:500 .7rem/1 var(--mono);padding:7px 10px;border-radius:999px;opacity:0;transform:translateY(8px) scale(.96);transition:opacity .35s,transform .45s var(--spring);white-space:nowrap;width:max-content}
+.ev b{color:#9EF0B5;font-weight:500}
+.ev.in{opacity:1;transform:none}
+.bphone{position:absolute;right:-14px;bottom:-6px;width:27%;max-width:176px;min-width:100px;aspect-ratio:540/1170;border-radius:22px;padding:5px;background:var(--ink);box-shadow:var(--sh-lg);transform:rotate(4deg);z-index:4}
+.bphone::before{content:"";position:absolute;top:9px;left:50%;width:30%;height:9px;border-radius:9px;background:var(--ink);transform:translateX(-50%);z-index:2}
+.bphone .scr{position:relative;width:100%;height:100%;border-radius:17px;overflow:hidden;background:var(--bg)}
+.bphone img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity .6s}
+.bphone img.on{opacity:1}
+.bcap{position:absolute;left:0;bottom:0;font:500 .74rem var(--mono);color:var(--mut);max-width:62%}
+.bcap b{color:var(--ink);font-weight:500}
+@media (min-width:980px){
+  .hero{padding:56px 0 64px}
+  .hero-grid{grid-template-columns:1.12fr .88fr;gap:48px}
+  .builder{margin-right:24px}
+}
+
+/* prova */
+.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg)}
+.proof ul{display:grid;grid-template-columns:repeat(3,1fr)}
+.proof li{padding:22px 10px 20px;border-left:1px solid var(--line)}
+.proof li:first-child{border-left:0;padding-left:0}
+.proof b{display:block;font:500 clamp(1.08rem,4.4vw,2.2rem)/1 var(--mono);letter-spacing:-.04em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.proof span{display:block;margin-top:6px;font-size:.82rem;color:var(--mut);line-height:1.35}
+
+/* fita */
+.ribbon{position:relative;padding:44px 0;overflow:clip}
+.ribbon .track{background:var(--ink);color:#fff;transform:rotate(-2deg);margin:0 -4vw;padding:16px 0;overflow:hidden;box-shadow:0 18px 40px -20px rgba(54,0,9,.5)}
+.ribbon .track.two{position:absolute;left:0;right:0;top:50%;background:var(--wine);transform:translateY(-50%) rotate(1.6deg);z-index:-1;opacity:.95}
+.rail-m{display:flex;width:max-content;animation:marq 38s linear infinite}
+.track.two .rail-m{animation-direction:reverse;animation-duration:46s}
+.rail-m ul{display:flex;align-items:center;gap:28px;padding-right:28px}
+.rail-m li{display:flex;align-items:center;gap:28px;font:600 clamp(1.05rem,2vw,1.4rem)/1 var(--display);letter-spacing:-.01em;white-space:nowrap}
+.rail-m li .s{width:20px;color:var(--lav)}
+.ribbon:hover .rail-m{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* seções */
+.sec{padding:84px 0}
+.sec-head{display:grid;gap:16px;margin-bottom:40px}
+.sec-head .lead{margin-top:2px}
+@media (min-width:980px){.sec{padding:120px 0}.sec-head.split{grid-template-columns:1fr 1fr;align-items:end;gap:48px}}
+
+/* modelos */
+.mgrid{display:grid;gap:18px}
+.mcard{position:relative;background:var(--paper);border-radius:22px;padding:10px;box-shadow:var(--sh);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s;isolation:isolate}
+.mcard::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(380px circle at var(--mx) var(--my),rgba(172,0,47,.10),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none;z-index:-1}
+.mcard:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
+.mcard:hover::before{opacity:1}
+.mthumb{position:relative;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,var(--lav-l),#F4D3DB);aspect-ratio:16/10}
+.mthumb .bar{position:absolute;top:0;left:0;right:0;height:26px;display:flex;align-items:center;gap:5px;padding:0 10px;background:rgba(255,255,255,.92);z-index:2;font:500 .7rem var(--mono);color:var(--mut)}
+.mthumb .bar i{width:7px;height:7px;border-radius:50%;background:#E3D9DC}
+.mthumb .bar em{font-style:normal;margin-left:6px}
+.mthumb img{position:absolute;left:0;right:0;top:26px;width:100%;height:calc(100% - 26px);object-fit:cover;object-position:top;transition:transform 1.2s var(--ease)}
+.mcard:hover .mthumb img{transform:scale(1.045)}
+.mbody{padding:16px 8px 6px;display:flex;flex-direction:column;gap:6px;flex:1}
+.mbody .label{font-size:.72rem}
+.mbody h3{font:600 1.45rem/1.05 var(--display);letter-spacing:-.02em}
+.mbody p{color:var(--ink-2);font-size:.96rem;line-height:1.5}
+.mact{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:14px}
+.mact .btn{--h:44px;font-size:.9rem;padding:0 6px 0 18px}
+.mact .btn .ic{width:30px;height:30px}
+.mact .btn-ghost{padding:0 18px}
+.mnote{margin-top:22px;font-size:.88rem;color:var(--mut)}
+@media (min-width:700px){.mgrid{grid-template-columns:1fr 1fr}}
+@media (min-width:1020px){
+  .mgrid{grid-template-columns:repeat(6,1fr)}
+  .mcard:nth-child(1){grid-column:span 4}.mcard:nth-child(2){grid-column:span 2}
+  .mcard:nth-child(3){grid-column:span 2}.mcard:nth-child(4){grid-column:span 4}
+  .mcard:nth-child(5){grid-column:span 3}.mcard:nth-child(6){grid-column:span 3}
+  .mcard:nth-child(2) .mthumb,.mcard:nth-child(3) .mthumb{aspect-ratio:auto;flex:1;min-height:240px}
+}
+
+/* portfólio */
+.pf{background:var(--ink);color:#F3EEEF;border-radius:28px 28px 0 0;overflow:clip;position:relative}
+.pf .label{color:var(--lav)}
+.pf .h2 .w{color:var(--lav)}
+.pf .lead{color:#C9C0C3}
+.pf-ctl{display:flex;gap:10px;align-items:center}
+.rbtn{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.rbtn:hover{background:#fff;color:var(--ink)}
+.rbtn:disabled{opacity:.35;cursor:default;background:transparent;color:#fff}
+.rbtn svg{width:18px;height:18px}
+.pf-count{font:500 .85rem var(--mono);color:#C9C0C3;margin-left:6px;font-variant-numeric:tabular-nums}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--gut) 28px;margin:0 calc(var(--gut) * -1);scrollbar-width:none;overscroll-behavior-x:contain}
+.rail::-webkit-scrollbar{display:none}
+.case{flex:none;width:min(86vw,1020px);scroll-snap-align:center;background:#262223;border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:12px;display:grid;gap:18px}
+.case-vis{position:relative;border-radius:16px;background:linear-gradient(140deg,#3a1520,#1d1d1d 60%);padding:16px 16px 0;overflow:hidden;aspect-ratio:16/11}
+.case-vis .dwin{position:relative;border-radius:10px 10px 0 0;overflow:hidden;background:#fff;box-shadow:0 20px 40px -18px rgba(0,0,0,.6);width:94%}
+.case-vis .dwin .bar{height:20px;background:#F1ECED;display:flex;gap:5px;align-items:center;padding:0 8px}
+.case-vis .dwin .bar i{width:6px;height:6px;border-radius:50%;background:#D5CACD}
+.case-vis .dwin img{width:100%;height:auto;aspect-ratio:1200/568;object-fit:cover;object-position:top}
+.case-vis .mph{position:absolute;right:14px;bottom:-18%;width:30%;border-radius:18px;padding:4px;background:#111;box-shadow:0 20px 40px -10px rgba(0,0,0,.7);transform:rotate(-3deg);transition:transform .6s var(--ease)}
+.case-vis .mph img{border-radius:14px;width:100%;height:auto;aspect-ratio:540/1170;object-fit:cover;object-position:top}
+.case:hover .mph{transform:rotate(0) translateY(-10px)}
+.case-txt{padding:6px 8px 10px;display:flex;flex-direction:column;gap:10px}
+.case-txt .meta{font:500 .74rem/1.4 var(--mono);letter-spacing:.04em;color:var(--lav);text-transform:uppercase}
+.case-txt h3{font:600 clamp(1.6rem,3vw,2.3rem)/1 var(--display);letter-spacing:-.03em;color:#fff}
+.case-txt p{color:#D3CBCD;font-size:1rem;line-height:1.55}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags li{font:500 .74rem var(--mono);padding:6px 10px;border-radius:999px;background:rgba(185,181,255,.12);color:var(--lav-l);border:1px solid rgba(185,181,255,.22)}
+.case-act{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:8px}
+.case-act .btn{--h:46px;font-size:.92rem}
+.btn-lav{background:var(--lav-l);color:var(--ink)}
+.btn-lav .ic{background:rgba(29,29,29,.08)}
+.btn-lav:hover{background:#fff}
+@media (min-width:900px){.case{grid-template-columns:1.3fr 1fr;align-items:stretch;padding:14px}.case-vis{aspect-ratio:auto;min-height:380px}.case-txt{padding:22px 16px 18px}}
+.pf-swipe{display:flex;align-items:center;gap:8px;font:500 .78rem var(--mono);color:#A69DA0;margin-top:4px}
+@media (min-width:900px){.pf-swipe{display:none}}
+
+/* google */
+.gmn{background:var(--bg-2)}
+.gmn-grid{display:grid;gap:44px;align-items:center}
+.gsteps{display:grid;gap:10px;margin-top:30px}
+.gstep{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:18px;border-radius:18px;background:var(--paper);border:1px solid var(--line);transition:border-color .3s,box-shadow .3s}
+.gstep.cur{border-color:var(--wine);box-shadow:0 0 0 3px rgba(172,0,47,.08)}
+.gstep .n{font:500 .9rem var(--mono);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--bg);color:var(--wine)}
+.gstep.cur .n{background:var(--wine);color:#fff}
+.gstep h3{font:600 1.15rem/1.2 var(--display);letter-spacing:-.01em}
+.gstep p{color:var(--ink-2);font-size:.95rem;margin-top:4px}
+.callout{margin-top:18px;padding:18px 20px;border-left:4px solid var(--wine);background:var(--paper);border-radius:0 16px 16px 0;color:var(--ink-2);font-size:.98rem}
+.callout b{color:var(--ink)}
+.gmn .btn{margin-top:24px}
+.gphone{justify-self:center;width:min(320px,82vw);aspect-ratio:9/18.5;background:var(--ink);border-radius:42px;padding:9px;box-shadow:var(--sh-lg);position:relative}
+.gphone .scr{position:relative;height:100%;border-radius:34px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.gsearch{margin:44px 14px 10px;height:44px;border-radius:999px;border:1px solid #E1DADC;display:flex;align-items:center;gap:10px;padding:0 14px;font-size:.84rem;color:var(--ink);box-shadow:0 4px 12px -6px rgba(0,0,0,.15)}
+.gsearch svg{width:16px;height:16px;flex:none;color:var(--mut)}
+.gsearch .caret{display:inline-block;width:1.5px;height:1.1em;background:var(--wine);vertical-align:-3px;margin-left:1px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.gmap{position:relative;flex:1;background:#F2EFEA;background-image:linear-gradient(#E6E0D8 1px,transparent 1px),linear-gradient(90deg,#E6E0D8 1px,transparent 1px);background-size:28px 28px;overflow:hidden}
+.gmap::before{content:"";position:absolute;left:-10%;top:38%;width:130%;height:14px;background:#fff;transform:rotate(-12deg);box-shadow:0 0 0 1px #E6E0D8}
+.gmap::after{content:"";position:absolute;left:52%;top:-10%;width:12px;height:130%;background:#fff;transform:rotate(14deg);box-shadow:0 0 0 1px #E6E0D8}
+.pin{position:absolute;left:50%;top:40%;width:30px;transform:translate(-50%,-100%);z-index:2;color:var(--wine);filter:drop-shadow(0 6px 6px rgba(0,0,0,.2))}
+.gcard{position:relative;z-index:3;margin:-24px 10px 10px;background:#fff;border-radius:20px;padding:14px;box-shadow:0 -6px 24px -10px rgba(0,0,0,.25)}
+.gcard h4{font:700 1rem var(--sans)}
+.gcard .st{font-size:.78rem;color:var(--mut);display:flex;gap:6px;align-items:center;margin-top:2px}
+.gcard .st .stars{color:#946000;letter-spacing:1px}
+.gcard .open{color:#1E7A3C;font-size:.78rem;font-weight:700;margin-top:2px}
+.gbtns{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+.gbtns span{display:grid;place-items:center;height:36px;border-radius:999px;border:1px solid #DCD3D6;font-size:.78rem;font-weight:700;color:var(--wine)}
+.gbtns .site{background:var(--wine);color:#fff;border-color:var(--wine);position:relative}
+.gbtns .site::after{content:"";position:absolute;inset:-4px;border-radius:999px;border:2px solid var(--wine);opacity:0;animation:ping 2s var(--ease) infinite}
+@keyframes ping{0%{opacity:.7;transform:scale(.9)}80%,100%{opacity:0;transform:scale(1.25)}}
+.gbubble{position:absolute;right:-14px;top:30%;z-index:4;background:#fff;border-radius:16px 16px 4px 16px;padding:10px 12px;box-shadow:var(--sh);font-size:.8rem;max-width:180px}
+.gbubble small{display:block;font:500 .7rem var(--mono);color:#1E7A3C;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+@media (min-width:980px){.gmn-grid{grid-template-columns:1.1fr .9fr;gap:70px}}
+
+/* preços */
+.plans{display:grid;gap:18px;align-items:stretch}
+.plan{position:relative;border-radius:28px;padding:30px 26px 26px;display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);box-shadow:var(--sh)}
+.plan h3{font:600 1.7rem/1 var(--display);letter-spacing:-.02em}
+.plan .desc{margin-top:10px;min-height:3.2em;color:var(--ink-2)}
+.plan .pr{margin-top:22px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.plan .pr small{font:500 .82rem var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.plan .pr strong{font:700 clamp(3.2rem,8vw,4.6rem)/.9 var(--display);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.plan ul{margin:24px 0 28px;display:grid;gap:12px}
+.plan li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;font-size:1rem}
+.plan li svg{width:22px;height:22px;margin-top:1px}
+.plan .btn{margin-top:auto;width:100%;justify-content:space-between}
+.plan.main{background:var(--wine);color:#fff;border-color:var(--wine);box-shadow:0 30px 70px -30px rgba(172,0,47,.75)}
+.plan.main::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(500px circle at 85% -10%,rgba(255,255,255,.18),transparent 55%);pointer-events:none}
+.plan.main .desc{color:#FBE5EA}
+.plan.main .pr small{color:#FBE5EA}
+.plan.main li svg{color:var(--lav-l)}
+.plan li svg{color:var(--wine)}
+.badge{position:absolute;top:-14px;left:24px;background:var(--lav-l);color:var(--ink);font:500 .72rem var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;border-radius:999px;box-shadow:0 8px 18px -8px rgba(54,0,9,.35)}
+.plan-note{margin-top:22px;display:flex;gap:12px;align-items:flex-start;padding:18px 20px;border-radius:18px;background:var(--paper);border:1px dashed var(--line-2);color:var(--ink-2);font-size:.95rem}
+.plan-note svg{width:22px;height:22px;flex:none;color:var(--wine);margin-top:2px}
+@media (min-width:860px){.plans{grid-template-columns:1.08fr 1fr}.plan{padding:40px 36px 34px}.plan.main{transform:translateY(-12px)}}
+
+/* adicionais */
+.adds{display:grid;gap:18px}
+.add{border-radius:24px;background:var(--paper);border:1px solid var(--line);padding:26px;box-shadow:var(--sh);position:relative;overflow:hidden}
+.add h3{font:600 1.45rem/1.1 var(--display);letter-spacing:-.02em;margin:10px 0 8px}
+.add p{color:var(--ink-2);font-size:.98rem}
+.xtrato{margin-top:20px;border-radius:16px;background:#FBF8F9;border:1px solid var(--line);padding:16px 16px 8px;font:500 .8rem/1.4 var(--mono)}
+.xtrato .hd{display:flex;justify-content:space-between;color:var(--mut);padding-bottom:10px;border-bottom:1px dashed var(--line-2);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+.xl{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.xl:last-child{border-bottom:0}
+.xl .src{color:var(--wine);min-width:7.5em}
+.xl .ok{font-size:.7rem;padding:4px 8px;border-radius:999px;background:#E2F5E8;color:#1E6B37;opacity:.25;transform:scale(.8);transition:opacity .3s,transform .4s var(--spring)}
+.xl.in .ok{opacity:1;transform:none}
+.mini{display:flex;gap:6px;margin-top:18px;align-items:flex-end}
+.mini i{flex:1;border-radius:8px 8px 4px 4px;background:var(--lav-l)}
+.mini i:nth-child(1){height:58px}.mini i:nth-child(2){height:44px;background:#D7D4FF}.mini i:nth-child(3){height:30px;background:var(--lav)}.mini i:nth-child(4){height:18px;background:var(--wine)}
+.chat{margin-top:18px;display:grid;gap:8px;font-size:.84rem}
+.chat span{padding:9px 12px;border-radius:14px;max-width:84%;line-height:1.35}
+.chat .c{background:var(--bg);justify-self:start;border-bottom-left-radius:4px}
+.chat .i{background:#DCF5E4;justify-self:end;border-bottom-right-radius:4px}
+.adds-foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:22px}
+.adds-foot p{font:500 .9rem var(--mono);color:var(--mut)}
+@media (min-width:900px){.adds{grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto}.add.big{grid-row:span 2}}
+
+/* recursos */
+.feat{display:grid;gap:30px}
+.feat-head{align-self:start}
+.flist{border-top:1px solid var(--line-2)}
+.fitem{display:grid;grid-template-columns:3.2rem 1fr;gap:14px;padding:22px 0;border-bottom:1px solid var(--line-2);align-items:baseline;position:relative}
+.fitem .n{font:500 .85rem var(--mono);color:var(--wine)}
+.fitem h3{font:600 clamp(1.3rem,2.6vw,1.75rem)/1.1 var(--display);letter-spacing:-.02em;transition:transform .35s var(--ease),color .2s}
+.fitem p{grid-column:2;color:var(--ink-2);margin-top:6px;max-width:52ch}
+.fitem::after{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--wine);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.fitem:hover::after{transform:scaleX(1)}
+.fitem:hover h3{transform:translateX(6px);color:var(--wine)}
+@media (min-width:980px){.feat{grid-template-columns:.9fr 1.1fr;gap:70px}.feat-head{position:sticky;top:calc(var(--header-h) + 40px)}}
+
+/* como funciona */
+.how{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tl{position:relative;display:grid;gap:26px;margin-top:10px;padding-left:34px}
+.tl .rail-l{position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl .rail-l i{position:absolute;inset:0;background:var(--wine);transform:scaleY(var(--p,0));transform-origin:top}
+.tstep{position:relative}
+.tstep .dot{position:absolute;left:-34px;top:2px;width:24px;height:24px;border-radius:50%;background:var(--paper);border:2px solid var(--line-2);display:grid;place-items:center;font:500 .7rem var(--mono);color:var(--mut);transition:background .3s,border-color .3s,color .3s}
+.tstep.lit .dot{background:var(--wine);border-color:var(--wine);color:#fff}
+.tstep h3{font:600 1.35rem/1.15 var(--display);letter-spacing:-.02em}
+.tstep p{color:var(--ink-2);margin-top:6px}
+.how-end{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px 22px;align-items:center}
+.how-end p{color:var(--mut);font-size:.95rem}
+@media (min-width:900px){
+  .tl{grid-template-columns:repeat(4,1fr);gap:28px;padding:46px 0 0}
+  .tl .rail-l{left:0;right:0;top:11px;bottom:auto;height:2px;width:auto}
+  .tl .rail-l i{transform:scaleX(var(--p,0));transform-origin:left}
+  .tstep .dot{left:0;top:-46px}
+}
+
+/* números (escuro) */
+.dark{background:var(--ink);color:#F3EEEF;position:relative;overflow:clip}
+.dark::before{content:"";position:absolute;left:50%;top:-30%;width:120vw;height:120vw;max-width:1400px;max-height:1400px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(172,0,47,.35),rgba(172,0,47,.06) 55%,transparent 75%);pointer-events:none}
+.dark .label{color:var(--lav)}
+.dark .h2 .w{color:var(--lav)}
+.dark .lead{color:#CFC6C9}
+.nums-grid{position:relative;display:grid;gap:44px;align-items:center}
+.bigsym{position:relative;width:min(340px,70vw);justify-self:center;color:#fff}
+.bigsym .sym-svg{width:100%;height:auto;overflow:visible}
+.bigsym .ray{transform-box:view-box;transform-origin:286.5px 287.7px;color:var(--lav)}
+.bigsym .sym-rays{animation:spin 60s linear infinite;transform-box:view-box;transform-origin:286.5px 287.7px}
+.bigsym .sym-face{color:#fff}
+.bigsym::after{content:"";position:absolute;inset:18%;border-radius:50%;background:radial-gradient(closest-side,rgba(185,181,255,.35),transparent);filter:blur(20px);z-index:-1}
+@keyframes spin{to{transform:rotate(360deg)}}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.12);border-radius:22px;overflow:hidden;margin-top:30px;border:1px solid rgba(255,255,255,.12)}
+.nums div{background:#232021;padding:22px 18px}
+.nums b{display:block;font:600 clamp(1.6rem,6.4vw,3.3rem)/1 var(--display);letter-spacing:-.04em;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
+.nums div>span{display:block;margin-top:8px;color:#CFC6C9;font-size:.9rem;line-height:1.4}
+.nums-cap{margin-top:10px;font:500 .74rem var(--mono);color:#A69DA0}
+.dark-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+@media (min-width:980px){.nums-grid{grid-template-columns:1.2fr .8fr;gap:60px}}
+
+/* faq */
+.faq-grid{display:grid;gap:36px}
+.faq-side{align-self:start;display:grid;gap:24px}
+.askcard{border-radius:22px;background:var(--ink);color:#fff;padding:24px;display:grid;gap:10px}
+.askcard h3{font:600 1.4rem var(--display);letter-spacing:-.02em}
+.askcard p{color:#CFC6C9}
+.askcard .btn{margin-top:8px;justify-self:start}
+.qa{border-top:1px solid var(--line-2)}
+.qa details{border-bottom:1px solid var(--line-2)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 2px;font:600 clamp(1.1rem,2vw,1.3rem)/1.25 var(--display);letter-spacing:-.01em;min-height:44px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .pm{flex:none;width:34px;height:34px;border-radius:50%;background:var(--paper);border:1px solid var(--line);position:relative;transition:background .25s,transform .35s var(--ease)}
+.qa summary .pm::before,.qa summary .pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--ink);transform:translate(-50%,-50%);transition:transform .3s var(--ease),background .2s}
+.qa summary .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.qa details[open] summary .pm{background:var(--wine);border-color:var(--wine);transform:rotate(180deg)}
+.qa details[open] summary .pm::before,.qa details[open] summary .pm::after{background:#fff}
+.qa details[open] summary .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.qa details p{padding:0 50px 22px 2px;color:var(--ink-2)}
+@media (min-width:980px){.faq-grid{grid-template-columns:.8fr 1.2fr;gap:70px}.faq-side{position:sticky;top:calc(var(--header-h) + 40px)}}
+
+/* chamada final */
+.final{background:var(--wine);color:#fff;position:relative;overflow:clip;text-align:center}
+.final::before{content:"";position:absolute;inset:0;background:radial-gradient(600px circle at 50% 120%,rgba(185,181,255,.35),transparent 60%),radial-gradient(500px circle at 10% -10%,rgba(255,255,255,.12),transparent 60%);pointer-events:none}
+.final .wrap{position:relative}
+.final .sym-wrap{width:96px;margin:0 auto 24px;color:#fff}
+.final .sym-svg{width:100%;height:auto;overflow:visible}
+.final .ray{transform-box:view-box;transform-origin:286.5px 287.7px;animation:breathe 2.8s var(--ease) infinite;animation-delay:calc(var(--i) * .12s)}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.12);opacity:.6}}
+.final h2{font:700 clamp(2.5rem,8vw,6.2rem)/.92 var(--display);letter-spacing:-.05em;text-wrap:balance;max-width:14ch;margin:0 auto}
+.final p{margin:20px auto 0;color:#FBE5EA;max-width:46ch}
+.final .ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px}
+
+/* rodapé */
+.foot{background:var(--ink);color:#CFC6C9;padding:56px 0 calc(40px + env(safe-area-inset-bottom));font-size:.92rem}
+.foot .row{display:grid;gap:28px}
+.foot .brand{color:#fff}
+.foot .brand .logo-svg{width:110px}
+.foot p{max-width:42ch;margin-top:12px}
+.foot nav{display:grid;gap:6px;align-content:start}
+.foot nav a{text-decoration:none;color:#fff;padding:6px 0;width:max-content}
+.foot nav a:hover{color:var(--lav)}
+.foot .legal{margin-top:36px;padding:22px 76px 0 0;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font:500 .76rem var(--mono);color:#A69DA0}
+@media (min-width:760px){.foot .row{grid-template-columns:1.4fr 1fr 1fr}}
+
+/* whatsapp flutuante */
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;width:60px;height:60px;border-radius:50%;background:var(--wine);color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(172,0,47,.8);transition:transform .3s var(--spring)}
+.wa:hover{transform:scale(1.07) rotate(-6deg)}
+.wa svg{width:28px;height:28px}
+.wa::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--wine);opacity:0;animation:ping 2.6s var(--ease) infinite 2s}
+
+/* reveal */
+.js .rv.hide{opacity:0;transform:translateY(22px)}
+.rv{transition:opacity .7s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--d,0) * 70ms)}
+/* entrada do hero */
+.js.intro .h1 .line>span{transform:translateY(105%)}
+.h1 .line>span{transition:transform 1s var(--ease);transition-delay:calc(var(--d,0) * 90ms + 80ms)}
+.js.intro .h1 .chip-k{clip-path:inset(0 100% 0 0)}
+.h1 .chip-k{clip-path:inset(0 0 0 0);transition:clip-path .9s var(--ease) .55s}
+.price-rays .ray{transform-box:view-box;transform-origin:286.5px 287.7px;transition:transform .5s var(--spring),opacity .3s;transition-delay:calc(1s + var(--i) * 60ms)}
+.js.intro .price-rays .ray{transform:scale(.2);opacity:0}
+.js.intro .hero .fade{opacity:0;transform:translateY(14px)}
+.hero .fade{transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--d,0) * 90ms + 400ms)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv.hide{opacity:1;transform:none}
+  .js.intro .h1 .line>span,.js.intro .hero .fade{transform:none;opacity:1}
+  .js.intro .h1 .chip-k{clip-path:none}
+  .js.intro .price-rays .ray{transform:none;opacity:1}
+  .rail-m{flex-wrap:wrap;width:auto}
+  .rail-m ul+ul{display:none}
+  .rail-m ul{flex-wrap:wrap;justify-content:center;padding:0 16px}
+}
+.plan .pr strong.quote{font-size:clamp(2.3rem,5.4vw,3.2rem);letter-spacing:-.04em}
+.askcard .mail{color:#fff;font-weight:700;overflow-wrap:anywhere}
+@media (min-width:1020px){
+  .mgrid.mgrid-3{grid-template-columns:2fr 1fr;grid-template-rows:auto auto}
+  .mgrid.mgrid-3 .mcard{grid-column:auto!important}
+  .mgrid.mgrid-3 .mcard:nth-child(1){grid-row:span 2}
+  .mgrid.mgrid-3 .mcard:nth-child(1) .mthumb{aspect-ratio:auto;flex:1;min-height:340px}
+  .mgrid.mgrid-3 .mcard:nth-child(2) .mthumb,.mgrid.mgrid-3 .mcard:nth-child(3) .mthumb{aspect-ratio:16/10;flex:none;min-height:0}
+}
+html[lang="en"] .h1{font-size:clamp(2.3rem,9.4vw,4.3rem)}
+@media (min-width:1440px){html[lang="en"] .h1{font-size:4.9rem}}
+@media (min-width:1020px){
+  .mgrid:not(.mgrid-3) .mcard:nth-child(2) .mbody,.mgrid:not(.mgrid-3) .mcard:nth-child(3) .mbody,.mgrid.mgrid-3 .mcard:nth-child(1) .mbody{flex:none}
+}
+@media (min-width:1020px){
+  .mgrid.mgrid-3 .mcard:nth-child(1) .mthumb img,.mgrid:not(.mgrid-3) .mcard:nth-child(2) .mthumb img,.mgrid:not(.mgrid-3) .mcard:nth-child(3) .mthumb img{object-position:left top}
+}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://beatusmidias.com/#org", "name": "Beatus Mídias", "url": "https://beatusmidias.com", "logo": "https://beatusmidias.com.br/assets/logo-tinta-160.png", "email": "hello@beatusmidias.com", "sameAs": ["https://www.instagram.com/beatusmidias/", "https://beatusmidias.com.br"]}, {"@type": "Service", "name": "Landing page design", "serviceType": "Website and landing page design", "provider": {"@id": "https://beatusmidias.com/#org"}, "areaServed": {"@type": "Country", "name": "United States"}, "offers": [{"@type": "Offer", "name": "Landing page", "priceCurrency": "USD", "price": "200"}, {"@type": "Offer", "name": "Full website", "description": "Custom quote based on size"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you build on WordPress and Elementor?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We also build in custom HTML, which is usually lighter and faster. We will recommend the best option for your case."}}, {"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "A landing page is $200 flat. A multi-page website is quoted based on its size. The price is agreed before we start."}}, {"@type": "Question", "name": "Are hosting and domain included?", "acceptedAnswer": {"@type": "Answer", "text": "No. You pay the provider you choose directly. We tell you where to sign up and set everything up."}}, {"@type": "Question", "name": "Do I need copy and photos ready?", "acceptedAnswer": {"@type": "Answer", "text": "No. We write the copy with you and can use the photos from your Instagram."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "We agree on the timeline before we start, based on the size of the page."}}, {"@type": "Question", "name": "Can I see the page before it goes live?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You get a working preview and can ask for changes."}}, {"@type": "Question", "name": "Is the page ready for ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with the Meta Pixel, the Google tag and contact events installed."}}, {"@type": "Question", "name": "Do you work with businesses in the US?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work remotely and in English, mostly over WhatsApp and email."}}, {"@type": "Question", "name": "Does it work for an online store?", "acceptedAnswer": {"@type": "Answer", "text": "No. E-commerce needs a different setup, and we can point you in the right direction."}}, {"@type": "Question", "name": "How do I pay?", "acceptedAnswer": {"@type": "Answer", "text": "We agree on it with you over WhatsApp or email."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="hdr" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Beatus Mídias, home"><svg class="logo-svg" viewBox="-10 2 1277 459" role="img" aria-label="Beatus Mídias"><path fill="currentColor" fill-rule="evenodd" d="M 264.5 12 C 215 19.4, 171.1 44.6, 143.2 81.5 C 123.9 107.1, 123 125, 140.5 133.1 C 152.1 138.4, 159.6 134.3, 173.4 115.1 C 198.7 80, 242.8 60.6, 297.5 60.5 C 359.5 60.4, 390.9 83.2, 391.2 128.5 C 391.5 171.4, 359.4 196.6, 298.9 201 C 278.3 202.5, 277.9 202.6, 273.1 206 C 262.8 213.5, 261.4 228.1, 270.1 237.5 C 275.3 243.2, 280.2 244.7, 295.5 245.4 C 356.1 248.3, 384.6 301.5, 349.5 346.2 C 335.9 363.6, 310.2 376.2, 291.9 374.7 C 273.6 373.2, 268 369.3, 231.5 332.6 C 216.1 317.1, 201.4 302.9, 198.8 301 C 192.1 296.1, 192.1 296.3, 201.7 280.1 C 206.5 272.1, 214.5 258.5, 219.5 250 C 224.6 241.5, 234.6 224.6, 241.7 212.5 C 248.9 200.4, 262.1 178.1, 271 163 C 280 147.9, 289.9 131.2, 293.1 126 C 304.4 107.4, 302.9 95.3, 288.5 88 C 276 81.8, 263.5 88.2, 254.8 105.4 C 252.7 109.4, 248.7 116.3, 230.4 147 C 219.3 165.8, 200.3 197.8, 161.6 263.2 C 154.8 274.6, 155.2 274.4, 145.9 271.9 C 97.2 259, 42 283.9, 19.9 328.5 C -6.1 381.1, 21.1 432, 80.2 441.4 C 94.9 443.7, 369.9 443.9, 388.5 441.6 C 402 440, 414.4 437.8, 419.5 436.2 C 421.1 435.6, 425.2 434.4, 428.5 433.5 C 431.8 432.5, 438.5 430, 443.4 427.8 C 454.6 423, 454.9 423, 460.9 428.4 C 489.1 453.4, 535.2 446.6, 583.2 410.3 C 590.2 405, 590.7 405, 592.1 410.2 C 601.9 447.5, 646.6 454.2, 687.2 424.6 C 696.6 417.7, 696 417.7, 701 425 C 719.2 451.8, 756.3 449, 786 418.6 C 791.5 412.9, 791.2 412.9, 794.9 419.5 C 813.8 453, 855.1 450.7, 888 414.1 C 894 407.6, 897 406.8, 897 411.9 C 897 415.4, 904.1 428.1, 908.5 432.6 C 926.8 450.8, 960.7 446, 991.3 420.7 C 996 416.8, 999 416.7, 999 420.5 C 999 423.2, 1008.2 434.1, 1013.2 437.4 C 1042 456.5, 1099.8 428.8, 1124.9 384 C 1135.6 364.8, 1140.4 348.1, 1141.6 325.8 C 1142.5 309.4, 1142.8 309.4, 1157.2 327.5 C 1199.1 380, 1196.1 403.9, 1146.4 414.5 C 1120.7 420, 1113 425.3, 1113 437.5 C 1113 452, 1124.2 457, 1152.8 455.1 C 1235.9 449.5, 1262.6 402.4, 1222.4 332.4 C 1207.3 306.1, 1149.4 234.4, 1137.2 226.8 C 1120 216.1, 1093.1 240, 1102.6 257.5 C 1120.8 291.3, 1108.4 335.7, 1070 374 C 1042 402, 1025.6 396.7, 1033 361.9 C 1036.3 346.2, 1038.8 338.3, 1056 289 C 1071.6 244.1, 1072.6 239, 1066.8 232.4 C 1058.4 222.8, 1042.6 222.6, 1034.7 231.9 C 1031.5 235.7, 1029.7 239.7, 1021.8 260 C 988.2 346.4, 973.1 374.8, 954.1 386.9 C 932.2 400.9, 922.2 382.7, 931.9 346.5 C 936.9 327.8, 940.7 316.7, 955.5 276.5 C 967.9 242.9, 967.9 235.7, 955.6 228.5 C 936.1 217.1, 927.5 226, 903.8 282.8 C 870.3 363.2, 857 385.4, 839.5 390.5 C 821.8 395.7, 823.1 375.7, 844.3 321 C 866.6 263.1, 877.8 231.2, 889 193 C 895.5 170.9, 893.9 172.2, 908.6 176 C 1021.2 205.1, 1093.7 192, 1112.9 139 C 1124.5 106.9, 1118.3 83.9, 1098.1 83.8 C 1083.7 83.7, 1076.6 91.8, 1075.7 109.5 C 1073.8 149.8, 1021.6 161, 937 139.1 C 903 130.3, 906 132.4, 909.4 119.9 C 910.9 114.7, 912.7 107.8, 913.6 104.5 C 914.5 101.2, 916.3 94.8, 917.6 90.3 C 924.6 66.4, 916.4 52.6, 896.3 54.2 C 884.3 55.2, 881 60.2, 872.9 89.8 C 869.7 101.7, 866.6 113.1, 866 115.1 C 864.4 121, 863.2 121.5, 853.7 120.1 C 742.2 103.9, 665.7 113.7, 633.1 148.5 C 610.6 172.6, 613.5 203.1, 638.2 203 C 648.4 202.9, 652.7 199.6, 659.1 186.6 C 673.6 157.1, 735.4 146.7, 822.5 159 C 855 163.6, 853 162.8, 850.6 170.7 C 812.8 295.1, 773.3 378.6, 746.8 390 C 732.1 396.3, 730.7 386.3, 741 348.5 C 743.1 340.8, 746 330.2, 747.4 324.9 C 765.9 255, 754.3 225.7, 708 225.6 C 675.3 225.5, 651.5 242.1, 627.2 281.7 C 622.1 290.1, 619.7 294.3, 607.5 317 C 584.5 359.9, 535.7 399, 504.4 399.4 C 495.3 399.5, 493 397.9, 497.4 394.6 C 598.2 320, 618 226, 532.9 226 C 476.1 226, 430.7 293.7, 436.8 369.5 C 437.9 382.8, 437.6 383.4, 428.3 388.6 C 417.4 394.7, 406 398.1, 395.5 398.3 C 384.5 398.5, 384.5 398.4, 392.8 388.6 C 433.4 340.3, 430.6 289.5, 384.7 242.3 C 373.9 231.2, 371.8 228, 375.3 228 C 377.7 228, 397 218.1, 405.1 212.7 C 478 164.6, 469.6 65.8, 389.5 28.4 C 354.9 12.2, 305.8 5.8, 264.5 12 M 521.7 266.5 C 500.8 274.2, 486.8 299.5, 481 340.1 C 478.7 355.8, 479.4 355.6, 500.2 335.2 C 533.1 302.9, 549.7 275.7, 541.5 267.5 C 538.7 264.6, 528.4 264.1, 521.7 266.5 M 694.5 266.7 C 676 274.1, 654.6 303.3, 643.7 336 C 618.4 411.5, 661 409.6, 698.5 333.5 C 722 285.8, 720.3 256.4, 694.5 266.7 M 105.3 311 C 87.6 313.6, 72 329.4, 66.5 350.5 C 61 371.5, 77.7 385.9, 115.5 393 C 137.3 397.1, 220.5 401.9, 223.1 399.3 C 225.9 396.5, 173.7 333.7, 169.8 335.2 C 169.1 335.5, 166 340.2, 163 345.6 C 150.9 367.3, 140.2 373.4, 126.1 366.4 C 111.6 359.1, 111.3 348.9, 125.1 323.7 C 131.1 312.6, 124.3 308.2, 105.3 311"/></svg></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#templates">Templates</a><a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#how">How it works</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="lang" href="../index.html" hreflang="pt-BR" lang="pt-BR" aria-label="Versão em português">PT</a>
+    <a class="btn btn-wine hdr-cta mag" href="https://wa.me/5521975340783?text=Hi%21%20I%20came%20from%20the%20Beatus%20websites%20page." target="_blank" rel="noopener">Get my page</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu" hidden>
+  <a href="#templates">Templates</a><a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="../index.html" hreflang="pt-BR" lang="pt-BR">Versão em português</a>
+</nav>
+
+<main id="content">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="label fade" style="--d:0"><span class="sym-mini"><svg class="sym-svg" viewBox="3 3 566 570" aria-hidden="true"><g class="sym-rays" fill="currentColor"><path class="ray" style="--i:0" d="M 272.3 12.4 C 269.5 14.8, 269.5 14.8, 269.2 63.7 C 268.8 126.2, 267.3 121, 286.2 121 C 305.6 121, 304 125.9, 304 65.8 C 304 14.4, 303.9 13.2, 299.3 11.1 C 294.3 8.8, 275.5 9.7, 272.3 12.4 "/><path class="ray" style="--i:1" d="M 146.9 47.1 C 134.4 54.5, 133.6 57.1, 140.3 68.1 C 141.5 70.1, 144.5 75.3, 147 79.5 C 149.5 83.8, 152.7 89.4, 154.2 91.9 C 155.7 94.4, 157.7 97.8, 158.5 99.5 C 159.4 101.2, 161.1 104.1, 162.3 106.1 C 163.5 108.1, 166.8 113.7, 169.5 118.5 C 172.2 123.3, 175.5 128.8, 176.7 130.9 C 177.9 132.9, 179.4 135.5, 179.9 136.7 C 185.6 149.1, 191.3 151.3, 202 145.1 C 219.1 135.3, 219.2 134.7, 206.3 113.2 C 205 111.2, 203.1 107.7, 202 105.5 C 200.8 103.3, 198.9 99.9, 197.7 97.9 C 192.4 89, 182.7 72.4, 179.5 66.5 C 178.7 64.8, 176.8 61.7, 175.5 59.5 C 174.2 57.3, 171.9 53.3, 170.5 50.7 C 164.7 39.9, 160.2 39.2, 146.9 47.1 "/><path class="ray" style="--i:2" d="M 407 44.2 C 405.8 45.5, 401.9 51.8, 398.2 58.4 C 394.5 64.9, 390.5 71.9, 389.3 73.9 C 388.1 75.9, 386.3 79.1, 385.2 81 C 383.5 84.2, 376.9 95.5, 371.3 104.8 C 368.6 109.5, 365.8 114.5, 363.5 119 C 362.5 120.9, 360.8 123.6, 359.8 124.9 C 354.9 131.2, 357.4 136.8, 368 143.3 C 380.3 150.8, 384.5 150.6, 389.6 142.2 C 391.2 139.6, 393.1 136.6, 393.7 135.5 C 394.4 134.4, 397.1 129.7, 399.7 125.1 C 402.4 120.6, 405.5 115.2, 406.7 113.1 C 407.9 111.1, 409.7 108.1, 410.7 106.3 C 411.7 104.6, 414.8 99.2, 417.5 94.4 C 420.2 89.6, 423.8 83.4, 425.3 80.6 C 426.9 77.8, 428.9 74.4, 429.8 73 C 439.8 57.8, 439.4 55, 426 47 C 416.1 41.2, 410.6 40.4, 407 44.2 "/><path class="ray" style="--i:3" d="M 495 146.2 C 472.5 159.1, 473.2 158.7, 451.8 171 C 423.5 187.1, 423 187.6, 425.1 195.3 C 425.7 197.6, 426.7 200.2, 427.4 201 C 428.1 201.8, 430.1 205, 431.9 208.1 C 437 217.4, 441.2 217.5, 455.5 209.1 C 461 205.8, 474 198.3, 484.3 192.3 C 494.6 186.4, 505.2 180.3, 507.8 178.7 C 510.4 177.2, 513.5 175.6, 514.8 175 C 516 174.5, 518.3 173.2, 519.8 172.2 C 521.3 171.1, 524.2 169.2, 526.2 167.9 C 531.8 164.3, 533.4 154.2, 528.9 151.4 C 528.3 151.1, 527.3 149.6, 526.6 148.1 C 523.3 140.6, 518.5 135.9, 514.2 136 C 513.3 136.1, 504.6 140.6, 495 146.2 "/><path class="ray" style="--i:4" d="M 273.8 452.7 C 269 455.7, 269 456.2, 269 507.3 C 269 566, 268.4 564, 286.2 564 C 304.8 564, 304 566.6, 304 506.6 L 304 457.4 300.7 454.2 C 296.7 450.3, 279.2 449.4, 273.8 452.7"/><path class="ray" style="--i:5" d="M 376 425.3 C 366.6 430.4, 360.8 434.1, 359.2 435.9 C 357.6 437.9, 357.7 443.9, 359.5 447 C 360.3 448.4, 361.9 451.3, 363 453.5 C 364.1 455.7, 366.1 459.3, 367.5 461.5 C 368.8 463.7, 370.7 466.9, 371.7 468.7 C 372.7 470.4, 375.8 475.7, 378.5 480.5 C 381.2 485.3, 384.5 490.8, 385.7 492.9 C 388.2 497.1, 389.3 498.9, 398.3 514.9 C 408.3 532.6, 411.5 534.2, 423.8 527.3 C 437.9 519.4, 439.2 516.7, 433.5 506.5 C 431.6 503.2, 429.4 499.1, 428.5 497.5 C 427.6 495.9, 425.9 492.9, 424.7 490.9 C 423.5 488.8, 420.2 483.3, 417.5 478.5 C 414.8 473.7, 411.5 468.1, 410.3 466.1 C 409.1 464.1, 407.3 461.1, 406.3 459.3 C 396.1 441.3, 394.1 438, 389.3 430.4 C 385.1 423.7, 381.6 422.4, 376 425.3 "/><path class="ray" style="--i:6" d="M 188.2 424.7 C 186.9 425.2, 182.8 431.1, 180.2 436 C 179.5 437.4, 177.9 440.1, 176.7 442.1 C 174.8 445.3, 168.6 455.9, 162.7 466.3 C 161.7 468.1, 159.9 471.1, 158.7 473.1 C 157.5 475.1, 153.3 482.3, 149.5 489 C 145.7 495.7, 141.5 502.9, 140.3 504.9 C 133.3 516.5, 134.1 518.9, 148.7 527 C 160.3 533.4, 164.3 532.7, 169.8 523.3 C 171.8 519.7, 174.5 515.2, 175.7 513.2 C 176.9 511.1, 178.7 508.1, 179.6 506.5 C 181.7 502.4, 185.3 496.3, 193 483.1 C 199.8 471.3, 203.8 464.5, 206.5 459.5 C 210.2 452.7, 211.8 449.9, 212.9 448.6 C 217.2 443.4, 216 436.4, 210.1 432.9 C 204.9 429.8, 199.9 426.9, 197 425.3 C 194.5 424, 190.6 423.7, 188.2 424.7 "/><path class="ray" style="--i:7" d="M 52.1 139.8 C 50.1 141.9, 46.8 147, 44.6 151.2 C 38.4 163.4, 38.8 163.9, 65.5 179 C 73.2 183.3, 107.1 202.9, 117.5 209 C 130.9 216.9, 136.2 217.1, 140.1 210.1 C 141.2 208.1, 143.2 204.7, 144.5 202.5 C 152.6 189.1, 152.2 188.4, 125.5 173.5 C 118.9 169.8, 111.9 165.7, 110 164.5 C 108.1 163.2, 103.7 160.6, 100.3 158.8 C 96.9 157, 86.4 151.1, 77.1 145.8 C 57.8 134.7, 57.1 134.5, 52.1 139.8 "/></g><path class="sym-face" fill="currentColor" fill-rule="evenodd" d="M 199.9 188 C 168.9 195, 149.6 221.8, 151.3 255.5 C 152.2 272.9, 156.1 291.8, 160.9 302.5 C 164.1 309.6, 169.6 320.2, 172.1 324 C 181 338, 180.4 338.6, 153 343.1 C 139.7 345.3, 113.3 339.8, 101 332.2 C 85.7 322.8, 77.6 315.4, 69.8 303.8 C 60.4 289.8, 56.7 281.1, 54.6 267.8 C 52.2 253.2, 50.5 252, 30.6 252 C 16.1 252, 11.7 253.4, 10.4 258.4 C 9.5 262.2, 12 281.8, 14.1 287.3 C 15.2 289.9, 16 292.8, 16 293.7 C 16 304.8, 38.2 338.2, 55.5 353.3 C 66.6 362.8, 83.3 374, 86.6 374 C 87 374, 89.2 374.9, 91.4 375.9 C 124.1 391.4, 170.8 390, 205.3 372.5 C 215.7 367.2, 215.7 367.2, 222.9 370.9 C 263.6 392.2, 309.4 392.2, 350.1 370.9 C 357.1 367.3, 357.3 367.3, 364.6 370.9 C 386.6 381.8, 402.1 385.8, 425.2 386.7 C 443.3 387.4, 469.9 382.2, 482.5 375.6 C 484.1 374.7, 485.9 374, 486.3 374 C 487.8 374, 503.6 364.5, 510 359.7 C 523.7 349.4, 534.9 336.7, 545.5 319.5 C 548.8 314.2, 553 305.8, 553 304.6 C 553 304, 553.9 301.8, 555 299.7 C 556.1 297.7, 557 295.2, 557 294.3 C 557.1 293.3, 557.9 290, 559 287 C 561.2 280.6, 563.6 262.3, 562.6 258.5 C 561.3 253.4, 557 252, 542.1 252 C 522.7 252, 519.9 253.9, 518.5 268 C 518.1 271.5, 517 276.3, 515.9 278.7 C 514.9 281, 514 283.5, 514 284.2 C 513.9 287.9, 506.8 299.7, 498.8 309.7 C 491.3 318.9, 484.8 324.4, 472 332.2 C 459.5 339.8, 433.3 345.3, 420 343.1 C 392.2 338.5, 391.7 337.9, 401.7 322.4 C 407.8 313, 414.3 298.7, 415.6 292 C 415.9 290.1, 416.8 287.3, 417.6 285.9 C 422.8 275.7, 422.3 237.2, 416.8 224 C 400.1 184.4, 345.2 173.3, 312.7 203 C 291.3 222.5, 286.7 266.7, 302.5 301.5 C 306.1 309.5, 311.5 320, 314.1 324 C 319.7 332.8, 320.4 336.8, 316.3 338.5 C 304.8 343.1, 281.9 344.6, 269 341.6 C 250.3 337.2, 250.3 337.3, 260.2 322.1 C 264 316.3, 273 296.8, 273 294.5 C 273 293.7, 273.7 291.3, 274.6 289.2 C 276.5 284.8, 279.9 261.2, 280 252.1 C 280.2 207.9, 243 178.2, 199.9 188 M 209 230.8 C 189.6 238, 190 269.2, 209.9 302.2 C 214.8 310.3, 218.4 308.4, 225.7 294 C 234.2 277.5, 238.5 253.5, 234.8 242.9 C 231.2 232.3, 219.6 226.9, 209 230.8 M 350.8 230.8 C 339.6 234.8, 334.7 244.4, 336.9 258 C 339.6 275.3, 340.1 277.7, 342.1 282.5 C 352 306.4, 358.1 311.8, 363.4 301.7 C 364.3 299.9, 366.2 296.5, 367.6 294 C 375.3 280.5, 379.9 256.8, 377.1 244.9 C 374.4 233, 362.5 226.6, 350.8 230.8 "/></svg></span>Websites and landing pages by Beatus Mídias</p>
+      <h1 class="h1" id="h1">
+        <span class="line"><span style="--d:0">Your landing page,</span></span>
+        <span class="line"><span style="--d:1">ready to sell,</span></span>
+        <span class="line3"><span class="from fade" style="--d:1">for</span> <span class="price"><span class="chip-k">$200</span><span class="price-rays" aria-hidden="true"><svg class="sym-svg" viewBox="3 3 566 570" aria-hidden="true"><g class="sym-rays" fill="currentColor"><path class="ray" style="--i:0" d="M 272.3 12.4 C 269.5 14.8, 269.5 14.8, 269.2 63.7 C 268.8 126.2, 267.3 121, 286.2 121 C 305.6 121, 304 125.9, 304 65.8 C 304 14.4, 303.9 13.2, 299.3 11.1 C 294.3 8.8, 275.5 9.7, 272.3 12.4 "/><path class="ray" style="--i:1" d="M 146.9 47.1 C 134.4 54.5, 133.6 57.1, 140.3 68.1 C 141.5 70.1, 144.5 75.3, 147 79.5 C 149.5 83.8, 152.7 89.4, 154.2 91.9 C 155.7 94.4, 157.7 97.8, 158.5 99.5 C 159.4 101.2, 161.1 104.1, 162.3 106.1 C 163.5 108.1, 166.8 113.7, 169.5 118.5 C 172.2 123.3, 175.5 128.8, 176.7 130.9 C 177.9 132.9, 179.4 135.5, 179.9 136.7 C 185.6 149.1, 191.3 151.3, 202 145.1 C 219.1 135.3, 219.2 134.7, 206.3 113.2 C 205 111.2, 203.1 107.7, 202 105.5 C 200.8 103.3, 198.9 99.9, 197.7 97.9 C 192.4 89, 182.7 72.4, 179.5 66.5 C 178.7 64.8, 176.8 61.7, 175.5 59.5 C 174.2 57.3, 171.9 53.3, 170.5 50.7 C 164.7 39.9, 160.2 39.2, 146.9 47.1 "/><path class="ray" style="--i:2" d="M 407 44.2 C 405.8 45.5, 401.9 51.8, 398.2 58.4 C 394.5 64.9, 390.5 71.9, 389.3 73.9 C 388.1 75.9, 386.3 79.1, 385.2 81 C 383.5 84.2, 376.9 95.5, 371.3 104.8 C 368.6 109.5, 365.8 114.5, 363.5 119 C 362.5 120.9, 360.8 123.6, 359.8 124.9 C 354.9 131.2, 357.4 136.8, 368 143.3 C 380.3 150.8, 384.5 150.6, 389.6 142.2 C 391.2 139.6, 393.1 136.6, 393.7 135.5 C 394.4 134.4, 397.1 129.7, 399.7 125.1 C 402.4 120.6, 405.5 115.2, 406.7 113.1 C 407.9 111.1, 409.7 108.1, 410.7 106.3 C 411.7 104.6, 414.8 99.2, 417.5 94.4 C 420.2 89.6, 423.8 83.4, 425.3 80.6 C 426.9 77.8, 428.9 74.4, 429.8 73 C 439.8 57.8, 439.4 55, 426 47 C 416.1 41.2, 410.6 40.4, 407 44.2 "/><path class="ray" style="--i:3" d="M 495 146.2 C 472.5 159.1, 473.2 158.7, 451.8 171 C 423.5 187.1, 423 187.6, 425.1 195.3 C 425.7 197.6, 426.7 200.2, 427.4 201 C 428.1 201.8, 430.1 205, 431.9 208.1 C 437 217.4, 441.2 217.5, 455.5 209.1 C 461 205.8, 474 198.3, 484.3 192.3 C 494.6 186.4, 505.2 180.3, 507.8 178.7 C 510.4 177.2, 513.5 175.6, 514.8 175 C 516 174.5, 518.3 173.2, 519.8 172.2 C 521.3 171.1, 524.2 169.2, 526.2 167.9 C 531.8 164.3, 533.4 154.2, 528.9 151.4 C 528.3 151.1, 527.3 149.6, 526.6 148.1 C 523.3 140.6, 518.5 135.9, 514.2 136 C 513.3 136.1, 504.6 140.6, 495 146.2 "/><path class="ray" style="--i:4" d="M 273.8 452.7 C 269 455.7, 269 456.2, 269 507.3 C 269 566, 268.4 564, 286.2 564 C 304.8 564, 304 566.6, 304 506.6 L 304 457.4 300.7 454.2 C 296.7 450.3, 279.2 449.4, 273.8 452.7"/><path class="ray" style="--i:5" d="M 376 425.3 C 366.6 430.4, 360.8 434.1, 359.2 435.9 C 357.6 437.9, 357.7 443.9, 359.5 447 C 360.3 448.4, 361.9 451.3, 363 453.5 C 364.1 455.7, 366.1 459.3, 367.5 461.5 C 368.8 463.7, 370.7 466.9, 371.7 468.7 C 372.7 470.4, 375.8 475.7, 378.5 480.5 C 381.2 485.3, 384.5 490.8, 385.7 492.9 C 388.2 497.1, 389.3 498.9, 398.3 514.9 C 408.3 532.6, 411.5 534.2, 423.8 527.3 C 437.9 519.4, 439.2 516.7, 433.5 506.5 C 431.6 503.2, 429.4 499.1, 428.5 497.5 C 427.6 495.9, 425.9 492.9, 424.7 490.9 C 423.5 488.8, 420.2 483.3, 417.5 478.5 C 414.8 473.7, 411.5 468.1, 410.3 466.1 C 409.1 464.1, 407.3 461.1, 406.3 459.3 C 396.1 441.3, 394.1 438, 389.3 430.4 C 385.1 423.7, 381.6 422.4, 376 425.3 "/><path class="ray" style="--i:6" d="M 188.2 424.7 C 186.9 425.2, 182.8 431.1, 180.2 436 C 179.5 437.4, 177.9 440.1, 176.7 442.1 C 174.8 445.3, 168.6 455.9, 162.7 466.3 C 161.7 468.1, 159.9 471.1, 158.7 473.1 C 157.5 475.1, 153.3 482.3, 149.5 489 C 145.7 495.7, 141.5 502.9, 140.3 504.9 C 133.3 516.5, 134.1 518.9, 148.7 527 C 160.3 533.4, 164.3 532.7, 169.8 523.3 C 171.8 519.7, 174.5 515.2, 175.7 513.2 C 176.9 511.1, 178.7 508.1, 179.6 506.5 C 181.7 502.4, 185.3 496.3, 193 483.1 C 199.8 471.3, 203.8 464.5, 206.5 459.5 C 210.2 452.7, 211.8 449.9, 212.9 448.6 C 217.2 443.4, 216 436.4, 210.1 432.9 C 204.9 429.8, 199.9 426.9, 197 425.3 C 194.5 424, 190.6 423.7, 188.2 424.7 "/><path class="ray" style="--i:7" d="M 52.1 139.8 C 50.1 141.9, 46.8 147, 44.6 151.2 C 38.4 163.4, 38.8 163.9, 65.5 179 C 73.2 183.3, 107.1 202.9, 117.5 209 C 130.9 216.9, 136.2 217.1, 140.1 210.1 C 141.2 208.1, 143.2 204.7, 144.5 202.5 C 152.6 189.1, 152.2 188.4, 125.5 173.5 C 118.9 169.8, 111.9 165.7, 110 164.5 C 108.1 163.2, 103.7 160.6, 100.3 158.8 C 96.9 157, 86.4 151.1, 77.1 145.8 C 57.8 134.7, 57.1 134.5, 52.1 139.8 "/></g><path class="sym-face" fill="currentColor" fill-rule="evenodd" d="M 199.9 188 C 168.9 195, 149.6 221.8, 151.3 255.5 C 152.2 272.9, 156.1 291.8, 160.9 302.5 C 164.1 309.6, 169.6 320.2, 172.1 324 C 181 338, 180.4 338.6, 153 343.1 C 139.7 345.3, 113.3 339.8, 101 332.2 C 85.7 322.8, 77.6 315.4, 69.8 303.8 C 60.4 289.8, 56.7 281.1, 54.6 267.8 C 52.2 253.2, 50.5 252, 30.6 252 C 16.1 252, 11.7 253.4, 10.4 258.4 C 9.5 262.2, 12 281.8, 14.1 287.3 C 15.2 289.9, 16 292.8, 16 293.7 C 16 304.8, 38.2 338.2, 55.5 353.3 C 66.6 362.8, 83.3 374, 86.6 374 C 87 374, 89.2 374.9, 91.4 375.9 C 124.1 391.4, 170.8 390, 205.3 372.5 C 215.7 367.2, 215.7 367.2, 222.9 370.9 C 263.6 392.2, 309.4 392.2, 350.1 370.9 C 357.1 367.3, 357.3 367.3, 364.6 370.9 C 386.6 381.8, 402.1 385.8, 425.2 386.7 C 443.3 387.4, 469.9 382.2, 482.5 375.6 C 484.1 374.7, 485.9 374, 486.3 374 C 487.8 374, 503.6 364.5, 510 359.7 C 523.7 349.4, 534.9 336.7, 545.5 319.5 C 548.8 314.2, 553 305.8, 553 304.6 C 553 304, 553.9 301.8, 555 299.7 C 556.1 297.7, 557 295.2, 557 294.3 C 557.1 293.3, 557.9 290, 559 287 C 561.2 280.6, 563.6 262.3, 562.6 258.5 C 561.3 253.4, 557 252, 542.1 252 C 522.7 252, 519.9 253.9, 518.5 268 C 518.1 271.5, 517 276.3, 515.9 278.7 C 514.9 281, 514 283.5, 514 284.2 C 513.9 287.9, 506.8 299.7, 498.8 309.7 C 491.3 318.9, 484.8 324.4, 472 332.2 C 459.5 339.8, 433.3 345.3, 420 343.1 C 392.2 338.5, 391.7 337.9, 401.7 322.4 C 407.8 313, 414.3 298.7, 415.6 292 C 415.9 290.1, 416.8 287.3, 417.6 285.9 C 422.8 275.7, 422.3 237.2, 416.8 224 C 400.1 184.4, 345.2 173.3, 312.7 203 C 291.3 222.5, 286.7 266.7, 302.5 301.5 C 306.1 309.5, 311.5 320, 314.1 324 C 319.7 332.8, 320.4 336.8, 316.3 338.5 C 304.8 343.1, 281.9 344.6, 269 341.6 C 250.3 337.2, 250.3 337.3, 260.2 322.1 C 264 316.3, 273 296.8, 273 294.5 C 273 293.7, 273.7 291.3, 274.6 289.2 C 276.5 284.8, 279.9 261.2, 280 252.1 C 280.2 207.9, 243 178.2, 199.9 188 M 209 230.8 C 189.6 238, 190 269.2, 209.9 302.2 C 214.8 310.3, 218.4 308.4, 225.7 294 C 234.2 277.5, 238.5 253.5, 234.8 242.9 C 231.2 232.3, 219.6 226.9, 209 230.8 M 350.8 230.8 C 339.6 234.8, 334.7 244.4, 336.9 258 C 339.6 275.3, 340.1 277.7, 342.1 282.5 C 352 306.4, 358.1 311.8, 363.4 301.7 C 364.3 299.9, 366.2 296.5, 367.6 294 C 375.3 280.5, 379.9 256.8, 377.1 244.9 C 374.4 233, 362.5 226.6, 350.8 230.8 "/></svg></span></span></span>
+      </h1>
+      <p class="lead fade" style="--d:2">A custom landing page built by the same agency that runs paid ads for more than 80 businesses. It ships with message buttons, a mobile-first layout and your ad tracking already installed.</p>
+      <div class="hero-ctas fade" style="--d:3">
+        <a class="btn btn-wine mag" href="https://wa.me/5521975340783?text=Hi%21%20I%20came%20from%20the%20Beatus%20websites%20page%20and%20I%20want%20my%20%24200%20landing%20page." target="_blank" rel="noopener">Get my landing page<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a>
+        <a class="btn btn-ghost" href="#templates">See templates</a>
+      </div>
+      <p class="alt-link fade" style="--d:4">Need a site with several pages? <a class="tlink" href="https://wa.me/5521975340783?text=Hi%21%20I%20came%20from%20the%20Beatus%20websites%20page%20and%20I%27d%20like%20a%20quote%20for%20a%20full%20website." target="_blank" rel="noopener">Get a quote for a full website</a></p>
+      <p class="note fade" style="--d:5">Landing page: $200 flat. Multi-page website by quote. Hosting and domain are on you. Online stores not included.</p>
+    </div>
+
+    <div class="builder fade" style="--d:2" data-step="3" aria-label="Example of a page being built, using sites made by Beatus">
+      <div class="bwin">
+        <div class="btop"><div class="dots"><i></i><i></i><i></i></div><div class="url"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="5.5" width="7" height="5" rx="1"/><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5"/></svg><span class="url-t">yourbusiness.com</span></div></div>
+        <div class="steps-b" aria-hidden="true">
+          <span class="stp"><span>1 Structure</span></span><span class="stp"><span>2 Design</span></span><span class="stp"><span>3 Content</span></span><span class="stp"><span>4 Tracking</span></span>
+        </div>
+        <div class="bstage">
+          <div class="wire" aria-hidden="true">
+            <div class="wnav"><i class="wb a"></i><i class="wb b"></i><i class="wb c"></i></div>
+            <div class="wcol"><i class="wb t1"></i><i class="wb t2"></i><i class="wb t3"></i><i class="wb t4"></i><div class="bt"><i class="wb"></i><i class="wb"></i></div></div>
+            <div class="wb wimg"></div>
+          </div>
+          <img class="shot show" src="../img/portfolio/arteiros-desk.webp" alt="Oficina de Arteiros page built by Beatus" width="1200" height="568">
+          <div class="events" aria-hidden="true">
+            <span class="ev">GTM · page view <b>ok</b></span>
+            <span class="ev">Meta · ViewContent <b>ok</b></span>
+            <span class="ev">WhatsApp · Contact <b>ok</b></span>
+          </div>
+        </div>
+      </div>
+      <figure class="bphone" aria-hidden="true"><div class="scr">
+        <img class="on" src="../img/portfolio/arteiros-mob.webp" alt="" width="540" height="1170">
+      </div></figure>
+      <p class="bcap" aria-live="off">Built by Beatus · <b class="bcap-n">Oficina de Arteiros</b></p>
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-label="Beatus Mídias by the numbers">
+  <div class="wrap"><ul>
+    <li class="rv"><b>+80</b><span>businesses served</span></li>
+    <li class="rv" style="--d:1"><b>$40M+</b><span>revenue generated for clients</span></li>
+    <li class="rv" style="--d:2"><b>5 yrs</b><span>in business</span></li>
+  </ul></div>
+</section>
+
+<div class="ribbon" aria-label="What goes into your page">
+  <div class="track"><div class="rail-m">
+    <ul><li>Message buttons on every section<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Meta Pixel<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Google Tag Manager<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>GA4<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Google Ads conversions<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Structured data<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Ready for ChatGPT and Gemini<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Mobile first<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Form connected to your CRM<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li></ul><ul aria-hidden="true"><li>Message buttons on every section<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Meta Pixel<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Google Tag Manager<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>GA4<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Google Ads conversions<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Structured data<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Ready for ChatGPT and Gemini<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Mobile first<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Form connected to your CRM<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li></ul>
+  </div></div>
+  <div class="track two" aria-hidden="true"><div class="rail-m">
+    <ul><li>Message buttons on every section<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Meta Pixel<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Google Tag Manager<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>GA4<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Google Ads conversions<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Structured data<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Ready for ChatGPT and Gemini<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Mobile first<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Form connected to your CRM<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li></ul><ul><li>Message buttons on every section<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Meta Pixel<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Google Tag Manager<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>GA4<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Google Ads conversions<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Structured data<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Ready for ChatGPT and Gemini<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Mobile first<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li><li>Form connected to your CRM<svg class="s" viewBox="0 0 20 20" aria-hidden="true"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 2v4M10 14v4M2 10h4M14 10h4M4.3 4.3l2.8 2.8M12.9 12.9l2.8 2.8M15.7 4.3l-2.8 2.8M7.1 12.9l-2.8 2.8"/></g></svg></li></ul>
+  </div></div>
+</div>
+
+<!-- TEMPLATES -->
+<section class="sec" id="templates" aria-labelledby="t-templates">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div><p class="label rv">Templates</p><h2 class="h2 rv" id="t-templates" style="margin-top:14px">Pick a <span class="w">starting point</span></h2></div>
+      <p class="lead rv" style="--d:1">Each template shows a design direction built for one kind of business. Your page is made to measure, with your brand, your copy and your photos. Templates use fictional brands.</p>
+    </div>
+    <div class="mgrid mgrid-3">
+      <article class="mcard rv" style="--d:0">
+        <a class="mthumb" href="../en/modelos/restaurant/index.html" target="_blank" rel="noopener" aria-label="Open the restaurant template in a new tab"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><em>template · restaurant</em></span><img src="../img/modelos/en-restaurant.webp" alt="Top of the restaurant template" loading="lazy" width="1280" height="800" onerror="this.remove()"></a>
+        <div class="mbody"><p class="label">Warm and appetizing</p><h3>Restaurant</h3><p>Menu tabs and direct ordering, without delivery app fees.</p>
+        <div class="mact"><a class="btn btn-ink" href="../en/modelos/restaurant/index.html" target="_blank" rel="noopener">View template<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="btn btn-ghost" href="https://wa.me/5521975340783?text=Hi%21%20I%20saw%20the%20restaurant%20template%20and%20I%20want%20a%20page%20like%20this." target="_blank" rel="noopener">I want one like this</a></div></div>
+      </article>
+      <article class="mcard rv" style="--d:1">
+        <a class="mthumb" href="../en/modelos/dental/index.html" target="_blank" rel="noopener" aria-label="Open the dental template in a new tab"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><em>template · dental</em></span><img src="../img/modelos/en-dental.webp" alt="Top of the dental template" loading="lazy" width="1280" height="800" onerror="this.remove()"></a>
+        <div class="mbody"><p class="label">Clean and trustworthy</p><h3>Dental clinic</h3><p>Calm and clear, a new patient offer and easy booking.</p>
+        <div class="mact"><a class="btn btn-ink" href="../en/modelos/dental/index.html" target="_blank" rel="noopener">View template<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="btn btn-ghost" href="https://wa.me/5521975340783?text=Hi%21%20I%20saw%20the%20dental%20template%20and%20I%20want%20a%20page%20like%20this." target="_blank" rel="noopener">I want one like this</a></div></div>
+      </article>
+      <article class="mcard rv" style="--d:2">
+        <a class="mthumb" href="../en/modelos/medspa/index.html" target="_blank" rel="noopener" aria-label="Open the med spa template in a new tab"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><em>template · medspa</em></span><img src="../img/modelos/en-medspa.webp" alt="Top of the med spa template" loading="lazy" width="1280" height="800" onerror="this.remove()"></a>
+        <div class="mbody"><p class="label">Luxury and depth</p><h3>Med spa</h3><p>Quiet luxury, before and after and free consultation booking.</p>
+        <div class="mact"><a class="btn btn-ink" href="../en/modelos/medspa/index.html" target="_blank" rel="noopener">View template<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="btn btn-ghost" href="https://wa.me/5521975340783?text=Hi%21%20I%20saw%20the%20med%20spa%20template%20and%20I%20want%20a%20page%20like%20this." target="_blank" rel="noopener">I want one like this</a></div></div>
+      </article>
+    </div>
+    <p class="mnote rv">Open a template and browse it like a customer: they all work on a phone.</p>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="sec pf" id="portfolio" aria-labelledby="t-pf">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div><p class="label rv">Portfolio</p><h2 class="h2 rv" id="t-pf" style="margin-top:14px">Pages Beatus has <span class="w">already put live</span></h2></div>
+      <div class="rv" style="--d:1"><p class="lead">Real sites for real clients in Brazil. Open them and look around.</p>
+        <div class="pf-ctl" style="margin-top:20px"><button class="rbtn" type="button" data-dir="-1" aria-label="Previous case" disabled><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l-6 6 6 6"/></svg></button><button class="rbtn" type="button" data-dir="1" aria-label="Next case"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4l6 6-6 6"/></svg></button><span class="pf-count" aria-live="polite">01 / 05</span></div>
+      </div>
+    </div>
+    <div class="rail" tabindex="0" aria-label="Portfolio cases, scroll sideways">
+      <article class="case" aria-label="Oficina de Arteiros">
+        <div class="case-vis"><div class="dwin"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="../img/portfolio/arteiros-desk.webp" alt="Oficina de Arteiros page on a computer" loading="lazy" width="1200" height="568"></div><div class="mph"><img src="../img/portfolio/arteiros-mob.webp" alt="Oficina de Arteiros page on a phone" loading="lazy" width="540" height="1170"></div></div>
+        <div class="case-txt"><p class="meta">Arts school for kids · São Paulo, Brazil</p><h3>Oficina de Arteiros</h3><p>Landing page for paid ads: kids pick an activity and parents book a free trial class over WhatsApp.</p><ul class="tags"><li>Landing page</li><li>Paid ads</li><li>Motion</li></ul>
+        <div class="case-act"><a class="btn btn-lav" href="https://lp-oficina-de-arteiros.vercel.app" target="_blank" rel="noopener">See it live<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="btn btn-line-w" href="https://wa.me/5521975340783?text=Hi%21%20I%20saw%20the%20Oficina%20de%20Arteiros%20site%20in%20your%20portfolio%20and%20I%20want%20a%20page%20like%20this." target="_blank" rel="noopener">I want one like this</a></div></div>
+      </article>
+      <article class="case" aria-label="Mariana Costa Nutricionista">
+        <div class="case-vis"><div class="dwin"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="../img/portfolio/nutri-desk.webp" alt="Mariana Costa Nutricionista page on a computer" loading="lazy" width="1200" height="568"></div><div class="mph"><img src="../img/portfolio/nutri-mob.webp" alt="Mariana Costa Nutricionista page on a phone" loading="lazy" width="540" height="1170"></div></div>
+        <div class="case-txt"><p class="meta">Nutritionist · Maricá, Rio de Janeiro</p><h3>Mariana Costa Nutricionista</h3><p>Full website with a page per specialty and a blog, built to be found on Google and recommended by AI assistants like ChatGPT.</p><ul class="tags"><li>Full website</li><li>SEO and AI</li><li>Blog</li></ul>
+        <div class="case-act"><a class="btn btn-lav" href="https://nutri-mariana-costa.vercel.app" target="_blank" rel="noopener">See it live<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="btn btn-line-w" href="https://wa.me/5521975340783?text=Hi%21%20I%20saw%20the%20Mariana%20Costa%20site%20in%20your%20portfolio%20and%20I%20want%20a%20page%20like%20this." target="_blank" rel="noopener">I want one like this</a></div></div>
+      </article>
+      <article class="case" aria-label="CTESTEM Contábil">
+        <div class="case-vis"><div class="dwin"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="../img/portfolio/ctestem-desk.webp" alt="CTESTEM Contábil page on a computer" loading="lazy" width="1200" height="568"></div><div class="mph"><img src="../img/portfolio/ctestem-mob.webp" alt="CTESTEM Contábil page on a phone" loading="lazy" width="540" height="1170"></div></div>
+        <div class="case-txt"><p class="meta">Accounting firm · Niterói, Rio de Janeiro</p><h3>CTESTEM Contábil</h3><p>Interactive fee table: the client picks a revenue range and sees the monthly price, no quote request needed.</p><ul class="tags"><li>Full website</li><li>Calculator</li></ul>
+        <div class="case-act"><a class="btn btn-lav" href="https://ctestem-previa.vercel.app" target="_blank" rel="noopener">See it live<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="btn btn-line-w" href="https://wa.me/5521975340783?text=Hi%21%20I%20saw%20the%20CTESTEM%20site%20in%20your%20portfolio%20and%20I%20want%20a%20page%20like%20this." target="_blank" rel="noopener">I want one like this</a></div></div>
+      </article>
+      <article class="case" aria-label="Vau de Jaboc">
+        <div class="case-vis"><div class="dwin"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="../img/portfolio/vau-desk.webp" alt="Vau de Jaboc page on a computer" loading="lazy" width="1200" height="568"></div><div class="mph"><img src="../img/portfolio/vau-mob.webp" alt="Vau de Jaboc page on a phone" loading="lazy" width="540" height="1170"></div></div>
+        <div class="case-txt"><p class="meta">Event venue · Duque de Caxias, Rio de Janeiro</p><h3>Vau de Jaboc</h3><p>Weddings, 15th birthday parties and corporate events, with venue details, pricing and tasting visits booked over WhatsApp.</p><ul class="tags"><li>Full website</li><li>Events</li></ul>
+        <div class="case-act"><a class="btn btn-lav" href="https://vau-de-jaboc.vercel.app" target="_blank" rel="noopener">See it live<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="btn btn-line-w" href="https://wa.me/5521975340783?text=Hi%21%20I%20saw%20the%20Vau%20de%20Jaboc%20site%20in%20your%20portfolio%20and%20I%20want%20a%20page%20like%20this." target="_blank" rel="noopener">I want one like this</a></div></div>
+      </article>
+      <article class="case" aria-label="Beatus Mídias">
+        <div class="case-vis"><div class="dwin"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="../img/portfolio/beatus-desk.webp" alt="Beatus Mídias page on a computer" loading="lazy" width="1200" height="568"></div><div class="mph"><img src="../img/portfolio/beatus-mob.webp" alt="Beatus Mídias page on a phone" loading="lazy" width="540" height="1170"></div></div>
+        <div class="case-txt"><p class="meta">Paid ads agency · Maricá, Rio de Janeiro</p><h3>Beatus Mídias</h3><p>Our own website: pages by city and by service, a blog, and a receipt that traces the path from ad to sale.</p><ul class="tags"><li>Full website</li><li>Local SEO</li></ul>
+        <div class="case-act"><a class="btn btn-lav" href="https://beatusmidias.com.br" target="_blank" rel="noopener">See it live<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="btn btn-line-w" href="https://wa.me/5521975340783?text=Hi%21%20I%20saw%20the%20Beatus%20M%C3%ADdias%20site%20in%20your%20portfolio%20and%20I%20want%20a%20page%20like%20this." target="_blank" rel="noopener">I want one like this</a></div></div>
+      </article>
+    </div>
+    <p class="pf-swipe" aria-hidden="true">Swipe sideways to see all 5 sites <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10h12M11 5l5 5-5 5"/></svg></p>
+  </div>
+</section>
+
+<!-- GOOGLE -->
+<section class="sec gmn" aria-labelledby="t-gmn">
+  <div class="wrap gmn-grid">
+    <div>
+      <p class="label rv">Google Business Profile</p>
+      <h2 class="h2 rv" id="t-gmn" style="margin-top:14px">Want more customers from Google? <span class="w">Your profile needs a website.</span></h2>
+      <ol class="gsteps">
+        <li class="gstep rv" data-g="0"><span class="n">1</span><div><h3>A customer searches on Google</h3><p>Something like med spa near me.</p></div></li>
+        <li class="gstep rv" data-g="1" style="--d:1"><span class="n">2</span><div><h3>They find your profile</h3><p>Rating, photos, hours and the Directions, Call and Website buttons.</p></div></li>
+        <li class="gstep rv" data-g="2" style="--d:2"><span class="n">3</span><div><h3>They tap Website and meet you</h3><p>On your page they see your services and results, then message you.</p></div></li>
+      </ol>
+      <p class="callout rv"><b>No website, no Website button on your profile.</b> And Google reads your page to understand what you do, which helps your profile show up for the right searches.</p>
+      <a class="btn btn-ink rv mag" href="https://wa.me/5521975340783?text=Hi%21%20I%20want%20a%20website%20for%20my%20Google%20Business%20Profile." target="_blank" rel="noopener">I want a site for my Google profile<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a>
+    </div>
+    <div class="gphone rv" aria-hidden="true">
+      <div class="scr">
+        <div class="gsearch"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4"/></svg><span><span class="gq">med spa near me</span><span class="caret"></span></span></div>
+        <div class="gmap"><svg class="pin" viewBox="0 0 24 32"><path fill="currentColor" d="M12 0C5.4 0 0 5.3 0 11.8 0 20.6 12 32 12 32s12-11.4 12-20.2C24 5.3 18.6 0 12 0z"/><circle cx="12" cy="11.5" r="4.5" fill="#fff"/></svg></div>
+        <div class="gcard"><h4>Your business</h4><div class="st">5.0 <span class="stars">★★★★★</span> · Med spa</div><div class="open">Open now</div><div class="gbtns"><span>Directions</span><span>Call</span><span class="site">Website</span></div></div>
+      </div>
+      <div class="gbubble"><small>New message</small>Saw your site on Google. Can I book this week?</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec" id="pricing" aria-labelledby="t-pricing">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div><p class="label rv">Pricing</p><h2 class="h2 rv" id="t-pricing" style="margin-top:14px">Choose what your business <span class="w">needs right now</span></h2></div>
+      <p class="lead rv" style="--d:1">Price agreed before we start. No monthly fee for the page.</p>
+    </div>
+    <div class="plans">
+      <article class="plan main rv" aria-labelledby="p-lp">
+        <span class="badge">Most popular for ads</span>
+        <h3 id="p-lp">Landing page</h3>
+        <p class="desc">One page focused on one offer. The best choice for paid traffic.</p>
+        <p class="pr"><small>flat price</small><strong>$200</strong></p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" opacity=".22" fill="currentColor" stroke="none"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>One page with all the sales sections</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" opacity=".22" fill="currentColor" stroke="none"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Message buttons across the whole page</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" opacity=".22" fill="currentColor" stroke="none"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Mobile-first layout</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" opacity=".22" fill="currentColor" stroke="none"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Meta Pixel and Google tag with a contact event</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" opacity=".22" fill="currentColor" stroke="none"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Sales copy written with you</li>
+        </ul>
+        <a class="btn btn-white" href="https://wa.me/5521975340783?text=Hi%21%20I%20came%20from%20the%20Beatus%20websites%20page%20and%20I%20want%20my%20%24200%20landing%20page." target="_blank" rel="noopener">Get my landing page<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a>
+      </article>
+      <article class="plan rv" style="--d:1" aria-labelledby="p-site">
+        <h3 id="p-site">Full website</h3>
+        <p class="desc">Several pages for a complete presence and to show up on Google.</p>
+        <p class="pr"><small>priced by size</small><strong class="quote">Custom quote</strong></p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" opacity=".22" fill="currentColor" stroke="none"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Home, services, about and contact</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" opacity=".22" fill="currentColor" stroke="none"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Ready for Google and AI search</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" opacity=".22" fill="currentColor" stroke="none"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Map, gallery and before and after</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" opacity=".22" fill="currentColor" stroke="none"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Everything in the landing page</li>
+        </ul>
+        <a class="btn btn-ink" href="https://wa.me/5521975340783?text=Hi%21%20I%20came%20from%20the%20Beatus%20websites%20page%20and%20I%27d%20like%20a%20quote%20for%20a%20full%20website." target="_blank" rel="noopener">Get a quote<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a>
+      </article>
+    </div>
+    <p class="plan-note rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span>Hosting and domain are paid directly to the provider you choose. We tell you where to sign up and put the page live for you. Online stores (e-commerce) are not included.</span></p>
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section class="sec" style="padding-top:0" aria-labelledby="t-adds">
+  <div class="wrap">
+    <div class="sec-head"><p class="label rv">Add-ons</p><h2 class="h2 rv" id="t-adds">Want more? <span class="w">Add it to your page</span></h2></div>
+    <div class="adds">
+      <article class="add big rv">
+        <p class="label dim">Most requested</p>
+        <h3>Full tracking setup</h3>
+        <p>Google Tag Manager set up from scratch, Meta Pixel with events, Google Ads conversions, GA4 events, click and scroll tracking, all tested before delivery.</p>
+        <div class="xtrato" aria-label="Example event log">
+          <div class="hd"><span>Event log</span><span>example</span></div>
+          <div class="xl"><span class="src">GTM</span><span>page view</span><span class="ok">ok</span></div>
+          <div class="xl"><span class="src">GA4</span><span>75% scroll</span><span class="ok">ok</span></div>
+          <div class="xl"><span class="src">Meta</span><span>ViewContent on pricing</span><span class="ok">ok</span></div>
+          <div class="xl"><span class="src">Google Ads</span><span>message button click</span><span class="ok">ok</span></div>
+          <div class="xl"><span class="src">Meta</span><span>Contact, chat started</span><span class="ok">ok</span></div>
+        </div>
+      </article>
+      <article class="add rv" style="--d:1">
+        <h3>Form connected to your CRM</h3>
+        <p>Every lead lands straight in your pipeline, with the ad it came from.</p>
+        <div class="mini" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </article>
+      <article class="add rv" style="--d:2">
+        <h3>AI assistant on WhatsApp</h3>
+        <p>The AI replies in seconds and separates buyers from people who are just curious.</p>
+        <div class="chat" aria-hidden="true"><span class="c">Hi, how much is a HydraFacial?</span><span class="i">Hi there. It's $199. Want to see this week's openings?</span></div>
+      </article>
+    </div>
+    <div class="adds-foot rv"><p>Priced on request.</p><a class="btn btn-ghost" href="https://wa.me/5521975340783?text=Hi%21%20I%27d%20like%20to%20know%20about%20the%20add-ons%3A%20tracking%2C%20CRM%20and%20AI%20on%20WhatsApp." target="_blank" rel="noopener">Ask about add-ons</a></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="sec" style="padding-top:0" aria-labelledby="t-feat">
+  <div class="wrap feat">
+    <div class="feat-head">
+      <p class="label rv">On every page</p>
+      <h2 class="h2 rv" id="t-feat" style="margin-top:14px">Pretty is the minimum. <span class="chip-k">It has to sell.</span></h2>
+    </div>
+    <ol class="flist">
+      <li class="fitem rv"><span class="n">01</span><h3>Made to measure</h3><p>No template with swapped colors. A structure built around your customer.</p></li>
+      <li class="fitem rv"><span class="n">02</span><h3>Mobile first</h3><p>Almost everyone arrives on a phone, from an ad or from Instagram.</p></li>
+      <li class="fitem rv"><span class="n">03</span><h3>Message buttons everywhere</h3><p>A floating button and calls to action throughout the page, with a ready message.</p></li>
+      <li class="fitem rv"><span class="n">04</span><h3>Ad tracking</h3><p>PageView, ViewContent and Contact reaching your ads manager.</p></li>
+      <li class="fitem rv"><span class="n">05</span><h3>Ready for Google and AI</h3><p>Structured data, a sitemap and copy that ChatGPT and Gemini can quote.</p></li>
+      <li class="fitem rv"><span class="n">06</span><h3>Light and fast</h3><p>Optimized images and lean code. A slow page loses customers.</p></li>
+      <li class="fitem rv"><span class="n">07</span><h3>Motion and interaction</h3><p>Animations, before and after, maps, galleries and FAQs.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec how" id="how" aria-labelledby="t-how">
+  <div class="wrap">
+    <div class="sec-head"><p class="label rv">How it works</p><h2 class="h2 rv" id="t-how" style="margin-top:14px">From the first hello to a <span class="w">live page</span></h2></div>
+    <ol class="tl">
+      <span class="rail-l" aria-hidden="true"><i></i></span>
+      <li class="tstep rv"><span class="dot">1</span><h3>Message us</h3><p>Tell us what you sell and who you sell to.</p></li>
+      <li class="tstep rv" style="--d:1"><span class="dot">2</span><h3>Quick briefing</h3><p>Copy and photos. If something is missing, we write it and use your Instagram.</p></li>
+      <li class="tstep rv" style="--d:2"><span class="dot">3</span><h3>Preview and tweaks</h3><p>You see the page working before it goes live and ask for changes.</p></li>
+      <li class="tstep rv" style="--d:3"><span class="dot">4</span><h3>Live, with tracking checked</h3><p>We publish it on your domain with the pixel and events tested.</p></li>
+    </ol>
+    <div class="how-end rv"><a class="btn btn-wine mag" href="https://wa.me/5521975340783?text=Hi%21%20I%20came%20from%20the%20Beatus%20websites%20page%20and%20I%20want%20my%20%24200%20landing%20page." target="_blank" rel="noopener">Start on WhatsApp<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><p>You see the preview before it goes live.</p></div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="sec dark" aria-labelledby="t-traf">
+  <div class="wrap nums-grid">
+    <div>
+      <p class="label rv">Beatus Mídias by the numbers</p>
+      <h2 class="h2 rv" id="t-traf" style="margin-top:14px">Page ready. <span class="w">Now it needs people.</span></h2>
+      <p class="lead rv" style="margin-top:18px">Beatus is a paid ads, CRM and AI agency from Rio de Janeiro, Brazil, working with businesses in Brazil and the US. The team that builds your page can also run Meta and Google ads to bring customers to it.</p>
+      <div class="nums rv">
+        <div><b><span class="cnt" data-to="40" data-pre="$" data-suf="M+">$40M+</span></b><span>revenue generated for clients</span></div>
+        <div><b><span class="cnt" data-to="80" data-pre="+">+80</span></b><span>businesses served</span></div>
+        <div><b><span class="cnt" data-to="5" data-suf=" yrs">5 yrs</span></b><span>in business</span></div>
+        <div><b><span class="cnt" data-to="3" data-suf=" yrs">3 yrs</span></b><span>in Latin America's largest mentorship for paid traffic managers</span></div>
+      </div>
+      <p class="nums-cap rv">Aggregate results across the agency's full client base since 2022. Figures converted at approximate exchange rate.</p>
+      <div class="dark-ctas rv"><a class="btn btn-wine mag" href="https://wa.me/5521975340783?text=Hi%21%20I%27d%20like%20to%20talk%20about%20paid%20ads%20with%20Beatus." target="_blank" rel="noopener">Hire paid ads<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="btn btn-line-w" href="https://beatusmidias.com" target="_blank" rel="noopener">Visit Beatus</a></div>
+    </div>
+    <div class="bigsym rv" aria-hidden="true"><svg class="sym-svg" viewBox="3 3 566 570" aria-hidden="true"><g class="sym-rays" fill="currentColor"><path class="ray" style="--i:0" d="M 272.3 12.4 C 269.5 14.8, 269.5 14.8, 269.2 63.7 C 268.8 126.2, 267.3 121, 286.2 121 C 305.6 121, 304 125.9, 304 65.8 C 304 14.4, 303.9 13.2, 299.3 11.1 C 294.3 8.8, 275.5 9.7, 272.3 12.4 "/><path class="ray" style="--i:1" d="M 146.9 47.1 C 134.4 54.5, 133.6 57.1, 140.3 68.1 C 141.5 70.1, 144.5 75.3, 147 79.5 C 149.5 83.8, 152.7 89.4, 154.2 91.9 C 155.7 94.4, 157.7 97.8, 158.5 99.5 C 159.4 101.2, 161.1 104.1, 162.3 106.1 C 163.5 108.1, 166.8 113.7, 169.5 118.5 C 172.2 123.3, 175.5 128.8, 176.7 130.9 C 177.9 132.9, 179.4 135.5, 179.9 136.7 C 185.6 149.1, 191.3 151.3, 202 145.1 C 219.1 135.3, 219.2 134.7, 206.3 113.2 C 205 111.2, 203.1 107.7, 202 105.5 C 200.8 103.3, 198.9 99.9, 197.7 97.9 C 192.4 89, 182.7 72.4, 179.5 66.5 C 178.7 64.8, 176.8 61.7, 175.5 59.5 C 174.2 57.3, 171.9 53.3, 170.5 50.7 C 164.7 39.9, 160.2 39.2, 146.9 47.1 "/><path class="ray" style="--i:2" d="M 407 44.2 C 405.8 45.5, 401.9 51.8, 398.2 58.4 C 394.5 64.9, 390.5 71.9, 389.3 73.9 C 388.1 75.9, 386.3 79.1, 385.2 81 C 383.5 84.2, 376.9 95.5, 371.3 104.8 C 368.6 109.5, 365.8 114.5, 363.5 119 C 362.5 120.9, 360.8 123.6, 359.8 124.9 C 354.9 131.2, 357.4 136.8, 368 143.3 C 380.3 150.8, 384.5 150.6, 389.6 142.2 C 391.2 139.6, 393.1 136.6, 393.7 135.5 C 394.4 134.4, 397.1 129.7, 399.7 125.1 C 402.4 120.6, 405.5 115.2, 406.7 113.1 C 407.9 111.1, 409.7 108.1, 410.7 106.3 C 411.7 104.6, 414.8 99.2, 417.5 94.4 C 420.2 89.6, 423.8 83.4, 425.3 80.6 C 426.9 77.8, 428.9 74.4, 429.8 73 C 439.8 57.8, 439.4 55, 426 47 C 416.1 41.2, 410.6 40.4, 407 44.2 "/><path class="ray" style="--i:3" d="M 495 146.2 C 472.5 159.1, 473.2 158.7, 451.8 171 C 423.5 187.1, 423 187.6, 425.1 195.3 C 425.7 197.6, 426.7 200.2, 427.4 201 C 428.1 201.8, 430.1 205, 431.9 208.1 C 437 217.4, 441.2 217.5, 455.5 209.1 C 461 205.8, 474 198.3, 484.3 192.3 C 494.6 186.4, 505.2 180.3, 507.8 178.7 C 510.4 177.2, 513.5 175.6, 514.8 175 C 516 174.5, 518.3 173.2, 519.8 172.2 C 521.3 171.1, 524.2 169.2, 526.2 167.9 C 531.8 164.3, 533.4 154.2, 528.9 151.4 C 528.3 151.1, 527.3 149.6, 526.6 148.1 C 523.3 140.6, 518.5 135.9, 514.2 136 C 513.3 136.1, 504.6 140.6, 495 146.2 "/><path class="ray" style="--i:4" d="M 273.8 452.7 C 269 455.7, 269 456.2, 269 507.3 C 269 566, 268.4 564, 286.2 564 C 304.8 564, 304 566.6, 304 506.6 L 304 457.4 300.7 454.2 C 296.7 450.3, 279.2 449.4, 273.8 452.7"/><path class="ray" style="--i:5" d="M 376 425.3 C 366.6 430.4, 360.8 434.1, 359.2 435.9 C 357.6 437.9, 357.7 443.9, 359.5 447 C 360.3 448.4, 361.9 451.3, 363 453.5 C 364.1 455.7, 366.1 459.3, 367.5 461.5 C 368.8 463.7, 370.7 466.9, 371.7 468.7 C 372.7 470.4, 375.8 475.7, 378.5 480.5 C 381.2 485.3, 384.5 490.8, 385.7 492.9 C 388.2 497.1, 389.3 498.9, 398.3 514.9 C 408.3 532.6, 411.5 534.2, 423.8 527.3 C 437.9 519.4, 439.2 516.7, 433.5 506.5 C 431.6 503.2, 429.4 499.1, 428.5 497.5 C 427.6 495.9, 425.9 492.9, 424.7 490.9 C 423.5 488.8, 420.2 483.3, 417.5 478.5 C 414.8 473.7, 411.5 468.1, 410.3 466.1 C 409.1 464.1, 407.3 461.1, 406.3 459.3 C 396.1 441.3, 394.1 438, 389.3 430.4 C 385.1 423.7, 381.6 422.4, 376 425.3 "/><path class="ray" style="--i:6" d="M 188.2 424.7 C 186.9 425.2, 182.8 431.1, 180.2 436 C 179.5 437.4, 177.9 440.1, 176.7 442.1 C 174.8 445.3, 168.6 455.9, 162.7 466.3 C 161.7 468.1, 159.9 471.1, 158.7 473.1 C 157.5 475.1, 153.3 482.3, 149.5 489 C 145.7 495.7, 141.5 502.9, 140.3 504.9 C 133.3 516.5, 134.1 518.9, 148.7 527 C 160.3 533.4, 164.3 532.7, 169.8 523.3 C 171.8 519.7, 174.5 515.2, 175.7 513.2 C 176.9 511.1, 178.7 508.1, 179.6 506.5 C 181.7 502.4, 185.3 496.3, 193 483.1 C 199.8 471.3, 203.8 464.5, 206.5 459.5 C 210.2 452.7, 211.8 449.9, 212.9 448.6 C 217.2 443.4, 216 436.4, 210.1 432.9 C 204.9 429.8, 199.9 426.9, 197 425.3 C 194.5 424, 190.6 423.7, 188.2 424.7 "/><path class="ray" style="--i:7" d="M 52.1 139.8 C 50.1 141.9, 46.8 147, 44.6 151.2 C 38.4 163.4, 38.8 163.9, 65.5 179 C 73.2 183.3, 107.1 202.9, 117.5 209 C 130.9 216.9, 136.2 217.1, 140.1 210.1 C 141.2 208.1, 143.2 204.7, 144.5 202.5 C 152.6 189.1, 152.2 188.4, 125.5 173.5 C 118.9 169.8, 111.9 165.7, 110 164.5 C 108.1 163.2, 103.7 160.6, 100.3 158.8 C 96.9 157, 86.4 151.1, 77.1 145.8 C 57.8 134.7, 57.1 134.5, 52.1 139.8 "/></g><path class="sym-face" fill="currentColor" fill-rule="evenodd" d="M 199.9 188 C 168.9 195, 149.6 221.8, 151.3 255.5 C 152.2 272.9, 156.1 291.8, 160.9 302.5 C 164.1 309.6, 169.6 320.2, 172.1 324 C 181 338, 180.4 338.6, 153 343.1 C 139.7 345.3, 113.3 339.8, 101 332.2 C 85.7 322.8, 77.6 315.4, 69.8 303.8 C 60.4 289.8, 56.7 281.1, 54.6 267.8 C 52.2 253.2, 50.5 252, 30.6 252 C 16.1 252, 11.7 253.4, 10.4 258.4 C 9.5 262.2, 12 281.8, 14.1 287.3 C 15.2 289.9, 16 292.8, 16 293.7 C 16 304.8, 38.2 338.2, 55.5 353.3 C 66.6 362.8, 83.3 374, 86.6 374 C 87 374, 89.2 374.9, 91.4 375.9 C 124.1 391.4, 170.8 390, 205.3 372.5 C 215.7 367.2, 215.7 367.2, 222.9 370.9 C 263.6 392.2, 309.4 392.2, 350.1 370.9 C 357.1 367.3, 357.3 367.3, 364.6 370.9 C 386.6 381.8, 402.1 385.8, 425.2 386.7 C 443.3 387.4, 469.9 382.2, 482.5 375.6 C 484.1 374.7, 485.9 374, 486.3 374 C 487.8 374, 503.6 364.5, 510 359.7 C 523.7 349.4, 534.9 336.7, 545.5 319.5 C 548.8 314.2, 553 305.8, 553 304.6 C 553 304, 553.9 301.8, 555 299.7 C 556.1 297.7, 557 295.2, 557 294.3 C 557.1 293.3, 557.9 290, 559 287 C 561.2 280.6, 563.6 262.3, 562.6 258.5 C 561.3 253.4, 557 252, 542.1 252 C 522.7 252, 519.9 253.9, 518.5 268 C 518.1 271.5, 517 276.3, 515.9 278.7 C 514.9 281, 514 283.5, 514 284.2 C 513.9 287.9, 506.8 299.7, 498.8 309.7 C 491.3 318.9, 484.8 324.4, 472 332.2 C 459.5 339.8, 433.3 345.3, 420 343.1 C 392.2 338.5, 391.7 337.9, 401.7 322.4 C 407.8 313, 414.3 298.7, 415.6 292 C 415.9 290.1, 416.8 287.3, 417.6 285.9 C 422.8 275.7, 422.3 237.2, 416.8 224 C 400.1 184.4, 345.2 173.3, 312.7 203 C 291.3 222.5, 286.7 266.7, 302.5 301.5 C 306.1 309.5, 311.5 320, 314.1 324 C 319.7 332.8, 320.4 336.8, 316.3 338.5 C 304.8 343.1, 281.9 344.6, 269 341.6 C 250.3 337.2, 250.3 337.3, 260.2 322.1 C 264 316.3, 273 296.8, 273 294.5 C 273 293.7, 273.7 291.3, 274.6 289.2 C 276.5 284.8, 279.9 261.2, 280 252.1 C 280.2 207.9, 243 178.2, 199.9 188 M 209 230.8 C 189.6 238, 190 269.2, 209.9 302.2 C 214.8 310.3, 218.4 308.4, 225.7 294 C 234.2 277.5, 238.5 253.5, 234.8 242.9 C 231.2 232.3, 219.6 226.9, 209 230.8 M 350.8 230.8 C 339.6 234.8, 334.7 244.4, 336.9 258 C 339.6 275.3, 340.1 277.7, 342.1 282.5 C 352 306.4, 358.1 311.8, 363.4 301.7 C 364.3 299.9, 366.2 296.5, 367.6 294 C 375.3 280.5, 379.9 256.8, 377.1 244.9 C 374.4 233, 362.5 226.6, 350.8 230.8 "/></svg></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" aria-labelledby="t-faq">
+  <div class="wrap faq-grid">
+    <div class="faq-side">
+      <div><p class="label rv">FAQ</p><h2 class="h2 rv" id="t-faq" style="margin-top:14px">What people ask <span class="w">before we start</span></h2></div>
+      <div class="askcard rv"><h3>Still have a question?</h3><p>Message us on WhatsApp or write to <span class="mail">hello@beatusmidias.com</span>.</p><a class="btn btn-wine" href="https://wa.me/5521975340783?text=Hi%21%20I%20came%20from%20the%20Beatus%20websites%20page." target="_blank" rel="noopener">Message us on WhatsApp<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a></div>
+    </div>
+    <div class="qa">
+      <details open class="rv"><summary>Do you build on WordPress and Elementor?<span class="pm" aria-hidden="true"></span></summary><p>Yes. We also build in custom HTML, which is usually lighter and faster. We will recommend the best option for your case.</p></details>
+      <details class="rv"><summary>How much does it cost?<span class="pm" aria-hidden="true"></span></summary><p>A landing page is $200 flat. A multi-page website is quoted based on its size. The price is agreed before we start.</p></details>
+      <details class="rv"><summary>Are hosting and domain included?<span class="pm" aria-hidden="true"></span></summary><p>No. You pay the provider you choose directly. We tell you where to sign up and set everything up.</p></details>
+      <details class="rv"><summary>Do I need copy and photos ready?<span class="pm" aria-hidden="true"></span></summary><p>No. We write the copy with you and can use the photos from your Instagram.</p></details>
+      <details class="rv"><summary>How long does it take?<span class="pm" aria-hidden="true"></span></summary><p>We agree on the timeline before we start, based on the size of the page.</p></details>
+      <details class="rv"><summary>Can I see the page before it goes live?<span class="pm" aria-hidden="true"></span></summary><p>Yes. You get a working preview and can ask for changes.</p></details>
+      <details class="rv"><summary>Is the page ready for ads?<span class="pm" aria-hidden="true"></span></summary><p>Yes, with the Meta Pixel, the Google tag and contact events installed.</p></details>
+      <details class="rv"><summary>Do you work with businesses in the US?<span class="pm" aria-hidden="true"></span></summary><p>Yes. We work remotely and in English, mostly over WhatsApp and email.</p></details>
+      <details class="rv"><summary>Does it work for an online store?<span class="pm" aria-hidden="true"></span></summary><p>No. E-commerce needs a different setup, and we can point you in the right direction.</p></details>
+      <details class="rv"><summary>How do I pay?<span class="pm" aria-hidden="true"></span></summary><p>We agree on it with you over WhatsApp or email.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec final" aria-labelledby="t-final">
+  <div class="wrap">
+    <div class="sym-wrap rv" aria-hidden="true"><svg class="sym-svg" viewBox="3 3 566 570" aria-hidden="true"><g class="sym-rays" fill="currentColor"><path class="ray" style="--i:0" d="M 272.3 12.4 C 269.5 14.8, 269.5 14.8, 269.2 63.7 C 268.8 126.2, 267.3 121, 286.2 121 C 305.6 121, 304 125.9, 304 65.8 C 304 14.4, 303.9 13.2, 299.3 11.1 C 294.3 8.8, 275.5 9.7, 272.3 12.4 "/><path class="ray" style="--i:1" d="M 146.9 47.1 C 134.4 54.5, 133.6 57.1, 140.3 68.1 C 141.5 70.1, 144.5 75.3, 147 79.5 C 149.5 83.8, 152.7 89.4, 154.2 91.9 C 155.7 94.4, 157.7 97.8, 158.5 99.5 C 159.4 101.2, 161.1 104.1, 162.3 106.1 C 163.5 108.1, 166.8 113.7, 169.5 118.5 C 172.2 123.3, 175.5 128.8, 176.7 130.9 C 177.9 132.9, 179.4 135.5, 179.9 136.7 C 185.6 149.1, 191.3 151.3, 202 145.1 C 219.1 135.3, 219.2 134.7, 206.3 113.2 C 205 111.2, 203.1 107.7, 202 105.5 C 200.8 103.3, 198.9 99.9, 197.7 97.9 C 192.4 89, 182.7 72.4, 179.5 66.5 C 178.7 64.8, 176.8 61.7, 175.5 59.5 C 174.2 57.3, 171.9 53.3, 170.5 50.7 C 164.7 39.9, 160.2 39.2, 146.9 47.1 "/><path class="ray" style="--i:2" d="M 407 44.2 C 405.8 45.5, 401.9 51.8, 398.2 58.4 C 394.5 64.9, 390.5 71.9, 389.3 73.9 C 388.1 75.9, 386.3 79.1, 385.2 81 C 383.5 84.2, 376.9 95.5, 371.3 104.8 C 368.6 109.5, 365.8 114.5, 363.5 119 C 362.5 120.9, 360.8 123.6, 359.8 124.9 C 354.9 131.2, 357.4 136.8, 368 143.3 C 380.3 150.8, 384.5 150.6, 389.6 142.2 C 391.2 139.6, 393.1 136.6, 393.7 135.5 C 394.4 134.4, 397.1 129.7, 399.7 125.1 C 402.4 120.6, 405.5 115.2, 406.7 113.1 C 407.9 111.1, 409.7 108.1, 410.7 106.3 C 411.7 104.6, 414.8 99.2, 417.5 94.4 C 420.2 89.6, 423.8 83.4, 425.3 80.6 C 426.9 77.8, 428.9 74.4, 429.8 73 C 439.8 57.8, 439.4 55, 426 47 C 416.1 41.2, 410.6 40.4, 407 44.2 "/><path class="ray" style="--i:3" d="M 495 146.2 C 472.5 159.1, 473.2 158.7, 451.8 171 C 423.5 187.1, 423 187.6, 425.1 195.3 C 425.7 197.6, 426.7 200.2, 427.4 201 C 428.1 201.8, 430.1 205, 431.9 208.1 C 437 217.4, 441.2 217.5, 455.5 209.1 C 461 205.8, 474 198.3, 484.3 192.3 C 494.6 186.4, 505.2 180.3, 507.8 178.7 C 510.4 177.2, 513.5 175.6, 514.8 175 C 516 174.5, 518.3 173.2, 519.8 172.2 C 521.3 171.1, 524.2 169.2, 526.2 167.9 C 531.8 164.3, 533.4 154.2, 528.9 151.4 C 528.3 151.1, 527.3 149.6, 526.6 148.1 C 523.3 140.6, 518.5 135.9, 514.2 136 C 513.3 136.1, 504.6 140.6, 495 146.2 "/><path class="ray" style="--i:4" d="M 273.8 452.7 C 269 455.7, 269 456.2, 269 507.3 C 269 566, 268.4 564, 286.2 564 C 304.8 564, 304 566.6, 304 506.6 L 304 457.4 300.7 454.2 C 296.7 450.3, 279.2 449.4, 273.8 452.7"/><path class="ray" style="--i:5" d="M 376 425.3 C 366.6 430.4, 360.8 434.1, 359.2 435.9 C 357.6 437.9, 357.7 443.9, 359.5 447 C 360.3 448.4, 361.9 451.3, 363 453.5 C 364.1 455.7, 366.1 459.3, 367.5 461.5 C 368.8 463.7, 370.7 466.9, 371.7 468.7 C 372.7 470.4, 375.8 475.7, 378.5 480.5 C 381.2 485.3, 384.5 490.8, 385.7 492.9 C 388.2 497.1, 389.3 498.9, 398.3 514.9 C 408.3 532.6, 411.5 534.2, 423.8 527.3 C 437.9 519.4, 439.2 516.7, 433.5 506.5 C 431.6 503.2, 429.4 499.1, 428.5 497.5 C 427.6 495.9, 425.9 492.9, 424.7 490.9 C 423.5 488.8, 420.2 483.3, 417.5 478.5 C 414.8 473.7, 411.5 468.1, 410.3 466.1 C 409.1 464.1, 407.3 461.1, 406.3 459.3 C 396.1 441.3, 394.1 438, 389.3 430.4 C 385.1 423.7, 381.6 422.4, 376 425.3 "/><path class="ray" style="--i:6" d="M 188.2 424.7 C 186.9 425.2, 182.8 431.1, 180.2 436 C 179.5 437.4, 177.9 440.1, 176.7 442.1 C 174.8 445.3, 168.6 455.9, 162.7 466.3 C 161.7 468.1, 159.9 471.1, 158.7 473.1 C 157.5 475.1, 153.3 482.3, 149.5 489 C 145.7 495.7, 141.5 502.9, 140.3 504.9 C 133.3 516.5, 134.1 518.9, 148.7 527 C 160.3 533.4, 164.3 532.7, 169.8 523.3 C 171.8 519.7, 174.5 515.2, 175.7 513.2 C 176.9 511.1, 178.7 508.1, 179.6 506.5 C 181.7 502.4, 185.3 496.3, 193 483.1 C 199.8 471.3, 203.8 464.5, 206.5 459.5 C 210.2 452.7, 211.8 449.9, 212.9 448.6 C 217.2 443.4, 216 436.4, 210.1 432.9 C 204.9 429.8, 199.9 426.9, 197 425.3 C 194.5 424, 190.6 423.7, 188.2 424.7 "/><path class="ray" style="--i:7" d="M 52.1 139.8 C 50.1 141.9, 46.8 147, 44.6 151.2 C 38.4 163.4, 38.8 163.9, 65.5 179 C 73.2 183.3, 107.1 202.9, 117.5 209 C 130.9 216.9, 136.2 217.1, 140.1 210.1 C 141.2 208.1, 143.2 204.7, 144.5 202.5 C 152.6 189.1, 152.2 188.4, 125.5 173.5 C 118.9 169.8, 111.9 165.7, 110 164.5 C 108.1 163.2, 103.7 160.6, 100.3 158.8 C 96.9 157, 86.4 151.1, 77.1 145.8 C 57.8 134.7, 57.1 134.5, 52.1 139.8 "/></g><path class="sym-face" fill="currentColor" fill-rule="evenodd" d="M 199.9 188 C 168.9 195, 149.6 221.8, 151.3 255.5 C 152.2 272.9, 156.1 291.8, 160.9 302.5 C 164.1 309.6, 169.6 320.2, 172.1 324 C 181 338, 180.4 338.6, 153 343.1 C 139.7 345.3, 113.3 339.8, 101 332.2 C 85.7 322.8, 77.6 315.4, 69.8 303.8 C 60.4 289.8, 56.7 281.1, 54.6 267.8 C 52.2 253.2, 50.5 252, 30.6 252 C 16.1 252, 11.7 253.4, 10.4 258.4 C 9.5 262.2, 12 281.8, 14.1 287.3 C 15.2 289.9, 16 292.8, 16 293.7 C 16 304.8, 38.2 338.2, 55.5 353.3 C 66.6 362.8, 83.3 374, 86.6 374 C 87 374, 89.2 374.9, 91.4 375.9 C 124.1 391.4, 170.8 390, 205.3 372.5 C 215.7 367.2, 215.7 367.2, 222.9 370.9 C 263.6 392.2, 309.4 392.2, 350.1 370.9 C 357.1 367.3, 357.3 367.3, 364.6 370.9 C 386.6 381.8, 402.1 385.8, 425.2 386.7 C 443.3 387.4, 469.9 382.2, 482.5 375.6 C 484.1 374.7, 485.9 374, 486.3 374 C 487.8 374, 503.6 364.5, 510 359.7 C 523.7 349.4, 534.9 336.7, 545.5 319.5 C 548.8 314.2, 553 305.8, 553 304.6 C 553 304, 553.9 301.8, 555 299.7 C 556.1 297.7, 557 295.2, 557 294.3 C 557.1 293.3, 557.9 290, 559 287 C 561.2 280.6, 563.6 262.3, 562.6 258.5 C 561.3 253.4, 557 252, 542.1 252 C 522.7 252, 519.9 253.9, 518.5 268 C 518.1 271.5, 517 276.3, 515.9 278.7 C 514.9 281, 514 283.5, 514 284.2 C 513.9 287.9, 506.8 299.7, 498.8 309.7 C 491.3 318.9, 484.8 324.4, 472 332.2 C 459.5 339.8, 433.3 345.3, 420 343.1 C 392.2 338.5, 391.7 337.9, 401.7 322.4 C 407.8 313, 414.3 298.7, 415.6 292 C 415.9 290.1, 416.8 287.3, 417.6 285.9 C 422.8 275.7, 422.3 237.2, 416.8 224 C 400.1 184.4, 345.2 173.3, 312.7 203 C 291.3 222.5, 286.7 266.7, 302.5 301.5 C 306.1 309.5, 311.5 320, 314.1 324 C 319.7 332.8, 320.4 336.8, 316.3 338.5 C 304.8 343.1, 281.9 344.6, 269 341.6 C 250.3 337.2, 250.3 337.3, 260.2 322.1 C 264 316.3, 273 296.8, 273 294.5 C 273 293.7, 273.7 291.3, 274.6 289.2 C 276.5 284.8, 279.9 261.2, 280 252.1 C 280.2 207.9, 243 178.2, 199.9 188 M 209 230.8 C 189.6 238, 190 269.2, 209.9 302.2 C 214.8 310.3, 218.4 308.4, 225.7 294 C 234.2 277.5, 238.5 253.5, 234.8 242.9 C 231.2 232.3, 219.6 226.9, 209 230.8 M 350.8 230.8 C 339.6 234.8, 334.7 244.4, 336.9 258 C 339.6 275.3, 340.1 277.7, 342.1 282.5 C 352 306.4, 358.1 311.8, 363.4 301.7 C 364.3 299.9, 366.2 296.5, 367.6 294 C 375.3 280.5, 379.9 256.8, 377.1 244.9 C 374.4 233, 362.5 226.6, 350.8 230.8 "/></svg></div>
+    <h2 class="rv" id="t-final">Ready to put your page live?</h2>
+    <p class="rv">A landing page for $200 or a multi-page website by quote, with message buttons and tracking installed.</p>
+    <div class="ctas rv"><a class="btn btn-white mag" href="https://wa.me/5521975340783?text=Hi%21%20I%20came%20from%20the%20Beatus%20websites%20page%20and%20I%20want%20my%20%24200%20landing%20page." target="_blank" rel="noopener">Get my landing page<span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span></a><a class="btn btn-line-w" href="https://wa.me/5521975340783?text=Hi%21%20I%20came%20from%20the%20Beatus%20websites%20page%20and%20I%27d%20like%20a%20quote%20for%20a%20full%20website." target="_blank" rel="noopener">Get a quote</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="row">
+      <div><a class="brand" href="#top" aria-label="Beatus Mídias, back to top"><svg class="logo-svg" viewBox="-10 2 1277 459" role="img" aria-label="Beatus Mídias"><path fill="currentColor" fill-rule="evenodd" d="M 264.5 12 C 215 19.4, 171.1 44.6, 143.2 81.5 C 123.9 107.1, 123 125, 140.5 133.1 C 152.1 138.4, 159.6 134.3, 173.4 115.1 C 198.7 80, 242.8 60.6, 297.5 60.5 C 359.5 60.4, 390.9 83.2, 391.2 128.5 C 391.5 171.4, 359.4 196.6, 298.9 201 C 278.3 202.5, 277.9 202.6, 273.1 206 C 262.8 213.5, 261.4 228.1, 270.1 237.5 C 275.3 243.2, 280.2 244.7, 295.5 245.4 C 356.1 248.3, 384.6 301.5, 349.5 346.2 C 335.9 363.6, 310.2 376.2, 291.9 374.7 C 273.6 373.2, 268 369.3, 231.5 332.6 C 216.1 317.1, 201.4 302.9, 198.8 301 C 192.1 296.1, 192.1 296.3, 201.7 280.1 C 206.5 272.1, 214.5 258.5, 219.5 250 C 224.6 241.5, 234.6 224.6, 241.7 212.5 C 248.9 200.4, 262.1 178.1, 271 163 C 280 147.9, 289.9 131.2, 293.1 126 C 304.4 107.4, 302.9 95.3, 288.5 88 C 276 81.8, 263.5 88.2, 254.8 105.4 C 252.7 109.4, 248.7 116.3, 230.4 147 C 219.3 165.8, 200.3 197.8, 161.6 263.2 C 154.8 274.6, 155.2 274.4, 145.9 271.9 C 97.2 259, 42 283.9, 19.9 328.5 C -6.1 381.1, 21.1 432, 80.2 441.4 C 94.9 443.7, 369.9 443.9, 388.5 441.6 C 402 440, 414.4 437.8, 419.5 436.2 C 421.1 435.6, 425.2 434.4, 428.5 433.5 C 431.8 432.5, 438.5 430, 443.4 427.8 C 454.6 423, 454.9 423, 460.9 428.4 C 489.1 453.4, 535.2 446.6, 583.2 410.3 C 590.2 405, 590.7 405, 592.1 410.2 C 601.9 447.5, 646.6 454.2, 687.2 424.6 C 696.6 417.7, 696 417.7, 701 425 C 719.2 451.8, 756.3 449, 786 418.6 C 791.5 412.9, 791.2 412.9, 794.9 419.5 C 813.8 453, 855.1 450.7, 888 414.1 C 894 407.6, 897 406.8, 897 411.9 C 897 415.4, 904.1 428.1, 908.5 432.6 C 926.8 450.8, 960.7 446, 991.3 420.7 C 996 416.8, 999 416.7, 999 420.5 C 999 423.2, 1008.2 434.1, 1013.2 437.4 C 1042 456.5, 1099.8 428.8, 1124.9 384 C 1135.6 364.8, 1140.4 348.1, 1141.6 325.8 C 1142.5 309.4, 1142.8 309.4, 1157.2 327.5 C 1199.1 380, 1196.1 403.9, 1146.4 414.5 C 1120.7 420, 1113 425.3, 1113 437.5 C 1113 452, 1124.2 457, 1152.8 455.1 C 1235.9 449.5, 1262.6 402.4, 1222.4 332.4 C 1207.3 306.1, 1149.4 234.4, 1137.2 226.8 C 1120 216.1, 1093.1 240, 1102.6 257.5 C 1120.8 291.3, 1108.4 335.7, 1070 374 C 1042 402, 1025.6 396.7, 1033 361.9 C 1036.3 346.2, 1038.8 338.3, 1056 289 C 1071.6 244.1, 1072.6 239, 1066.8 232.4 C 1058.4 222.8, 1042.6 222.6, 1034.7 231.9 C 1031.5 235.7, 1029.7 239.7, 1021.8 260 C 988.2 346.4, 973.1 374.8, 954.1 386.9 C 932.2 400.9, 922.2 382.7, 931.9 346.5 C 936.9 327.8, 940.7 316.7, 955.5 276.5 C 967.9 242.9, 967.9 235.7, 955.6 228.5 C 936.1 217.1, 927.5 226, 903.8 282.8 C 870.3 363.2, 857 385.4, 839.5 390.5 C 821.8 395.7, 823.1 375.7, 844.3 321 C 866.6 263.1, 877.8 231.2, 889 193 C 895.5 170.9, 893.9 172.2, 908.6 176 C 1021.2 205.1, 1093.7 192, 1112.9 139 C 1124.5 106.9, 1118.3 83.9, 1098.1 83.8 C 1083.7 83.7, 1076.6 91.8, 1075.7 109.5 C 1073.8 149.8, 1021.6 161, 937 139.1 C 903 130.3, 906 132.4, 909.4 119.9 C 910.9 114.7, 912.7 107.8, 913.6 104.5 C 914.5 101.2, 916.3 94.8, 917.6 90.3 C 924.6 66.4, 916.4 52.6, 896.3 54.2 C 884.3 55.2, 881 60.2, 872.9 89.8 C 869.7 101.7, 866.6 113.1, 866 115.1 C 864.4 121, 863.2 121.5, 853.7 120.1 C 742.2 103.9, 665.7 113.7, 633.1 148.5 C 610.6 172.6, 613.5 203.1, 638.2 203 C 648.4 202.9, 652.7 199.6, 659.1 186.6 C 673.6 157.1, 735.4 146.7, 822.5 159 C 855 163.6, 853 162.8, 850.6 170.7 C 812.8 295.1, 773.3 378.6, 746.8 390 C 732.1 396.3, 730.7 386.3, 741 348.5 C 743.1 340.8, 746 330.2, 747.4 324.9 C 765.9 255, 754.3 225.7, 708 225.6 C 675.3 225.5, 651.5 242.1, 627.2 281.7 C 622.1 290.1, 619.7 294.3, 607.5 317 C 584.5 359.9, 535.7 399, 504.4 399.4 C 495.3 399.5, 493 397.9, 497.4 394.6 C 598.2 320, 618 226, 532.9 226 C 476.1 226, 430.7 293.7, 436.8 369.5 C 437.9 382.8, 437.6 383.4, 428.3 388.6 C 417.4 394.7, 406 398.1, 395.5 398.3 C 384.5 398.5, 384.5 398.4, 392.8 388.6 C 433.4 340.3, 430.6 289.5, 384.7 242.3 C 373.9 231.2, 371.8 228, 375.3 228 C 377.7 228, 397 218.1, 405.1 212.7 C 478 164.6, 469.6 65.8, 389.5 28.4 C 354.9 12.2, 305.8 5.8, 264.5 12 M 521.7 266.5 C 500.8 274.2, 486.8 299.5, 481 340.1 C 478.7 355.8, 479.4 355.6, 500.2 335.2 C 533.1 302.9, 549.7 275.7, 541.5 267.5 C 538.7 264.6, 528.4 264.1, 521.7 266.5 M 694.5 266.7 C 676 274.1, 654.6 303.3, 643.7 336 C 618.4 411.5, 661 409.6, 698.5 333.5 C 722 285.8, 720.3 256.4, 694.5 266.7 M 105.3 311 C 87.6 313.6, 72 329.4, 66.5 350.5 C 61 371.5, 77.7 385.9, 115.5 393 C 137.3 397.1, 220.5 401.9, 223.1 399.3 C 225.9 396.5, 173.7 333.7, 169.8 335.2 C 169.1 335.5, 166 340.2, 163 345.6 C 150.9 367.3, 140.2 373.4, 126.1 366.4 C 111.6 359.1, 111.3 348.9, 125.1 323.7 C 131.1 312.6, 124.3 308.2, 105.3 311"/></svg></a><p>Beatus Mídias. Paid ads, CRM and AI agency. Maricá, Rio de Janeiro, Brazil.</p></div>
+      <nav aria-label="Beatus"><a href="https://beatusmidias.com" target="_blank" rel="noopener">Beatus Mídias (US)</a><a href="https://www.instagram.com/beatusmidias/" target="_blank" rel="noopener">Instagram</a><a href="mailto:hello@beatusmidias.com">hello@beatusmidias.com</a><a href="https://wa.me/5521975340783?text=Hi%21%20I%20came%20from%20the%20Beatus%20websites%20page." target="_blank" rel="noopener">WhatsApp +55 21 97534-0783</a></nav>
+      <nav aria-label="Legal"><a href="https://beatusmidias.com/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a><a href="../index.html" hreflang="pt-BR" lang="pt-BR">Versão em português</a></nav>
+    </div>
+    <div class="legal"><span>Bruno Lucas Marketing LTDA · CNPJ 48.414.383/0001-70</span><span>© 2026 Beatus Mídias</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5521975340783?text=Hi%21%20I%20came%20from%20the%20Beatus%20websites%20page." target="_blank" rel="noopener" aria-label="Message Beatus on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6.1C4.9 10 9.9 5.2 16 5.2s11.1 4.8 11.1 10.6S22.1 26.4 16 26.4zm6.1-7.9c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.6-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.7-.4z"/></svg></a>
+
+<script>
+(function(){
+  var d=document, de=d.documentElement, EN=(de.lang||'').slice(0,2)==='en', IMG=de.getAttribute('data-img')||'img/', L=EN?{open:'Open menu',close:'Close menu'}:{open:'Abrir menu',close:'Fechar menu'}, REDUZ=matchMedia('(prefers-reduced-motion: reduce)').matches, HOVER=matchMedia('(hover:hover) and (pointer:fine)').matches;
+  de.classList.add('js');
+
+  /* entrada do hero: só anima com a aba visível */
+  if(!REDUZ && d.visibilityState==='visible'){
+    de.classList.add('intro');
+    requestAnimationFrame(function(){requestAnimationFrame(function(){de.classList.remove('intro');});});
+  }
+
+  /* cabeçalho */
+  var hdr=d.querySelector('.hdr');
+  function onScrollHdr(){hdr.classList.toggle('scrolled',scrollY>8);}
+  addEventListener('scroll',onScrollHdr,{passive:true});onScrollHdr();
+
+  /* menu mobile */
+  var mb=d.querySelector('.menu-btn'), mn=d.getElementById('mnav');
+  function closeMenu(){mn.hidden=true;mb.setAttribute('aria-expanded','false');mb.setAttribute('aria-label',L.open);}
+  mb.addEventListener('click',function(e){e.stopPropagation();var open=mn.hidden;mn.hidden=!open;mb.setAttribute('aria-expanded',String(open));mb.setAttribute('aria-label',open?L.close:L.open);if(open)mn.querySelector('a').focus();});
+  mn.addEventListener('click',function(e){if(e.target.closest('a'))closeMenu();});
+  d.addEventListener('click',function(e){if(!mn.hidden&&!mn.contains(e.target))closeMenu();});
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'&&!mn.hidden){closeMenu();mb.focus();}});
+
+  /* reveal por TOPO */
+  var els=[].slice.call(d.querySelectorAll('.rv'));
+  if(!REDUZ && d.visibilityState==='visible'){
+    var vh=innerHeight;
+    els.forEach(function(el){if(el.getBoundingClientRect().top>vh*0.92)el.classList.add('hide');});
+    var sweep=function(){var lim=innerHeight*0.92;els.forEach(function(el){if(el.classList.contains('hide')&&el.getBoundingClientRect().top<lim)el.classList.remove('hide');});};
+    addEventListener('scroll',sweep,{passive:true});addEventListener('resize',sweep);addEventListener('load',sweep);
+    setTimeout(function(){els.forEach(function(el){el.classList.remove('hide');});},6000);
+  }
+
+  /* scrollspy */
+  var links=[].slice.call(d.querySelectorAll('.nav a')), secs=links.map(function(a){return d.querySelector(a.getAttribute('href'));}), tk=false;
+  function spy(){tk=false;var cur=null;secs.forEach(function(s){if(s&&s.getBoundingClientRect().top<=innerHeight*0.35)cur=s.id;});links.forEach(function(a){var on=a.getAttribute('href')==='#'+cur;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});}
+  addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(spy);}},{passive:true});spy();
+
+  /* holofote nos cartões e botões magnéticos (só mouse) */
+  if(HOVER){
+    [].slice.call(d.querySelectorAll('.mcard')).forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');});});
+    if(!REDUZ)[].slice.call(d.querySelectorAll('.mag')).forEach(function(b){
+      b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();var x=(e.clientX-r.left-r.width/2)*0.18, y=(e.clientY-r.top-r.height/2)*0.3;b.style.transform='translate('+x.toFixed(1)+'px,'+y.toFixed(1)+'px)';});
+      b.addEventListener('pointerleave',function(){b.style.transform='';});
+    });
+  }
+
+  /* montador do hero: estrutura, design, conteúdo, rastreio, em loop pelos sites reais */
+  var SITES=[["arteiros","Oficina de Arteiros"],["nutri","Mariana Costa Nutricionista"],["ctestem","CTESTEM Contábil"],["vau","Vau de Jaboc"],["beatus","Beatus Mídias"]];
+  var B=d.querySelector('.builder');
+  if(B){
+    var shot=B.querySelector('.shot'), steps=[].slice.call(B.querySelectorAll('.stp')), evs=[].slice.call(B.querySelectorAll('.ev')), scr=B.querySelector('.bphone .scr'), cap=B.querySelector('.bcap-n');
+    /* pré-carrega */
+    SITES.forEach(function(s){var a=new Image();a.src=IMG+'portfolio/'+s[0]+'-desk.webp';var b=new Image();b.src=IMG+'portfolio/'+s[0]+'-mob.webp';});
+    var i=0, timers=[], running=false, visible=true;
+    function T(fn,ms){timers.push(setTimeout(fn,ms));}
+    function clear(){timers.forEach(clearTimeout);timers=[];}
+    function setStep(n){B.dataset.step=n;steps.forEach(function(s,k){s.classList.toggle('on',k===n);s.classList.toggle('done',k<n);});}
+    function phone(src){var cur=scr.querySelector('img.on');var im=d.createElement('img');im.alt='';im.width=540;im.height=1170;im.src=src;scr.appendChild(im);requestAnimationFrame(function(){requestAnimationFrame(function(){im.classList.add('on');if(cur){cur.classList.remove('on');setTimeout(function(){cur.remove();},700);}});});}
+    function cycle(){
+      if(!running)return;
+      var s=SITES[i];
+      shot.classList.add('out');
+      evs.forEach(function(e){e.classList.remove('in');});
+      setStep(0);
+      T(function(){shot.classList.remove('show','out');shot.src=IMG+'portfolio/'+s[0]+'-desk.webp';shot.alt=EN?(s[1]+' page built by Beatus'):('Página '+(s[0]==='vau'?'do ':'da ')+s[1]+' feita pela Beatus');cap.textContent=s[1];},500);
+      T(function(){setStep(1);},1300);
+      T(function(){setStep(2);shot.classList.add('show');phone(IMG+'portfolio/'+s[0]+'-mob.webp');},2300);
+      T(function(){setStep(3);evs.forEach(function(e,k){setTimeout(function(){e.classList.add('in');},k*380);});},3500);
+      T(function(){i=(i+1)%SITES.length;cycle();},7600);
+    }
+    function start(){if(running||REDUZ)return;running=true;T(function(){i=1;cycle();},4200);}
+    function stop(){running=false;clear();}
+    /* estado inicial: primeiro site já montado, com eventos */
+    setStep(3);evs.forEach(function(e){e.classList.add('in');});steps.forEach(function(s){s.classList.add('done');});
+    if(!REDUZ){
+      if('IntersectionObserver' in window){new IntersectionObserver(function(en){visible=en[0].isIntersecting;if(visible&&d.visibilityState==='visible')start();else stop();}).observe(B);}else start();
+      d.addEventListener('visibilitychange',function(){if(d.visibilityState==='visible'&&visible)start();else stop();});
+    }
+  }
+
+  /* portfólio: trilho com botões */
+  var rail=d.querySelector('.rail');
+  if(rail){
+    var cases=[].slice.call(rail.querySelectorAll('.case')), prev=d.querySelector('.rbtn[data-dir="-1"]'), next=d.querySelector('.rbtn[data-dir="1"]'), cnt=d.querySelector('.pf-count');
+    function idx(){var mid=rail.scrollLeft+rail.clientWidth/2, best=0, bd=1e9;cases.forEach(function(c,k){var cm=c.offsetLeft+c.offsetWidth/2;var dd=Math.abs(cm-mid);if(dd<bd){bd=dd;best=k;}});return best;}
+    function upd(){var k=idx();cnt.textContent=String(k+1).padStart(2,'0')+' / '+String(cases.length).padStart(2,'0');prev.disabled=k===0;next.disabled=k===cases.length-1;}
+    [prev,next].forEach(function(b){b.addEventListener('click',function(){var k=Math.max(0,Math.min(cases.length-1,idx()+(+b.dataset.dir)));var c=cases[k];rail.scrollTo({left:c.offsetLeft-(rail.clientWidth-c.offsetWidth)/2,behavior:REDUZ?'auto':'smooth'});});});
+    var rt=false;rail.addEventListener('scroll',function(){if(!rt){rt=true;requestAnimationFrame(function(){rt=false;upd();});}},{passive:true});
+    rail.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();next.click();}if(e.key==='ArrowLeft'){e.preventDefault();prev.click();}});
+    upd();
+  }
+
+  /* Google: passos acendem e a busca digita */
+  var gs=[].slice.call(d.querySelectorAll('.gstep')), gq=d.querySelector('.gq');
+  if(gs.length&&!REDUZ&&'IntersectionObserver' in window){
+    var full=gq.textContent, gi=0, typed=false;
+    new IntersectionObserver(function(en,io){if(!en[0].isIntersecting)return;io.disconnect();
+      gq.textContent='';var k=0;(function ty(){gq.textContent=full.slice(0,++k);if(k<full.length)setTimeout(ty,45);})();
+      setInterval(function(){gs.forEach(function(g,k){g.classList.toggle('cur',k===gi);});gi=(gi+1)%gs.length;},1800);
+    },{rootMargin:'0px 0px -20% 0px'}).observe(d.querySelector('.gphone'));
+  } else if(gs[2]) gs[2].classList.add('cur');
+
+  /* extrato de eventos: linhas ganham ok uma a uma */
+  var xls=[].slice.call(d.querySelectorAll('.xl'));
+  if(xls.length){
+    if(REDUZ||!('IntersectionObserver' in window)){xls.forEach(function(x){x.classList.add('in');});}
+    else new IntersectionObserver(function(en,io){if(!en[0].isIntersecting)return;io.disconnect();xls.forEach(function(x,k){setTimeout(function(){x.classList.add('in');},300+k*420);});},{rootMargin:'0px 0px -15% 0px'}).observe(d.querySelector('.xtrato'));
+  }
+
+  /* linha do tempo se traça com a rolagem */
+  var tl=d.querySelector('.tl'), tsteps=[].slice.call(d.querySelectorAll('.tstep'));
+  function tlUp(){var r=tl.getBoundingClientRect();var p=(innerHeight*0.75-r.top)/(r.height+innerHeight*0.15);p=Math.max(0,Math.min(1,p));tl.style.setProperty('--p',p.toFixed(3));tsteps.forEach(function(s,k){s.classList.toggle('lit',p>=k/tsteps.length+0.02);});}
+  if(tl){if(REDUZ){tl.style.setProperty('--p',1);tsteps.forEach(function(s){s.classList.add('lit');});}else{addEventListener('scroll',function(){requestAnimationFrame(tlUp);},{passive:true});addEventListener('resize',tlUp);tlUp();}}
+
+  /* contadores (o valor final já está no HTML) */
+  var cnts=[].slice.call(d.querySelectorAll('.cnt'));
+  if(cnts.length&&!REDUZ&&'IntersectionObserver' in window){
+    cnts.forEach(function(el){
+      var to=+el.dataset.to, pre=el.dataset.pre||'', suf=el.dataset.suf||'';
+      new IntersectionObserver(function(en,io){if(!en[0].isIntersecting)return;io.disconnect();var t0=null;(function st(t){t0=t0||t;var p=Math.min(1,(t-t0)/1500);el.textContent=pre+Math.round(to*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(st);})(performance.now());},{rootMargin:'0px 0px -10% 0px'}).observe(el);
+    });
+  }
+})();
+</script>
+</body>
+</html>

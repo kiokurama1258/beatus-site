@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Maré Alta Imóveis · Maricá (modelo demonstrativo)</title>
+<meta name="description" content="Modelo demonstrativo de landing page para imobiliária, criado pela Beatus Mídias. Marca fictícia.">
+<meta name="theme-color" content="#f4ecdd">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230b2f45'/%3E%3Cpath d='M10 38c6-6 11-6 17 0s11 6 17 0 9-5 10-4' fill='none' stroke='%2346c7b0' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M18 30l14-12 14 12' fill='none' stroke='%23f4ecdd' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>if(/[?&]thumb=1/.test(location.search))document.documentElement.classList.add('thumb');</script>
+<style>
+@font-face{font-family:"Bricolage Grotesque";src:url("fontes/bricolage-grotesque-latin-opsz-normal.woff2") format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Figtree";src:url("fontes/figtree-latin-wght-normal.woff2") format("woff2");font-weight:300 900;font-display:swap}
+:root{
+  --bar:34px;--hdr:64px;
+  --sand:#f4ecdd;--sand2:#eadfc9;--paper:#fffaf2;
+  --ink:#0b2232;--mut:#4b5d6b;--sea:#0b2f45;--sea2:#114a63;--deep:#072233;
+  --aqua:#46c7b0;--aqua-ink:#0a6b5c;
+  --line:rgba(11,34,50,.1);
+  --disp:"Bricolage Grotesque","Figtree",system-ui,sans-serif;
+  --ui:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --spring:cubic-bezier(.34,1.56,.64,1);--out:cubic-bezier(.22,1,.36,1);
+  --sh:0 1px 0 rgba(255,255,255,.9) inset,0 2px 6px -2px rgba(11,47,69,.12),0 22px 44px -26px rgba(11,47,69,.42);
+}
+html.thumb{--bar:0px}
+html.thumb .demo{display:none}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(var(--bar) + var(--hdr) + 16px);-webkit-text-size-adjust:100%}
+body{margin:0;padding-top:var(--bar);background:var(--sand);color:var(--ink);font:400 1rem/1.6 var(--ui);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+html.lock{overflow:hidden}
+h1,h2,h3{font-family:var(--disp);font-weight:600;letter-spacing:-.035em;line-height:1.02;margin:0;text-wrap:balance;font-variation-settings:"opsz" 96}
+p{margin:0;text-wrap:pretty}
+a{color:inherit}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--aqua);outline-offset:3px;border-radius:12px}
+.num{font-variant-numeric:tabular-nums}
+.skip{position:fixed;left:12px;top:calc(var(--bar) + 8px);z-index:99;background:var(--sea);color:var(--sand);padding:12px 16px;border-radius:14px;font-weight:700;transform:translateY(calc(-100% - 120px));transition:transform .25s var(--out)}
+.skip:focus{transform:none}
+.wrap{width:100%;max-width:1220px;margin:0 auto;padding:0 16px}
+@media(min-width:700px){.wrap{padding:0 24px}}
+@media(min-width:1500px){.wrap{max-width:1320px}}
+.sec{padding:76px 0}
+@media(min-width:900px){.sec{padding:112px 0}}
+.eyebrow{font:600 .9rem/1.3 var(--ui);color:var(--aqua-ink);margin-bottom:12px}
+.sec-h{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 40px;margin-bottom:28px}
+.sec-h h2{font-size:clamp(2.1rem,6vw,3.6rem);max-width:16ch}
+.sec-h p{color:var(--mut);max-width:46ch}
+.lead{color:var(--mut);font-size:1.05rem}
+
+/* faixa demo */
+.demo{position:fixed;top:0;left:0;right:0;z-index:90;height:var(--bar);display:flex;align-items:center;justify-content:center;gap:12px;padding:0 12px;background:var(--deep);color:#cfe1e6;font:500 .76rem/1 var(--ui)}
+.demo p{white-space:nowrap}.demo .sm{display:none}
+.demo a{position:relative;color:var(--aqua);font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.demo a::after{content:"";position:absolute;inset:-12px -6px}
+@media(max-width:560px){.demo .lg{display:none}.demo .sm{display:inline}}
+
+/* barra de app */
+.appbar{position:sticky;top:var(--bar);z-index:50;height:var(--hdr);background:rgba(244,236,221,.78);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.appbar.scrolled{border-color:var(--line);box-shadow:0 10px 30px -24px rgba(11,47,69,.5)}
+.appbar .wrap{height:100%;display:flex;align-items:center;gap:10px}
+html.thumb .appbar{top:0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-height:44px}
+.brand-mark{width:38px;height:38px;border-radius:12px;background:var(--sea);display:grid;place-items:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
+.brand b{font:700 1.18rem/1 var(--disp);letter-spacing:-.03em}
+.brand small{display:block;font:500 .74rem/1 var(--ui);color:var(--mut);margin-top:3px;letter-spacing:.02em}
+.links{display:none;list-style:none;margin:0;padding:4px;gap:2px;border-radius:999px;background:rgba(255,250,242,.6);box-shadow:inset 0 0 0 1px var(--line)}
+.links a{display:block;padding:9px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.93rem;color:var(--mut);transition:color .2s,background .2s}
+.links a:hover{color:var(--ink);background:rgba(11,47,69,.06)}
+.links a[aria-current]{color:var(--ink);background:var(--paper);box-shadow:0 2px 8px -3px rgba(11,47,69,.3)}
+@media(min-width:1040px){.links{display:flex}}
+
+/* botões com resposta física */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border:0;border-radius:18px;cursor:pointer;text-decoration:none;font:700 1rem/1 var(--ui);letter-spacing:-.01em;transition:transform .45s var(--spring),box-shadow .25s,background .25s;-webkit-user-select:none;user-select:none}
+.btn:active{transform:scale(.96);transition-duration:.12s}
+.btn.sea{background:var(--sea);color:var(--sand);box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 14px 28px -16px rgba(7,34,51,.8)}
+.btn.sea:hover{background:#0e3a55}
+.btn.aqua{background:var(--aqua);color:var(--deep);box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 14px 28px -14px rgba(10,107,92,.6)}
+.btn.aqua:hover{background:#55d1bb}
+.btn.light{background:rgba(255,250,242,.14);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.btn.light:hover{background:rgba(255,250,242,.22)}
+.btn.sm{min-height:44px;padding:0 16px;border-radius:14px;font-size:.92rem}
+.btn svg{width:20px;height:20px;flex:none}
+.appbar .btn .lg{display:none}
+@media(min-width:620px){.appbar .btn .lg{display:inline}.appbar .btn .sm2{display:none}}
+
+/* hero em cena */
+.hero{padding:12px 0 0}
+.scene{position:relative;isolation:isolate;overflow:hidden;border-radius:30px;min-height:640px;color:#fff;background:var(--sea);box-shadow:0 40px 80px -40px rgba(7,34,51,.7)}
+@media(min-width:900px){.scene{min-height:min(620px,calc(100dvh - var(--bar) - var(--hdr) - 120px));border-radius:36px}}
+.scene>svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.scene-in{position:relative;padding:28px 20px 150px;max-width:640px}
+@media(max-width:559px){.hero-ctas .btn.light{display:none}}
+@media(max-width:899px){.scene .shift{transform:translate(-170px,70px)}.scene .shift2{transform:translateX(-40px)}}
+@media(min-width:900px){.scene-in{padding:64px 56px 150px}}
+.scene h1{font-size:clamp(2.6rem,8.4vw,4.9rem);font-weight:600;letter-spacing:-.045em;line-height:.98;color:#fdf7ec;margin-bottom:18px}
+.scene h1 span{color:#9ee6d6}
+.scene .lead{color:#d9e9ec;max-width:44ch;margin-bottom:26px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:10px}
+.float-card{position:absolute;right:16px;bottom:118px;z-index:2;display:flex;align-items:center;gap:12px;padding:10px 14px 10px 10px;border-radius:20px;border:0;cursor:pointer;text-align:left;background:rgba(255,250,242,.9);color:var(--ink);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 20px 40px -20px rgba(7,34,51,.8);transition:transform .45s var(--spring)}
+.float-card:active{transform:scale(.96)}
+.float-card .mini{width:52px;height:44px;border-radius:12px;overflow:hidden;background:linear-gradient(#9fd6d0,#f4e2c4)}
+.float-card .mini svg{width:100%;height:100%}
+.float-card b{display:block;font:700 1.05rem/1.1 var(--disp);letter-spacing:-.02em}
+.float-card span{font-size:.82rem;color:var(--mut)}
+@media(max-width:899px){.float-card{display:none}}
+.bob{animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.wave{animation:drift linear infinite}
+.w1{animation-duration:9s}.w2{animation-duration:14s;animation-direction:reverse}.w3{animation-duration:20s}
+@keyframes drift{from{transform:translateX(-200px)}to{transform:translateX(0)}}
+.beam{transform-box:view-box;transform-origin:886px 268px;animation:beam 7s ease-in-out infinite}
+@keyframes beam{0%,100%{transform:rotate(-14deg);opacity:.5}50%{transform:rotate(12deg);opacity:.9}}
+
+/* busca */
+.search{position:relative;z-index:3;margin:-44px 12px 0;padding:8px;border-radius:26px;background:rgba(255,250,242,.82);-webkit-backdrop-filter:blur(20px) saturate(150%);backdrop-filter:blur(20px) saturate(150%);box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 30px 60px -30px rgba(7,34,51,.55);display:grid;gap:8px}
+@media(min-width:900px){.search{margin:-64px auto 0;max-width:900px;grid-template-columns:1fr 1fr auto;align-items:stretch}}
+.field{position:relative;display:block;height:64px;border-radius:18px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .2s}
+.field:focus-within{box-shadow:inset 0 0 0 2px var(--aqua)}
+.field span{position:absolute;left:16px;top:10px;font-size:.78rem;font-weight:600;color:var(--mut);pointer-events:none}
+.field select{appearance:none;-webkit-appearance:none;position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:18px;background:transparent;padding:26px 40px 6px 16px;font-weight:600;font-size:1.02rem;cursor:pointer;outline:none}
+.field::after{content:"";position:absolute;right:16px;top:50%;width:8px;height:8px;border-right:2px solid var(--mut);border-bottom:2px solid var(--mut);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.search .btn{min-height:58px}
+.anim .rise{animation:rise .9s var(--spring) both;animation-delay:calc(var(--i,0) * 70ms + 80ms)}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}}
+
+/* números */
+.stats{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding:22px 2px 4px;margin:0 -2px}
+.stats::-webkit-scrollbar{display:none}
+.stat{flex:1 0 auto;display:flex;align-items:center;gap:12px;padding:12px 18px 12px 12px;border-radius:20px;background:var(--paper);box-shadow:var(--sh)}
+.stat i{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:#dff3ee;color:var(--aqua-ink);font-style:normal}
+.stat b{display:block;font:700 1.25rem/1.1 var(--disp);letter-spacing:-.02em}
+.stat span{font-size:.84rem;color:var(--mut)}
+.note{font-size:.8rem;color:var(--mut);margin-top:10px}
+.tag{display:inline-block;font:700 .7rem/1 var(--ui);letter-spacing:.05em;text-transform:uppercase;padding:4px 7px;border-radius:6px;background:#dff3ee;color:var(--aqua-ink);vertical-align:2px}
+
+/* filtros */
+.tabs{position:relative;display:inline-flex;max-width:100%;overflow-x:auto;scrollbar-width:none;padding:5px;border-radius:18px;background:var(--sand2);box-shadow:inset 0 1px 2px rgba(11,47,69,.08)}
+.tabs::-webkit-scrollbar{display:none}
+.tabs .ind{position:absolute;top:5px;bottom:5px;left:0;width:0;border-radius:13px;background:var(--paper);box-shadow:0 1px 0 #fff inset,0 4px 12px -4px rgba(11,47,69,.35);pointer-events:none}
+.tabs [role=tab]{position:relative;z-index:1;flex:none;border:0;background:none;cursor:pointer;min-height:44px;padding:0 16px;border-radius:13px;font-weight:600;font-size:.95rem;color:var(--mut);transition:color .2s}
+.tabs [aria-selected=true]{color:var(--ink)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:14px 2px 6px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:40px;padding:0 14px;border-radius:999px;border:0;cursor:pointer;background:transparent;box-shadow:inset 0 0 0 1px rgba(11,34,50,.18);font-weight:600;font-size:.9rem;color:var(--mut);transition:background .2s,color .2s,box-shadow .2s,transform .4s var(--spring)}
+.chip:active{transform:scale(.95)}
+.chip[aria-pressed=true]{background:var(--sea);color:var(--sand);box-shadow:none}
+.filter-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px}
+.count{font-size:.9rem;color:var(--mut);min-height:24px}
+.arrows{display:none;gap:8px}
+@media(min-width:900px){.arrows{display:flex}}
+.arw{width:48px;height:48px;border-radius:16px;border:0;cursor:pointer;background:var(--paper);box-shadow:var(--sh);display:grid;place-items:center;transition:transform .4s var(--spring),opacity .2s}
+.arw:active{transform:scale(.92)}
+.arw:disabled{opacity:.4;cursor:default}
+
+/* trilho arrastável */
+.rail{position:relative;overflow:hidden;margin:14px -16px 0;padding:10px 16px 34px;touch-action:pan-y;cursor:grab}
+@media(min-width:700px){.rail{margin:14px -24px 0;padding:10px 24px 34px}}
+.rail.drag{cursor:grabbing}
+.rail.drag .home{pointer-events:none}
+.track{display:flex;gap:14px;will-change:transform}
+.home{flex:none;width:min(82vw,340px);display:flex;flex-direction:column;border-radius:26px;background:var(--paper);box-shadow:var(--sh);transition:transform .5s var(--spring)}
+@media(min-width:900px){.home{width:360px}}
+.home[hidden]{display:none}
+.home-open{display:block;width:100%;text-align:left;border:0;background:none;padding:8px 8px 0;cursor:pointer;border-radius:26px 26px 0 0}
+.home-open:active{transform:scale(.985)}
+.home-art{position:relative;display:block;height:190px;border-radius:20px;overflow:hidden;background:linear-gradient(180deg,var(--sky1,#9fd6d0),var(--sky2,#f4e2c4))}
+.home-art svg{position:absolute;inset:0;width:100%;height:100%}
+.badge{position:absolute;left:10px;top:10px;padding:6px 10px;border-radius:10px;font-size:.78rem;font-weight:700;background:rgba(255,250,242,.86);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--ink)}
+.home-info{display:block;padding:14px 10px 4px}
+.price{display:block;font:700 1.6rem/1.1 var(--disp);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.title{display:block;font-weight:600;margin-top:4px}
+.where{display:flex;align-items:center;gap:6px;color:var(--mut);font-size:.9rem;margin-top:2px}
+.where svg{width:16px;height:16px;flex:none}
+.specs{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.specs span{display:inline-flex;align-items:center;gap:5px;padding:6px 8px;border-radius:10px;background:var(--sand);font-size:.85rem;font-weight:600;font-variant-numeric:tabular-nums}
+.specs svg{width:16px;height:16px;color:var(--aqua-ink)}
+.home-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding:10px 18px 16px}
+.ref{font-size:.8rem;color:var(--mut)}
+.hint{display:flex;align-items:center;gap:8px;color:var(--mut);font-size:.86rem;margin-top:-14px}
+.hint i{display:inline-block;width:26px;height:4px;border-radius:2px;background:rgba(11,34,50,.2)}
+.empty{padding:40px 0;color:var(--mut)}
+
+/* folha (bottom sheet) */
+.sheet-wrap{position:fixed;inset:0;z-index:95}
+.sheet-wrap[hidden]{display:none}
+.backdrop{position:absolute;inset:0;background:rgba(7,34,51,.5);opacity:0}
+.sheet{position:absolute;left:0;right:0;bottom:0;margin:0 auto;max-width:720px;max-height:min(90dvh,860px);display:flex;flex-direction:column;border-radius:28px 28px 0 0;background:var(--paper);box-shadow:0 -30px 60px -20px rgba(7,34,51,.5);transform:translate3d(0,100%,0);will-change:transform}
+.sheet::after{content:"";position:absolute;left:0;right:0;top:100%;height:120px;background:var(--paper)}
+.grab{flex:none;padding:10px 0 4px;display:grid;place-items:center;cursor:grab;touch-action:none}
+.grab span{width:44px;height:5px;border-radius:3px;background:rgba(11,34,50,.22)}
+.sh-head{flex:none;display:flex;align-items:flex-start;gap:12px;padding:6px 20px 14px;touch-action:none;cursor:grab}
+.sh-head h3{font-size:1.5rem;letter-spacing:-.03em}
+.sh-head .where{margin-top:4px}
+.sh-close{margin-left:auto;flex:none;width:44px;height:44px;border-radius:14px;border:0;cursor:pointer;background:var(--sand);display:grid;place-items:center}
+.sh-body{overflow-y:auto;overscroll-behavior:contain;padding:0 20px calc(20px + env(safe-area-inset-bottom))}
+.sh-art{height:200px;border-radius:20px;overflow:hidden;position:relative}
+.sh-art svg{position:absolute;inset:0;width:100%;height:100%}
+.sh-price{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;margin:16px 0 8px}
+.sh-price b{font:700 2rem/1 var(--disp);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.sh-price span{color:var(--mut);font-size:.9rem}
+.sh-body p{color:var(--mut);margin:10px 0 14px}
+.feat{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0 0 16px;padding:0}
+.feat li{padding:7px 12px;border-radius:12px;background:#dff3ee;color:var(--aqua-ink);font-weight:600;font-size:.86rem}
+.sh-grid{display:grid;gap:12px}
+@media(min-width:620px){.sh-grid{grid-template-columns:1.1fr .9fr}}
+.box{border-radius:18px;padding:14px 16px;background:var(--sand)}
+.box h4{margin:0 0 8px;font:600 .82rem/1.2 var(--ui);color:var(--mut)}
+.box svg{width:100%;height:auto;display:block}
+.sim b{display:block;font:700 1.35rem/1.15 var(--disp);letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin:2px 0}
+.sim small{display:block;color:var(--mut);font-size:.8rem;line-height:1.4;margin-top:6px}
+.sh-actions .btn{padding:0 12px;font-size:.95rem}
+.sh-actions{position:sticky;bottom:0;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:8px;padding:14px 0 4px;background:linear-gradient(rgba(255,250,242,0),var(--paper) 30%)}
+
+/* serviços */
+.svc{display:grid;gap:14px}
+@media(min-width:900px){.svc{grid-template-columns:1.2fr .8fr;align-items:stretch}}
+.group{border-radius:28px;background:var(--paper);box-shadow:var(--sh);padding:6px;list-style:none;margin:0}
+.row{display:flex;align-items:center;gap:14px;padding:14px;border-radius:22px;transition:background .2s,transform .45s var(--spring)}
+.row{position:relative}
+.row+.row::before{content:"";position:absolute;left:76px;right:14px;top:0;height:1px;background:var(--line)}
+.row:hover{background:rgba(11,47,69,.035)}
+.row .ic{width:48px;height:48px;flex:none;border-radius:16px;display:grid;place-items:center;background:var(--sea);color:var(--aqua)}
+.row .ic svg{width:24px;height:24px}
+.row h3{font:600 1.15rem/1.2 var(--disp);letter-spacing:-.02em}
+.row p{color:var(--mut);font-size:.92rem}
+.promo{position:relative;overflow:hidden;border-radius:28px;padding:28px 24px;color:#fff;background:radial-gradient(120% 80% at 100% 0%,#1b6d80,transparent 60%),var(--sea);display:flex;flex-direction:column;justify-content:space-between;gap:26px;min-height:320px}
+.promo h3{font-size:clamp(1.8rem,4vw,2.4rem);color:#fdf7ec}
+.promo p{color:#cfe1e6;margin-top:10px}
+.promo svg.key{position:absolute;right:-18px;bottom:-34px;width:180px;opacity:.55;pointer-events:none}
+.promo>div{position:relative}
+
+/* diferenciais */
+.bento{display:grid;gap:14px}
+@media(min-width:900px){.bento{grid-template-columns:repeat(6,1fr)}.b1{grid-column:span 3;grid-row:span 2}.b2{grid-column:span 3}.b3{grid-column:span 3}}
+.tile{border-radius:28px;background:var(--paper);box-shadow:var(--sh);padding:24px;overflow:hidden;position:relative}
+.tile h3{font-size:1.5rem;margin-bottom:8px}
+.tile p{color:var(--mut)}
+.chat{display:grid;gap:8px;margin-top:22px;padding:16px;border-radius:22px;background:var(--sand)}
+.msg{max-width:84%;padding:10px 14px;border-radius:18px;font-size:.92rem;line-height:1.4}
+.msg.in{background:var(--paper);border-bottom-left-radius:6px;box-shadow:0 2px 6px -3px rgba(11,47,69,.25)}
+.msg.out{justify-self:end;background:var(--sea);color:var(--sand);border-bottom-right-radius:6px}
+.msg.card{padding:8px;display:flex;gap:10px;align-items:center}
+.msg.card .mini{width:64px;height:48px;flex:none;border-radius:12px;overflow:hidden;background:linear-gradient(#bfe3e9,#f6e6c8)}
+.msg.card b{display:block;font-variant-numeric:tabular-nums}
+.chat small{color:var(--mut);font-size:.78rem;text-align:center}
+.typing{display:inline-flex;gap:4px;padding:12px 14px}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--mut);opacity:.5;animation:typ 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes typ{50%{transform:translateY(-4px);opacity:1}}
+.mini-ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:#dff3ee;color:var(--aqua-ink);margin-bottom:14px}
+
+/* como funciona: cartões que empilham */
+.how{display:grid;gap:30px}
+@media(min-width:900px){.how{grid-template-columns:.8fr 1.2fr;gap:56px}.how-l{position:sticky;top:calc(var(--bar) + var(--hdr) + 40px);align-self:start}}
+.how-l h2{font-size:clamp(2.1rem,6vw,3.6rem);margin-bottom:16px}
+.stack{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.stack li{position:sticky;top:calc(var(--bar) + var(--hdr) + 18px + var(--k) * 14px);display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:22px;border-radius:26px;background:var(--paper);box-shadow:0 -1px 0 rgba(255,255,255,.9) inset,0 -12px 30px -18px rgba(11,47,69,.3),var(--sh)}
+.stack .n{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:var(--sea);color:var(--aqua);font:700 1.2rem/1 var(--disp)}
+.stack h3{font-size:1.35rem;margin:4px 0 6px}
+.stack p{color:var(--mut)}
+
+/* depoimentos */
+.quotes{display:grid;gap:14px}
+@media(min-width:900px){.quotes{grid-template-columns:1fr 1fr}}
+.quote{border-radius:28px;background:var(--paper);box-shadow:var(--sh);padding:26px}
+.quote .st{color:#8a5f14;letter-spacing:2px}
+.quote blockquote{margin:10px 0 18px;font:500 1.3rem/1.35 var(--disp);letter-spacing:-.02em}
+.quote figcaption{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--mut);font-size:.9rem}
+.quote .av{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;background:var(--sea);color:var(--aqua);font-weight:700}
+.quote b{color:var(--ink)}
+
+/* faq */
+.faq{display:grid;gap:30px}
+@media(min-width:900px){.faq{grid-template-columns:.8fr 1.2fr;gap:56px}}
+.faq h2{font-size:clamp(2.1rem,6vw,3.6rem);margin-bottom:14px}
+.qa{border-radius:28px;background:var(--paper);box-shadow:var(--sh);padding:6px}
+.qa details{border-radius:22px;transition:background .2s}
+.qa details{position:relative}
+.qa details+details::before{content:"";position:absolute;left:18px;right:18px;top:0;height:1px;background:var(--line)}
+.qa details[open]::before,.qa details[open]+details::before{opacity:0}
+.qa details[open]{background:var(--sand)}
+.qa summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px;font:600 1.08rem/1.3 var(--disp);letter-spacing:-.015em;min-height:56px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary i{flex:none;width:32px;height:32px;border-radius:11px;background:var(--sand2);position:relative;transition:transform .45s var(--spring)}
+.qa summary i::before{content:"";position:absolute;left:11px;top:9px;width:8px;height:8px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg)}
+.qa details[open] summary i{transform:rotate(180deg);background:var(--paper)}
+.qa details p{padding:0 18px 18px;color:var(--mut)}
+
+/* localização */
+.loc{display:grid;gap:14px}
+@media(min-width:900px){.loc{grid-template-columns:.9fr 1.1fr}}
+.loc-card{border-radius:28px;background:var(--paper);box-shadow:var(--sh);padding:26px}
+.loc-card h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:14px}
+.loc-card dl{margin:18px 0 22px;display:grid;gap:0}
+.loc-card dl div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;box-shadow:0 -1px 0 var(--line);font-variant-numeric:tabular-nums}
+.loc-card dt{color:var(--mut)}.loc-card dd{margin:0;font-weight:600}
+.map{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:5/4;background:#efe5d2;box-shadow:var(--sh)}
+@media(min-width:900px){.map{aspect-ratio:auto;min-height:340px}}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map .lbl{position:absolute;left:14px;top:14px;padding:6px 10px;border-radius:10px;font-size:.78rem;font-weight:600;background:rgba(255,250,242,.9);color:var(--mut)}
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.2s var(--out) infinite}
+@keyframes ping{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+
+/* cta final */
+.final{position:relative;overflow:hidden;isolation:isolate;border-radius:32px;padding:56px 24px 64px;text-align:center;color:#fff;background:var(--sea)}
+.final>svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:55%;z-index:-1}
+.final h2{font-size:clamp(2.2rem,7vw,4rem);color:#fdf7ec;max-width:16ch;margin:0 auto 14px}
+.final p{color:#cfe1e6;max-width:44ch;margin:0 auto 26px}
+
+/* rodapé */
+footer{padding:64px 0 calc(110px + env(safe-area-inset-bottom))}
+@media(min-width:900px){footer{padding-bottom:48px}}
+.foot{display:grid;gap:28px 20px;grid-template-columns:1fr 1fr}
+.foot .about{grid-column:1/-1}
+@media(min-width:900px){.foot{grid-template-columns:1.5fr 1fr 1fr 1fr}.foot .about{grid-column:auto}}
+.foot h4{margin:0 0 8px;font:700 .82rem/1 var(--ui);color:var(--mut)}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot a,.foot .lk{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--ink);background:none;border:0;padding:0;cursor:pointer;font-weight:500}
+.foot a:hover,.foot .lk:hover{color:var(--aqua-ink)}
+.foot .about p{color:var(--mut);max-width:36ch;margin-top:10px}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px;margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:var(--mut);font-size:.84rem}
+.legal a,.legal .lk{color:var(--aqua-ink);font-weight:600;font-size:.84rem}
+.legal .lk{background:none;border:0;padding:0;cursor:pointer;min-height:44px}
+
+/* dock mobile */
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;display:flex;gap:8px;padding:8px;border-radius:24px;background:rgba(255,250,242,.82);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);box-shadow:0 1px 0 #fff inset,0 20px 40px -18px rgba(7,34,51,.55);transform:translateY(140%);transition:transform .6s var(--spring)}
+.dock.on{transform:none}
+.dock .btn{flex:1}
+.dock .btn.ghost{flex:none;width:52px;padding:0;background:var(--sand);color:var(--ink)}
+@media(min-width:900px){.dock{display:none}}
+
+/* aviso */
+.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));z-index:99;width:max-content;max-width:min(92vw,460px);padding:14px 18px;border-radius:18px;background:var(--deep);color:#eaf4f5;font-size:.92rem;line-height:1.45;box-shadow:0 20px 40px -16px rgba(7,34,51,.7);opacity:0;transform:translate(-50%,24px) scale(.96);pointer-events:none;transition:opacity .25s,transform .55s var(--spring)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media(min-width:900px){.toast{bottom:28px}}
+
+/* revelar por topo */
+.js .rv.hide{opacity:0;transform:translateY(28px) scale(.98)}
+.rv{transition:opacity .6s var(--out),transform .8s var(--spring);transition-delay:calc(var(--d,0) * 70ms)}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv.hide{opacity:1;transform:none}
+}
+</style>
+</head>
+<body id="topo">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-casa" viewBox="0 0 200 130">
+      <ellipse cx="100" cy="134" rx="130" ry="26" fill="var(--ground,#e7d3ad)"/>
+      <path d="M150 112c2-26 6-42 14-58" stroke="#7a5b3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M164 54c-14-6-28-2-34 6M164 54c12-10 26-8 32-2M164 54c-4-12-14-18-24-18M164 54c8-12 20-14 28-10M164 54c2 12-2 22-8 28" stroke="#2f8a6e" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <rect x="42" y="62" width="96" height="52" rx="3" fill="var(--wall,#fbf3e4)"/>
+      <path d="M32 64L90 26L148 64Z" fill="var(--roof,#d27b5a)"/>
+      <rect x="80" y="80" width="20" height="34" rx="2" fill="var(--trim,#0b2f45)"/>
+      <rect x="52" y="76" width="20" height="16" rx="2" fill="#ffd98a"/>
+      <rect x="108" y="76" width="22" height="16" rx="2" fill="#ffd98a"/>
+      <path d="M52 84h20M119 76v16" stroke="var(--trim,#0b2f45)" stroke-width="1.5" opacity=".5"/>
+      <path d="M20 114h160" stroke="#c9b48c" stroke-width="2"/>
+      <path d="M24 114v-10M34 114v-10M44 114v-10M20 106h28" stroke="#fff" stroke-width="2" opacity=".85"/>
+    </symbol>
+    <symbol id="i-apto" viewBox="0 0 200 130">
+      <ellipse cx="100" cy="134" rx="130" ry="26" fill="var(--ground,#e7d3ad)"/>
+      <rect x="118" y="38" width="50" height="78" rx="3" fill="var(--wall2,#d7e6e4)"/>
+      <rect x="54" y="14" width="74" height="102" rx="4" fill="var(--wall,#fbf3e4)"/>
+      <rect x="50" y="10" width="82" height="8" rx="3" fill="var(--roof,#0b2f45)"/>
+      <g fill="#ffd98a"><rect x="62" y="26" width="16" height="12" rx="2"/><rect x="84" y="26" width="16" height="12" rx="2" opacity=".55"/><rect x="106" y="26" width="16" height="12" rx="2"/><rect x="62" y="48" width="16" height="12" rx="2" opacity=".55"/><rect x="84" y="48" width="16" height="12" rx="2"/><rect x="106" y="48" width="16" height="12" rx="2"/><rect x="62" y="70" width="16" height="12" rx="2"/><rect x="84" y="70" width="16" height="12" rx="2"/><rect x="106" y="70" width="16" height="12" rx="2" opacity=".55"/></g>
+      <g stroke="var(--trim,#0b2f45)" stroke-width="2" opacity=".55"><path d="M60 40h66M60 62h66M60 84h66"/></g>
+      <rect x="82" y="94" width="18" height="22" rx="2" fill="var(--trim,#0b2f45)"/>
+      <g fill="#fff" opacity=".7"><rect x="126" y="48" width="12" height="8" rx="2"/><rect x="146" y="48" width="12" height="8" rx="2"/><rect x="126" y="66" width="12" height="8" rx="2"/><rect x="146" y="66" width="12" height="8" rx="2"/><rect x="126" y="84" width="12" height="8" rx="2"/><rect x="146" y="84" width="12" height="8" rx="2"/></g>
+      <path d="M20 116h160" stroke="#c9b48c" stroke-width="2"/>
+      <circle cx="34" cy="98" r="14" fill="#2f8a6e"/><path d="M34 98v18" stroke="#7a5b3a" stroke-width="3"/>
+    </symbol>
+    <symbol id="i-lote" viewBox="0 0 200 130">
+      <ellipse cx="100" cy="140" rx="150" ry="40" fill="var(--ground,#e7d3ad)"/>
+      <path d="M30 104L74 70H172L150 104Z" fill="var(--grass,#9ccf8f)"/>
+      <path d="M30 104L74 70H172L150 104Z" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="6 5"/>
+      <g fill="var(--trim,#0b2f45)"><rect x="28" y="94" width="4" height="12" rx="1"/><rect x="72" y="60" width="4" height="12" rx="1"/><rect x="170" y="60" width="4" height="12" rx="1"/><rect x="148" y="94" width="4" height="12" rx="1"/></g>
+      <rect x="96" y="46" width="34" height="20" rx="3" fill="var(--paper,#fffaf2)" stroke="var(--trim,#0b2f45)" stroke-width="2"/>
+      <path d="M113 66v16" stroke="var(--trim,#0b2f45)" stroke-width="3"/>
+      <path d="M103 56h20" stroke="var(--trim,#0b2f45)" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="56" cy="62" r="13" fill="#2f8a6e"/><path d="M56 62v24" stroke="#7a5b3a" stroke-width="3"/>
+    </symbol>
+    <symbol id="p-casa" viewBox="0 0 220 150"><g fill="none" stroke="#0b2f45" stroke-width="2.5"><rect x="6" y="6" width="208" height="138" rx="4"/><path d="M110 6v86M6 92h150M156 92v52M156 50h58M60 92v52"/></g><g font-family="Figtree,sans-serif" font-size="11" font-weight="600" fill="#4b5d6b"><text x="40" y="52">Sala</text><text x="150" y="32">Suíte</text><text x="166" y="78">Quarto</text><text x="18" y="122">Banho</text><text x="88" y="122">Cozinha</text><text x="168" y="122">Quarto</text></g></symbol>
+    <symbol id="p-apto" viewBox="0 0 220 150"><g fill="none" stroke="#0b2f45" stroke-width="2.5"><rect x="6" y="6" width="208" height="138" rx="4"/><path d="M120 6v138M6 96h114M120 76h94M60 96v48"/><path d="M6 30h20" stroke-dasharray="3 3"/></g><g font-family="Figtree,sans-serif" font-size="11" font-weight="600" fill="#4b5d6b"><text x="30" y="56">Sala e varanda</text><text x="150" y="44">Quarto</text><text x="150" y="114">Quarto</text><text x="16" y="124">Banho</text><text x="70" y="124">Cozinha</text></g></symbol>
+    <symbol id="p-lote" viewBox="0 0 220 150"><g fill="none" stroke="#0b2f45" stroke-width="2.5"><rect x="40" y="10" width="140" height="120" rx="3" stroke-dasharray="7 5"/></g><g font-family="Figtree,sans-serif" font-size="11" font-weight="600" fill="#4b5d6b"><text x="92" y="146">frente</text><text x="98" y="74">lote</text></g><path d="M40 138h140M188 10v120" stroke="#0a6b5c" stroke-width="1.5"/></symbol>
+    <symbol id="g-bed" viewBox="0 0 24 24"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7M3 15h18M7 9V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="g-car" viewBox="0 0 24 24"><path d="M5 16h14M4 16v-3l2-5h12l2 5v3M7 16v2M17 16v2M4 13h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="g-area" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="g-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="g-chat" viewBox="0 0 24 24"><path d="M4 18.5l1.2-3.6A8 8 0 1 1 8.6 18z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 10.5h6M9 13.5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="demo" role="note"><p><span class="lg">Modelo demonstrativo da Beatus Mídias</span><span class="sm">Modelo Beatus</span> · marca fictícia</p><a href="https://wa.me/5521975340783?text=Ol%C3%A1!%20Gostei%20do%20modelo%20de%20imobili%C3%A1ria%20e%20quero%20uma%20p%C3%A1gina%20assim." target="_blank" rel="noopener">Quero uma página assim</a></div>
+
+<header class="appbar" id="appbar">
+  <div class="wrap">
+    <a class="brand" href="#topo" aria-label="Maré Alta Imóveis, início"><span class="brand-mark" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12l7-6 7 6" stroke="#f4ecdd" stroke-width="2.4"/><path d="M3 18c3-3 5-3 8 0s5 3 8 0 4-2 4-2" stroke="#46c7b0" stroke-width="2.4"/></svg></span><span><b>Maré Alta</b><small>imóveis em Maricá</small></span></a>
+    <ul class="links">
+      <li><a href="#imoveis">Imóveis</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#como">Como funciona</a></li><li><a href="#duvidas">Dúvidas</a></li><li><a href="#contato">Contato</a></li>
+    </ul>
+    <button class="btn sea sm" type="button" data-demo><svg aria-hidden="true"><use href="#g-chat"/></svg><span class="lg">Falar com um corretor</span><span class="sm2">Corretor</span></button>
+  </div>
+</header>
+
+<main id="conteudo">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="scene" id="scene">
+      <svg viewBox="0 0 1200 640" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Ilustração da orla de Maricá ao entardecer, com mar, farol no morro e casas na areia">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b2f45"/><stop offset=".45" stop-color="#155a72"/><stop offset=".72" stop-color="#5f9a9a"/><stop offset=".86" stop-color="#e9c9a0"/></linearGradient>
+          <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff2d6"/><stop offset=".35" stop-color="#f7d9a8" stop-opacity=".9"/><stop offset="1" stop-color="#f7d9a8" stop-opacity="0"/></radialGradient>
+          <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c7f8c"/><stop offset="1" stop-color="#0d4459"/></linearGradient>
+          <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1dfbd"/><stop offset="1" stop-color="#dcc39a"/></linearGradient>
+          <linearGradient id="beamG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff3cf" stop-opacity=".75"/><stop offset="1" stop-color="#fff3cf" stop-opacity="0"/></linearGradient>
+        </defs>
+        <rect width="1200" height="640" fill="url(#sky)"/>
+        <circle cx="560" cy="452" r="150" fill="url(#sun)"/>
+        <circle cx="560" cy="452" r="34" fill="#fff4dc"/>
+        <path d="M0 448C120 420 210 430 320 412C420 396 520 430 640 420C760 410 820 380 900 392V470H0Z" fill="#2f6f7c" opacity=".55"/>
+        <g class="shift"><path class="beam" d="M886 268L1210 214V322Z" fill="url(#beamG)"/>
+        <path d="M780 470C800 400 840 330 880 300C920 300 960 340 1000 380C1060 420 1140 430 1200 440V480H780Z" fill="#0f3e50"/>
+        <rect x="872" y="230" width="28" height="78" rx="3" fill="#f6ecdc"/>
+        <rect x="872" y="252" width="28" height="10" fill="#0b2f45"/><rect x="872" y="278" width="28" height="10" fill="#0b2f45"/>
+        <path d="M866 230h40l-6-14h-28z" fill="#0b2f45"/><circle cx="886" cy="210" r="9" fill="#fff3cf"/><path d="M876 202h20l-10-10z" fill="#0b2f45"/>
+        </g>
+        <rect x="0" y="460" width="1200" height="180" fill="url(#sea)"/>
+        <g fill="none" stroke="#bfe9e6" stroke-linecap="round">
+          <path class="wave w3" opacity=".35" stroke-width="2" data-y="488"/>
+          <path class="wave w2" opacity=".45" stroke-width="2.4" data-y="518"/>
+          <path class="wave w1" opacity=".6" stroke-width="3" data-y="548"/>
+        </g>
+        <path d="M0 586C160 556 300 560 440 574C600 590 760 560 900 566C1020 572 1110 590 1200 584V640H0Z" fill="url(#sand)"/>
+        <path d="M0 586C160 556 300 560 440 574C600 590 760 560 900 566C1020 572 1110 590 1200 584" fill="none" stroke="#fff8ea" stroke-width="3" opacity=".8"/>
+        <g transform="translate(50 40)"><g class="boat bob" aria-hidden="true"><path d="M280 500h64l-11 13h-42z" fill="#f6ecdc"/><path d="M309 498V450l24 46z" fill="#fffaf2"/><path d="M305 498V460l-18 38z" fill="#46c7b0"/></g></g>
+        <g transform="translate(560 512) scale(.62)"><rect x="42" y="62" width="96" height="52" rx="3" fill="#fbf3e4"/><path d="M32 64L90 26L148 64Z" fill="#d27b5a"/><rect x="80" y="80" width="20" height="34" rx="2" fill="#0b2f45"/><rect x="52" y="76" width="20" height="16" rx="2" fill="#ffd98a"/><rect x="108" y="76" width="22" height="16" rx="2" fill="#ffd98a"/></g>
+        <g transform="translate(660 520) scale(.5)"><rect x="42" y="62" width="96" height="52" rx="3" fill="#e3f0ee"/><path d="M32 64L90 26L148 64Z" fill="#0f5e6e"/><rect x="58" y="76" width="22" height="16" rx="2" fill="#ffd98a"/><rect x="100" y="76" width="22" height="16" rx="2" fill="#ffd98a"/></g>
+        <g stroke="#2f6d55" stroke-width="4" fill="none" stroke-linecap="round"><path d="M520 600c-6-20-4-32 4-44M528 600c4-16 14-26 26-30M512 600c-10-10-20-14-30-14"/><path d="M780 604c-4-18 0-30 8-40M790 604c8-12 18-18 30-18"/></g>
+        <path d="M470 590c2-40 8-70 22-100" stroke="#6b4f33" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M492 490c-20-8-40-2-48 10M492 490c18-14 38-10 46-2M492 490c-6-18-20-26-34-26M492 490c12-18 30-20 40-14M492 490c4 16-2 30-12 38" stroke="#1f6b55" stroke-width="7" fill="none" stroke-linecap="round"/>
+      </svg>
+      <div class="scene-in">
+        <h1 id="h1" class="rise" style="--i:0">Sua casa perto do mar, <span>em Maricá.</span></h1>
+        <p class="lead rise" style="--i:1">Casas, apartamentos e terrenos de Itaipuaçu a Ponta Negra, com corretores que moram na cidade e conhecem cada rua.</p>
+        <div class="hero-ctas rise" style="--i:2">
+          <button class="btn aqua" type="button" data-demo><svg aria-hidden="true"><use href="#g-chat"/></svg>Falar com um corretor</button>
+          <a class="btn light" href="#imoveis">Ver imóveis</a>
+        </div>
+      </div>
+      <button class="float-card bob" type="button" data-open="1" aria-label="Ver detalhes da casa térrea com quintal em Itaipuaçu, R$ 485.000">
+        <span class="mini" aria-hidden="true"><svg viewBox="0 0 200 130"><use href="#i-casa"/></svg></span>
+        <span><b class="num">R$ 485.000</b><span>Casa em Itaipuaçu · toque para ver</span></span>
+      </button>
+    </div>
+    <form class="search rise" style="--i:3" id="busca" aria-label="Buscar imóveis">
+      <label class="field"><span>Tipo de imóvel</span><select id="sTipo"><option value="todos">Todos os tipos</option><option value="casa">Casa</option><option value="apartamento">Apartamento</option><option value="terreno">Terreno</option></select></label>
+      <label class="field"><span>Bairro</span><select id="sBairro"><option value="todos">Todos os bairros</option><option>Itaipuaçu</option><option>Centro</option><option>Ponta Negra</option><option>Barra de Maricá</option><option>São José do Imbassaí</option></select></label>
+      <button class="btn sea" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>Buscar imóveis</button>
+    </form>
+    <div class="stats rise" style="--i:4" aria-label="Números ilustrativos">
+      <div class="stat"><i aria-hidden="true">⌂</i><span><b class="num">180 imóveis</b><span>na carteira</span></span></div>
+      <div class="stat"><i aria-hidden="true">◎</i><span><b class="num">12 bairros</b><span>atendidos em Maricá</span></span></div>
+      <div class="stat"><i aria-hidden="true">★</i><span><b class="num">4,8 de nota</b><span>no Google <span class="tag">exemplo</span></span></span></div>
+      <div class="stat"><i aria-hidden="true">✓</i><span><b class="num">15 anos</b><span>de mercado local</span></span></div>
+    </div>
+    <p class="note">Números ilustrativos de uma marca fictícia.</p>
+  </div>
+</section>
+
+<section class="sec" id="imoveis" aria-labelledby="im-h">
+  <div class="wrap">
+    <div class="sec-h">
+      <div><p class="eyebrow">Selecionados esta semana</p><h2 id="im-h" class="rv">Imóveis em destaque</h2></div>
+      <p class="rv" style="--d:1">Toque em um imóvel para ver os detalhes, a planta e uma simulação de parcela. Arraste para o lado para ver mais.</p>
+    </div>
+    <div class="filter-row">
+      <div class="tabs" role="tablist" aria-label="Tipo de imóvel" id="tabs">
+        <span class="ind" aria-hidden="true"></span>
+        <button role="tab" aria-selected="true" aria-controls="lista" data-tipo="todos" id="tb-todos">Todos</button>
+        <button role="tab" aria-selected="false" aria-controls="lista" data-tipo="casa" tabindex="-1" id="tb-casa">Casas</button>
+        <button role="tab" aria-selected="false" aria-controls="lista" data-tipo="apartamento" tabindex="-1" id="tb-apartamento">Apartamentos</button>
+        <button role="tab" aria-selected="false" aria-controls="lista" data-tipo="terreno" tabindex="-1" id="tb-terreno">Terrenos</button>
+      </div>
+      <div class="arrows"><button class="arw" type="button" id="prev" aria-label="Imóveis anteriores"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 4l-6 6 6 6"/></svg></button><button class="arw" type="button" id="next" aria-label="Próximos imóveis"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 4l6 6-6 6"/></svg></button></div>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por bairro">
+      <button class="chip" type="button" aria-pressed="true" data-bairro="todos">Todos os bairros</button>
+      <button class="chip" type="button" aria-pressed="false" data-bairro="Itaipuaçu">Itaipuaçu</button>
+      <button class="chip" type="button" aria-pressed="false" data-bairro="Centro">Centro</button>
+      <button class="chip" type="button" aria-pressed="false" data-bairro="Ponta Negra">Ponta Negra</button>
+      <button class="chip" type="button" aria-pressed="false" data-bairro="Barra de Maricá">Barra de Maricá</button>
+      <button class="chip" type="button" aria-pressed="false" data-bairro="São José do Imbassaí">São José do Imbassaí</button>
+    </div>
+    <p class="count" id="count" aria-live="polite">7 imóveis</p>
+    <div class="rail" id="rail">
+      <div class="track" id="lista" role="tabpanel" aria-labelledby="tb-todos">
+        <article class="home" data-id="1" data-tipo="casa" data-bairro="Itaipuaçu" data-preco="485000" data-qts="3" data-vagas="2" data-area="140" data-ref="MA-0142" data-feat="Quintal gramado|Churrasqueira coberta|Suíte|Aceita financiamento" data-desc="Casa térrea em rua tranquila, com sala ampla integrada à cozinha, suíte, quintal gramado e churrasqueira coberta. Fica a 10 minutos da orla de Itaipuaçu.">
+          <button class="home-open" type="button" aria-haspopup="dialog"><span class="home-art" style="--sky1:#a7dbd5;--sky2:#f6e3c2"><svg viewBox="0 0 200 130" aria-hidden="true"><use href="#i-casa"/></svg><span class="badge">Quintal amplo</span></span>
+          <span class="home-info"><span class="price">R$ 485.000</span><span class="title">Casa térrea com quintal</span><span class="where"><svg aria-hidden="true"><use href="#g-pin"/></svg>Itaipuaçu</span><span class="specs"><span><svg aria-hidden="true"><use href="#g-bed"/></svg>3 quartos</span><span><svg aria-hidden="true"><use href="#g-car"/></svg>2 vagas</span><span><svg aria-hidden="true"><use href="#g-area"/></svg>140 m²</span></span></span></button>
+          <div class="home-foot"><span class="ref">Ref. MA-0142</span><button class="btn sea sm" type="button" data-demo>Quero visitar</button></div>
+        </article>
+        <article class="home" data-id="2" data-tipo="apartamento" data-bairro="Centro" data-preco="320000" data-qts="2" data-vagas="1" data-area="68" data-ref="MA-0218" data-feat="Varanda|Elevador|Portaria 24 h|Perto do comércio" data-desc="Apartamento de dois quartos com varanda, sol da manhã e vaga coberta. Prédio com elevador e portaria, a duas quadras da praça central.">
+          <button class="home-open" type="button" aria-haspopup="dialog"><span class="home-art" style="--sky1:#c7e6ee;--sky2:#fbefdc;--wall:#fffaf2;--wall2:#cfe3e7"><svg viewBox="0 0 200 130" aria-hidden="true"><use href="#i-apto"/></svg><span class="badge">Com varanda</span></span>
+          <span class="home-info"><span class="price">R$ 320.000</span><span class="title">Apartamento com varanda</span><span class="where"><svg aria-hidden="true"><use href="#g-pin"/></svg>Centro</span><span class="specs"><span><svg aria-hidden="true"><use href="#g-bed"/></svg>2 quartos</span><span><svg aria-hidden="true"><use href="#g-car"/></svg>1 vaga</span><span><svg aria-hidden="true"><use href="#g-area"/></svg>68 m²</span></span></span></button>
+          <div class="home-foot"><span class="ref">Ref. MA-0218</span><button class="btn sea sm" type="button" data-demo>Quero visitar</button></div>
+        </article>
+        <article class="home" data-id="3" data-tipo="casa" data-bairro="Ponta Negra" data-preco="890000" data-qts="4" data-vagas="3" data-area="260" data-ref="MA-0097" data-feat="300 m da praia|Piscina|Varanda gourmet|Duas suítes" data-desc="Casa de dois pavimentos a 300 metros da praia, com piscina, varanda gourmet e duas suítes. Terreno murado com portão automático.">
+          <button class="home-open" type="button" aria-haspopup="dialog"><span class="home-art" style="--sky1:#f0c9a4;--sky2:#fbe9d0;--roof:#0f5e6e;--wall:#fffaf2"><svg viewBox="0 0 200 130" aria-hidden="true"><use href="#i-casa"/></svg><span class="badge">Perto da praia</span></span>
+          <span class="home-info"><span class="price">R$ 890.000</span><span class="title">Casa a 300 m da praia</span><span class="where"><svg aria-hidden="true"><use href="#g-pin"/></svg>Ponta Negra</span><span class="specs"><span><svg aria-hidden="true"><use href="#g-bed"/></svg>4 quartos</span><span><svg aria-hidden="true"><use href="#g-car"/></svg>3 vagas</span><span><svg aria-hidden="true"><use href="#g-area"/></svg>260 m²</span></span></span></button>
+          <div class="home-foot"><span class="ref">Ref. MA-0097</span><button class="btn sea sm" type="button" data-demo>Quero visitar</button></div>
+        </article>
+        <article class="home" data-id="4" data-tipo="terreno" data-bairro="Itaipuaçu" data-preco="160000" data-qts="0" data-vagas="0" data-area="360" data-ref="MA-0305" data-feat="Rua asfaltada|Plano|Documentação em dia|12 x 30 m" data-desc="Terreno plano de 12 por 30 metros em rua asfaltada, com água e luz na porta. Documentação conferida e pronta para escritura.">
+          <button class="home-open" type="button" aria-haspopup="dialog"><span class="home-art" style="--sky1:#bfe3d8;--sky2:#f7ecd6"><svg viewBox="0 0 200 130" aria-hidden="true"><use href="#i-lote"/></svg><span class="badge">12 x 30 m</span></span>
+          <span class="home-info"><span class="price">R$ 160.000</span><span class="title">Terreno plano em rua asfaltada</span><span class="where"><svg aria-hidden="true"><use href="#g-pin"/></svg>Itaipuaçu</span><span class="specs"><span><svg aria-hidden="true"><use href="#g-area"/></svg>360 m²</span><span>Pronto para construir</span></span></span></button>
+          <div class="home-foot"><span class="ref">Ref. MA-0305</span><button class="btn sea sm" type="button" data-demo>Quero visitar</button></div>
+        </article>
+        <article class="home" data-id="5" data-tipo="apartamento" data-bairro="Barra de Maricá" data-preco="410000" data-qts="3" data-vagas="1" data-area="92" data-ref="MA-0251" data-feat="Vista para a lagoa|Cobertura|Terraço|Churrasqueira" data-desc="Cobertura com terraço e vista para a lagoa, três quartos e churrasqueira. Condomínio pequeno, com poucas unidades por andar.">
+          <button class="home-open" type="button" aria-haspopup="dialog"><span class="home-art" style="--sky1:#9fcfe0;--sky2:#f2e6cf;--roof:#46c7b0;--wall:#fbf3e4;--wall2:#e4ece4"><svg viewBox="0 0 200 130" aria-hidden="true"><use href="#i-apto"/></svg><span class="badge">Vista para a lagoa</span></span>
+          <span class="home-info"><span class="price">R$ 410.000</span><span class="title">Cobertura com terraço</span><span class="where"><svg aria-hidden="true"><use href="#g-pin"/></svg>Barra de Maricá</span><span class="specs"><span><svg aria-hidden="true"><use href="#g-bed"/></svg>3 quartos</span><span><svg aria-hidden="true"><use href="#g-car"/></svg>1 vaga</span><span><svg aria-hidden="true"><use href="#g-area"/></svg>92 m²</span></span></span></button>
+          <div class="home-foot"><span class="ref">Ref. MA-0251</span><button class="btn sea sm" type="button" data-demo>Quero visitar</button></div>
+        </article>
+        <article class="home" data-id="6" data-tipo="casa" data-bairro="São José do Imbassaí" data-preco="560000" data-qts="3" data-vagas="2" data-area="180" data-ref="MA-0163" data-feat="Condomínio fechado|Área verde|Suíte|Espaço gourmet" data-desc="Casa em condomínio fechado com área verde, três quartos sendo uma suíte e espaço gourmet integrado ao quintal.">
+          <button class="home-open" type="button" aria-haspopup="dialog"><span class="home-art" style="--sky1:#b9e2cf;--sky2:#f6ead2;--roof:#b8673f;--wall:#f7ecda"><svg viewBox="0 0 200 130" aria-hidden="true"><use href="#i-casa"/></svg><span class="badge">Condomínio fechado</span></span>
+          <span class="home-info"><span class="price">R$ 560.000</span><span class="title">Casa em condomínio</span><span class="where"><svg aria-hidden="true"><use href="#g-pin"/></svg>São José do Imbassaí</span><span class="specs"><span><svg aria-hidden="true"><use href="#g-bed"/></svg>3 quartos</span><span><svg aria-hidden="true"><use href="#g-car"/></svg>2 vagas</span><span><svg aria-hidden="true"><use href="#g-area"/></svg>180 m²</span></span></span></button>
+          <div class="home-foot"><span class="ref">Ref. MA-0163</span><button class="btn sea sm" type="button" data-demo>Quero visitar</button></div>
+        </article>
+        <article class="home" data-id="7" data-tipo="terreno" data-bairro="Ponta Negra" data-preco="230000" data-qts="0" data-vagas="0" data-area="450" data-ref="MA-0322" data-feat="Condomínio|Perto da praia|Esquina|15 x 30 m" data-desc="Lote de esquina em condomínio, a poucos minutos da praia de Ponta Negra. Ótimo para casa de veraneio ou moradia.">
+          <button class="home-open" type="button" aria-haspopup="dialog"><span class="home-art" style="--sky1:#f3cfaa;--sky2:#fbefdc;--grass:#a9d69a"><svg viewBox="0 0 200 130" aria-hidden="true"><use href="#i-lote"/></svg><span class="badge">Lote de esquina</span></span>
+          <span class="home-info"><span class="price">R$ 230.000</span><span class="title">Lote em condomínio</span><span class="where"><svg aria-hidden="true"><use href="#g-pin"/></svg>Ponta Negra</span><span class="specs"><span><svg aria-hidden="true"><use href="#g-area"/></svg>450 m²</span><span>Esquina</span></span></span></button>
+          <div class="home-foot"><span class="ref">Ref. MA-0322</span><button class="btn sea sm" type="button" data-demo>Quero visitar</button></div>
+        </article>
+      </div>
+    </div>
+    <p class="hint" aria-hidden="true"><i></i>Arraste para ver mais imóveis</p>
+    <p class="empty" id="vazio" hidden>Nenhum imóvel com esses filtros agora. Fale com um corretor: novidades entram toda semana.</p>
+  </div>
+</section>
+
+<section class="sec" id="servicos" aria-labelledby="sv-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><div><p class="eyebrow">O que fazemos</p><h2 id="sv-h" class="rv">Do anúncio à chave na mão.</h2></div><p class="rv" style="--d:1">Uma equipe pequena, com atendimento de ponta a ponta. Você fala sempre com o mesmo corretor.</p></div>
+    <div class="svc">
+      <ul class="group rv">
+        <li class="row"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-6 8 6v8a1 1 0 0 1-1 1h-4v-5h-6v5H5a1 1 0 0 1-1-1z"/></svg></span><div><h3>Comprar</h3><p>Seleção feita a partir do que você contou, com visitas agrupadas no mesmo dia.</p></div></li>
+        <li class="row"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/><path d="M17 14l3 3-3 3"/></svg></span><div><h3>Vender</h3><p>Fotos e vídeo profissionais, anúncio nos portais e filtro de interessados.</p></div></li>
+        <li class="row"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></span><div><h3>Alugar</h3><p>Contrato, vistoria com fotos e garantia locatícia, sem dor de cabeça.</p></div></li>
+        <li class="row"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19V9M10 19V5M15 19v-7M20 19v-4"/></svg></span><div><h3>Avaliar o seu imóvel</h3><p>Preço de mercado com base em vendas reais do bairro, em até 48 horas.</p></div></li>
+      </ul>
+      <div class="promo rv" style="--d:1">
+        <svg class="key" viewBox="0 0 200 200" aria-hidden="true" fill="none"><circle cx="70" cy="80" r="34" stroke="#46c7b0" stroke-width="10"/><circle cx="70" cy="80" r="12" fill="#46c7b0"/><path d="M100 98l70 52M140 128l-12 16M156 140l-10 14" stroke="#f4ecdd" stroke-width="10" stroke-linecap="round"/></svg>
+        <div><h3>Quer vender ou alugar o seu imóvel?</h3><p>Fazemos a avaliação, as fotos e o anúncio. Você só acompanha as visitas pelo celular.</p></div>
+        <div><button class="btn aqua" type="button" data-demo>Anunciar meu imóvel</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="df-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><div><p class="eyebrow">Por que a Maré Alta</p><h2 id="df-h" class="rv">Corretor que conhece a rua, não só o anúncio.</h2></div></div>
+    <div class="bento">
+      <div class="tile b1 rv">
+        <h3>Atendimento pelo WhatsApp, do jeito que você já usa</h3>
+        <p>Você conta o que procura, recebe uma seleção com fotos e marca as visitas sem sair da conversa.</p>
+        <div class="chat" aria-label="Prévia ilustrativa de conversa">
+          <div class="msg out">Oi! Procuro casa em Itaipuaçu até R$ 500 mil, com quintal.</div>
+          <div class="msg in">Oi, Ana! Separei três opções no seu orçamento. A primeira tem quintal gramado e churrasqueira.</div>
+          <div class="msg in card"><span class="mini" aria-hidden="true"><svg viewBox="0 0 200 130" width="64" height="48"><use href="#i-casa"/></svg></span><span><b>R$ 485.000</b>3 quartos · 140 m²</span></div>
+          <div class="msg out">Amei. Dá para visitar sábado de manhã?</div>
+          <div class="msg in typing" aria-hidden="true"><i></i><i></i><i></i></div>
+          <small>Prévia ilustrativa</small>
+        </div>
+      </div>
+      <div class="tile b2 rv" style="--d:1"><div class="mini-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><h3>Gente que mora em Maricá</h3><p>Sabemos qual rua alaga na chuva, onde passa o ônibus e qual escola fica perto. Isso também entra na escolha.</p></div>
+      <div class="tile b3 rv" style="--d:2"><div class="mini-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13l2 2 4-4"/></svg></div><h3>Documentação conferida antes</h3><p>Certidões e matrícula revisadas antes da proposta. E simulação de financiamento com bancos parceiros.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="como" aria-labelledby="cf-h" style="padding-top:0">
+  <div class="wrap how">
+    <div class="how-l"><p class="eyebrow">Como funciona</p><h2 id="cf-h" class="rv">Cinco passos até as chaves.</h2><p class="lead rv">Sem visita perdida e sem papelada surpresa. A cada etapa você sabe o que vem depois.</p><div style="margin-top:22px" class="rv"><button class="btn sea" type="button" data-demo><svg aria-hidden="true"><use href="#g-chat"/></svg>Falar com um corretor</button></div></div>
+    <ol class="stack">
+      <li style="--k:0"><span class="n">1</span><div><h3>Conte o que procura</h3><p>Bairro, orçamento, número de quartos e o que não pode faltar. Leva dois minutos pelo WhatsApp.</p></div></li>
+      <li style="--k:1"><span class="n">2</span><div><h3>Receba uma seleção</h3><p>Até cinco imóveis que fazem sentido, com fotos, planta e valores de condomínio e IPTU.</p></div></li>
+      <li style="--k:2"><span class="n">3</span><div><h3>Visite com o corretor</h3><p>Visitas agrupadas no mesmo dia, com o corretor contando o que o anúncio não mostra.</p></div></li>
+      <li style="--k:3"><span class="n">4</span><div><h3>Proposta e documentos</h3><p>Negociamos por você e conferimos a documentação antes de qualquer assinatura.</p></div></li>
+      <li style="--k:4"><span class="n">5</span><div><h3>Chaves na mão</h3><p>Acompanhamos o financiamento e a escritura até a entrega das chaves.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="dp-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><div><p class="eyebrow">Avaliações <span class="tag">exemplo</span></p><h2 id="dp-h" class="rv">Quem já encontrou o seu lugar.</h2></div><p class="rv" style="--d:1">Depoimentos de demonstração. No seu site, entram as avaliações reais dos seus clientes.</p></div>
+    <div class="quotes">
+      <figure class="quote rv" style="margin:0"><span class="st" aria-hidden="true">★★★★★</span><blockquote>“O corretor já sabia o que eu queria antes da primeira visita. Fechamos a casa em três semanas.”</blockquote><figcaption><span class="av" aria-hidden="true">R</span><span><b>Rafael T.</b> · comprou em Itaipuaçu</span><span class="tag">exemplo</span></figcaption></figure>
+      <figure class="quote rv" style="margin:0;--d:1"><span class="st" aria-hidden="true">★★★★★</span><blockquote>“Anunciaram meu apartamento com fotos lindas e só levaram visitas sérias.”</blockquote><figcaption><span class="av" aria-hidden="true">P</span><span><b>Patrícia L.</b> · vendeu no Centro</span><span class="tag">exemplo</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="duvidas" aria-labelledby="fq-h" style="padding-top:0">
+  <div class="wrap faq">
+    <div><p class="eyebrow">Dúvidas</p><h2 id="fq-h" class="rv">Perguntas que sempre aparecem.</h2><p class="lead rv">Se a sua não estiver aqui, um corretor responde pelo WhatsApp.</p></div>
+    <div class="qa rv">
+      <details open><summary>Vocês ajudam com o financiamento?<i aria-hidden="true"></i></summary><p>Sim. Fazemos a simulação com bancos parceiros, reunimos os documentos e acompanhamos a aprovação do crédito até a assinatura do contrato.</p></details>
+      <details><summary>Quanto custa para anunciar o meu imóvel?<i aria-hidden="true"></i></summary><p>O anúncio, as fotos e a avaliação não têm custo adiantado. A comissão só é cobrada quando a venda ou a locação é concluída, nas condições combinadas por escrito.</p></details>
+      <details><summary>Posso visitar no fim de semana?<i aria-hidden="true"></i></summary><p>Pode. Fazemos visitas aos sábados e, com agendamento, também aos domingos de manhã.</p></details>
+      <details><summary>Quais bairros vocês atendem?<i aria-hidden="true"></i></summary><p>Toda Maricá, com mais imóveis em Itaipuaçu, Centro, Ponta Negra, Barra de Maricá e São José do Imbassaí.</p></details>
+      <details><summary>Os imóveis do site estão disponíveis?<i aria-hidden="true"></i></summary><p>A vitrine é atualizada toda semana. Antes de marcar a visita, o corretor confirma a disponibilidade com o proprietário.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contato" aria-labelledby="lc-h" style="padding-top:0">
+  <div class="wrap loc">
+    <div class="loc-card rv">
+      <p class="eyebrow">Onde estamos</p>
+      <h2 id="lc-h">Passa aqui para um café.</h2>
+      <p class="lead">Rua das Palmeiras, 120, Centro, Maricá, RJ</p>
+      <dl><div><dt>Segunda a sexta</dt><dd>9h às 18h</dd></div><div><dt>Sábado</dt><dd>9h às 13h</dd></div><div><dt>Visitas</dt><dd>Com hora marcada</dd></div></dl>
+      <button class="btn sea" type="button" data-demo><svg aria-hidden="true"><use href="#g-chat"/></svg>Falar com um corretor</button>
+    </div>
+    <div class="map rv" style="--d:1">
+      <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mapa ilustrativo de Maricá com a lagoa, o mar e a localização da imobiliária no Centro">
+        <rect width="600" height="420" fill="#efe5d2"/>
+        <path d="M0 330C120 312 220 322 330 314C430 306 520 296 600 300V420H0Z" fill="#7fc3cf"/>
+        <path d="M0 312C120 294 220 304 330 296C430 288 520 278 600 282V300C520 296 430 306 330 314C220 322 120 312 0 330Z" fill="#f6e3bd"/>
+        <path d="M40 270C90 236 180 230 260 246C330 260 400 240 470 250C520 257 540 276 520 290C460 300 380 290 300 296C200 304 100 300 50 292C30 288 26 280 40 270Z" fill="#a9d8de"/>
+        <g fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.5"><path d="M120 272c20-4 30 4 50 0M300 270c20-4 30 4 50 0M420 266c16-3 24 3 40 0"/></g>
+        <g fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"><path d="M0 214C140 200 260 196 600 176"/><path d="M300 210V96M180 205C190 160 200 120 220 70M420 196C440 150 470 110 520 80"/></g>
+        <g fill="none" stroke="#d9c9a8" stroke-width="2"><path d="M0 214C140 200 260 196 600 176"/></g>
+        <g fill="#cfe6c8"><circle cx="90" cy="120" r="34"/><circle cx="130" cy="96" r="24"/><circle cx="500" cy="140" r="30"/><circle cx="540" cy="110" r="22"/></g>
+        <g font-family="Figtree,sans-serif" font-weight="700" fill="#0b2232"><text x="300" y="278" text-anchor="middle" font-size="17" fill="#0d5664">Lagoa de Maricá</text><text x="300" y="388" text-anchor="middle" font-size="17" fill="#0d4459">Oceano Atlântico</text><text x="128" y="236" text-anchor="middle" font-size="16" fill="#4b5d6b">Itaipuaçu</text><text x="466" y="232" text-anchor="middle" font-size="16" fill="#4b5d6b">Ponta Negra</text></g>
+        <circle class="ping" cx="300" cy="150" r="20" fill="#46c7b0" fill-opacity=".5"/>
+        <path d="M300 172s18-16 18-30a18 18 0 0 0-36 0c0 14 18 30 18 30z" fill="#0b2f45"/><circle cx="300" cy="142" r="6.5" fill="#46c7b0"/>
+        <rect x="214" y="88" width="172" height="34" rx="17" fill="#fffaf2"/><text x="300" y="111" text-anchor="middle" font-family="Figtree,sans-serif" font-size="16" font-weight="700" fill="#0b2232">Maré Alta · Centro</text>
+      </svg>
+      <span class="lbl">Mapa ilustrativo</span>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="fn-h">
+  <div class="wrap">
+    <div class="final rv">
+      <svg viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120C200 80 400 160 600 120S1000 80 1200 120V300H0Z" fill="#114a63"/><path d="M0 180C200 140 400 220 600 180S1000 140 1200 180V300H0Z" fill="#0d4459"/><path d="M0 240C200 210 400 270 600 240S1000 210 1200 240V300H0Z" fill="#072233"/></svg>
+      <h2 id="fn-h">A próxima casa pode estar a uma mensagem.</h2>
+      <p>Conte o que você procura e receba uma seleção de imóveis em Maricá ainda hoje.</p>
+      <button class="btn aqua" type="button" data-demo><svg aria-hidden="true"><use href="#g-chat"/></svg>Falar com um corretor</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="about"><a class="brand" href="#topo" aria-label="Maré Alta Imóveis, voltar ao topo"><span class="brand-mark" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12l7-6 7 6" stroke="#f4ecdd" stroke-width="2.4"/><path d="M3 18c3-3 5-3 8 0s5 3 8 0 4-2 4-2" stroke="#46c7b0" stroke-width="2.4"/></svg></span><span><b>Maré Alta</b><small>imóveis em Maricá</small></span></a><p>Compra, venda, aluguel e avaliação de imóveis em Maricá, RJ.</p></div>
+      <div><h4>Navegação</h4><ul><li><a href="#imoveis">Imóveis</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#como">Como funciona</a></li><li><a href="#duvidas">Dúvidas</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li><button class="lk" type="button" data-demo>WhatsApp</button></li><li><button class="lk" type="button" data-demo data-msg="Modelo demonstrativo: no seu site, este link abre o Instagram da imobiliária.">Instagram</button></li><li><a href="#contato">Rua das Palmeiras, 120</a></li></ul></div>
+      <div><h4>Horário</h4><ul><li><span class="lk">Seg a sex, 9h às 18h</span></li><li><span class="lk">Sábado, 9h às 13h</span></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 Maré Alta Imóveis, marca fictícia. O registro no CRECI entra aqui.</span><span><button class="lk" type="button" data-demo data-msg="Modelo demonstrativo: no seu site, este link abre a política de privacidade.">Política de privacidade</button> · Página criada pela <a href="https://wa.me/5521975340783?text=Ol%C3%A1!%20Gostei%20do%20modelo%20de%20imobili%C3%A1ria%20e%20quero%20uma%20p%C3%A1gina%20assim." target="_blank" rel="noopener">Beatus Mídias</a></span></div>
+  </div>
+</footer>
+
+<div class="dock" id="dock" aria-hidden="true">
+  <a class="btn ghost" href="#imoveis" aria-label="Ver imóveis" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-6 8 6v8a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></svg></a>
+  <button class="btn sea" type="button" data-demo tabindex="-1"><svg aria-hidden="true"><use href="#g-chat"/></svg>Falar com um corretor</button>
+</div>
+
+<div class="sheet-wrap" id="sheetWrap" hidden>
+  <div class="backdrop" id="backdrop"></div>
+  <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="shTitle">
+    <div class="grab" id="grab" aria-hidden="true"><span></span></div>
+    <div class="sh-head" id="shHead"><div><h3 id="shTitle">Imóvel</h3><p class="where" id="shWhere"></p></div><button class="sh-close" id="shClose" type="button" aria-label="Fechar detalhes"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l10 10M14 4L4 14"/></svg></button></div>
+    <div class="sh-body" id="shBody"></div>
+  </section>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var d=document,de=d.documentElement;de.classList.add('js');
+  var REDUZ=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(s,c){return(c||d).querySelector(s)}function $$(s,c){return[].slice.call((c||d).querySelectorAll(s))}
+  function brl(n){return 'R$ '+Math.round(n).toLocaleString('pt-BR')}
+
+  /* mola: integra x'' = -k(x - alvo) - c v; pode ser interrompida a qualquer momento */
+  function mola(st,alvo,o,upd,fim){cancelAnimationFrame(st.raf);var k=o.k||220,c=o.c||26,t0=performance.now();
+    function passo(t){var dt=Math.max(0,Math.min(.032,(t-t0)/1000));t0=t;for(var i=0;i<4;i++){var a=-k*(st.x-alvo)-c*st.v;st.v+=a*dt/4;st.x+=st.v*dt/4}
+      if(Math.abs(st.v)<4&&Math.abs(st.x-alvo)<.4){st.x=alvo;st.v=0;upd(alvo);if(fim)fim();return}upd(st.x);st.raf=requestAnimationFrame(passo)}
+    if(REDUZ){st.x=alvo;st.v=0;upd(alvo);if(fim)fim();return}st.raf=requestAnimationFrame(passo)}
+
+  /* ondas do hero: um período de 200 px repetido, para o loop não ter emenda */
+  $$('.wave').forEach(function(w,i){var a=10+i*1,dd='M-200 '+w.dataset.y;for(var k=0;k<16;k++)dd+='c50 '+(-a)+' 50 '+a+' 100 0s50 '+a+' 100 0';w.setAttribute('d',dd)});
+
+  if(!REDUZ&&d.visibilityState==='visible'){de.classList.add('anim');setTimeout(function(){de.classList.remove('anim')},4000)}
+
+  /* aviso dos botões do negócio fictício */
+  var toast=$('#toast'),tt,MSG='Modelo demonstrativo: no seu site, este botão abre o seu WhatsApp com a mensagem pronta.';
+  function avisa(m){toast.textContent=m||MSG;toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},4200)}
+  d.addEventListener('click',function(e){var b=e.target.closest('[data-demo]');if(!b)return;e.preventDefault();e.stopPropagation();avisa(b.getAttribute('data-msg'))},true);
+
+  /* rolagem suave nos links internos */
+  d.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href'),t=id.length>1&&d.getElementById(id.slice(1));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:REDUZ?'auto':'smooth',block:'start'});if(a.classList.contains('skip')){t.setAttribute('tabindex','-1');t.focus({preventScroll:true})}});
+
+  /* barra e dock reagem à rolagem; item ativo do menu */
+  (function(){var bar=$('#appbar'),dock=$('#dock'),links=$$('.links a'),secs=links.map(function(a){return $(a.getAttribute('href'))}),tick=false;
+    function up(){tick=false;var y=scrollY;bar.classList.toggle('scrolled',y>8);var on=y>520&&(innerHeight+y<de.scrollHeight-160);dock.classList.toggle('on',on);dock.setAttribute('aria-hidden',!on);$$('a,button',dock).forEach(function(x){x.tabIndex=on?0:-1});
+      var cur=null;secs.forEach(function(s){if(s&&s.getBoundingClientRect().top<=170)cur=s.id});links.forEach(function(a){if(a.getAttribute('href')==='#'+cur)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')})}
+    addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(up)}},{passive:true});up()})();
+
+  /* revelar por topo */
+  (function(){var els=$$('.rv');if(REDUZ||d.visibilityState!=='visible')return;var vh=innerHeight;
+    els.forEach(function(el){if(el.getBoundingClientRect().top>vh*.92)el.classList.add('hide')});
+    function sweep(){els.forEach(function(el){if(el.classList.contains('hide')&&el.getBoundingClientRect().top<innerHeight*.92)el.classList.remove('hide')})}
+    addEventListener('scroll',sweep,{passive:true});addEventListener('resize',sweep);addEventListener('load',sweep);
+    setTimeout(function(){els.forEach(function(el){el.classList.remove('hide')})},6000)})();
+
+  /* trilho arrastável com inércia e encaixe por mola */
+  var rail=$('#rail'),track=$('#lista'),cards=$$('.home',track),rs={x:0,v:0,raf:0},minX=0,moved=false;
+  function pinta(x){track.style.transform='translate3d('+x.toFixed(2)+'px,0,0)'}
+  function vis(){return cards.filter(function(c){return !c.hidden})}
+  function medir(){var v=vis(),last=v[v.length-1];if(!last){minX=0;return}var pad=parseFloat(getComputedStyle(rail).paddingLeft)*2;minX=Math.min(0,-(last.offsetLeft+last.offsetWidth-(rail.clientWidth-pad)));setas()}
+  function pontos(){return vis().map(function(c){return Math.max(minX,-c.offsetLeft)})}
+  function perto(x){var p=pontos(),b=0,dm=1e9;p.forEach(function(q){var dd=Math.abs(q-x);if(dd<dm){dm=dd;b=q}});return b}
+  function vaiPara(x,v){x=Math.max(minX,Math.min(0,x));rs.v=v||rs.v;mola(rs,x,{k:190,c:25},function(y){pinta(y);setas()})}
+  var prev=$('#prev'),next=$('#next');
+  function setas(){prev.disabled=rs.x>-4;next.disabled=rs.x<minX+4}
+  prev.addEventListener('click',function(){var p=pontos().filter(function(q){return q>rs.x+4});vaiPara(p.length?p[p.length-1]:0,0)});
+  next.addEventListener('click',function(){var p=pontos().filter(function(q){return q<rs.x-4});vaiPara(p.length?p[0]:minX,0)});
+  (function(){var sx,sy,sp,dr=false,id=null,am=[];
+    rail.addEventListener('pointerdown',function(e){if(e.button>0)return;sx=e.clientX;sy=e.clientY;sp=rs.x;dr=false;moved=false;id=e.pointerId;am=[{t:performance.now(),x:rs.x}];cancelAnimationFrame(rs.raf);rs.v=0});
+    rail.addEventListener('pointermove',function(e){if(id!==e.pointerId)return;var dx=e.clientX-sx,dy=e.clientY-sy;
+      if(!dr){if(Math.abs(dx)>7&&Math.abs(dx)>Math.abs(dy)){dr=true;moved=true;rail.setPointerCapture(id);rail.classList.add('drag')}else if(Math.abs(dy)>10){id=null;return}else return}
+      var x=sp+dx;if(x>0)x=x*.32;if(x<minX)x=minX+(x-minX)*.32;rs.x=x;pinta(x);var t=performance.now();am.push({t:t,x:x});while(am.length>2&&t-am[0].t>90)am.shift()});
+    function solta(e){if(id!==e.pointerId)return;id=null;if(!dr)return;dr=false;rail.classList.remove('drag');
+      var a=am[0],b=am[am.length-1],v=b.t>a.t?(b.x-a.x)/(b.t-a.t)*1000:0;rs.v=v;var proj=rs.x+v*.28;vaiPara(perto(Math.max(minX,Math.min(0,proj))),v)}
+    rail.addEventListener('pointerup',solta);rail.addEventListener('pointercancel',solta);
+    rail.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+    rail.addEventListener('focusin',function(e){var c=e.target.closest('.home');if(!c)return;rail.scrollLeft=0;var w=rail.clientWidth,l=c.offsetLeft+rs.x;if(l<0||l+c.offsetWidth>w-20)vaiPara(-c.offsetLeft,0)});
+    addEventListener('resize',function(){medir();vaiPara(perto(rs.x),0)});
+    if(d.fonts&&d.fonts.ready)d.fonts.ready.then(medir);medir();
+  })();
+
+  /* filtros: abas por tipo (indicador com mola) e chips por bairro */
+  var tipo='todos',bairro='todos',tabs=$$('#tabs [role=tab]'),ind=$('#tabs .ind'),chips=$$('#chips .chip'),count=$('#count'),vazio=$('#vazio');
+  function poeInd(tab,anima){var r=tab.offsetLeft,w=tab.offsetWidth,old=ind.getBoundingClientRect(),oldL=ind.offsetLeft,oldW=ind.offsetWidth;ind.style.left=r+'px';ind.style.width=w+'px';
+    if(anima&&!REDUZ&&oldW&&ind.animate)ind.animate([{transform:'translateX('+(oldL-r)+'px) scaleX('+(oldW/w)+')',transformOrigin:'left'},{transform:'none',transformOrigin:'left'}],{duration:520,easing:'cubic-bezier(.3,1.32,.5,1)'})}
+  function filtra(anima){var n=0;cards.forEach(function(c){var ok=(tipo==='todos'||c.dataset.tipo===tipo)&&(bairro==='todos'||c.dataset.bairro===bairro);c.hidden=!ok;if(ok)n++});
+    count.textContent=n===1?'1 imóvel':n+' imóveis';vazio.hidden=n>0;medir();rs.x=0;rs.v=0;cancelAnimationFrame(rs.raf);pinta(0);setas();
+    if(anima&&!REDUZ)vis().forEach(function(c,i){c.animate([{opacity:0,transform:'translateY(18px) scale(.96)'},{opacity:1,transform:'none'}],{duration:620,delay:i*55,easing:'cubic-bezier(.3,1.3,.5,1)',fill:'backwards'})})}
+  function escolheTab(i,foco){tabs.forEach(function(t,k){var on=k===i;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1});track.setAttribute('aria-labelledby',tabs[i].id);poeInd(tabs[i],true);tipo=tabs[i].dataset.tipo;if(foco)tabs[i].focus();filtra(true)}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){escolheTab(i)});t.addEventListener('keydown',function(e){var n=null;if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;if(n!==null){e.preventDefault();escolheTab(n,true)}})});
+  chips.forEach(function(c){c.addEventListener('click',function(){chips.forEach(function(x){x.setAttribute('aria-pressed',x===c)});bairro=c.dataset.bairro;filtra(true)})});
+  poeInd(tabs[0],false);if(d.fonts&&d.fonts.ready)d.fonts.ready.then(function(){poeInd(tabs.filter(function(t){return t.getAttribute('aria-selected')==='true'})[0],false)});
+  addEventListener('resize',function(){poeInd(tabs.filter(function(t){return t.getAttribute('aria-selected')==='true'})[0],false)});
+
+  /* busca do hero aplica os filtros e leva até a vitrine */
+  $('#busca').addEventListener('submit',function(e){e.preventDefault();var t=$('#sTipo').value,b=$('#sBairro').value;var ti=tabs.map(function(x){return x.dataset.tipo}).indexOf(t);bairro=b;chips.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.bairro===b)});escolheTab(ti<0?0:ti);$('#imoveis').scrollIntoView({behavior:REDUZ?'auto':'smooth'})});
+
+  /* folha de detalhes com mola, arrastável para fechar */
+  var wrap=$('#sheetWrap'),sheet=$('#sheet'),bd=$('#backdrop'),body=$('#shBody'),ss={x:0,v:0,raf:0},H=600,origem=null,aberta=false;
+  function poe(y){sheet.style.transform='translate3d(0,'+y.toFixed(2)+'px,0)';bd.style.opacity=Math.max(0,Math.min(1,1-y/H)).toFixed(3)}
+  function parcela(p){var f=p*.8,i=Math.pow(1.105,1/12)-1;return Math.round((f/360+f*i)/10)*10}
+  function abre(card,quem){var c=card.dataset,art=$('.home-art',card),tp=c.tipo,feat=c.feat.split('|'),pl=tp==='casa'?'p-casa':tp==='apartamento'?'p-apto':'p-lote';
+    $('#shTitle').textContent=$('.title',card).textContent;$('#shWhere').innerHTML='<svg aria-hidden="true"><use href="#g-pin"/></svg>'+c.bairro+', Maricá · Ref. '+c.ref;
+    var specs=tp==='terreno'?'<span><svg aria-hidden="true"><use href="#g-area"/></svg>'+c.area+' m²</span>':'<span><svg aria-hidden="true"><use href="#g-bed"/></svg>'+c.qts+' quartos</span><span><svg aria-hidden="true"><use href="#g-car"/></svg>'+c.vagas+(c.vagas==='1'?' vaga':' vagas')+'</span><span><svg aria-hidden="true"><use href="#g-area"/></svg>'+c.area+' m²</span>';
+    var sim=tp==='terreno'?'<div class="box sim"><h4>Condições</h4><b>Aceita proposta</b><small>Terrenos têm linhas de crédito próprias. O corretor apresenta as opções.</small></div>':'<div class="box sim"><h4>Parcela estimada</h4><b>'+brl(parcela(+c.preco))+' por mês</b><small>Entrada de '+brl(c.preco*.2)+', 30 anos, tabela SAC, juros de 10,5% ao ano. Simulação ilustrativa, sujeita à análise do banco.</small></div>';
+    body.innerHTML='<div class="sh-art" style="'+art.getAttribute('style')+';background:linear-gradient(180deg,var(--sky1),var(--sky2))">'+art.querySelector('svg').outerHTML+'</div>'+
+      '<div class="sh-price"><b>'+brl(+c.preco)+'</b><span>'+(tp==='apartamento'?'Condomínio a consultar · IPTU a consultar':'IPTU a consultar')+'</span></div><div class="specs">'+specs+'</div>'+
+      '<p>'+c.desc+'</p><ul class="feat">'+feat.map(function(f){return '<li>'+f+'</li>'}).join('')+'</ul>'+
+      '<div class="sh-grid"><div class="box"><h4>'+(tp==='terreno'?'Desenho do lote':'Planta ilustrativa')+'</h4><svg viewBox="0 0 220 150" role="img" aria-label="Planta ilustrativa"><use href="#'+pl+'"/></svg></div>'+sim+'</div>'+
+      '<div class="sh-actions"><button class="btn sea" type="button" data-demo>Quero visitar</button><button class="btn aqua" type="button" data-demo>Falar com um corretor</button></div>';
+    origem=quem||$('.home-open',card);wrap.hidden=false;de.classList.add('lock');H=sheet.offsetHeight||600;
+    if(!aberta){ss.x=H;ss.v=0;poe(H)}aberta=true;mola(ss,0,{k:240,c:24},poe);setTimeout(function(){$('#shClose').focus({preventScroll:true})},30)}
+  function fecha(v){if(!aberta)return;aberta=false;ss.v=v||0;mola(ss,H,{k:260,c:30},poe,function(){wrap.hidden=true;de.classList.remove('lock');if(origem)origem.focus({preventScroll:true})})}
+  track.addEventListener('click',function(e){var c=e.target.closest('.home');if(!c||e.target.closest('[data-demo]'))return;abre(c)});
+  $$('[data-open]').forEach(function(b){b.addEventListener('click',function(){abre(cards.filter(function(c){return c.dataset.id===b.dataset.open})[0],b)})});
+  $('#shClose').addEventListener('click',function(){fecha(0)});bd.addEventListener('click',function(){fecha(0)});
+  d.addEventListener('keydown',function(e){if(!aberta)return;if(e.key==='Escape'){fecha(0);return}
+    if(e.key==='Tab'){var f=$$('button,a[href]',sheet).filter(function(x){return x.offsetParent}),a=f[0],z=f[f.length-1];if(e.shiftKey&&d.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&d.activeElement===z){e.preventDefault();a.focus()}}});
+  (function(){var sy,sp,id=null,am=[];
+    function ini(e){if(e.target.closest('.sh-close'))return;id=e.pointerId;sy=e.clientY;sp=ss.x;am=[{t:performance.now(),y:ss.x}];cancelAnimationFrame(ss.raf);e.currentTarget.setPointerCapture(id)}
+    function mov(e){if(id!==e.pointerId)return;var y=sp+(e.clientY-sy);if(y<0)y=y*.25;ss.x=y;poe(y);var t=performance.now();am.push({t:t,y:y});while(am.length>2&&t-am[0].t>90)am.shift()}
+    function fim(e){if(id!==e.pointerId)return;id=null;var a=am[0],b=am[am.length-1],v=b.t>a.t?(b.y-a.y)/(b.t-a.t)*1000:0;if(v>650||ss.x>H*.33)fecha(v);else{ss.v=v;mola(ss,0,{k:240,c:24},poe)}}
+    [$('#grab'),$('#shHead')].forEach(function(el){el.addEventListener('pointerdown',ini);el.addEventListener('pointermove',mov);el.addEventListener('pointerup',fim);el.addEventListener('pointercancel',fim)})})();
+})();
+</script>
+</body>
+</html>

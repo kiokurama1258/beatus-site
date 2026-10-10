@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Sol Forte Energia Solar · Cabo Frio, RJ · Modelo demonstrativo</title>
+<meta name="description" content="Modelo demonstrativo da Beatus Mídias para empresa de energia solar. Marca fictícia.">
+<meta name="theme-color" content="#f1f0eb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ff5b14'/%3E%3Cpath d='M4 28a12 12 0 0 1 24 0z' fill='%23141518'/%3E%3C/svg%3E">
+<script>if(/[?&]thumb=1/.test(location.search))document.documentElement.classList.add('thumb');</script>
+<style>
+@font-face{font-family:"Archivo";src:url("fontes/archivo-latin-wdth-normal.woff2") format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url("fontes/jetbrains-mono-latin-wght-normal.woff2") format("woff2");font-weight:100 800;font-display:swap}
+:root{
+  --paper:#f1f0eb; --paper-2:#e7e5de; --ink:#141518; --ink-2:#3d4047; --mute:#5a5e66;
+  --graph:#1b1d21; --graph-2:#26292f; --graph-3:#33373f; --on-graph:#ecebe6; --on-graph-mute:#a9adb5;
+  --or:#ff5b14; --or-ink:#b23c09; --line:rgba(20,21,24,.16); --line-d:rgba(236,235,230,.14);
+  --demo-h:44px; --head-h:60px;
+  --sans:"Archivo","Arial Narrow",Arial,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --mech:cubic-bezier(.65,0,.25,1); --out:cubic-bezier(.22,1,.36,1);
+}
+@media (min-width:760px){:root{--demo-h:38px;--head-h:68px}}
+.thumb{--demo-h:0px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--demo-h) + var(--head-h) + 12px);-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);font-stretch:100%;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+h1,h2,h3{font-weight:800;line-height:.95;letter-spacing:-.035em;text-wrap:balance}
+p{text-wrap:pretty}
+:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--ink);color:var(--paper);padding:12px 16px;font:600 15px var(--mono);transition:transform .2s}
+.skip:focus{transform:translateY(calc(60px + var(--demo-h) + 8px))}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+@media (min-width:760px){.wrap{padding:0 32px}}
+@media (min-width:1500px){.wrap{max-width:1320px}}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;font-weight:500}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* faixa demo */
+.demo-bar{position:fixed;inset:0 0 auto 0;z-index:120;height:var(--demo-h);background:var(--ink);color:#d9d8d2;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 0 0 14px;font:500 12px/1.25 var(--sans);font-stretch:92%;letter-spacing:.01em;border-bottom:2px solid var(--or)}
+.demo-bar p{display:flex;flex-direction:column}
+.demo-bar a{display:flex;align-items:center;height:100%;padding:0 14px;background:var(--or);color:var(--ink);font-weight:700;text-decoration:none;max-width:9em;line-height:1.15;flex:none}
+.demo-bar a:hover{background:#ff7a3f}
+.demo-bar a{position:relative}.demo-bar a::after{content:"";position:absolute;inset:-2px 0 -4px}
+@media (min-width:760px){.demo-bar{padding-left:24px;font:500 12px/1.25 var(--mono);letter-spacing:.02em}.demo-bar p{flex-direction:row;gap:.6em}.demo-bar p span+span::before{content:"· ";}.demo-bar a{max-width:none;padding:0 22px}}
+.thumb .demo-bar{display:none}
+
+/* cabecalho */
+.head{position:sticky;top:var(--demo-h);z-index:100;background:rgba(241,240,235,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+body{padding-top:var(--demo-h)}
+.head .wrap{height:var(--head-h);display:flex;align-items:center;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-height:44px}
+.logo-mark{width:34px;height:34px;flex:none}
+.logo b{font-weight:850;font-stretch:118%;font-size:17px;letter-spacing:-.02em;line-height:1;white-space:nowrap}
+.logo small{display:block;font:500 11px/1.2 var(--mono);letter-spacing:.12em;color:var(--mute);margin-top:3px}
+.nav{display:none}
+.nav a{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;text-decoration:none;padding:10px 4px;position:relative;color:var(--ink-2)}
+.nav a::after{content:"";position:absolute;left:4px;right:4px;bottom:4px;height:2px;background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--mech)}
+.nav a:hover::after,.nav a.active::after{transform:scaleX(1)}
+.nav a.active{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:0 20px;background:var(--or);color:var(--ink);font:750 15px/1 var(--sans);font-stretch:105%;letter-spacing:-.01em;text-decoration:none;border:2px solid var(--ink);transition:transform .2s var(--mech),box-shadow .2s var(--mech);box-shadow:4px 4px 0 var(--ink)}
+.btn .ar{display:inline-block;transition:transform .25s var(--mech)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:hover .ar{transform:translateX(4px)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn.ghost{background:transparent;box-shadow:none;border-color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper);transform:none}
+.btn.sm{min-height:44px;padding:0 14px;font-size:14px;box-shadow:3px 3px 0 var(--ink)}
+.menu-btn{width:44px;height:44px;border:1.5px solid var(--ink);display:grid;place-items:center}
+.menu-btn i{display:block;width:18px;height:2px;background:var(--ink);box-shadow:0 6px 0 var(--ink),0 -6px 0 var(--ink)}
+.mnav{position:fixed;left:0;right:0;top:calc(var(--demo-h) + var(--head-h));background:var(--paper);border-bottom:2px solid var(--ink);padding:8px 20px 20px;display:none;z-index:99}
+.mnav.open{display:block}
+.mnav a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font:600 20px var(--sans);font-stretch:110%}
+.mnav a span{font:500 12px var(--mono);color:var(--mute)}
+.head .btn.sm .lg{display:none}
+@media (min-width:980px){.nav{display:flex;gap:18px}.menu-btn,.mnav{display:none!important}.head .btn.sm .lg{display:inline}}
+@media (max-width:520px){.logo small{display:none}.head .btn.sm{padding:0 12px}.head .btn.sm .ar{display:none}}
+@media (max-width:379px){.head .btn.sm{padding:0 10px;font-size:13px}.logo-mark{width:28px;height:28px}}
+
+/* secoes base */
+.sec{padding:84px 0;position:relative}
+@media (min-width:760px){.sec{padding:120px 0}}
+.sec-head{display:grid;gap:18px;margin-bottom:44px;border-top:2px solid var(--ink);padding-top:16px}
+.sec-head .mono{display:flex;flex-wrap:wrap;gap:4px 18px;justify-content:space-between;color:var(--mute)}
+.sec-head h2{font-size:clamp(2.4rem,7vw,5.4rem);font-stretch:82%}
+.sec-head p{max-width:56ch;color:var(--ink-2)}
+@media (min-width:980px){.sec-head{grid-template-columns:repeat(12,1fr);column-gap:24px}.sec-head .mono{grid-column:1/-1}.sec-head h2{grid-column:1/8}.sec-head p{grid-column:8/13;align-self:end}}
+.dark{background:var(--graph);color:var(--on-graph)}
+.dark .sec-head{border-color:var(--on-graph)}
+.dark .sec-head .mono,.dark .sec-head p{color:var(--on-graph-mute)}
+
+/* HERO */
+.hero{position:relative;padding:34px 0 0;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,var(--line) 1px,transparent 1px) 0 0/25% 100%;max-width:1240px;margin:0 auto;opacity:.55}
+@media (min-width:760px){.hero::before{background-size:calc(100%/12) 100%}}
+.hero-meta{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--mute);padding-bottom:14px;border-bottom:1px solid var(--line)}
+.hero-meta b{color:var(--ink);font-weight:600}
+.hero h1{font-size:clamp(3.1rem,15vw,10rem);font-stretch:78%;font-weight:850;line-height:.86;letter-spacing:-.045em;margin:26px 0 22px;text-wrap:initial}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .ln>span{display:inline-block}
+.hero h1 .hl{background:var(--or);padding:0 .08em;margin-left:-.04em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero-grid{display:grid;gap:30px;position:relative}
+.hero-copy p{font-size:clamp(1.05rem,1rem + .4vw,1.3rem);line-height:1.5;color:var(--ink-2);max-width:40ch}
+.hero-copy p strong{color:var(--ink);font-weight:650}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.hero-specs{margin-top:0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+.hero-specs div{padding:12px 12px 14px 0;border-bottom:1px solid var(--line)}
+.hero-specs div:nth-child(odd){border-right:1px solid var(--line)}
+.hero-specs div:nth-child(even){padding-left:14px}
+.hero-specs dt{color:var(--mute)}
+.hero-specs dd{font-weight:800;font-stretch:85%;font-size:1.5rem;letter-spacing:-.02em;line-height:1.1;margin-top:4px}
+.diagram{position:relative;border:1.5px solid var(--ink);background:var(--paper);align-self:start}
+.diagram svg{width:100%;height:auto}
+.diag-top,.diag-bot{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;font:500 11.5px/1.3 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.diag-top{border-bottom:1px solid var(--line);color:var(--mute)}
+.diag-bot{border-top:1.5px solid var(--ink);background:var(--ink);color:var(--paper);flex-wrap:wrap}
+.diag-bot span b{color:var(--or);font-weight:600}
+.cursor{display:inline-block;width:.6em;height:1.05em;background:var(--or);vertical-align:-.18em;margin-left:2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (max-width:640px){#sunsvg text{font-size:21px}#sunsvg text.sm{font-size:17px}}
+.sun-rays{transform-box:fill-box;transform-origin:center;animation:spin 24s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (min-width:980px){
+  .hero{padding-top:40px}
+  .hero-grid{grid-template-columns:repeat(12,1fr);column-gap:24px}
+  .hero-copy{grid-column:1/6;grid-row:1}
+  .diagram{grid-column:6/13;grid-row:1/3;margin-top:-6px}
+  .hero-specs{grid-column:1/6;grid-row:2;align-self:end}
+}
+.site-data{display:none}
+@media (min-width:1100px){
+  .hero-top{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end}
+  .hero-top h1{grid-column:1/10}
+  .site-data{display:block;grid-column:10/13;margin-bottom:26px;border-top:2px solid var(--ink);padding-top:10px}
+  .site-data>.mono{color:var(--mute)}
+  .site-data dl div{padding:12px 0;border-bottom:1px solid var(--line)}
+  .site-data dt{color:var(--mute)}
+  .site-data dd{font-weight:850;font-stretch:72%;font-size:2.6rem;line-height:1;letter-spacing:-.02em;margin-top:6px}
+  .site-data dd small{display:block;font:500 12px/1.3 var(--mono);letter-spacing:.02em;color:var(--ink-2);margin-top:4px}
+  .site-data p{color:var(--mute);margin-top:10px}
+}
+/* entrada do hero (so com .anim, que o JS liga se a aba estiver visivel) */
+.anim .hero h1 .ln>span{animation:lineUp .9s var(--mech) both;animation-delay:calc(var(--i,0)*110ms + 80ms)}
+.anim .hero .hin{animation:fadeUp .7s var(--out) both;animation-delay:calc(var(--i,0)*90ms + 380ms)}
+@keyframes lineUp{from{transform:translateY(105%)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}}
+.anim-done .hero h1 .ln>span,.anim-done .hero .hin{animation:none}
+
+/* faixa de numeros */
+.stats{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin-top:56px;background:var(--paper)}
+.stats .wrap{display:grid;grid-template-columns:1fr 1fr}
+.stat{padding:22px 14px 22px 0;border-bottom:1px solid var(--line)}
+.stat:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+.stat .big{display:flex;align-items:baseline;font-weight:850;font-stretch:70%;font-size:clamp(2.6rem,9vw,4.6rem);line-height:1;letter-spacing:-.03em}
+.stat .big small{font-size:.42em;font-stretch:90%;margin-left:.12em;letter-spacing:0}
+.stat p{font-size:14.5px;line-height:1.4;color:var(--ink-2);margin-top:8px;max-width:22ch}
+.stars{display:inline-flex;gap:2px;color:var(--or-ink);font-size:14px;margin-top:6px}
+.tag{display:inline-block;font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;border:1px solid currentColor;padding:4px 6px;vertical-align:middle}
+.stats-note{grid-column:1/-1;padding:12px 0;color:var(--mute)}
+@media (min-width:980px){.stats .wrap{grid-template-columns:repeat(4,1fr)}.stat{border-bottom:0;padding:28px 18px}.stat+.stat{border-left:1px solid var(--line)}.stat:first-child{padding-left:0}.stats-note{border-top:1px solid var(--line)}}
+
+/* odometro */
+.odo{display:inline-flex;font-variant-numeric:tabular-nums}
+.odo .od{display:inline-block;height:1em;overflow:hidden;line-height:1;vertical-align:top}
+.odo .ods{display:block;transition:transform 1s var(--mech)}
+.odo .ods span{display:block;height:1em;line-height:1;text-align:center}
+.odo .oc{display:inline-block;line-height:1}
+
+/* SIMULADOR */
+.sim-grid{display:grid;gap:28px}
+.sim-in{border:1px solid var(--line-d);background:var(--graph-2);padding:22px}
+.sim-in label,.sim-in .lab{display:block;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--on-graph-mute);margin-bottom:10px}
+.money{display:flex;align-items:baseline;gap:10px;border-bottom:2px solid var(--or);padding-bottom:6px}
+.money span{font:600 1.6rem var(--mono);color:var(--on-graph-mute)}
+.money input{width:100%;background:none;border:0;color:var(--on-graph);font:850 clamp(3rem,12vw,5.2rem)/1 var(--sans);font-stretch:72%;letter-spacing:-.03em;font-variant-numeric:tabular-nums;min-width:0}
+.money input:focus{outline:none}
+.money:focus-within{border-bottom-color:#fff}
+.range{width:100%;margin:22px 0 4px;-webkit-appearance:none;appearance:none;height:44px;background:transparent;--fill:10%}
+.range::-webkit-slider-runnable-track{height:8px;background:linear-gradient(to right,var(--or) var(--fill),var(--graph-3) var(--fill))}
+.range::-moz-range-track{height:8px;background:linear-gradient(to right,var(--or) var(--fill),var(--graph-3) var(--fill))}
+.range::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-11px;background:var(--on-graph);border:3px solid var(--or)}
+.range::-moz-range-thumb{width:24px;height:24px;border-radius:0;background:var(--on-graph);border:3px solid var(--or)}
+.range-lims{display:flex;justify-content:space-between;color:var(--on-graph-mute)}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line-d);margin-top:6px}
+.seg label{margin:0;display:block;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:flex;align-items:center;justify-content:center;min-height:46px;font:600 13px var(--mono);letter-spacing:.04em;color:var(--on-graph-mute);text-transform:uppercase;transition:background .2s,color .2s}
+.seg label+label span{border-left:1px solid var(--line-d)}
+.seg input:checked+span{background:var(--on-graph);color:var(--ink)}
+.seg input:focus-visible+span{outline:3px solid var(--or);outline-offset:-3px}
+.cmp{margin-top:26px;display:grid;gap:10px;border-top:1px solid var(--line-d);padding-top:18px}
+.cmp-row{display:grid;grid-template-columns:92px 1fr 78px;gap:12px;align-items:center}
+.cmp-row .mono{color:var(--on-graph-mute)}
+.cmp-row .bar{height:14px;background:var(--graph-3);overflow:hidden}
+.cmp-row .bar i{display:block;height:100%;background:var(--on-graph-mute);transform-origin:left;transition:transform .8s var(--mech)}
+.cmp-row .bar i.or{background:var(--or)}
+.cmp-row b{font:600 14px var(--mono);text-align:right}
+.assume{margin-top:22px;font:400 13px/1.55 var(--mono);color:var(--on-graph-mute)}
+.assume b{color:var(--on-graph);font-weight:500}
+.sim-out{border:1px solid var(--line-d)}
+.out-main{padding:22px;border-bottom:1px solid var(--line-d);background:var(--or);color:var(--ink)}
+.out-main .lab{font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.out-main .val{display:flex;align-items:baseline;gap:.15em;font-weight:850;font-stretch:68%;font-size:clamp(3.6rem,17vw,8.2rem);line-height:.92;letter-spacing:-.03em;margin-top:8px}
+.out-main .val small{font-size:.32em;font-stretch:90%;letter-spacing:0}
+.out-main p{font:500 13px/1.4 var(--mono);margin-top:10px}
+.out-cells{display:grid;grid-template-columns:1fr 1fr}
+.cell{padding:16px 16px 18px;border-bottom:1px solid var(--line-d)}
+.cell:nth-child(odd){border-right:1px solid var(--line-d)}
+.cell .lab{font:500 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--on-graph-mute)}
+.cell .v{font-weight:800;font-stretch:75%;font-size:clamp(1.9rem,6vw,2.8rem);line-height:1;letter-spacing:-.02em;margin-top:8px;display:flex;align-items:baseline;gap:.12em}
+.cell .v small{font-size:.5em;font-stretch:95%;letter-spacing:0;color:var(--on-graph-mute)}
+.roof{padding:18px 16px;display:grid;gap:12px}
+.roof-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:4px}
+.roof-grid i{aspect-ratio:1/1.5;background:var(--graph-3);position:relative;overflow:hidden}
+.roof-grid i::after{content:"";position:absolute;inset:0;background:var(--or);transform:scaleY(0);transform-origin:bottom;transition:transform .45s var(--mech);transition-delay:calc(var(--k,0)*12ms)}
+.roof-grid i.on::after{transform:none}
+.sim-cta{padding:18px 16px 20px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;border-top:1px solid var(--line-d)}
+.sim-cta .btn{box-shadow:4px 4px 0 var(--on-graph);border-color:var(--on-graph)}
+.sim-cta .btn:hover{box-shadow:6px 6px 0 var(--on-graph)}
+.sim-cta .tag{color:var(--or)}
+@media (min-width:980px){.sim-grid{grid-template-columns:5fr 7fr;gap:24px}.sim-in{padding:30px}.out-cells{grid-template-columns:repeat(4,1fr)}.cell:nth-child(odd){border-right:0}.cell+.cell{border-left:1px solid var(--line-d)}.roof-grid{grid-template-columns:repeat(16,1fr)}}
+
+/* servicos (tabela) */
+.svc{border-top:2px solid var(--ink)}
+.svc-row{position:relative;display:grid;grid-template-columns:44px 1fr;gap:4px 14px;padding:20px 0;border-bottom:1px solid var(--line);isolation:isolate}
+.svc-row::before{content:"";position:absolute;inset:0 -12px;background:var(--or);z-index:-1;transform:scaleX(0);transform-origin:left;transition:transform .35s var(--mech)}
+.svc-row .n{font:600 13px var(--mono);color:var(--or-ink);padding-top:6px}
+.svc-row h3{font-size:clamp(1.5rem,4.4vw,2.4rem);font-stretch:88%;letter-spacing:-.03em}
+.svc-row p{grid-column:2;color:var(--ink-2);font-size:16px;max-width:52ch}
+.svc-row .meta{grid-column:2;display:flex;flex-wrap:wrap;gap:6px 16px;color:var(--mute);margin-top:6px}
+.svc-row .go{display:none}
+@media (hover:hover){.svc-row:hover::before{transform:none}.svc-row:hover .n,.svc-row:hover .meta,.svc-row:hover p{color:var(--ink)}}
+@media (min-width:980px){
+  .svc-row{grid-template-columns:70px 4fr 4fr 2fr 48px;align-items:start;padding:26px 0}
+  .svc-row p{grid-column:auto}
+  .svc-row .meta{grid-column:auto;flex-direction:column;margin-top:4px}
+  .svc-row .go{display:block;font:500 26px var(--mono);transition:transform .3s var(--mech);justify-self:end}
+  .svc-row:hover .go{transform:translateX(6px)}
+}
+
+/* diferencial */
+.dif{display:grid;gap:34px}
+.dif-num{border-top:2px solid var(--ink);padding-top:16px}
+.dif-num .g{font-weight:900;font-stretch:62%;font-size:clamp(11rem,46vw,22rem);line-height:.8;letter-spacing:-.05em;color:var(--ink)}
+.dif-num .g span{color:var(--or);-webkit-text-stroke:0}
+.dif-num p{font-weight:700;font-stretch:90%;font-size:1.35rem;line-height:1.15;max-width:18ch;margin-top:10px;letter-spacing:-.02em}
+.dif-list{list-style:none;border-top:2px solid var(--ink)}
+.dif-list li{display:grid;grid-template-columns:52px 1fr;gap:4px 12px;padding:22px 0;border-bottom:1px solid var(--line)}
+.dif-list .mono{color:var(--or-ink);padding-top:5px}
+.dif-list h3{font-size:1.45rem;font-stretch:92%;letter-spacing:-.02em;line-height:1.08}
+.dif-list p{grid-column:2;color:var(--ink-2);font-size:16px}
+@media (min-width:980px){.dif{grid-template-columns:5fr 7fr;gap:24px}}
+
+/* passos */
+.steps{position:relative}.steps-ol{display:grid;gap:0;list-style:none}
+.steps::before{content:"";position:absolute;left:15px;top:8px;bottom:8px;width:2px;background:var(--line-d)}
+.steps .rail{position:absolute;left:15px;top:8px;bottom:8px;width:2px;background:var(--or);transform-origin:top;transform:scaleY(var(--p,1))}
+.step{position:relative;padding:0 0 34px 52px}
+.step::before{content:"";position:absolute;left:8px;top:6px;width:16px;height:16px;background:var(--graph);border:2px solid var(--or)}
+.step .mono{color:var(--or);display:flex;gap:12px}
+.step .mono em{font-style:normal;color:var(--on-graph-mute)}
+.step h3{font-size:1.6rem;font-stretch:88%;margin:8px 0 8px;letter-spacing:-.02em;line-height:1.05}
+.step p{color:var(--on-graph-mute);font-size:16px;max-width:36ch}
+.steps-foot{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;border-top:1px solid var(--line-d);padding-top:24px;margin-top:10px}
+.steps-foot p{font:500 13px/1.5 var(--mono);color:var(--on-graph-mute);max-width:52ch}
+.steps-foot .btn{box-shadow:4px 4px 0 var(--on-graph);border-color:var(--on-graph)}
+@media (min-width:980px){
+  .steps{padding-top:40px}.steps-ol{grid-template-columns:repeat(5,1fr);gap:24px}
+  .steps::before,.steps .rail{left:0;right:0;top:15px;bottom:auto;height:2px;width:auto}
+  .steps .rail{transform-origin:left;transform:scaleX(var(--p,1))}
+  .step{padding:0}
+  .step::before{left:0;top:-33px}
+}
+
+/* projetos */
+.proj{display:grid;gap:20px}
+.pj{border:1.5px solid var(--ink);background:var(--paper);display:flex;flex-direction:column;transition:transform .3s var(--mech),box-shadow .3s var(--mech)}
+@media (hover:hover){.pj:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--or)}}
+.pj figure{position:relative;border-bottom:1.5px solid var(--ink);background:repeating-linear-gradient(0deg,transparent 0 23px,rgba(20,21,24,.06) 23px 24px),repeating-linear-gradient(90deg,transparent 0 23px,rgba(20,21,24,.06) 23px 24px)}
+.pj figure svg{width:100%;height:auto}
+.pj figcaption{position:absolute;right:10px;bottom:10px;font:500 11.5px var(--mono);letter-spacing:.04em;background:var(--paper);border:1px solid var(--ink);padding:4px 7px;text-transform:uppercase}
+.pj-body{padding:14px 16px 16px;display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:end}
+.pj-body h3{font-size:1.4rem;font-stretch:90%;letter-spacing:-.02em;line-height:1.1}
+.pj-body .mono{color:var(--mute);grid-column:1}
+.pj-body .kwp{grid-row:1/3;grid-column:2;font-weight:850;font-stretch:70%;font-size:2.4rem;line-height:1;letter-spacing:-.03em}
+.pj-body .kwp small{font-size:.42em;font-stretch:95%}
+@media (min-width:980px){.proj{grid-template-columns:7fr 5fr;grid-template-rows:auto auto}.pj.big{grid-row:1/3}.pj.big figure{flex:1;display:flex;align-items:center}}
+
+/* depoimentos */
+.quotes{display:grid;gap:20px}
+.qt{border-top:2px solid var(--ink);padding-top:20px;display:grid;gap:16px;align-content:start}
+.qt blockquote{font-weight:600;font-stretch:92%;font-size:clamp(1.35rem,3.6vw,1.9rem);line-height:1.18;letter-spacing:-.02em}
+.qt .who{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;color:var(--mute)}
+.qt .who b{color:var(--ink);font:600 15px var(--sans)}
+.qt .bill{display:flex;gap:10px;align-items:center;font:600 14px var(--mono)}
+.qt .bill s{color:var(--mute)}
+.qt .bill b{background:var(--or);padding:2px 6px}
+.qt .tag{color:var(--or-ink)}
+.rating{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding:6px 0 0}
+@media (min-width:980px){.sec-head .rating{grid-column:8/13;align-self:end;justify-content:flex-end}}
+.rating .r{font-weight:850;font-stretch:70%;font-size:3.4rem;line-height:1}
+.rating .stars{font-size:20px}
+@media (min-width:980px){.quotes{grid-template-columns:1fr 1fr;gap:24px}}
+
+/* FAQ */
+.faq{display:grid;gap:36px}
+.faq-side{border-top:2px solid var(--ink);padding-top:16px;display:grid;gap:18px;align-content:start}
+.faq-side h2{font-size:clamp(2.4rem,7vw,4.8rem);font-stretch:82%}
+.faq-box{border:1.5px solid var(--ink);padding:20px;display:grid;gap:14px;background:var(--paper-2)}
+.faq-box p{color:var(--ink-2);font-size:16px}
+.faq-list{border-top:2px solid var(--ink)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:40px 1fr 28px;gap:10px;padding:20px 0;font-weight:700;font-stretch:95%;font-size:1.15rem;line-height:1.3;letter-spacing:-.01em;min-height:44px}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary .mono{color:var(--or-ink);padding-top:3px}
+.faq-list summary::after{content:"+";font:500 24px/1 var(--mono);text-align:right;transition:transform .25s var(--mech)}
+.faq-list details[open] summary::after{content:"\2212"}
+.faq-list details p{padding:0 0 22px 50px;color:var(--ink-2);max-width:62ch}
+@media (min-width:980px){.faq{grid-template-columns:5fr 7fr;gap:24px}.faq-side{position:sticky;top:calc(var(--demo-h) + var(--head-h) + 24px)}}
+
+/* local */
+.loc{display:grid;gap:24px}
+.map{border:1.5px solid var(--ink);background:var(--paper-2);position:relative}
+.map svg{width:100%;height:auto}
+@media (max-width:640px){.map svg text{font-size:21px}}
+.map .mono{position:absolute;left:10px;top:10px;background:var(--paper);border:1px solid var(--ink);padding:4px 7px}
+.loc-tab{border-top:2px solid var(--ink)}
+.loc-tab div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.loc-tab dt{color:var(--mute);padding-top:3px}
+.loc-tab dd{font-size:16.5px;line-height:1.45}
+.loc-tab dd b{font-weight:650}
+@media (min-width:980px){.loc{grid-template-columns:7fr 5fr}}
+
+/* CTA final */
+.final{background:var(--or);color:var(--ink);padding:84px 0 70px;border-top:2px solid var(--ink);position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(20,21,24,.14) 1px,transparent 1px) 0 0/calc(100%/12) 100%;pointer-events:none}
+.final .wrap{position:relative}
+.final-sun{display:none}
+@media (min-width:1100px){.final-sun{display:block;position:absolute;right:0;bottom:0;width:440px;height:440px}.final h2{max-width:11.5em}}
+.final .mono{display:flex;flex-wrap:wrap;gap:4px 18px;justify-content:space-between;border-top:2px solid var(--ink);padding-top:14px}
+.final h2{font-size:clamp(3rem,11vw,9rem);font-stretch:74%;line-height:.86;letter-spacing:-.045em;margin:28px 0 30px}
+.final p{font-size:1.15rem;max-width:44ch;font-weight:500}
+.final .cta-row .btn{background:var(--ink);color:var(--paper);border-color:var(--ink);box-shadow:4px 4px 0 var(--paper)}
+.final .cta-row .btn:hover{box-shadow:6px 6px 0 var(--paper)}
+.final .cta-row .btn.ghost{background:transparent;color:var(--ink);box-shadow:none}
+.final .cta-row .btn.ghost:hover{background:var(--ink);color:var(--paper)}
+
+/* rodape */
+.foot{background:var(--graph);color:var(--on-graph-mute);padding:56px 0 30px;font-size:15px;overflow:hidden}
+.foot-grid{display:grid;gap:28px;grid-template-columns:1fr 1fr}
+.foot-grid>div:first-child{grid-column:1/-1}
+.foot h3{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--on-graph);margin-bottom:12px}
+.foot a,.foot button.lnk{display:flex;align-items:center;min-height:44px;text-decoration:none;color:var(--on-graph-mute);text-align:left}
+.foot a:hover,.foot button.lnk:hover{color:var(--or)}
+.foot-word{font-weight:900;font-stretch:125%;font-size:clamp(2.6rem,11.6vw,10.6rem);line-height:.8;letter-spacing:-.05em;color:var(--on-graph);margin:46px 0 22px;white-space:nowrap}
+.foot-word span{color:var(--or)}
+.foot-legal{display:flex;flex-wrap:wrap;gap:10px 22px;border-top:1px solid var(--line-d);padding-top:18px;font:500 12px/1.5 var(--mono);letter-spacing:.03em}
+@media (min-width:980px){.foot-grid{grid-template-columns:4fr 2fr 2fr 2fr}.foot-grid>div:first-child{grid-column:auto}}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:18px;z-index:150;width:min(92vw,460px);background:var(--ink);color:var(--paper);border:2px solid var(--or);padding:14px 16px;font:500 14px/1.45 var(--mono);transform:translate(-50%,140%);opacity:0;transition:transform .35s var(--mech),opacity .25s}
+.toast.show{transform:translate(-50%,0);opacity:1}
+.toast b{color:var(--or);font-weight:600}
+
+/* reveal */
+.js .rv.hide{opacity:0;transform:translateY(22px)}
+.rv{transition:opacity .6s ease,transform .7s var(--out)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv.hide{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="demo-bar" role="note" aria-label="Aviso de modelo demonstrativo">
+  <p><span>Modelo demonstrativo da Beatus Mídias</span><span>marca fictícia</span></p>
+  <a href="https://wa.me/5521975340783?text=Ol%C3%A1!%20Gostei%20do%20modelo%20de%20energia%20solar%20e%20quero%20uma%20p%C3%A1gina%20assim." target="_blank" rel="noopener">Quero uma página assim</a>
+</div>
+
+<header class="head">
+  <div class="wrap">
+    <a class="logo" href="#topo" aria-label="Sol Forte Energia Solar, início">
+      <svg class="logo-mark" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" fill="#141518"/><path d="M5 29a12 12 0 0 1 24 0z" fill="#ff5b14"/><g stroke="#ff5b14" stroke-width="2"><path d="M17 5v5M6 10l3.5 3.5M28 10l-3.5 3.5"/></g></svg>
+      <span><b>SOL FORTE</b><small>ENERGIA SOLAR</small></span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#simulador">Simulador</a><a href="#servicos">Serviços</a><a href="#como-funciona">Como funciona</a><a href="#projetos">Projetos</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a>
+    </nav>
+    <button class="btn sm" type="button" data-demo><span>Orçamento<span class="lg"> grátis</span></span><span class="ar" aria-hidden="true">→</span></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menu"><i></i></button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Menu">
+    <a href="#simulador">Simulador <span>01</span></a><a href="#servicos">Serviços <span>02</span></a><a href="#como-funciona">Como funciona <span>03</span></a><a href="#projetos">Projetos <span>04</span></a><a href="#duvidas">Dúvidas <span>05</span></a><a href="#contato">Contato <span>06</span></a>
+  </nav>
+</header>
+
+<main id="conteudo">
+<section class="hero" id="topo">
+  <div class="wrap">
+    <div class="hero-meta mono hin" style="--i:0"><span><b>SF/01</b> Energia solar fotovoltaica</span><span>Cabo Frio, RJ</span><span>Região dos Lagos</span></div>
+    <div class="hero-top"><h1><span class="ln"><span style="--i:0">Até <span class="hl">90%</span></span></span><span class="ln"><span style="--i:1">a menos na</span></span><span class="ln"><span style="--i:2">conta de luz.</span></span></h1>
+    <aside class="site-data hin" style="--i:3" aria-label="Dados solares de Cabo Frio">
+      <div class="mono">Dados do local</div>
+      <dl>
+        <div><dt class="mono">Irradiação média</dt><dd class="tnum">5,3<small>kWh/m² ao dia</small></dd></div>
+        <div><dt class="mono">Sol pleno</dt><dd class="tnum">5 h<small>por dia, na média</small></dd></div>
+        <div><dt class="mono">Telhado ideal</dt><dd>Norte<small>inclinação de 15° a 25°</small></dd></div>
+      </dl>
+      <p class="mono">Médias regionais aproximadas</p>
+    </aside></div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hin" style="--i:1">Projeto, instalação e homologação na Enel para casas, pousadas e comércios da Região dos Lagos. <strong>Você passa a pagar só a taxa mínima</strong> e o sol de Cabo Frio cobre o resto.</p>
+        <div class="cta-row hin" style="--i:2">
+          <button class="btn" type="button" data-demo>Quero meu orçamento <span class="ar" aria-hidden="true">→</span></button>
+          <a class="btn ghost" href="#simulador">Simular economia</a>
+        </div>
+
+      </div>
+      <figure class="diagram hin" style="--i:2" aria-label="Diagrama: o sol percorre o arco do dia sobre os painéis enquanto você rola a página">
+        <div class="diag-top"><span>Fig. 01 · Trajetória solar</span><span>Lat. 22,9° S</span></div>
+        <svg id="sunsvg" viewBox="0 0 640 380" aria-hidden="true">
+          <defs>
+            <pattern id="cells" width="14" height="10" patternUnits="userSpaceOnUse"><path d="M14 0H0V10" fill="none" stroke="#5a5e66" stroke-width=".8"/></pattern>
+          </defs>
+          <g stroke="#141518" fill="none">
+            <path d="M40 300H600" stroke-width="1.5"/>
+            <path id="arc" d="M80 300A240 240 0 0 1 560 300" stroke-dasharray="4 6" stroke-opacity=".55"/>
+            <path d="M200 300A120 120 0 0 1 440 300" stroke-opacity=".18"/>
+            <g id="ticks" stroke-opacity=".7"></g>
+          </g>
+          <g font-family="JetBrains Mono, monospace" font-size="13" fill="#3d4047" text-anchor="middle">
+            <text x="62" y="322">06h</text><text x="148" y="140">09h</text><text x="320" y="44">12h</text><text x="492" y="140">15h</text><text x="578" y="322">18h</text>
+            <text class="sm" x="600" y="290" text-anchor="end" font-size="11">HORIZONTE 0°</text>
+          </g>
+          <line id="beam" x1="320" y1="300" x2="320" y2="60" stroke="#ff5b14" stroke-width="1.5" stroke-dasharray="2 4"/>
+          <g id="panels" transform="translate(196 252)">
+            <g><path d="M0 48L28 0H92L64 48Z" fill="#26292f"/><path d="M0 48L28 0H92L64 48Z" fill="url(#cells)"/><path class="glow" d="M0 48L28 0H92L64 48Z" fill="#ff5b14" opacity=".2"/><path d="M0 48L28 0H92L64 48Z" fill="none" stroke="#141518" stroke-width="1.5"/></g>
+            <g transform="translate(64 0)"><path d="M0 48L28 0H92L64 48Z" fill="#26292f"/><path d="M0 48L28 0H92L64 48Z" fill="url(#cells)"/><path class="glow" d="M0 48L28 0H92L64 48Z" fill="#ff5b14" opacity=".2"/><path d="M0 48L28 0H92L64 48Z" fill="none" stroke="#141518" stroke-width="1.5"/></g>
+            <g transform="translate(128 0)"><path d="M0 48L28 0H92L64 48Z" fill="#26292f"/><path d="M0 48L28 0H92L64 48Z" fill="url(#cells)"/><path class="glow" d="M0 48L28 0H92L64 48Z" fill="#ff5b14" opacity=".2"/><path d="M0 48L28 0H92L64 48Z" fill="none" stroke="#141518" stroke-width="1.5"/></g>
+            <path d="M14 48V58M206 48V58M110 48V58" stroke="#141518" stroke-width="2"/>
+          </g>
+          <g transform="translate(588 70)">
+            <rect x="0" y="0" width="16" height="200" fill="none" stroke="#141518" stroke-width="1.2"/>
+            <rect id="meter" x="3" y="3" width="10" height="194" fill="#ff5b14" style="transform-box:fill-box;transform-origin:bottom"/>
+            <text x="8" y="-10" font-family="JetBrains Mono, monospace" font-size="11" fill="#3d4047" text-anchor="middle">kW</text>
+          </g>
+          <g id="sun" transform="translate(320 60)">
+            <circle r="34" fill="#ff5b14" opacity=".14"/>
+            <g class="sun-rays" stroke="#ff5b14" stroke-width="3" stroke-linecap="square">
+              <path d="M0-30V-40M0 30V40M-30 0H-40M30 0H40M21 21L28 28M-21-21L-28-28M21-21L28-28M-21 21L-28 28"/>
+            </g>
+            <circle r="20" fill="#ff5b14" stroke="#141518" stroke-width="1.5"/>
+          </g>
+        </svg>
+        <figcaption class="diag-bot" aria-hidden="true"><span>Hora <b id="r-h" class="tnum">09:00</b></span><span>Elev. <b id="r-e" class="tnum">45°</b></span><span>Geração <b id="r-g" class="tnum">70%</b><i class="cursor"></i></span></figcaption>
+      </figure>
+      <dl class="hero-specs hin" style="--i:3">
+          <div><dt class="mono">Retorno médio</dt><dd>3 a 4 anos</dd></div>
+          <div><dt class="mono">Garantia painéis</dt><dd>25 anos</dd></div>
+          <div><dt class="mono">Obra</dt><dd>1 a 3 dias</dd></div>
+          <div><dt class="mono">Visita técnica</dt><dd>Sem custo</dd></div>
+        </dl>
+    </div>
+  </div>
+
+  <div class="stats" aria-label="Números da empresa (ilustrativos)">
+    <div class="wrap">
+      <div class="stat rv"><div class="big"><span class="odo" data-odo="1.284">1.284</span></div><p>sistemas instalados na Região dos Lagos*</p></div>
+      <div class="stat rv"><div class="big"><span class="odo" data-odo="7,9">7,9</span><small>MWp</small></div><p>de potência em telhados de clientes*</p></div>
+      <div class="stat rv"><div class="big"><span class="odo" data-odo="4,9">4,9</span><small>/5</small></div><p>nota média dos clientes <span class="tag" style="color:var(--or-ink)">exemplo</span></p><span class="stars" aria-label="5 estrelas">★★★★★</span></div>
+      <div class="stat rv"><div class="big"><span class="odo" data-odo="11">11</span><small>anos</small></div><p>de obra na região, com equipe própria*</p></div>
+      <p class="stats-note mono">* Números ilustrativos de uma marca fictícia.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="simulador" aria-labelledby="sim-t">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="mono"><span>[01] Simulador</span><span>Estimativa ilustrativa</span></div>
+      <h2 id="sim-t">Quanto você deixa de pagar.</h2>
+      <p>Arraste ou digite o valor médio da sua conta. A conta é simples e aberta: as premissas estão logo abaixo do campo.</p>
+    </div>
+    <div class="sim-grid">
+      <form class="sim-in rv" id="sim" onsubmit="return false">
+        <label for="conta">Sua conta de luz por mês</label>
+        <div class="money"><span>R$</span><input id="conta" type="text" inputmode="numeric" autocomplete="off" value="450" aria-describedby="premissas"></div>
+        <input class="range" id="faixa" type="range" min="150" max="3000" step="10" value="450" aria-label="Valor da conta de luz, de R$ 150 a R$ 3.000">
+        <div class="range-lims mono"><span>R$ 150</span><span>R$ 3.000</span></div>
+        <fieldset style="border:0;margin-top:22px">
+          <legend class="lab" style="font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--on-graph-mute);margin-bottom:10px">Tipo de ligação</legend>
+          <div class="seg">
+            <label><input type="radio" name="lig" value="30"><span>Mono</span></label>
+            <label><input type="radio" name="lig" value="50" checked><span>Bi</span></label>
+            <label><input type="radio" name="lig" value="100"><span>Tri</span></label>
+          </div>
+        </fieldset>
+        <div class="cmp" aria-hidden="true">
+          <div class="cmp-row"><span class="mono">Conta hoje</span><div class="bar"><i id="b-hoje"></i></div><b class="tnum" id="c-hoje">R$ 450</b></div>
+          <div class="cmp-row"><span class="mono">Com solar</span><div class="bar"><i id="b-sol" class="or"></i></div><b class="tnum" id="c-sol">R$ 53</b></div>
+        </div>
+        <p class="assume" id="premissas"><b>Premissas:</b> tarifa média de R$ 1,05 por kWh; cada placa de 550 W gera cerca de 66 kWh por mês em Cabo Frio; a taxa mínima da distribuidora continua na conta (30, 50 ou 100 kWh, conforme a ligação); economia limitada a 90% da conta. Valores de 25 anos sem reajuste de tarifa.</p>
+      </form>
+      <div class="sim-out rv" aria-live="polite">
+        <div class="out-main">
+          <div class="lab">Economia estimada por mês</div>
+          <div class="val"><small>R$</small><span class="odo" id="o-mes">397</span></div>
+          <p id="o-pct">88% da sua conta atual</p>
+        </div>
+        <div class="out-cells">
+          <div class="cell"><div class="lab">Em 25 anos</div><div class="v"><small>R$</small><span class="odo" id="o-25">119.250</span></div></div>
+          <div class="cell"><div class="lab">Placas 550 W</div><div class="v"><span class="odo" id="o-pl">6</span><small>un.</small></div></div>
+          <div class="cell"><div class="lab">Área de telhado</div><div class="v"><span class="odo" id="o-ar">16</span><small>m²</small></div></div>
+          <div class="cell"><div class="lab">Retorno estimado</div><div class="v"><span class="odo" id="o-pb">3,0</span><small>anos</small></div></div>
+        </div>
+        <div class="roof">
+          <div class="mono" style="display:flex;flex-wrap:wrap;gap:4px 16px;justify-content:space-between;color:var(--on-graph-mute)"><span>Planta do telhado</span><span id="o-kwp">3,3 kWp · invest. R$ 15.400</span></div>
+          <div class="roof-grid" id="roof" aria-hidden="true"></div>
+        </div>
+        <div class="sim-cta">
+          <span class="tag">Estimativa ilustrativa</span>
+          <button class="btn" type="button" data-demo>Quero meu orçamento <span class="ar" aria-hidden="true">→</span></button>
+        </div>
+        <p class="sr-only" id="o-sr"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="servicos" aria-labelledby="svc-t">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="mono"><span>[02] Serviços</span><span>05 linhas</span></div>
+      <h2 id="svc-t">Do telhado à conta nova.</h2>
+      <p>Uma empresa só cuida de tudo: medição, projeto elétrico, papelada com a distribuidora, obra e acompanhamento depois de ligado.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-row rv"><span class="n">01</span><h3>Residencial</h3><p>Casas e condomínios. Sistema dimensionado pela sua fatura dos últimos 12 meses, com espaço para crescer (ar-condicionado, piscina, carro elétrico).</p><div class="meta mono"><span>Obra: 1 a 2 dias</span><span>A partir de 4 placas</span></div><span class="go" aria-hidden="true">→</span></div>
+      <div class="svc-row rv"><span class="n">02</span><h3>Comercial e pousadas</h3><p>Pousadas, restaurantes, clínicas e lojas, onde a conta pesa no verão. Instalação em telhado, laje ou estacionamento coberto.</p><div class="meta mono"><span>Obra: 2 a 5 dias</span><span>Ligação trifásica</span></div><span class="go" aria-hidden="true">→</span></div>
+      <div class="svc-row rv"><span class="n">03</span><h3>Projeto e homologação</h3><p>Projeto elétrico com ART de engenheiro, pedido de acesso e vistoria na Enel. Você não precisa ir a nenhum balcão.</p><div class="meta mono"><span>Incluso no orçamento</span><span>Prazo da distribuidora</span></div><span class="go" aria-hidden="true">→</span></div>
+      <div class="svc-row rv"><span class="n">04</span><h3>Limpeza e manutenção</h3><p>Maresia e poeira derrubam a geração. Limpeza técnica, reaperto e inspeção do inversor, inclusive em sistemas de outras empresas.</p><div class="meta mono"><span>Visita agendada</span><span>Relatório com fotos</span></div><span class="go" aria-hidden="true">→</span></div>
+      <div class="svc-row rv"><span class="n">05</span><h3>Monitoramento</h3><p>Acompanhe a geração do dia pelo celular. Se o sistema cair, a gente vê junto com você e agenda a visita.</p><div class="meta mono"><span>Contínuo</span><span>App do inversor</span></div><span class="go" aria-hidden="true">→</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0" aria-labelledby="dif-t">
+  <div class="wrap dif">
+    <div class="dif-num rv">
+      <div class="mono" style="color:var(--mute)">[03] Por que a Sol Forte</div>
+      <div class="g" aria-hidden="true">25<span>.</span></div>
+      <p id="dif-t">anos de garantia de performance nos painéis, por escrito.</p>
+    </div>
+    <ul class="dif-list">
+      <li class="rv"><span class="mono">A</span><h3>Equipe própria na obra</h3><p>Quem instala é funcionário da casa, treinado e registrado. Nada de terceirizar o seu telhado.</p></li>
+      <li class="rv"><span class="mono">B</span><h3>Feito para a maresia</h3><p>Estruturas em alumínio e parafusos inox, pensados para o ar salgado de Cabo Frio, Búzios e Arraial.</p></li>
+      <li class="rv"><span class="mono">C</span><h3>Engenheiro responsável</h3><p>Todo projeto sai com ART e memorial de cálculo. Você recebe a pasta completa no fim da obra.</p></li>
+      <li class="rv"><span class="mono">D</span><h3>Proposta sem letra miúda</h3><p>Geração estimada mês a mês, marca dos equipamentos e garantia de cada item escritos na proposta.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec dark" id="como-funciona" aria-labelledby="cf-t">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="mono"><span>[04] Como funciona</span><span>05 etapas</span></div>
+      <h2 id="cf-t">Cinco etapas, uma conversa só.</h2>
+      <p>Você fala com a mesma pessoa do primeiro contato até a conta nova chegar.</p>
+    </div>
+    <div class="steps" id="steps"><span class="rail" aria-hidden="true"></span><ol class="steps-ol">
+      <li class="step rv"><div class="mono">Etapa 01 <em>Dia 1</em></div><h3>Foto da conta</h3><p>Mande a foto da fatura pelo WhatsApp. Em poucas horas sai uma primeira estimativa.</p></li>
+      <li class="step rv"><div class="mono">Etapa 02 <em>Dia 2 a 5</em></div><h3>Visita técnica</h3><p>Medimos o telhado, a sombra das árvores e prédios e o quadro de energia. Sem custo.</p></li>
+      <li class="step rv"><div class="mono">Etapa 03 <em>Dia 5 a 7</em></div><h3>Proposta</h3><p>Projeto com geração mês a mês, equipamentos, prazo e formas de pagamento.</p></li>
+      <li class="step rv"><div class="mono">Etapa 04 <em>1 a 3 dias</em></div><h3>Instalação</h3><p>Equipe própria, obra limpa, telhado revisado e teste do sistema na sua frente.</p></li>
+      <li class="step rv"><div class="mono">Etapa 05 <em>Prazo Enel</em></div><h3>Conta nova</h3><p>Cuidamos da vistoria e da troca do medidor. A economia aparece na fatura seguinte.</p></li>
+    </ol></div>
+    <div class="steps-foot rv">
+      <p>Nenhum valor é cobrado antes de você aprovar a proposta. O prazo da distribuidora varia e não depende da Sol Forte.</p>
+      <button class="btn" type="button" data-demo>Quero meu orçamento <span class="ar" aria-hidden="true">→</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="projetos" aria-labelledby="pj-t">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="mono"><span>[05] Projetos</span><span>Ilustração técnica</span></div>
+      <h2 id="pj-t">Telhados que já pagam a conta.</h2>
+      <p>No site real, cada cartão traz fotos da obra, a cidade e a potência instalada. Aqui, desenhos técnicos fazem as vezes das fotos.</p>
+    </div>
+    <div class="proj">
+      <article class="pj big rv">
+        <figure>
+          <svg viewBox="0 0 560 380" aria-hidden="true"><g fill="none" stroke="#141518" stroke-width="1.6"><path d="M60 330H500"/><path d="M110 330V190H450V330"/><path d="M90 196L280 80L470 196"/><path d="M180 330V250H240V330M310 240H400V290H310Z"/></g><g transform="translate(150 98)"><path d="M0 72L118 0L216 0L98 72Z" fill="#26292f" stroke="#141518" stroke-width="1.5"/><path d="M0 72L118 0L216 0L98 72Z" fill="url(#cells)"/><path d="M98 72L216 0L280 30L170 92Z" fill="#ff5b14" stroke="#141518" stroke-width="1.5" opacity=".9"/></g><g font-family="JetBrains Mono, monospace" font-size="12" fill="#3d4047"><path d="M110 352H450" stroke="#141518"/><path d="M110 346V358M450 346V358" stroke="#141518"/><text x="280" y="372" text-anchor="middle">12,4 m</text></g></svg>
+          <figcaption>suas fotos de obra entram aqui</figcaption>
+        </figure>
+        <div class="pj-body"><h3>Residência no Peró</h3><span class="mono">Cabo Frio · 12 placas · 2023</span><span class="kwp">6,6<small>kWp</small></span></div>
+      </article>
+      <article class="pj rv">
+        <figure>
+          <svg viewBox="0 0 560 240" aria-hidden="true"><g fill="none" stroke="#141518" stroke-width="1.6"><path d="M40 210H520"/><path d="M70 210V120H490V210"/><path d="M60 120H500L470 92H90Z"/><path d="M110 150H150V180H110ZM190 150H230V180H190ZM330 150H370V180H330ZM410 150H450V180H410ZM260 210V150H300V210"/></g><g fill="#ff5b14" stroke="#141518" stroke-width="1.2"><path d="M110 92L124 70H190L176 92Z"/><path d="M190 92L204 70H270L256 92Z"/><path d="M270 92L284 70H350L336 92Z"/><path d="M350 92L364 70H430L416 92Z"/></g></svg>
+          <figcaption>suas fotos de obra entram aqui</figcaption>
+        </figure>
+        <div class="pj-body"><h3>Pousada em Búzios</h3><span class="mono">Búzios · 40 placas · 2024</span><span class="kwp">22<small>kWp</small></span></div>
+      </article>
+      <article class="pj rv">
+        <figure>
+          <svg viewBox="0 0 560 240" aria-hidden="true"><g fill="none" stroke="#141518" stroke-width="1.6"><path d="M40 210H520"/><path d="M80 210V110L280 60L480 110V210"/><path d="M240 210V150H320V210"/></g><g stroke="#141518" stroke-width="1.2"><path d="M110 104L280 62L280 92L110 128Z" fill="#26292f"/><path d="M110 104L280 62L280 92L110 128Z" fill="url(#cells)"/><path d="M280 62L450 104L450 128L280 92Z" fill="#ff5b14"/></g></svg>
+          <figcaption>suas fotos de obra entram aqui</figcaption>
+        </figure>
+        <div class="pj-body"><h3>Galpão em São Pedro</h3><span class="mono">São Pedro da Aldeia · 84 placas</span><span class="kwp">46<small>kWp</small></span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0" aria-labelledby="dep-t">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="mono"><span>[06] Quem já instalou</span><span>Depoimentos de exemplo</span></div>
+      <h2 id="dep-t">A conta que chega depois.</h2>
+      <div class="rating"><span class="r tnum">4,9</span><span><span class="stars" aria-label="Nota 4,9 de 5">★★★★★</span><br><span class="mono" style="color:var(--mute)">média das avaliações</span></span><span class="tag" style="color:var(--or-ink)">exemplo</span></div>
+    </div>
+    <div class="quotes">
+      <figure class="qt rv">
+        <blockquote>“Vieram, mediram, explicaram a sombra da amendoeira e ajustaram o projeto. A conta do verão, que era a pior do ano, ficou na taxa mínima.”</blockquote>
+        <figcaption class="who"><b>Renata M.</b><span class="mono">Cabo Frio · residencial</span><span class="tag">exemplo</span></figcaption>
+        <div class="bill"><span>Conta</span><s>R$ 680</s><span>→</span><b>R$ 74</b></div>
+      </figure>
+      <figure class="qt rv">
+        <blockquote>“A pousada lotada em janeiro dobrava a conta. Hoje o ar-condicionado dos quartos roda no sol e a proposta bateu com a geração real.”</blockquote>
+        <figcaption class="who"><b>Paulo R.</b><span class="mono">Búzios · comercial</span><span class="tag">exemplo</span></figcaption>
+        <div class="bill"><span>Conta</span><s>R$ 2.940</s><span>→</span><b>R$ 310</b></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="duvidas" aria-labelledby="faq-t" style="padding-top:0">
+  <div class="wrap faq">
+    <div class="faq-side rv">
+      <div class="mono" style="color:var(--mute)">[07] Dúvidas frequentes</div>
+      <h2 id="faq-t">Perguntas que todo mundo faz.</h2>
+      <div class="faq-box"><p>Ficou alguma dúvida sobre o seu telhado? Mande uma foto e a gente responde.</p><button class="btn sm" type="button" data-demo>Chamar no WhatsApp <span class="ar" aria-hidden="true">→</span></button></div>
+    </div>
+    <div class="faq-list">
+      <details open class="rv"><summary><span class="mono">01</span>E nos dias nublados ou de chuva?</summary><p>O sistema continua gerando, só que menos. O que conta é a média do ano: o excedente dos dias de sol vira crédito na distribuidora e é usado quando a geração cai, por até 60 meses.</p></details>
+      <details class="rv"><summary><span class="mono">02</span>A conta de luz zera?</summary><p>Não. Continua a taxa mínima da distribuidora (custo de disponibilidade), a iluminação pública e, pela lei atual, uma parte da tarifa de uso da rede. Por isso falamos em economia de até 90%, e não em conta zerada.</p></details>
+      <details class="rv"><summary><span class="mono">03</span>Meu telhado aguenta as placas?</summary><p>Na visita técnica avaliamos a estrutura. Cada placa pesa cerca de 28 kg, distribuídos em vários pontos. Se for preciso reforçar ou trocar telhas, isso aparece na proposta, antes de qualquer obra.</p></details>
+      <details class="rv"><summary><span class="mono">04</span>Tem financiamento?</summary><p>Trabalhamos com financiamento solar de bancos parceiros e cartão em parcelas. Em muitos casos a parcela fica parecida com a economia do mês, mas isso depende do seu crédito e é simulado na proposta.</p></details>
+      <details class="rv"><summary><span class="mono">05</span>E se eu mudar de casa?</summary><p>O sistema pode ser desmontado e reinstalado no novo endereço, com novo pedido na distribuidora. Também dá para usar os créditos em outro imóvel no seu nome, na mesma área da distribuidora.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contato" aria-labelledby="loc-t" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="mono"><span>[08] Onde estamos</span><span>Atendimento na Região dos Lagos</span></div>
+      <h2 id="loc-t">Escritório no Centro de Cabo Frio.</h2>
+    </div>
+    <div class="loc">
+      <figure class="map rv" aria-label="Mapa ilustrativo com a localização do escritório">
+        <svg viewBox="0 0 700 420" aria-hidden="true">
+          <rect width="700" height="420" fill="#e7e5de"/>
+          <path d="M0 330C90 300 150 340 230 318S380 260 470 290 610 360 700 330V420H0Z" fill="#d6d9d6"/>
+          <path d="M0 330C90 300 150 340 230 318S380 260 470 290 610 360 700 330" fill="none" stroke="#141518" stroke-width="1.2"/>
+          <g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="square"><path d="M0 120H700M0 220H520M180 0V300M380 0V280M560 0V300"/><path d="M60 0L300 300" stroke-width="10"/></g>
+          <g stroke="#141518" stroke-opacity=".25" fill="none"><path d="M0 120H700M0 220H520M180 0V300M380 0V280M560 0V300M60 0L300 300"/></g>
+          <g font-family="JetBrains Mono, monospace" font-size="12" fill="#3d4047" letter-spacing=".5"><text x="20" y="110">R. DAS PALMEIRAS</text><text x="396" y="210">AV. CENTRAL</text><text x="40" y="390">CANAL / LAGOA</text></g>
+          <g transform="translate(380 120)"><circle r="46" fill="#ff5b14" opacity=".16"/><circle r="26" fill="none" stroke="#ff5b14" stroke-width="2"/><rect x="-11" y="-11" width="22" height="22" fill="#ff5b14" stroke="#141518" stroke-width="2"/></g>
+          <g transform="translate(640 40)" font-family="JetBrains Mono, monospace" font-size="13" fill="#141518" text-anchor="middle"><path d="M0 26V-4M-7 6L0-6L7 6" fill="none" stroke="#141518" stroke-width="1.6"/><text y="44">N</text></g>
+        </svg>
+        <span class="mono">Mapa ilustrativo</span>
+      </figure>
+      <dl class="loc-tab rv">
+        <div><dt class="mono">Endereço</dt><dd><b>Rua das Palmeiras, 120, Centro</b><br>Cabo Frio, RJ</dd></div>
+        <div><dt class="mono">Horário</dt><dd>Segunda a sexta, 8h às 18h<br>Sábado, 8h às 12h</dd></div>
+        <div><dt class="mono">Atendemos</dt><dd>Cabo Frio, Búzios, Arraial do Cabo, São Pedro da Aldeia, Iguaba Grande e Araruama</dd></div>
+        <div><dt class="mono">Contato</dt><dd><button class="btn sm" type="button" data-demo>Chamar no WhatsApp <span class="ar" aria-hidden="true">→</span></button></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="fim-t">
+  <svg class="final-sun" viewBox="0 0 480 480" aria-hidden="true"><g fill="none" stroke="#141518" stroke-width="2"><circle cx="480" cy="480" r="150"/><circle cx="480" cy="480" r="220" stroke-dasharray="3 9"/><circle cx="480" cy="480" r="300"/><circle cx="480" cy="480" r="390" stroke-opacity=".5"/></g><circle cx="480" cy="480" r="96" fill="#141518"/><g class="fs-rays" stroke="#141518" stroke-width="3"><path d="M330 480H250M374 374L318 318M480 330V250M410 341L380 268M341 410L268 380"/></g></svg>
+  <div class="wrap">
+    <div class="mono rv"><span>[09] Próximo passo</span><span>Resposta no mesmo dia útil</span></div>
+    <h2 id="fim-t" class="rv">Mande a foto da conta. A gente devolve o projeto.</h2>
+    <p class="rv">Com a sua fatura em mãos, a Sol Forte calcula o sistema, a economia e o prazo. Sem compromisso e sem custo para a visita técnica.</p>
+    <div class="cta-row rv"><button class="btn" type="button" data-demo>Quero meu orçamento <span class="ar" aria-hidden="true">→</span></button><a class="btn ghost" href="#simulador">Refazer a simulação</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h3>Sol Forte Energia Solar</h3><p style="max-width:34ch">Projeto, instalação e manutenção de energia solar na Região dos Lagos. Marca fictícia criada pela Beatus Mídias para demonstração.</p></div>
+      <div><h3>Páginas</h3><a href="#simulador">Simulador</a><a href="#servicos">Serviços</a><a href="#projetos">Projetos</a></div>
+      <div><h3>Ajuda</h3><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a></div>
+      <div><h3>Legal</h3><button class="lnk" type="button" data-demo="link">Privacidade</button><button class="lnk" type="button" data-demo="link">Termos de uso</button></div>
+    </div>
+    <div class="foot-word" aria-hidden="true">SOL FORTE<span>.</span></div>
+    <div class="foot-legal"><span>Modelo demonstrativo · marca, números e depoimentos fictícios</span><a href="https://wa.me/5521975340783?text=Ol%C3%A1!%20Gostei%20do%20modelo%20de%20energia%20solar%20e%20quero%20uma%20p%C3%A1gina%20assim." target="_blank" rel="noopener" style="display:inline-flex;color:var(--or)">Site feito pela Beatus Mídias</a></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+var D=document,H=D.documentElement,REDUZ=matchMedia('(prefers-reduced-motion: reduce)').matches;
+H.classList.add('js');
+if(!REDUZ&&D.visibilityState==='visible'){H.classList.add('anim');setTimeout(function(){H.classList.add('anim-done')},2600);}
+
+/* toast dos botoes do negocio */
+var T=D.getElementById('toast'),tt;
+function toast(m){T.innerHTML=m;T.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){T.classList.remove('show')},4200);}
+D.addEventListener('click',function(e){var b=e.target.closest('[data-demo]');if(!b)return;e.preventDefault();
+  toast(b.dataset.demo==='link'?'<b>Modelo demonstrativo:</b> no seu site, este link abre a página correspondente.':'<b>Modelo demonstrativo:</b> no seu site, este botão abre o seu WhatsApp com a mensagem pronta.');});
+
+/* menu mobile */
+var mb=D.querySelector('.menu-btn'),mn=D.getElementById('mnav');
+function setMenu(o){mn.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');}
+mb.addEventListener('click',function(e){e.stopPropagation();setMenu(!mn.classList.contains('open'));});
+mn.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false);});
+D.addEventListener('click',function(e){if(mn.classList.contains('open')&&!mn.contains(e.target))setMenu(false);});
+D.addEventListener('keydown',function(e){if(e.key==='Escape'&&mn.classList.contains('open')){setMenu(false);mb.focus();}});
+
+/* reveal por topo */
+var els=[].slice.call(D.querySelectorAll('.rv'));
+if(!REDUZ&&D.visibilityState==='visible'){
+  var vh=innerHeight;els.forEach(function(el){if(el.getBoundingClientRect().top>vh*.92)el.classList.add('hide');});
+  var sweep=function(){els.forEach(function(el){if(el.classList.contains('hide')&&el.getBoundingClientRect().top<innerHeight*.92){el.classList.remove('hide');}});};
+  addEventListener('scroll',sweep,{passive:true});addEventListener('resize',sweep);addEventListener('load',sweep);
+  setTimeout(function(){els.forEach(function(el){el.classList.remove('hide');});},6000);
+}
+
+/* odometro mecanico */
+function odo(el,txt){
+  var sig=txt.replace(/\d/g,'0');
+  if(el._sig!==sig){el._sig=sig;el.textContent='';el.setAttribute('aria-hidden','true');
+    txt.split('').forEach(function(c){var s=D.createElement('span');
+      if(/\d/.test(c)){s.className='od';var st=D.createElement('span');st.className='ods';for(var k=0;k<10;k++){var d=D.createElement('span');d.textContent=k;st.appendChild(d);}s.appendChild(st);}
+      else{s.className='oc';s.textContent=c;}el.appendChild(s);});
+    el.offsetHeight;}
+  var ds=el.querySelectorAll('.ods'),i=0,n=ds.length;
+  txt.split('').forEach(function(c){if(/\d/.test(c)){ds[i].style.transitionDelay=((n-1-i)*45)+'ms';ds[i].style.transform='translateY('+(-10*c)+'%)';i++;}});
+}
+/* numeros da faixa: rolam quando o topo entra na tela */
+var stat=[].slice.call(D.querySelectorAll('[data-odo]'));
+stat.forEach(function(el){var v=el.dataset.odo,sr=D.createElement('span');sr.className='sr-only';sr.textContent=v;el.parentNode.insertBefore(sr,el);
+  if(REDUZ){return;}odo(el,v.replace(/\d/g,'0'));});
+function statSweep(){stat.forEach(function(el){if(!el._done&&el.getBoundingClientRect().top<innerHeight*.9){el._done=1;if(!REDUZ)setTimeout(function(){odo(el,el.dataset.odo)},120);}});}
+addEventListener('scroll',statSweep,{passive:true});addEventListener('load',statSweep);setTimeout(statSweep,300);
+
+/* sol no arco: acompanha a rolagem */
+(function(){
+  var sun=D.getElementById('sun'),beam=D.getElementById('beam'),meter=D.getElementById('meter'),glows=D.querySelectorAll('#panels .glow'),
+      rh=D.getElementById('r-h'),re=D.getElementById('r-e'),rg=D.getElementById('r-g'),ticks=D.getElementById('ticks'),hero=D.getElementById('topo');
+  var cx=320,cy=300,R=240,NS='http://www.w3.org/2000/svg';
+  for(var a=0;a<=180;a+=15){var r=a*Math.PI/180,l=a%45===0?18:9,p=D.createElementNS(NS,'path');
+    p.setAttribute('d','M'+(cx-Math.cos(r)*(R+4)).toFixed(1)+' '+(cy-Math.sin(r)*(R+4)).toFixed(1)+'L'+(cx-Math.cos(r)*(R+4+l)).toFixed(1)+' '+(cy-Math.sin(r)*(R+4+l)).toFixed(1));ticks.appendChild(p);}
+  var cur=REDUZ?.5:.04,target=cur,t0=null;
+  function place(p){var ang=Math.PI*(1-p),x=cx+Math.cos(ang)*R,y=cy-Math.sin(ang)*R,elev=Math.sin(ang),g=Math.max(0,Math.pow(elev,1.25));
+    sun.setAttribute('transform','translate('+x.toFixed(1)+' '+y.toFixed(1)+')');beam.setAttribute('x2',x.toFixed(1));beam.setAttribute('y2',y.toFixed(1));
+    meter.style.transform='scaleY('+Math.max(.02,g).toFixed(3)+')';
+    for(var k=0;k<glows.length;k++)glows[k].setAttribute('opacity',(.08+g*.72).toFixed(2));
+    var min=Math.round(360+p*720),hh=Math.floor(min/60),mm=min%60;
+    rh.textContent=(hh<10?'0':'')+hh+':'+(mm<10?'0':'')+mm;re.textContent=Math.round(elev*72)+'°';rg.textContent=Math.round(g*100)+'%';}
+  function want(){var h=hero.offsetHeight,y=scrollY;return .22+.72*Math.min(1,Math.max(0,y/(h*1.05)));}
+  place(cur);if(REDUZ)return;
+  target=want();var raf=0;
+  function loop(){cur+=(target-cur)*.09;place(cur);if(Math.abs(target-cur)>.0008)raf=requestAnimationFrame(loop);else{raf=0;}}
+  function kick(){target=want();if(!raf)raf=requestAnimationFrame(loop);}
+  addEventListener('scroll',kick,{passive:true});addEventListener('resize',kick);setTimeout(kick,350);
+})();
+
+/* simulador */
+(function(){
+  var f=D.getElementById('sim'),inp=D.getElementById('conta'),rng=D.getElementById('faixa'),roof=D.getElementById('roof');
+  var o={mes:D.getElementById('o-mes'),a25:D.getElementById('o-25'),pl:D.getElementById('o-pl'),ar:D.getElementById('o-ar'),pb:D.getElementById('o-pb')};
+  var TAR=1.05,KWH_PLACA=66,AREA=2.6,MAXC=48;
+  for(var k=0;k<MAXC;k++){var c=D.createElement('i');c.style.setProperty('--k',k);roof.appendChild(c);}
+  var cells=roof.children;
+  function br(n){return Math.round(n).toLocaleString('pt-BR');}
+  function dec(n){return n.toFixed(1).replace('.',',');}
+  function calc(){
+    var v=parseInt(String(inp.value).replace(/\D/g,''),10);if(isNaN(v))v=0;
+    var conta=Math.min(3000,Math.max(150,v)),min=+f.querySelector('input[name=lig]:checked').value*TAR;
+    var eco=Math.max(0,Math.min(conta*.9,conta-min)),kwh=eco/TAR,pl=Math.max(2,Math.ceil(kwh/KWH_PLACA)),kwp=pl*.55,
+        inv=Math.round((4500+kwp*3300)/100)*100,pb=eco>0?inv/eco/12:0,area=Math.ceil(pl*AREA);
+    return{conta:conta,eco:eco,pct:Math.round(eco/conta*100),a25:eco*300,pl:pl,area:area,kwp:kwp,inv:inv,pb:pb};
+  }
+  function render(){var r=calc();
+    rng.value=r.conta;rng.style.setProperty('--fill',((r.conta-150)/2850*100).toFixed(1)+'%');
+    odo(o.mes,br(r.eco));odo(o.a25,br(r.a25));odo(o.pl,String(r.pl));odo(o.ar,String(r.area));odo(o.pb,dec(r.pb));
+    D.getElementById('o-pct').textContent=r.pct+'% da sua conta atual de R$ '+br(r.conta);
+    D.getElementById('o-kwp').textContent=dec(r.kwp)+' kWp · invest. R$ '+br(r.inv);
+    for(var k=0;k<cells.length;k++)cells[k].classList.toggle('on',k<r.pl);
+    D.getElementById('b-sol').style.transform='scaleX('+((r.conta-r.eco)/r.conta).toFixed(3)+')';
+    D.getElementById('c-hoje').textContent='R$ '+br(r.conta);D.getElementById('c-sol').textContent='R$ '+br(r.conta-r.eco);
+    D.getElementById('o-sr').textContent='Economia estimada de R$ '+br(r.eco)+' por mês, R$ '+br(r.a25)+' em 25 anos, '+r.pl+' placas, cerca de '+r.area+' metros quadrados, retorno estimado em '+dec(r.pb)+' anos.';
+  }
+  rng.addEventListener('input',function(){inp.value=rng.value;render();});
+  inp.addEventListener('input',function(){var d=inp.value.replace(/\D/g,'').slice(0,4);inp.value=d;if(d.length>=3)render();});
+  inp.addEventListener('blur',function(){var r=calc();inp.value=r.conta;render();});
+  f.addEventListener('change',function(e){if(e.target.name==='lig')render();});
+  render();
+})();
+
+/* trilho das etapas: se desenha conforme a rolagem */
+(function(){
+  var st=D.getElementById('steps');if(REDUZ){st.style.setProperty('--p',1);return;}
+  var tk=0;function up(){tk=0;var r=st.getBoundingClientRect(),h=innerHeight,p=(h*.85-r.top)/(r.height*.9);p=Math.max(0,Math.min(1,p));st.style.setProperty('--p',p.toFixed(3));}
+  addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(up);}},{passive:true});up();
+})();
+
+/* scrollspy */
+(function(){
+  var links=[].slice.call(D.querySelectorAll('.nav a')),secs=links.map(function(a){return D.querySelector(a.getAttribute('href'));}),tk=0;
+  function up(){tk=0;var cur=null;secs.forEach(function(s){if(s&&s.getBoundingClientRect().top<=200)cur=s.id;});
+    links.forEach(function(a){var on=a.getAttribute('href')==='#'+cur;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});}
+  addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(up);}},{passive:true});up();
+})();
+})();
+</script>
+</body>
+</html>

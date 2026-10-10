@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Harbor &amp; Vine Kitchen · Waterfront seafood in Tampa, FL (demo template)</title>
+<meta name="description" content="Demo restaurant landing page by Beatus Mídias for a fictional waterfront kitchen in Tampa, FL: menu, direct ordering, reservations and hours.">
+<meta name="theme-color" content="#f5ecdb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%23323d18'/%3E%3Cpath d='M8 26c3-2.4 5.6-2.4 8 0s5.6 2.4 8 0 5.6-2.4 8 0' stroke='%23f5ecdb' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M20 21c0-6 3-10 8-11-.5 5-3.5 9-8 11z' fill='%23a8b26b'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Fraunces";src:url("fontes/fraunces-latin-standard-normal.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("fontes/fraunces-latin-standard-italic.woff2") format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Schibsted Grotesk";src:url("fontes/schibsted-grotesk-latin-wght-normal.woff2") format("woff2");font-weight:400 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Caveat";src:url("fontes/caveat-latin-600-normal.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+:root{
+  --cream:#f5ecdb;--paper:#fbf6ec;--ink:#2a2116;--ink2:#5a4b38;--line:rgba(42,33,22,.16);
+  --olive:#55652b;--olive-d:#323d18;--olive-l:#a8b26b;--tomato:#c9452b;--tomato-d:#b1361c;--lemon:#e8b84a;--blush:#ecd3bf;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;--hand:"Caveat","Comic Sans MS",cursive;
+  --ease:cubic-bezier(.22,1,.36,1);--spring:cubic-bezier(.34,1.56,.64,1);--wrap:1180px
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:128px;-webkit-text-size-adjust:100%}
+body{background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .08 0 0 0 .065 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");color:var(--ink);font:400 1.0625rem/1.65 var(--sans);min-height:100dvh}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.02em;line-height:1.05;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{width:min(100% - 2.5rem,var(--wrap));margin-inline:auto}
+@media (min-width:1500px){:root{--wrap:1280px}}
+.skip{position:fixed;left:12px;top:-60px;z-index:100;background:var(--ink);color:var(--cream);padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:600;transition:top .2s}
+.skip:focus{top:12px}
+[tabindex="-1"]:focus{outline:none}
+:focus-visible{outline:2.5px solid var(--tomato-d);outline-offset:3px;border-radius:4px}
+.tag{display:inline-block;vertical-align:middle;font:600 .72rem/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:5px 8px 4px;border-radius:999px;background:rgba(85,101,43,.14);color:var(--olive-d);white-space:nowrap}
+.tag.on-dark{background:rgba(245,236,219,.16);color:var(--cream)}
+
+/* top bar: demo strip + header */
+.top{position:sticky;top:0;z-index:40}
+.demo{background:var(--ink);color:#efe4cf;font-size:.8125rem;line-height:1.35;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2px 14px;padding:7px 16px;text-align:center}
+.demo a{color:#f2cd73;font-weight:600;text-underline-offset:3px;padding:4px 0}
+.demo a:hover{color:#fff}
+.thumb .demo{display:none}
+.nav{background:rgba(245,236,219,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:14px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-height:44px}
+.brand svg{width:38px;height:38px;flex:none}
+.brand b{font:600 1.32rem/1 var(--serif);letter-spacing:-.02em;display:block}
+.brand b i{color:var(--tomato-d);font-weight:500}
+.brand small{display:block;font:600 .72rem/1 var(--sans);letter-spacing:.24em;color:var(--olive);margin-top:4px}
+.links{display:none;gap:4px;list-style:none}
+.links a{display:block;padding:10px 12px;text-decoration:none;font-weight:500;color:var(--ink2);position:relative}
+.links a::after{content:"";position:absolute;left:12px;right:12px;bottom:5px;height:2px;background:var(--tomato);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.links a:hover,.links a.active{color:var(--ink)}
+.links a:hover::after,.links a.active::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:48px;padding:.75em 1.35em;border:0;border-radius:6px;font:600 1rem/1.1 var(--sans);text-decoration:none;cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background-color .2s,color .2s}
+.btn svg{width:18px;height:18px;transition:transform .25s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-red{background:var(--tomato-d);color:#fff8ee;box-shadow:3px 3px 0 var(--ink)}
+.btn-red:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+.btn-red:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink)}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--cream)}
+.btn-sm{min-height:44px;padding:.6em 1em;font-size:.94rem}
+.burger{width:44px;height:44px;display:grid;place-items:center;background:none;border:1.5px solid var(--line);border-radius:6px;cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);position:relative;transition:transform .25s var(--ease)}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);transition:transform .25s var(--ease)}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.open .burger span{transform:rotate(45deg)}
+.open .burger span::before{transform:translateY(6px) rotate(90deg)}
+.open .burger span::after{transform:translateY(-6px);opacity:0}
+.drawer{background:var(--paper);border-bottom:1px solid var(--line);padding:8px 20px 22px}
+.drawer a{display:block;font:600 1.6rem/1.2 var(--serif);padding:12px 0;text-decoration:none;border-bottom:1px solid var(--line)}
+.drawer .btn{margin-top:16px;width:100%}
+@media (min-width:920px){.links{display:flex}.burger{display:none}.drawer{display:none!important}}
+@media (max-width:420px){.nav .btn-sm{padding:.6em .8em}.brand b{font-size:1.15rem}.brand svg{width:34px;height:34px}}
+
+/* hero */
+.hero{position:relative;padding:clamp(26px,5vw,60px) 0 clamp(36px,5vw,72px);overflow-x:clip}
+.hero-grid{display:grid;gap:22px;align-items:center}
+@media (min-width:920px){.hero-grid{grid-template-columns:1.02fr .98fr;gap:40px}}
+.kicker{display:flex;align-items:center;gap:.55em;font-weight:600;color:var(--olive);font-size:.98rem}
+.kicker svg{width:20px;height:20px}
+.hero h1{font-size:clamp(2.6rem,1.5rem + 4.8vw,5.15rem);line-height:.98;letter-spacing:-.022em;margin:.32em 0 .38em}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--tomato-d)}
+.lede{font-size:clamp(1.06rem,1rem + .3vw,1.22rem);color:var(--ink2);max-width:33em}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.proof{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:.95rem;color:var(--ink2)}
+.proof li{display:flex;align-items:center;gap:8px}
+.proof svg{width:18px;height:18px;color:var(--olive)}
+.stars{display:inline-flex;gap:2px;color:var(--tomato)}
+.stars svg{width:16px;height:16px}
+.plate-fig{position:relative;max-width:620px;margin-inline:auto;width:100%}
+.plate{width:100%;height:auto;overflow:visible}
+.plate text{font-family:var(--hand);font-weight:600;font-size:31px;fill:var(--ink)}
+.p-arrow,.p-head{fill:none;stroke:var(--ink);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.p-disc,.p-plate,.p-leaf,.p-herb,.p-dot,.p-fish,.p-lemon,.p-ware{transform-box:fill-box;transform-origin:center}
+.p-draw{stroke-dasharray:1;stroke-dashoffset:0}
+.js .plate .p-draw{transition:stroke-dashoffset 1s var(--ease) var(--t,0ms)}
+.js .plate .p-disc,.js .plate .p-plate,.js .plate .p-fish,.js .plate .p-lemon,.js .plate .p-ware{transition:opacity .6s var(--ease) var(--t,0ms),transform .9s var(--ease) var(--t,0ms)}
+.js .plate .p-leaf,.js .plate .p-herb,.js .plate .p-dot{transition:opacity .3s ease var(--t,0ms),transform .6s var(--spring) var(--t,0ms)}
+.js .plate .p-fade{transition:opacity .6s ease var(--t,0ms)}
+.plate.pre .p-disc{opacity:0;transform:scale(.82)}
+.plate.pre .p-plate{opacity:0;transform:translateY(22px) scale(.93)}
+.plate.pre .p-ware.l{opacity:0;transform:translateX(-36px)}
+.plate.pre .p-ware.r{opacity:0;transform:translateX(36px)}
+.plate.pre .p-leaf,.plate.pre .p-herb,.plate.pre .p-dot{opacity:0;transform:scale(0)}
+.plate.pre .p-fish{opacity:0;transform:translateY(-80px) rotate(-6deg)}
+.plate.pre .p-lemon{opacity:0;transform:translate(60px,14px) rotate(28deg)}
+.plate.pre .p-draw{stroke-dashoffset:1}
+.plate.pre .p-fade{opacity:0}
+.plate.done *{transition:none!important}
+.steam path{fill:none;stroke:rgba(90,75,56,.4);stroke-width:3.2;stroke-linecap:round;opacity:.5;transform-box:fill-box}
+.js .steam path{opacity:0}
+.js .plate.go .steam path{animation:steam 3.6s ease-in-out infinite;animation-delay:calc(2.4s + var(--i) * 1.1s)}
+@keyframes steam{0%{opacity:0;transform:translateY(10px)}35%{opacity:.85}100%{opacity:0;transform:translateY(-26px)}}
+.anim .hero [data-in]{animation:rise .8s var(--ease) both;animation-delay:calc(var(--i) * 90ms + 80ms)}
+.anim.settled .hero [data-in]{animation:none}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}}
+
+/* ribbons */
+.ribbons{position:relative;overflow-x:clip;padding:62px 0 26px;z-index:2}
+@media (min-width:900px){.ribbons{padding:30px 0}}
+.rb{margin-inline:-4%;overflow:hidden;padding:.8rem 0}
+.rb-front{position:relative;z-index:2;background:var(--olive-d);color:var(--cream);transform:rotate(-2deg);box-shadow:0 18px 30px -22px rgba(42,33,22,.7)}
+.rb-back{position:absolute;left:0;right:0;top:50%;z-index:1;background:var(--tomato);color:#fff;transform:translateY(calc(-50% - 38px)) rotate(2.2deg)}
+@media (min-width:900px){.rb-back{transform:translateY(-50%) rotate(1.8deg)}}
+.rb-track{display:flex;width:max-content;animation:rb 40s linear infinite}
+.rb-back .rb-track{animation-direction:reverse;animation-duration:52s}
+.rb ul{display:flex;flex:none;list-style:none}
+.rb li{display:flex;align-items:center;gap:1.3em;padding:0 .65em;white-space:nowrap;font:italic 500 clamp(1.12rem,.95rem + .9vw,1.6rem)/1.2 var(--serif)}
+.rb li::after{content:"";width:.6em;height:.6em;background:var(--lemon);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+.rb-back li::after{background:var(--cream)}
+.rb:hover .rb-track{animation-play-state:paused}
+@keyframes rb{to{transform:translateX(-50%)}}
+
+/* sections */
+.sec{padding:clamp(64px,9vw,120px) 0;position:relative}
+.label{display:flex;align-items:center;gap:12px;font-weight:600;font-size:.95rem;color:var(--olive);margin-bottom:18px}
+.label i{font:italic 500 1.5rem/1 var(--serif);color:var(--tomato-d)}
+.label::after{content:"";flex:1;height:1px;background:var(--line);max-width:220px}
+.h2{font-size:clamp(2.1rem,1.4rem + 3vw,3.6rem);letter-spacing:-.025em}
+.h2 em{font-style:italic;font-weight:500;color:var(--tomato-d)}
+.sub{color:var(--ink2);font-size:1.08rem;max-width:36em;margin-top:16px}
+
+/* ways */
+.ways{padding:clamp(40px,6vw,72px) 0 0}
+.ways-h{font:italic 500 1.25rem/1.2 var(--serif);color:var(--ink2);margin-bottom:22px;letter-spacing:0}
+.ways ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.ways li{padding:22px 18px 26px 0;border-bottom:1px solid var(--line)}
+.ways li:nth-child(odd){padding-right:16px;border-right:1px solid var(--line)}
+.ways li:nth-child(even){padding-left:16px}
+.ways li:nth-child(n+3){border-bottom:0}
+.ways svg{width:40px;height:40px;color:var(--olive);margin-bottom:12px}
+.ways h3{font-size:1.35rem;margin-bottom:6px}
+.ways p{color:var(--ink2);font-size:.97rem}
+@media (min-width:900px){.ways ol{grid-template-columns:repeat(4,1fr)}.ways li,.ways li:nth-child(odd),.ways li:nth-child(even){padding:26px 22px 30px;border-bottom:0;border-right:1px solid var(--line)}.ways li:first-child{padding-left:0}.ways li:last-child{border-right:0}}
+
+/* order direct */
+.order-grid{display:grid;gap:44px}
+@media (min-width:960px){.order-grid{grid-template-columns:1fr 1fr;gap:64px;align-items:center}}
+.steps{list-style:none;margin-top:30px;display:grid;gap:4px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:56px 1fr;gap:6px 14px;padding:16px 0;border-top:1px solid var(--line)}
+.steps li::before{counter-increment:s;content:counter(s);grid-row:span 2;font:italic 500 2.9rem/1 var(--serif);color:var(--tomato)}
+.steps b{font:600 1.2rem/1.3 var(--serif)}
+.steps span{color:var(--ink2);font-size:.98rem}
+.order-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:22px}
+.order-cta small{color:var(--ink2);font-size:.9rem}
+.receipts{position:relative;display:grid;gap:30px;padding:10px 6px 24px}
+@media (min-width:600px){.receipts{grid-template-columns:1fr 1fr;gap:22px}}
+.rc{--rc:#fffdf6;position:relative;background:var(--rc);padding:22px 20px 26px;box-shadow:0 22px 40px -26px rgba(42,33,22,.55),0 2px 0 rgba(42,33,22,.05)}
+.rc::after{content:"";position:absolute;left:0;right:0;top:100%;height:10px;background:linear-gradient(135deg,var(--rc) 7px,transparent 0) 0 0/14px 10px repeat-x,linear-gradient(225deg,var(--rc) 7px,transparent 0) 0 0/14px 10px repeat-x}
+.rc-app{transform:rotate(-2.5deg);--rc:#f2ece0;color:#4d4231}
+.rc-direct{transform:rotate(1.8deg)}
+@media (min-width:600px){.rc-app{margin-top:34px}.rc-direct{z-index:2}}
+.rc-h{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:12px}
+.rc-h b{font:600 1.08rem/1.25 var(--serif)}
+.rc .row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dashed rgba(42,33,22,.2);font-size:.93rem}
+.rc .row.fee{color:var(--tomato-d);font-weight:600}
+.rc .row.zero{color:var(--olive);font-weight:600}
+.rc .total{display:flex;justify-content:space-between;margin-top:12px;font:600 1.25rem/1.2 var(--serif)}
+.rc-app .total b{text-decoration:line-through;text-decoration-color:var(--tomato);text-decoration-thickness:2px}
+.keep{margin-top:16px;display:inline-block;font:italic 600 1.45rem/1.1 var(--serif);color:var(--tomato-d);border:2px solid var(--tomato-d);padding:8px 14px;border-radius:6px;transform:rotate(-3deg)}
+.fine{font-size:.86rem;color:var(--ink2);margin-top:22px}
+
+/* menu */
+.menu-sec{background:var(--paper);border-block:1px solid var(--line)}
+.menu-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px}
+.menu-grid{display:grid;gap:40px;margin-top:36px}
+.menu-grid>*,.order-grid>*,.rsv-grid>*,.visit-grid>*,.story-grid>*,.faq-grid>*,.hero-grid>*{min-width:0}
+@media (min-width:980px){.menu-grid{grid-template-columns:1fr 340px;gap:52px;align-items:start}}
+.tabs{position:relative;display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs [role=tab]{flex:none;background:none;border:0;cursor:pointer;padding:12px 10px 14px;min-height:48px;font:600 1.06rem/1 var(--serif);color:var(--ink2);transition:color .2s}
+@media (min-width:600px){.tabs [role=tab]{padding:12px 14px 14px;font-size:1.12rem}}
+.tabs [role=tab][aria-selected=true]{color:var(--ink)}
+.tabs [role=tab]:hover{color:var(--ink)}
+.tab-ink{position:absolute;left:0;bottom:-1px;height:3px;width:100px;background:var(--tomato);transform-origin:left;transition:transform .45s var(--ease)}
+.panel{list-style:none;display:grid;gap:4px 44px;padding-top:12px}
+.panel[hidden]{display:none}
+@media (min-width:720px){.panel{grid-template-columns:1fr 1fr}}
+.dish{padding:16px 0;border-bottom:1px solid var(--line)}
+.dish-top{display:flex;align-items:baseline;gap:8px}
+.dish h3{font-size:1.18rem;letter-spacing:-.01em;line-height:1.25}
+.lead{flex:1;min-width:16px;border-bottom:2px dotted rgba(42,33,22,.3);transform:translateY(-4px)}
+.price{font:600 1.15rem/1 var(--serif);color:var(--tomato-d);font-variant-numeric:tabular-nums}
+.dish p{color:var(--ink2);font-size:.95rem;margin-top:4px}
+.diet{font:700 .72rem/1 var(--sans);letter-spacing:.06em;color:var(--olive);border:1px solid rgba(85,101,43,.45);border-radius:999px;padding:3px 6px 2px;margin-left:4px;vertical-align:1px}
+.panel.enter .dish{animation:dishIn .5s var(--ease) both;animation-delay:calc(var(--i,0) * 45ms)}
+@keyframes dishIn{from{opacity:0;transform:translateY(12px)}}
+.board{position:relative;background:#23281a radial-gradient(120% 80% at 20% 10%,#39402a 0,#23281a 60%,#1d2115);color:#f3ead6;border-radius:8px;padding:30px 26px 28px;box-shadow:inset 0 0 0 9px #6f4f30,inset 0 0 0 11px #5a3e24,0 26px 40px -24px rgba(42,33,22,.7)}
+.board .hand{font-family:var(--hand);font-weight:600}
+.board h3{font-family:var(--hand);font-weight:600;font-size:2.1rem;color:var(--lemon);letter-spacing:0;line-height:1}
+.board .dishname{font-size:1.75rem;line-height:1.1;margin-top:12px}
+.board p{color:#d9cfb8;font-size:.98rem}
+.board .bp{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:14px;border-top:1px dashed rgba(243,234,214,.3)}
+.board .bp b{font-family:var(--hand);font-size:2.2rem;color:#fff}
+.board hr{border:0;border-top:1px dashed rgba(243,234,214,.3);margin:18px 0}
+.board .btn{width:100%;margin-top:18px;box-shadow:3px 3px 0 #0f120a}
+
+/* story */
+.story-grid{display:grid;gap:36px}
+@media (min-width:960px){.story-grid{grid-template-columns:.9fr 1.1fr;gap:64px}}
+.pull{font:italic 500 clamp(1.8rem,1.2rem + 2.4vw,2.9rem)/1.12 var(--serif);letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
+.pull::before{content:"\201C";display:block;font-size:4.2rem;line-height:.6;color:var(--tomato);margin-bottom:8px}
+.boat{margin-top:28px;width:100%;max-width:430px;color:var(--olive)}
+.boat .ld{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;transition:stroke-dashoffset 1.8s var(--ease) var(--t,0ms)}
+.boat .sun{stroke:var(--tomato)}
+.reveal.hide .boat .ld{stroke-dashoffset:1}
+.prose{columns:1;column-gap:40px;color:var(--ink2)}
+@media (min-width:720px){.prose{columns:2}}
+.prose p+p{margin-top:1em}
+.prose p:first-child::first-letter{float:left;font:600 4.4rem/.8 var(--serif);color:var(--tomato-d);margin:.08em .1em 0 0}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:44px;border-top:2px solid var(--ink)}
+@media (min-width:760px){.nums{grid-template-columns:repeat(4,1fr)}}
+.nums div{padding:20px 14px 6px 0}
+.nums b{display:block;font:600 clamp(2.6rem,1.8rem + 2.6vw,3.8rem)/1 var(--serif);letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--olive-d)}
+.nums span{color:var(--ink2);font-size:.95rem}
+.nums-note{margin-top:14px}
+
+/* reserve */
+.rsv-sec{background:var(--olive-d);color:var(--cream)}
+.rsv-sec .label{color:var(--olive-l)}
+.rsv-sec .label i{color:var(--lemon)}
+.rsv-sec .label::after{background:rgba(245,236,219,.2)}
+.rsv-sec .sub{color:#ddd3bd}
+.rsv-sec .h2 em{color:var(--lemon)}
+.rsv-grid{display:grid;gap:40px}
+@media (min-width:960px){.rsv-grid{grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}}
+.perks{list-style:none;margin-top:26px;display:grid;gap:12px}
+.perks li{display:flex;gap:12px;align-items:flex-start;color:#eadfca}
+.perks svg{width:22px;height:22px;flex:none;color:var(--lemon);margin-top:2px}
+.rsv{background:var(--paper);color:var(--ink);border-radius:10px;padding:24px 20px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+@media (min-width:600px){.rsv{padding:30px 30px 28px}}
+.rsv-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}
+.rsv-top h3{font-size:1.55rem}
+.rsv fieldset{border:0;margin-top:18px;min-width:0}
+.rsv legend{font-weight:600;font-size:.92rem;color:var(--ink2);margin-bottom:8px}
+.stepper{display:flex;align-items:center;gap:6px;border:1.5px solid var(--line);border-radius:8px;width:max-content;padding:3px}
+.stepper button{width:44px;height:44px;border:0;background:none;border-radius:6px;cursor:pointer;display:grid;place-items:center;transition:background-color .2s}
+.stepper button:hover{background:rgba(42,33,22,.07)}
+.stepper button svg{width:18px;height:18px}
+.stepper output{min-width:96px;text-align:center;font:600 1.1rem/1 var(--serif)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 2px 6px;margin:0 -2px}
+.chips::-webkit-scrollbar{display:none}
+#days{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent);padding-right:40px}
+.chip{position:relative;flex:none}
+.chip input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.chip span{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:64px;min-height:48px;padding:6px 12px;border:1.5px solid var(--line);border-radius:8px;font-weight:600;font-size:.95rem;line-height:1.15;transition:background-color .2s,border-color .2s,color .2s,transform .2s var(--ease)}
+.chip small{font-weight:500;font-size:.78rem;color:var(--ink2)}
+.chip input:checked+span{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.chip input:checked+span small{color:#d8ccb4}
+.chip input:focus-visible+span{outline:2.5px solid var(--tomato-d);outline-offset:2px}
+.chip:hover span{border-color:var(--ink)}
+.times{flex-wrap:wrap;overflow:visible}
+.rsv-sum{margin-top:20px;padding:14px 16px;background:rgba(85,101,43,.1);border-radius:8px;font:600 1.05rem/1.35 var(--serif)}
+.rsv .btn{width:100%;margin-top:14px}
+.rsv-note{font-size:.88rem;color:var(--ink2);margin-top:12px}
+.rsv-note.warn{color:var(--tomato-d);font-weight:600}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:34px}
+@media (min-width:860px){.gal{grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:16px}}
+.tile{position:relative;border-radius:8px;overflow:hidden;min-height:180px;isolation:isolate}
+.tile svg{position:absolute;inset:0;width:100%;height:100%;transition:transform .8s var(--ease)}
+.tile:hover svg{transform:scale(1.04)}
+.tile figcaption{position:absolute;left:10px;bottom:10px;right:10px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:space-between}
+.tile figcaption b{background:var(--paper);color:var(--ink);font:600 .95rem/1 var(--serif);padding:7px 10px;border-radius:4px}
+.tile figcaption span{font-size:.75rem;font-weight:600;color:#fff8ee;background:rgba(42,33,22,.78);padding:4px 8px;border-radius:999px}
+.t1{grid-column:span 2;min-height:260px}
+.t4{grid-column:span 2}
+@media (min-width:860px){.t1{grid-row:span 2;min-height:0}.t2,.t3{min-height:0}}
+
+/* reviews */
+.revs{display:grid;gap:18px;margin-top:36px}
+@media (min-width:900px){.revs{grid-template-columns:1.15fr 1fr 1fr;align-items:start}.rev:nth-child(2){margin-top:40px}.rev:nth-child(3){margin-top:12px}}
+.rev{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:24px 22px;transition:transform .3s var(--ease),box-shadow .3s}
+.rev:hover{transform:translateY(-4px) rotate(-.4deg);box-shadow:0 20px 34px -24px rgba(42,33,22,.5)}
+.rev:nth-child(1){background:var(--blush);border-color:transparent}
+.rev q{display:block;font:500 1.22rem/1.4 var(--serif);margin:12px 0 16px;quotes:"\201C" "\201D"}
+.rev:nth-child(1) q{font-size:1.42rem}
+.rev footer{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:600;font-size:.95rem}
+
+/* visit */
+.visit-grid{display:grid;gap:40px}
+@media (min-width:960px){.visit-grid{grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}}
+.addr{font:500 1.3rem/1.4 var(--serif);margin-top:18px}
+.hours{width:100%;border-collapse:collapse;margin-top:22px}
+.hours th,.hours td{text-align:left;padding:11px 0;border-bottom:1px solid var(--line);font-size:.98rem;vertical-align:top}
+.hours th{font-weight:600;padding-right:14px}
+.hours td{color:var(--ink2);text-align:right;white-space:nowrap}
+.hours tr.today th::after{content:"Today";margin-left:8px;font:700 .72rem/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;background:var(--tomato-d);color:#fff8ee;padding:4px 7px 3px;border-radius:999px;vertical-align:2px}
+.hours tr.today td{color:var(--ink);font-weight:600}
+.facts{display:grid;gap:10px;margin-top:22px}
+.facts p{display:flex;gap:10px;color:var(--ink2);font-size:.97rem}
+.facts svg{width:20px;height:20px;flex:none;color:var(--olive);margin-top:3px}
+.facts b{color:var(--ink)}
+.visit-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.map{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 26px 50px -34px rgba(42,33,22,.6)}
+.map svg{width:100%;height:auto}
+.map text{font-family:var(--sans);font-weight:600}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.6s ease-out infinite}
+@keyframes pulse{0%{opacity:.55;transform:scale(.4)}100%{opacity:0;transform:scale(1.6)}}
+
+/* faq */
+.faq-grid{display:grid;gap:34px}
+@media (min-width:960px){.faq-grid{grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}.faq-side{position:sticky;top:150px}}
+.ask{margin-top:26px;background:var(--blush);border-radius:8px;padding:22px}
+.ask b{font:600 1.25rem/1.3 var(--serif);display:block;margin-bottom:6px}
+.ask p{color:var(--ink2);font-size:.97rem;margin-bottom:14px}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 0;min-height:44px;font:600 1.18rem/1.3 var(--serif)}
+.faq summary::-webkit-details-marker{display:none}
+.pm{position:relative;width:30px;height:30px;flex:none;border-radius:50%;border:1.5px solid var(--ink);transition:background-color .2s,transform .35s var(--ease)}
+.pm::before,.pm::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--ink);transform:translate(-50%,-50%);transition:transform .35s var(--ease)}
+.pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+details[open] .pm{background:var(--ink)}
+details[open] .pm::before,details[open] .pm::after{background:var(--cream)}
+details[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.faq summary:hover .pm{transform:rotate(90deg)}
+.faq details p{color:var(--ink2);padding:0 44px 22px 0}
+
+/* final */
+.final{background:var(--tomato-d);color:#fff8ee;overflow:hidden;text-align:left}
+.final .amp{position:absolute;right:-4vw;top:50%;transform:translateY(-50%);font:italic 400 clamp(18rem,40vw,34rem)/1 var(--serif);color:rgba(255,248,238,.09);pointer-events:none;user-select:none}
+.final h2{font-size:clamp(2.6rem,1.5rem + 5vw,5.6rem);letter-spacing:-.035em;max-width:11em;position:relative}
+.final p{font:italic 500 clamp(1.2rem,1rem + .8vw,1.6rem)/1.35 var(--serif);margin-top:14px;color:#ffe9dd;position:relative}
+.final .cta-row{position:relative}
+.final .btn-red{background:var(--cream);color:var(--ink);box-shadow:3px 3px 0 var(--ink)}
+.final .btn-red:hover{box-shadow:5px 5px 0 var(--ink)}
+.final .btn-line{color:#fff8ee;box-shadow:inset 0 0 0 1.5px #fff8ee}
+.final .btn-line:hover{background:#fff8ee;color:var(--tomato-d)}
+
+/* footer */
+.foot{background:var(--ink);color:#e4d8c1;padding:56px 0 28px;font-size:.95rem}
+.foot-grid{display:grid;gap:30px}
+@media (min-width:860px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.foot .brand{display:flex}
+.foot .brand b{color:var(--cream)}
+.foot .brand b i{color:#e2694d}
+.foot .brand small{color:var(--olive-l)}
+.foot h3{font:600 .82rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#bfb196;margin-bottom:12px}
+.foot ul{list-style:none;display:grid;gap:0}
+.foot a,.linkish{color:#efe4cf;text-decoration:none;background:none;border:0;cursor:pointer;padding:10px 0;display:inline-block;text-align:left;min-height:44px}
+.foot a:hover,.linkish:hover{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.foot-bot{margin-top:40px;padding-top:20px;border-top:1px solid rgba(239,228,207,.16);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;color:#bfb196;font-size:.88rem}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:20px;z-index:90;width:max-content;max-width:min(92vw,460px);background:var(--ink);color:var(--cream);padding:14px 18px;border-radius:8px;font-size:.95rem;line-height:1.45;box-shadow:0 20px 40px -18px rgba(0,0,0,.6);opacity:0;transform:translate(-50%,16px);pointer-events:none;transition:opacity .3s ease,transform .4s var(--ease)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--lemon);margin-right:10px;vertical-align:1px}
+
+/* reveal */
+.reveal{transition:opacity .7s ease,transform .7s var(--ease)}
+.js .reveal.hide{opacity:0;transform:translateY(22px)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal.hide{opacity:1;transform:none}
+  .rb-track{width:auto;flex-wrap:wrap;justify-content:center}
+  .rb ul[aria-hidden]{display:none}.rb ul{flex-wrap:wrap;justify-content:center;row-gap:.3rem}
+  .js .steam path{opacity:.4}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-star" viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.6l2.5 5.3 5.8.7-4.3 4 1.1 5.7L10 14.5l-5.1 2.8 1.1-5.7-4.3-4 5.8-.7z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.5 4.8 4.8L19.5 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11.5a7 7 0 1 0-14 0C5 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></g></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="M5 19 13 11"/></g></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v-3l2-5h10l3 5h2a1 1 0 0 1 1 1v2"/><circle cx="7" cy="16.5" r="2"/><circle cx="17" cy="16.5" r="2"/><path d="M9 16.5h6M3 12h15"/></g></symbol>
+</svg>
+
+<div class="top" id="top">
+  <div class="demo" role="note"><span>Demo template by Beatus Mídias · fictional brand</span><a href="https://wa.me/5521975340783?text=Hi!%20I%20saw%20the%20restaurant%20template%20and%20I%20want%20a%20page%20like%20this." target="_blank" rel="noopener">I want a page like this</a></div>
+  <header class="nav" id="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#main" aria-label="Harbor and Vine Kitchen, back to top">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#323d18"/><path d="M8 26c3-2.4 5.6-2.4 8 0s5.6 2.4 8 0 5.6-2.4 8 0" stroke="#f5ecdb" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M20 21c0-6 3-10 8-11-.5 5-3.5 9-8 11z" fill="#a8b26b"/><path d="M20 21c-1-4-3.5-6.5-7-7 .3 3.6 2.8 6.3 7 7z" fill="#e8b84a"/></svg>
+        <span><b>Harbor <i>&amp;</i> Vine</b><small>KITCHEN</small></span>
+      </a>
+      <ul class="links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#reserve">Reserve</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <button class="btn btn-red btn-sm" type="button" data-demo>Order direct</button>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><span></span></button>
+    </div>
+    <nav class="drawer" id="drawer" hidden aria-label="Mobile">
+      <a href="#menu">Menu</a><a href="#order">Order direct</a><a href="#reserve">Reserve a table</a><a href="#visit">Hours and location</a><a href="#faq">FAQ</a>
+    </nav>
+  </header>
+</div>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker" data-in style="--i:0"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Waterfront kitchen and wine bar in Tampa, FL</p>
+        <h1 id="hero-h" data-in style="--i:1">Gulf seafood, a wood fire and a <em>proper</em> glass of wine.</h1>
+        <p class="lede" data-in style="--i:2">Seasonal plates built around what the boats bring in. Order direct for pickup or delivery and skip the app fees, or grab a table on the patio by the water.</p>
+        <div class="cta-row" data-in style="--i:3">
+          <button class="btn btn-red" type="button" data-demo>Order direct <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <a class="btn btn-line" href="#reserve">Reserve a table</a>
+        </div>
+        <ul class="proof" data-in style="--i:4">
+          <li><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span><b>4.8</b> from 1,240 reviews</span> <span class="tag">example</span></li>
+          <li><svg aria-hidden="true"><use href="#i-clock"/></svg>Pickup in about 25 minutes</li>
+          <li><svg aria-hidden="true"><use href="#i-car"/></svg>Delivery within 3 miles</li>
+        </ul>
+      </div>
+
+      <figure class="plate-fig">
+        <svg class="plate" id="plate" viewBox="0 0 640 600" role="img" aria-labelledby="plate-t">
+          <title id="plate-t">Illustration of the signature plate: blackened Gulf grouper over citrus fennel slaw, with charred lemon and a drizzle of datil pepper butter.</title>
+          <defs>
+            <radialGradient id="pg-well" cx="48%" cy="42%" r="62%"><stop offset="0" stop-color="#fffbf2"/><stop offset="1" stop-color="#eee1c8"/></radialGradient>
+            <radialGradient id="pg-shadow" cx="50%" cy="50%" r="50%"><stop offset=".72" stop-color="#2a2116" stop-opacity=".26"/><stop offset="1" stop-color="#2a2116" stop-opacity="0"/></radialGradient>
+            <linearGradient id="pg-fish" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9b071"/><stop offset=".5" stop-color="#c77d40"/><stop offset="1" stop-color="#8a4a22"/></linearGradient>
+            <radialGradient id="pg-crust" cx="50%" cy="45%" r="58%"><stop offset=".5" stop-color="#4a2410" stop-opacity="0"/><stop offset="1" stop-color="#3a1b0a" stop-opacity=".8"/></radialGradient>
+            <clipPath id="pc-fish"><path d="M226 258C232 236 262 220 300 214 352 206 412 218 432 248 442 266 430 292 398 304 356 320 292 318 254 300 236 290 222 276 226 258Z"/></clipPath>
+          </defs>
+          <circle class="p-disc" style="--t:0ms" cx="330" cy="300" r="262" fill="#ecd3bf"/>
+          <g class="p-ware l" style="--t:220ms" fill="#9c917d">
+            <path d="M56 168h4v66h-4zM64 168h4v66h-4zM72 168h4v66h-4zM80 168h4v66h-4z"/>
+            <path d="M54 230h32v14c0 18-7 26-10 38h-12c-3-12-10-20-10-38z"/>
+            <rect x="63" y="280" width="14" height="172" rx="7"/>
+          </g>
+          <g class="p-ware r" style="--t:260ms" fill="#a99f8b">
+            <path d="M578 168c15 12 20 62 17 124h-17z"/>
+            <rect x="577" y="286" width="17" height="166" rx="8"/>
+          </g>
+          <g class="p-plate" style="--t:120ms">
+            <circle cx="328" cy="314" r="212" fill="url(#pg-shadow)"/>
+            <circle cx="320" cy="300" r="200" fill="#fdf9f1" stroke="rgba(42,33,22,.14)" stroke-width="1.5"/>
+            <circle cx="320" cy="300" r="152" fill="url(#pg-well)"/>
+            <path d="M166 214A176 176 0 0 1 296 126" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+          </g>
+          <circle class="p-draw" style="--t:420ms" pathLength="1" cx="320" cy="300" r="183" fill="none" stroke="#55652b" stroke-width="3" transform="rotate(-90 320 300)"/>
+          <circle class="p-draw" style="--t:560ms" pathLength="1" cx="320" cy="300" r="176" fill="none" stroke="#55652b" stroke-width="1.2" opacity=".55" transform="rotate(90 320 300)"/>
+
+          <g fill="none" stroke-linecap="round">
+            <g transform="translate(196 330) rotate(-30)"><path class="p-leaf" style="--t:640ms" fill="#6f8a35" d="M0 0c8-14 26-18 42-12-8 14-26 18-42 12z"/></g>
+            <g transform="translate(206 354) rotate(10)"><path class="p-leaf" style="--t:680ms" fill="#8fa646" d="M0 0c8-14 26-18 42-12-8 14-26 18-42 12z"/></g>
+            <g transform="translate(230 374) rotate(38)"><path class="p-leaf" style="--t:720ms" fill="#5d7a2a" d="M0 0c8-14 26-18 42-12-8 14-26 18-42 12z"/></g>
+            <g transform="translate(258 388) rotate(-8)"><path class="p-leaf" style="--t:760ms" fill="#b6c26a" d="M0 0c8-14 26-18 42-12-8 14-26 18-42 12z"/></g>
+            <g transform="translate(292 384) rotate(22)"><path class="p-leaf" style="--t:800ms" fill="#6f8a35" d="M0 0c8-14 26-18 42-12-8 14-26 18-42 12z"/></g>
+            <g transform="translate(322 374) rotate(-34)"><path class="p-leaf" style="--t:840ms" fill="#8fa646" d="M0 0c8-14 26-18 42-12-8 14-26 18-42 12z"/></g>
+            <g transform="translate(350 354) rotate(14)"><path class="p-leaf" style="--t:880ms" fill="#5d7a2a" d="M0 0c8-14 26-18 42-12-8 14-26 18-42 12z"/></g>
+            <g transform="translate(222 316) rotate(70)"><path class="p-leaf" style="--t:900ms" fill="#b6c26a" d="M0 0c8-14 26-18 42-12-8 14-26 18-42 12z"/></g>
+            <g transform="translate(256 214) rotate(-150)"><path class="p-leaf" style="--t:920ms" fill="#8fa646" d="M0 0c8-14 26-18 42-12-8 14-26 18-42 12z"/></g>
+            <g transform="translate(290 204) rotate(-118)"><path class="p-leaf" style="--t:940ms" fill="#6f8a35" d="M0 0c8-14 26-18 42-12-8 14-26 18-42 12z"/></g>
+            <path class="p-fade" style="--t:860ms" stroke="#f1e9c2" stroke-width="4.5" d="M206 342q20-10 44 6M236 362q24-14 52 2M270 372q22 8 46-6M302 354q18-12 40 4"/>
+            <path class="p-fade" style="--t:900ms" stroke="#e0893a" stroke-width="3.5" d="M218 368q16-12 34-2M286 388q16-6 30 4M332 364q10-14 28-10"/>
+            <g class="p-fade" style="--t:940ms" fill="#f6dde0" stroke="#d06a7d" stroke-width="3"><circle cx="252" cy="342" r="9"/><circle cx="302" cy="398" r="8"/></g>
+          </g>
+
+          <g class="p-fish" style="--t:1000ms">
+            <g transform="rotate(-16 330 262)">
+              <path d="M226 258C232 236 262 220 300 214 352 206 412 218 432 248 442 266 430 292 398 304 356 320 292 318 254 300 236 290 222 276 226 258Z" fill="url(#pg-fish)"/>
+              <path d="M226 258C232 236 262 220 300 214 352 206 412 218 432 248 442 266 430 292 398 304 356 320 292 318 254 300 236 290 222 276 226 258Z" fill="url(#pg-crust)"/>
+              <g clip-path="url(#pc-fish)" stroke="#2e1608" stroke-width="8" stroke-linecap="round" opacity=".5">
+                <path d="M270 204 244 322M306 204 280 322M342 204 316 322M378 204 352 322M414 204 388 322"/>
+              </g>
+              <g fill="#2e1608" opacity=".55"><circle cx="262" cy="244" r="2.4"/><circle cx="290" cy="232" r="2"/><circle cx="330" cy="226" r="2.6"/><circle cx="372" cy="234" r="2"/><circle cx="404" cy="252" r="2.4"/><circle cx="356" cy="292" r="2"/><circle cx="300" cy="296" r="2.4"/><circle cx="246" cy="276" r="2"/></g>
+              <ellipse cx="330" cy="232" rx="74" ry="9" fill="#fff" opacity=".2"/>
+            </g>
+          </g>
+
+          <g class="p-lemon" style="--t:1300ms">
+            <g transform="translate(432 374) rotate(-22)">
+              <path d="M-48 0A48 48 0 0 0 48 0Z" fill="#e3a72a"/>
+              <path d="M-41 0A41 41 0 0 0 41 0Z" fill="#f7d95c"/>
+              <path d="M0 2 31 22M0 2 11 37M0 2-11 37M0 2-31 22" stroke="#fff4c4" stroke-width="2.6" stroke-linecap="round" opacity=".9"/>
+              <path d="M-48 0h96" stroke="#f6e7ad" stroke-width="3.4"/>
+              <ellipse cx="-20" cy="30" rx="10" ry="4" fill="#3a1d0a" opacity=".35" transform="rotate(30 -20 30)"/>
+              <ellipse cx="18" cy="34" rx="9" ry="3.6" fill="#3a1d0a" opacity=".3" transform="rotate(-24 18 34)"/>
+            </g>
+          </g>
+
+          <path class="p-draw" style="--t:1650ms" pathLength="1" d="M252 270C268 250 284 284 302 264S334 240 352 258 386 264 404 238" fill="none" stroke="#c9452b" stroke-width="6.5" stroke-linecap="round"/>
+          <path class="p-draw" style="--t:1850ms" pathLength="1" d="M268 292C286 280 304 300 324 284S356 270 376 282" fill="none" stroke="#e58a3a" stroke-width="4" stroke-linecap="round"/>
+          <g transform="translate(316 236)">
+            <g transform="rotate(-40)"><path class="p-herb" style="--t:1700ms" fill="#4f6b22" d="M0 0c4-7 13-9 21-6-4 7-13 9-21 6z"/></g>
+            <g transform="rotate(30)"><path class="p-herb" style="--t:1760ms" fill="#7c9a35" d="M0 0c4-7 13-9 21-6-4 7-13 9-21 6z"/></g>
+            <g transform="rotate(150)"><path class="p-herb" style="--t:1820ms" fill="#5d7a2a" d="M0 0c4-7 13-9 21-6-4 7-13 9-21 6z"/></g>
+            <g transform="rotate(-140)"><path class="p-herb" style="--t:1880ms" fill="#7c9a35" d="M0 0c4-7 13-9 21-6-4 7-13 9-21 6z"/></g>
+            <g transform="rotate(95)"><path class="p-herb" style="--t:1940ms" fill="#4f6b22" d="M0 0c4-7 13-9 21-6-4 7-13 9-21 6z"/></g>
+          </g>
+          <circle class="p-dot" style="--t:2050ms" cx="176" cy="382" r="10" fill="#c9452b"/>
+          <circle class="p-dot" style="--t:2140ms" cx="163" cy="354" r="7" fill="#c9452b"/>
+          <circle class="p-dot" style="--t:2230ms" cx="158" cy="330" r="4.5" fill="#c9452b"/>
+          <g class="p-fade" style="--t:2100ms"><circle cx="280" cy="250" r="2.2" fill="#8f2a17"/><circle cx="342" cy="244" r="2" fill="#8f2a17"/><circle cx="384" cy="250" r="2.2" fill="#8f2a17"/><circle cx="312" cy="276" r="1.8" fill="#2a2116"/><circle cx="364" cy="272" r="1.8" fill="#2a2116"/><circle cx="240" cy="352" r="2" fill="#8f2a17"/><circle cx="330" cy="356" r="2" fill="#2a2116"/></g>
+          <g class="steam" aria-hidden="true">
+            <path style="--i:0" d="M300 196c-12-14 10-24 0-40s10-24 0-38"/>
+            <path style="--i:1" d="M342 184c-12-14 10-24 0-40s10-24 0-38"/>
+            <path style="--i:2" d="M384 192c-12-14 10-24 0-40s10-24 0-38"/>
+          </g>
+
+          <g class="note">
+            <text class="p-fade" style="--t:2350ms" x="630" y="64" text-anchor="end">blackened Gulf grouper</text>
+            <path class="p-arrow p-draw" style="--t:2350ms" pathLength="1" d="M500 82C500 130 470 170 430 198"/>
+            <path class="p-head p-fade" style="--t:2950ms" d="M443 197.2 430 198 435.2 186.1"/>
+          </g>
+          <g class="note">
+            <text class="p-fade" style="--t:2550ms" x="14" y="108">datil pepper butter</text>
+            <path class="p-arrow p-draw" style="--t:2550ms" pathLength="1" d="M126 122C156 168 200 214 256 240"/>
+            <path class="p-head p-fade" style="--t:3150ms" d="M248.8 229.2 256 240 243.1 241.5"/>
+          </g>
+          <g class="note">
+            <text class="p-fade" style="--t:2750ms" x="14" y="572">citrus fennel slaw</text>
+            <path class="p-arrow p-draw" style="--t:2750ms" pathLength="1" d="M120 536C146 494 186 440 226 398"/>
+            <path class="p-head p-fade" style="--t:3350ms" d="M213.4 401.3 226 398 223.3 410.7"/>
+          </g>
+          <g class="note">
+            <text class="p-fade" style="--t:2950ms" x="628" y="572" text-anchor="end">charred lemon</text>
+            <path class="p-arrow p-draw" style="--t:2950ms" pathLength="1" d="M556 536C540 490 512 440 474 408"/>
+            <path class="p-head p-fade" style="--t:3550ms" d="M478.1 420.3 474 408 486.9 409.9"/>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <div class="ribbons">
+    <div class="rb rb-back" aria-hidden="true"><div class="rb-track">
+      <ul><li>Wood-fired</li><li>Locally caught</li><li>40 wines by the glass</li><li>Key lime pie made in house</li><li>Dogs welcome on the patio</li></ul>
+      <ul><li>Wood-fired</li><li>Locally caught</li><li>40 wines by the glass</li><li>Key lime pie made in house</li><li>Dogs welcome on the patio</li></ul>
+    </div></div>
+    <div class="rb rb-front" role="region" aria-label="Highlights"><div class="rb-track">
+      <ul><li>Gulf grouper off the boat this morning</li><li>Fresh pasta rolled daily</li><li>Happy hour 3 to 6</li><li>Sunday brunch on the patio</li><li>Order direct, keep the fees</li></ul>
+      <ul aria-hidden="true"><li>Gulf grouper off the boat this morning</li><li>Fresh pasta rolled daily</li><li>Happy hour 3 to 6</li><li>Sunday brunch on the patio</li><li>Order direct, keep the fees</li></ul>
+    </div></div>
+  </div>
+
+  <section class="ways" aria-labelledby="ways-h">
+    <div class="wrap">
+      <h2 class="ways-h reveal" id="ways-h">Four ways to eat with us</h2>
+      <ol class="reveal">
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h10l-1 9a4 4 0 0 1-8 0zM18 18v15M13 34h10"/><path d="M29 5v29M26 5v8a3 3 0 0 0 6 0V5"/></g></svg><h3>Dine in</h3><p>Dining room, bar and a patio facing the water. Walk-ins welcome at the bar.</p></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13h24l-2 21H10z"/><path d="M14 13v-2a6 6 0 0 1 12 0v2"/><path d="M15 21h10"/></g></svg><h3>Pickup</h3><p>Ready in about 25 minutes at our pickup window. Park right out front.</p></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="28" r="4"/><circle cx="30" cy="28" r="4"/><path d="M15 28h11l-3-10h-6M23 18l2-6h4M17 18l-3 6"/><path d="M3 14h7M5 19h5"/></g></svg><h3>Delivery</h3><p>Our own drivers, within 3 miles. Hot food, flat fee, no app markup.</p></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h8l-1 9a3 3 0 0 1-6 0zM22 6h8l-1 9a3 3 0 0 1-6 0z"/><path d="M14 18v14M26 18v14M10 33h8M22 33h8"/><path d="M20 2v2M16 3l1 2M24 3l-1 2"/></g></svg><h3>Private events</h3><p>Rehearsal dinners, birthdays and team nights for up to 60 guests.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="order" aria-labelledby="order-h">
+    <div class="wrap order-grid">
+      <div>
+        <p class="label reveal"><i>01</i> Order direct</p>
+        <h2 class="h2 reveal" id="order-h">Order direct and skip the <em>delivery app fees.</em></h2>
+        <p class="sub reveal">Delivery apps raise menu prices and stack fees on top. Order with us and you pay dining room prices plus a flat delivery fee. That's the whole bill. Here's the same dinner for two, both ways.</p>
+        <ol class="steps reveal">
+          <li><b>Pick your dishes</b><span>Browse the menu below and choose what you're craving tonight.</span></li>
+          <li><b>Send your order</b><span>One tap opens a chat with your order already typed. We confirm the time.</span></li>
+          <li><b>Pick up or get it delivered</b><span>Grab it at the window or let our own driver bring it over, still hot.</span></li>
+        </ol>
+        <div class="order-cta reveal">
+          <button class="btn btn-red" type="button" data-demo>Order direct <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <small>No account, no app to download.</small>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="receipts">
+          <article class="rc rc-app" aria-label="Example receipt through a delivery app">
+            <div class="rc-h"><b>Through a delivery app</b><span class="tag">example</span></div>
+            <div class="row"><span>Blackened grouper</span><span>$40.80</span></div>
+            <div class="row"><span>Shrimp and grits</span><span>$33.60</span></div>
+            <div class="row"><span>Key lime pie</span><span>$12.00</span></div>
+            <div class="row fee"><span>Menu markup</span><span>about 20%</span></div>
+            <div class="row fee"><span>Service fee</span><span>$12.96</span></div>
+            <div class="row fee"><span>Delivery fee</span><span>$4.99</span></div>
+            <p class="total"><span>Total</span><b>$104.35</b></p>
+          </article>
+          <article class="rc rc-direct" aria-label="Example receipt ordering direct">
+            <div class="rc-h"><b>Direct from Harbor &amp; Vine</b><span class="tag">example</span></div>
+            <div class="row"><span>Blackened grouper</span><span>$34.00</span></div>
+            <div class="row"><span>Shrimp and grits</span><span>$28.00</span></div>
+            <div class="row"><span>Key lime pie</span><span>$10.00</span></div>
+            <div class="row zero"><span>Menu markup</span><span>none</span></div>
+            <div class="row zero"><span>Service fee</span><span>$0.00</span></div>
+            <div class="row"><span>Delivery (3 miles)</span><span>$3.99</span></div>
+            <p class="total"><span>Total</span><b>$75.99</b></p>
+            <p class="keep">You keep $28.36</p>
+          </article>
+        </div>
+        <p class="fine">Example only. App markups and fees vary by platform, city and time of day.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec menu-sec" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="menu-head">
+        <div>
+          <p class="label reveal"><i>02</i> The menu</p>
+          <h2 class="h2 reveal" id="menu-h">What's cooking <em>this week.</em></h2>
+          <p class="sub reveal">The menu moves with the boats and the season. Everything on the dining room menu is available to order direct.</p>
+        </div>
+        <span class="tag reveal">example menu and prices</span>
+      </div>
+      <div class="menu-grid">
+        <div class="reveal">
+          <div class="tabs" role="tablist" aria-label="Menu sections">
+            <button role="tab" id="tab-1" aria-controls="pan-1" aria-selected="true">Starters</button>
+            <button role="tab" id="tab-2" aria-controls="pan-2" aria-selected="false" tabindex="-1">Mains</button>
+            <button role="tab" id="tab-3" aria-controls="pan-3" aria-selected="false" tabindex="-1">Drinks</button>
+            <button role="tab" id="tab-4" aria-controls="pan-4" aria-selected="false" tabindex="-1">Desserts</button>
+            <span class="tab-ink" aria-hidden="true"></span>
+          </div>
+          <ul class="panel" id="pan-1" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+            <li class="dish" style="--i:0"><div class="dish-top"><h3>Wood-roasted oysters</h3><span class="lead"></span><span class="price">$18</span></div><p>Half dozen, garlic butter, parmesan crumbs, lemon.</p></li>
+            <li class="dish" style="--i:1"><div class="dish-top"><h3>Gulf shrimp cocktail</h3><span class="lead"></span><span class="price">$16</span></div><p>Poached shrimp, datil pepper cocktail sauce. <span class="diet">GF</span></p></li>
+            <li class="dish" style="--i:2"><div class="dish-top"><h3>Burrata and tomatoes</h3><span class="lead"></span><span class="price">$15</span></div><p>Heirloom tomatoes, basil oil, grilled sourdough. <span class="diet">V</span></p></li>
+            <li class="dish" style="--i:3"><div class="dish-top"><h3>Crispy calamari</h3><span class="lead"></span><span class="price">$14</span></div><p>Pickled peppers, lemon aioli, sea salt.</p></li>
+            <li class="dish" style="--i:4"><div class="dish-top"><h3>Charred Brussels sprouts</h3><span class="lead"></span><span class="price">$11</span></div><p>Local honey, chili, shaved pecorino. <span class="diet">V</span></p></li>
+            <li class="dish" style="--i:5"><div class="dish-top"><h3>Smoked fish dip</h3><span class="lead"></span><span class="price">$13</span></div><p>Mullet and amberjack, pickled onion, saltines.</p></li>
+          </ul>
+          <ul class="panel" id="pan-2" role="tabpanel" aria-labelledby="tab-2" tabindex="0" hidden>
+            <li class="dish" style="--i:0"><div class="dish-top"><h3>Blackened grouper</h3><span class="lead"></span><span class="price">$34</span></div><p>Citrus fennel slaw, charred lemon, datil butter. <span class="diet">GF</span></p></li>
+            <li class="dish" style="--i:1"><div class="dish-top"><h3>Wood-fired half chicken</h3><span class="lead"></span><span class="price">$27</span></div><p>Salsa verde, crispy potatoes, arugula. <span class="diet">GF</span></p></li>
+            <li class="dish" style="--i:2"><div class="dish-top"><h3>Shrimp and grits</h3><span class="lead"></span><span class="price">$28</span></div><p>Stone-ground grits, smoked tomato broth, scallions.</p></li>
+            <li class="dish" style="--i:3"><div class="dish-top"><h3>Short rib pappardelle</h3><span class="lead"></span><span class="price">$29</span></div><p>Hand-cut pasta, slow-braised ragù, parmesan.</p></li>
+            <li class="dish" style="--i:4"><div class="dish-top"><h3>Cauliflower steak</h3><span class="lead"></span><span class="price">$22</span></div><p>Romesco, toasted almonds, golden raisins. <span class="diet">V</span> <span class="diet">GF</span></p></li>
+            <li class="dish" style="--i:5"><div class="dish-top"><h3>Harbor burger</h3><span class="lead"></span><span class="price">$19</span></div><p>Aged cheddar, onion jam, pickles, hand-cut fries.</p></li>
+          </ul>
+          <ul class="panel" id="pan-3" role="tabpanel" aria-labelledby="tab-3" tabindex="0" hidden>
+            <li class="dish" style="--i:0"><div class="dish-top"><h3>Harbor spritz</h3><span class="lead"></span><span class="price">$12</span></div><p>Bitter orange aperitivo, prosecco, soda, orange.</p></li>
+            <li class="dish" style="--i:1"><div class="dish-top"><h3>Key lime margarita</h3><span class="lead"></span><span class="price">$13</span></div><p>Blanco tequila, key lime, agave, salted rim.</p></li>
+            <li class="dish" style="--i:2"><div class="dish-top"><h3>House red or white</h3><span class="lead"></span><span class="price">$10</span></div><p>By the glass. Ask for a taste before you choose.</p></li>
+            <li class="dish" style="--i:3"><div class="dish-top"><h3>Local draft beer</h3><span class="lead"></span><span class="price">$8</span></div><p>Rotating taps from Tampa Bay brewers.</p></li>
+            <li class="dish" style="--i:4"><div class="dish-top"><h3>Fresh lemonade</h3><span class="lead"></span><span class="price">$6</span></div><p>Zero proof, with mint or strawberry.</p></li>
+            <li class="dish" style="--i:5"><div class="dish-top"><h3>Cold brew tonic</h3><span class="lead"></span><span class="price">$6</span></div><p>Cold brew, tonic, orange peel, lots of ice.</p></li>
+          </ul>
+          <ul class="panel" id="pan-4" role="tabpanel" aria-labelledby="tab-4" tabindex="0" hidden>
+            <li class="dish" style="--i:0"><div class="dish-top"><h3>Key lime pie</h3><span class="lead"></span><span class="price">$10</span></div><p>Graham crust, torched meringue, lime zest.</p></li>
+            <li class="dish" style="--i:1"><div class="dish-top"><h3>Olive oil cake</h3><span class="lead"></span><span class="price">$11</span></div><p>Citrus, whipped mascarpone, pistachio.</p></li>
+            <li class="dish" style="--i:2"><div class="dish-top"><h3>Chocolate pot de crème</h3><span class="lead"></span><span class="price">$10</span></div><p>Dark chocolate, sea salt, shortbread. <span class="diet">GF</span></p></li>
+            <li class="dish" style="--i:3"><div class="dish-top"><h3>Affogato</h3><span class="lead"></span><span class="price">$8</span></div><p>Vanilla gelato drowned in hot espresso.</p></li>
+          </ul>
+        </div>
+        <aside class="board reveal" aria-labelledby="board-h">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h3 id="board-h">Tonight's special</h3><span class="tag on-dark">example</span></div>
+          <p class="hand dishname">Whole grilled snapper for two</p>
+          <p>Charred lime, herb salad, crispy potatoes and a side of datil butter.</p>
+          <div class="bp"><span class="hand" style="font-size:1.3rem">serves 2</span><b>$58</b></div>
+          <hr>
+          <p><b class="hand" style="font-size:1.45rem;color:var(--lemon)">Happy hour, daily 3 to 6</b><br>$6 drafts, $8 spritz and half-price oysters at the bar.</p>
+          <button class="btn btn-red" type="button" data-demo>Order the special</button>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="story" aria-labelledby="story-h">
+    <div class="wrap">
+      <p class="label reveal"><i>03</i> Our kitchen</p>
+      <div class="story-grid">
+        <div class="reveal">
+          <h2 class="pull" id="story-h">If it wasn't swimming this morning, it won't be on the grill tonight.</h2>
+          <svg class="boat" viewBox="0 0 400 210" aria-hidden="true">
+            <circle class="ld sun" style="--t:100ms" pathLength="1" cx="300" cy="72" r="34"/>
+            <path class="ld" style="--t:200ms" pathLength="1" d="M0 150H400"/>
+            <path class="ld" style="--t:400ms" pathLength="1" d="M108 150 130 176H270L294 150Z"/>
+            <path class="ld" style="--t:600ms" pathLength="1" d="M150 150V122H212V150M162 132H176M188 132H202"/>
+            <path class="ld" style="--t:800ms" pathLength="1" d="M240 150V58M240 64 290 146M240 64 196 120"/>
+            <path class="ld" style="--t:900ms" pathLength="1" d="M0 188q20-10 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0"/>
+            <path class="ld" style="--t:1100ms" pathLength="1" d="M20 204q20-10 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0 40 0"/>
+            <path class="ld" style="--t:1300ms" pathLength="1" d="M62 66q10-10 20 0 10-10 20 0M100 44q7-7 14 0 7-7 14 0"/>
+          </svg>
+        </div>
+        <div class="reveal">
+          <div class="prose">
+            <p>Harbor &amp; Vine started with one simple rule: cook what's fresh and local, and cook it over real fire. Every morning our kitchen team meets the boats, picks the best of the catch and builds the day's specials around it.</p>
+            <p>Vegetables come from small farms about an hour away. Pasta is rolled by hand before lunch. Our key lime pie has not changed since the day we opened, and we would like to keep it that way.</p>
+            <p>The wine list leans toward small producers, with plenty to try by the glass. Not sure what you want? Ask your server for a taste before you commit. Nobody here will rush you.</p>
+          </div>
+        </div>
+      </div>
+      <div class="nums reveal">
+        <div><b data-count="6">6</b><span>local farms we buy from</span></div>
+        <div><b data-count="40">40</b><span>wines by the glass</span></div>
+        <div><b data-count="25">25</b><span>minutes, average pickup</span></div>
+        <div><b data-count="60">60</b><span>guests in the private room</span></div>
+      </div>
+      <p class="nums-note reveal"><span class="tag">illustrative numbers</span></p>
+    </div>
+  </section>
+
+  <section class="sec rsv-sec" id="reserve" aria-labelledby="rsv-h2">
+    <div class="wrap rsv-grid">
+      <div>
+        <p class="label reveal"><i>04</i> Reservations</p>
+        <h2 class="h2 reveal" id="rsv-h2">Book a table <em>by the water.</em></h2>
+        <p class="sub reveal">Sunset on the patio is the best seat in the house. Reserve online in under a minute, or walk in and grab a spot at the bar.</p>
+        <ul class="perks reveal">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Patio tables face the marina and catch the sunset.</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Private room for rehearsal dinners and birthdays, up to 60 guests.</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>High chairs, a kids menu and crayons on request.</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Dogs are welcome on the patio, water bowl included.</li>
+        </ul>
+      </div>
+      <form class="rsv reveal" id="rsv" aria-labelledby="rsv-h" onsubmit="return false">
+        <div class="rsv-top"><h3 id="rsv-h">Reserve a table</h3><span class="tag">demo</span></div>
+        <fieldset>
+          <legend>Party size</legend>
+          <div class="stepper">
+            <button type="button" data-step="-1" aria-label="Fewer guests"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+            <output id="party" aria-live="polite">2 guests</output>
+            <button type="button" data-step="1" aria-label="More guests"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5v14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Day</legend>
+          <div class="chips" id="days">
+            <label class="chip"><input type="radio" name="day" value="0" checked><span><small>Today</small>Tonight</span></label>
+            <label class="chip"><input type="radio" name="day" value="1"><span><small>Next</small>Tomorrow</span></label>
+            <label class="chip"><input type="radio" name="day" value="2"><span><small>Day</small>3</span></label>
+            <label class="chip"><input type="radio" name="day" value="3"><span><small>Day</small>4</span></label>
+            <label class="chip"><input type="radio" name="day" value="4"><span><small>Day</small>5</span></label>
+            <label class="chip"><input type="radio" name="day" value="5"><span><small>Day</small>6</span></label>
+            <label class="chip"><input type="radio" name="day" value="6"><span><small>Day</small>7</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Time</legend>
+          <div class="chips times">
+            <label class="chip"><input type="radio" name="time" value="5:30 PM"><span>5:30 PM</span></label>
+            <label class="chip"><input type="radio" name="time" value="6:00 PM"><span>6:00 PM</span></label>
+            <label class="chip"><input type="radio" name="time" value="6:30 PM"><span>6:30 PM</span></label>
+            <label class="chip"><input type="radio" name="time" value="7:00 PM" checked><span>7:00 PM</span></label>
+            <label class="chip"><input type="radio" name="time" value="7:30 PM"><span>7:30 PM</span></label>
+            <label class="chip"><input type="radio" name="time" value="8:00 PM"><span>8:00 PM</span></label>
+            <label class="chip"><input type="radio" name="time" value="8:30 PM"><span>8:30 PM</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Seating</legend>
+          <div class="chips times">
+            <label class="chip"><input type="radio" name="seat" value="Dining room"><span>Dining room</span></label>
+            <label class="chip"><input type="radio" name="seat" value="Patio" checked><span>Patio</span></label>
+            <label class="chip"><input type="radio" name="seat" value="Bar"><span>Bar</span></label>
+          </div>
+        </fieldset>
+        <p class="rsv-sum" id="rsv-sum" aria-live="polite">Table for 2 · Tonight · 7:00 PM · Patio</p>
+        <button class="btn btn-red" type="button" data-demo>Request this table <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="rsv-note" id="rsv-note">Groups of 9 or more: we'll plan it with you, just send us a message.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec" id="gallery" aria-labelledby="gal-h">
+    <div class="wrap">
+      <p class="label reveal"><i>05</i> From the kitchen</p>
+      <h2 class="h2 reveal" id="gal-h">A table full of <em>color.</em></h2>
+      <p class="sub reveal">Drawings made for this demo. On your site, your own food and dining room photos go here.</p>
+      <div class="gal">
+        <figure class="tile t1 reveal">
+          <svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="600" height="460" fill="#323d18"/>
+            <circle cx="300" cy="236" r="190" fill="#e8eee8"/>
+            <g fill="#ffffff" opacity=".7"><circle cx="210" cy="150" r="14"/><circle cx="380" cy="130" r="10"/><circle cx="420" cy="300" r="16"/><circle cx="200" cy="330" r="12"/><circle cx="300" cy="380" r="9"/><circle cx="260" cy="100" r="8"/></g>
+            <g id="oy" transform="translate(300 236)">
+              <g transform="rotate(0) translate(0 -112)"><ellipse rx="52" ry="36" fill="#8d8a7a"/><ellipse rx="40" ry="26" fill="#ddd6c4"/><ellipse rx="22" ry="14" fill="#c8bda2" cx="4"/></g>
+              <g transform="rotate(72) translate(0 -112)"><ellipse rx="52" ry="36" fill="#7f7c6c"/><ellipse rx="40" ry="26" fill="#e3dccb"/><ellipse rx="22" ry="14" fill="#c8bda2" cx="-4"/></g>
+              <g transform="rotate(144) translate(0 -112)"><ellipse rx="52" ry="36" fill="#8d8a7a"/><ellipse rx="40" ry="26" fill="#ddd6c4"/><ellipse rx="22" ry="14" fill="#c8bda2" cx="4"/></g>
+              <g transform="rotate(216) translate(0 -112)"><ellipse rx="52" ry="36" fill="#7f7c6c"/><ellipse rx="40" ry="26" fill="#e3dccb"/><ellipse rx="22" ry="14" fill="#c8bda2" cx="-4"/></g>
+              <g transform="rotate(288) translate(0 -112)"><ellipse rx="52" ry="36" fill="#8d8a7a"/><ellipse rx="40" ry="26" fill="#ddd6c4"/><ellipse rx="22" ry="14" fill="#c8bda2" cx="4"/></g>
+              <circle r="38" fill="#e8b84a"/><circle r="31" fill="#f7d95c"/><path d="M0 0 0-31M0 0 27-15M0 0 27 15M0 0 0 31M0 0-27 15M0 0-27-15" stroke="#fff4c4" stroke-width="3"/>
+            </g>
+          </svg>
+          <figcaption><b>Oysters on ice</b><span>your photo here</span></figcaption>
+        </figure>
+        <figure class="tile t2 reveal">
+          <svg viewBox="0 0 300 230" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="300" height="230" fill="#c9452b"/>
+            <circle cx="150" cy="112" r="88" fill="#fbf6ec"/><circle cx="150" cy="112" r="64" fill="#f1e5cc"/>
+            <g fill="none" stroke="#f0cf8a" stroke-width="11" stroke-linecap="round"><path d="M104 96c18-20 40 14 58-6s30 4 36 10"/><path d="M100 120c22-16 38 16 60 0s32 0 42 6"/><path d="M112 142c16-10 34 8 50-2s22-6 30 0"/></g>
+            <g fill="#7a2e18"><circle cx="128" cy="104" r="7"/><circle cx="170" cy="126" r="8"/><circle cx="146" cy="140" r="6"/><circle cx="182" cy="98" r="5"/></g>
+            <path d="M160 82c6-10 18-12 26-6-6 10-18 12-26 6z" fill="#55652b"/><path d="M118 130c4-9 14-11 22-6-5 8-15 10-22 6z" fill="#6f8a35"/>
+          </svg>
+          <figcaption><b>Pappardelle</b></figcaption>
+        </figure>
+        <figure class="tile t3 reveal">
+          <svg viewBox="0 0 300 230" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="300" height="230" fill="#ecd3bf"/>
+            <circle cx="210" cy="60" r="40" fill="#f2c26b" opacity=".6"/>
+            <path d="M112 40h76l-8 70a30 30 0 0 1-60 0z" fill="#fff" opacity=".55"/>
+            <path d="M116 66h68l-4 44a30 30 0 0 1-60 0z" fill="#ef8a3c"/>
+            <g fill="#fff" opacity=".8"><circle cx="134" cy="92" r="3"/><circle cx="160" cy="80" r="2.5"/><circle cx="150" cy="108" r="3.5"/><circle cx="170" cy="100" r="2"/></g>
+            <path d="M150 140v54M124 196h52" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+            <circle cx="184" cy="62" r="20" fill="#f29a3a" stroke="#fbe0a8" stroke-width="4"/><path d="M184 42v40M164 62h40" stroke="#fbe0a8" stroke-width="2"/>
+            <path d="M170 30 140 100" stroke="#2a2116" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <figcaption><b>Harbor spritz</b></figcaption>
+        </figure>
+        <figure class="tile t4 reveal">
+          <svg viewBox="0 0 600 230" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3c47a"/><stop offset=".55" stop-color="#e2774a"/><stop offset="1" stop-color="#9c3f34"/></linearGradient></defs>
+            <rect width="600" height="230" fill="url(#sky)"/>
+            <circle cx="380" cy="150" r="54" fill="#ffe2a6"/>
+            <rect y="150" width="600" height="80" fill="#5b3a3f"/>
+            <g stroke="#ffd59a" stroke-width="3" stroke-linecap="round" opacity=".7"><path d="M330 166h100M346 182h70M360 198h44"/></g>
+            <path d="M0 40Q150 90 300 46T600 50" fill="none" stroke="#2a2116" stroke-width="2"/>
+            <g fill="#fff3c9"><circle cx="60" cy="58" r="5"/><circle cx="120" cy="70" r="5"/><circle cx="180" cy="70" r="5"/><circle cx="240" cy="58" r="5"/><circle cx="360" cy="44" r="5"/><circle cx="420" cy="48" r="5"/><circle cx="480" cy="52" r="5"/><circle cx="540" cy="52" r="5"/></g>
+            <g fill="#2a2116"><path d="M60 130h120l-60-38z"/><rect x="117" y="130" width="6" height="70"/><rect x="70" y="170" width="100" height="8" rx="3"/><rect x="80" y="178" width="5" height="40"/><rect x="155" y="178" width="5" height="40"/></g>
+          </svg>
+          <figcaption><b>The patio at sunset</b></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="reviews" aria-labelledby="rev-h" style="padding-top:0">
+    <div class="wrap">
+      <p class="label reveal"><i>06</i> Guests</p>
+      <h2 class="h2 reveal" id="rev-h">People keep coming back <em>for the grouper.</em></h2>
+      <div class="revs">
+        <figure class="rev reveal"><span class="stars" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span><q>Ordered direct for the first time. Cheaper than the app and it still showed up hot. That grouper is unreal.</q><footer><span>Dana R.</span><span class="tag">example review</span></footer></figure>
+        <figure class="rev reveal"><span class="stars" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span><q>Best sunset patio in town. Our server walked us through the wines without any fuss.</q><footer><span>Marcus T.</span><span class="tag">example review</span></footer></figure>
+        <figure class="rev reveal"><span class="stars" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span><q>We booked the private room for my mom's 70th. They handled everything, cake included.</q><footer><span>Priya S.</span><span class="tag">example review</span></footer></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec menu-sec" id="visit" aria-labelledby="visit-h">
+    <div class="wrap visit-grid">
+      <div>
+        <p class="label reveal"><i>07</i> Visit</p>
+        <h2 class="h2 reveal" id="visit-h">Find us <em>on the water.</em></h2>
+        <p class="addr reveal">120 Palm Street, Waterfront District<br>Tampa, FL</p>
+        <table class="hours reveal" aria-label="Opening hours">
+          <tr data-days="1,2,3,4"><th scope="row">Monday to Thursday</th><td>11:30 a.m. to 10 p.m.</td></tr>
+          <tr data-days="5,6"><th scope="row">Friday and Saturday</th><td>11:30 a.m. to 11 p.m.</td></tr>
+          <tr data-days="0"><th scope="row">Sunday</th><td>10 a.m. to 9 p.m.<br>brunch until 2</td></tr>
+        </table>
+        <div class="facts reveal">
+          <p><svg aria-hidden="true"><use href="#i-car"/></svg><span><b>Delivery</b> within 3 miles, 11:30 a.m. to 9:30 p.m. Flat $3.99 fee, free over $60 <span class="tag">example</span></span></p>
+          <p><svg aria-hidden="true"><use href="#i-clock"/></svg><span><b>Happy hour</b> every day from 3 to 6 p.m. at the bar and patio.</span></p>
+          <p><svg aria-hidden="true"><use href="#i-pin"/></svg><span><b>Parking</b> in the free lot behind the building, plus bike racks out front.</span></p>
+        </div>
+        <div class="visit-cta reveal">
+          <button class="btn btn-line" type="button" data-demo="maps">Get directions</button>
+          <button class="btn btn-red" type="button" data-demo>Order direct <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+      <div class="map reveal">
+        <svg viewBox="0 0 520 440" role="img" aria-label="Stylized map: the restaurant sits on the waterfront, with a dashed 3-mile delivery zone around it covering downtown and the marina.">
+          <rect width="520" height="440" fill="#f3e8d3"/>
+          <path d="M0 300C70 286 120 320 190 330S320 300 380 340 470 420 520 410V440H0Z" fill="#b9cdc4"/>
+          <path d="M0 0H90C80 60 40 120 0 150Z" fill="#b9cdc4"/>
+          <g fill="none" stroke="#9fb8ad" stroke-width="2" stroke-linecap="round"><path d="M40 370q16-8 32 0t32 0M150 392q16-8 32 0t32 0M300 380q16-8 32 0t32 0M20 60q12-6 24 0t24 0"/></g>
+          <rect x="300" y="60" width="120" height="80" rx="8" fill="#d4d9ad"/>
+          <g stroke="#fffaf0" stroke-linecap="round"><path stroke-width="14" d="M0 220H520M240 0V310"/><path stroke-width="8" d="M0 120H520M120 40V300M380 0V330M0 270H460M470 0 460 300"/></g>
+          <circle cx="250" cy="258" r="150" fill="rgba(201,69,43,.07)" stroke="#c9452b" stroke-width="2.4" stroke-dasharray="8 8"/>
+          <g font-size="16" fill="#5a4b38"><text x="140" y="210">Palm St</text><text x="132" y="112">Bay Ave</text><text x="312" y="54">Oak Park</text><text x="30" y="420" font-style="italic">the bay</text></g>
+          <g font-size="13" fill="#7a6a52" letter-spacing="1.5"><text x="40" y="190">DOWNTOWN</text><text x="400" y="190">MARINA</text></g>
+          <rect x="300" y="396" width="190" height="30" rx="15" fill="#fffaf0"/><text x="395" y="416" font-size="14" fill="#b1361c" text-anchor="middle">3-mile delivery zone</text>
+          <circle class="pulse" cx="250" cy="258" r="30" fill="#c9452b"/>
+          <path d="M250 262c-14-16-20-26-20-36a20 20 0 0 1 40 0c0 10-6 20-20 36z" fill="#b1361c" stroke="#fffaf0" stroke-width="3"/>
+          <circle cx="250" cy="226" r="7" fill="#fffaf0"/>
+          <g transform="translate(476 44)" fill="#5a4b38"><path d="M0-20 7 6 0 1-7 6z"/><text y="22" font-size="13" text-anchor="middle">N</text></g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq" id="faq" aria-labelledby="faq-h">
+    <div class="wrap faq-grid">
+      <div class="faq-side">
+        <p class="label reveal"><i>08</i> Good to know</p>
+        <h2 class="h2 reveal" id="faq-h">Questions we <em>hear a lot.</em></h2>
+        <div class="ask reveal"><b>Still have a question?</b><p>Send us a message and someone from the floor team will answer, usually within minutes during service.</p><button class="btn btn-line btn-sm" type="button" data-demo>Message us</button></div>
+      </div>
+      <div class="reveal">
+        <details open><summary>Is ordering direct really cheaper than the delivery apps?<span class="pm" aria-hidden="true"></span></summary><p>Yes. When you order direct you pay the same prices as the dining room, there's no service fee, and delivery is a flat $3.99 within 3 miles. Apps usually mark up the menu and add their own fees, so the same order tends to cost more there.</p></details>
+        <details><summary>How far do you deliver, and how long does it take?<span class="pm" aria-hidden="true"></span></summary><p>We deliver within 3 miles of the restaurant with our own drivers. Most orders arrive in 35 to 45 minutes. On busy Friday nights we'll give you the real time when we confirm your order.</p></details>
+        <details><summary>Do you take walk-ins?<span class="pm" aria-hidden="true"></span></summary><p>Always at the bar, and on the patio when there's room. For Friday and Saturday dinner, a reservation is the safest bet.</p></details>
+        <details><summary>Can the kitchen handle allergies and gluten-free requests?<span class="pm" aria-hidden="true"></span></summary><p>Yes. Many dishes are naturally gluten-free and marked GF on the menu. Tell us about any allergy when you order or book, and the kitchen will walk you through safe options.</p></details>
+        <details><summary>Do you host private events?<span class="pm" aria-hidden="true"></span></summary><p>Our private room seats up to 60 for rehearsal dinners, birthdays and team nights. Send us the date and headcount and we'll put together a menu and a quote.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec final" aria-labelledby="final-h">
+    <span class="amp" aria-hidden="true">&amp;</span>
+    <div class="wrap">
+      <h2 class="reveal" id="final-h">Dinner's on the grill.</h2>
+      <p class="reveal">Pickup, delivery or a table by the water. Your call.</p>
+      <div class="cta-row reveal">
+        <button class="btn btn-red" type="button" data-demo>Order direct <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <a class="btn btn-line" href="#reserve">Reserve a table</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#main" aria-label="Harbor and Vine Kitchen, back to top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#55652b"/><path d="M8 26c3-2.4 5.6-2.4 8 0s5.6 2.4 8 0 5.6-2.4 8 0" stroke="#f5ecdb" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M20 21c0-6 3-10 8-11-.5 5-3.5 9-8 11z" fill="#a8b26b"/><path d="M20 21c-1-4-3.5-6.5-7-7 .3 3.6 2.8 6.3 7 7z" fill="#e8b84a"/></svg><span><b>Harbor <i>&amp;</i> Vine</b><small>KITCHEN</small></span></a>
+        <p style="margin-top:14px;max-width:26em">Coastal cooking, wood fire and small-producer wine on the Tampa waterfront.</p>
+      </div>
+      <div><h3>Visit</h3><p>120 Palm Street<br>Waterfront District<br>Tampa, FL</p></div>
+      <div><h3>Explore</h3><ul><li><a href="#menu">Menu</a></li><li><a href="#order">Order direct</a></li><li><a href="#reserve">Reservations</a></li><li><a href="#visit">Hours</a></li></ul></div>
+      <div><h3>Legal</h3><ul><li><button class="linkish" type="button" data-demo="page">Privacy policy</button></li><li><button class="linkish" type="button" data-demo="page">Terms of use</button></li><li><button class="linkish" type="button" data-demo="page">Accessibility</button></li></ul></div>
+    </div>
+    <div class="foot-bot"><span>© 2026 Harbor &amp; Vine Kitchen, a fictional brand.</span><span>Demo template by Beatus Mídias</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+  root.classList.add('js');
+  var REDUZ = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var VIS = d.visibilityState === 'visible';
+  if (/[?&]thumb=1/.test(location.search)) root.classList.add('thumb');
+  if (!REDUZ && VIS) root.classList.add('anim');
+  setTimeout(function () { root.classList.add('settled'); }, 2600);
+
+  /* toast for business CTAs (never opens a real number) */
+  var toast = d.getElementById('toast'), tt;
+  var MSG = {
+    wa: 'Demo template: on your site, this button opens your WhatsApp with a ready message.',
+    maps: 'Demo template: on your site, this button opens the map with your address.',
+    page: 'Demo template: on your site, this link opens your own policy page.'
+  };
+  d.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-demo]'); if (!b) return;
+    e.preventDefault();
+    toast.textContent = MSG[b.getAttribute('data-demo')] || MSG.wa;
+    toast.classList.add('show'); clearTimeout(tt);
+    tt = setTimeout(function () { toast.classList.remove('show'); }, 4200);
+  });
+
+  /* in-page anchors: smooth scroll by JS (keeps programmatic scroll instant) and move focus */
+  d.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]'); if (!a) return;
+    var id = a.getAttribute('href'), t = id.length > 1 && d.querySelector(id); if (!t) return;
+    e.preventDefault();
+    t.scrollIntoView({ behavior: REDUZ ? 'auto' : 'smooth', block: 'start' });
+    if (history.pushState) history.pushState(null, '', id);
+    if (!t.hasAttribute('tabindex')) t.setAttribute('tabindex', '-1');
+    t.focus({ preventScroll: true });
+  });
+
+  /* mobile menu */
+  var nav = d.getElementById('nav'), burger = nav.querySelector('.burger'), drawer = d.getElementById('drawer');
+  function setMenu(open) { nav.classList.toggle('open', open); burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); drawer.hidden = !open; }
+  burger.addEventListener('click', function () { setMenu(drawer.hidden); });
+  drawer.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !drawer.hidden) { setMenu(false); burger.focus(); } });
+  d.addEventListener('click', function (e) { if (!drawer.hidden && !nav.contains(e.target)) setMenu(false); });
+
+  /* signature 1: the plate assembles itself */
+  var plate = d.getElementById('plate');
+  if (!REDUZ && VIS) {
+    plate.classList.add('pre');
+    plate.getBoundingClientRect();
+    requestAnimationFrame(function () { requestAnimationFrame(function () { plate.classList.remove('pre'); plate.classList.add('go'); }); });
+    setTimeout(function () { plate.classList.add('done'); }, 5200);
+  } else { plate.classList.add('go'); }
+
+  /* reveal by TOP position (never by area fraction) */
+  var els = [].slice.call(d.querySelectorAll('.reveal'));
+  if (!REDUZ && VIS) {
+    var vh = innerHeight;
+    els.forEach(function (el) { if (el.getBoundingClientRect().top > vh * 0.92) el.classList.add('hide'); });
+    var sweep = function () { els.forEach(function (el) { if (el.classList.contains('hide') && el.getBoundingClientRect().top < innerHeight * 0.92) el.classList.remove('hide'); }); };
+    addEventListener('scroll', sweep, { passive: true }); addEventListener('resize', sweep); addEventListener('load', sweep);
+    setTimeout(function () { els.forEach(function (el) { el.classList.remove('hide'); }); }, 6000);
+  }
+
+  /* menu tabs (WAI-ARIA) with sliding underline */
+  var tabs = [].slice.call(d.querySelectorAll('[role=tab]')), ink = d.querySelector('.tab-ink');
+  var panels = tabs.map(function (t) { return d.getElementById(t.getAttribute('aria-controls')); });
+  function moveInk(t) { ink.style.transform = 'translateX(' + t.offsetLeft + 'px) scaleX(' + (t.offsetWidth / 100) + ')'; }
+  function select(i, focus) {
+    tabs.forEach(function (t, k) { var on = k === i; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; panels[k].hidden = !on; });
+    moveInk(tabs[i]);
+    if (!REDUZ) { var p = panels[i]; p.classList.remove('enter'); void p.offsetWidth; p.classList.add('enter'); }
+    if (focus) tabs[i].focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(i); });
+    t.addEventListener('keydown', function (e) {
+      var n = null, L = tabs.length;
+      if (e.key === 'ArrowRight') n = (i + 1) % L; else if (e.key === 'ArrowLeft') n = (i + L - 1) % L; else if (e.key === 'Home') n = 0; else if (e.key === 'End') n = L - 1;
+      if (n !== null) { e.preventDefault(); select(n, true); }
+    });
+  });
+  moveInk(tabs[0]);
+  if (d.fonts && d.fonts.ready) d.fonts.ready.then(function () { moveInk(tabs.filter(function (t) { return t.getAttribute('aria-selected') === 'true'; })[0]); });
+  addEventListener('resize', function () { moveInk(tabs.filter(function (t) { return t.getAttribute('aria-selected') === 'true'; })[0]); });
+
+  /* counters */
+  var nums = [].slice.call(d.querySelectorAll('[data-count]'));
+  if (!REDUZ && 'IntersectionObserver' in window) {
+    nums.forEach(function (el) { el.textContent = '0'; });
+    var io = new IntersectionObserver(function (en) {
+      en.forEach(function (x) {
+        if (!x.isIntersecting) return; io.unobserve(x.target);
+        var el = x.target, end = +el.getAttribute('data-count'), t0 = null;
+        (function step(t) { t0 = t0 || t; var p = Math.min(1, (t - t0) / 1300); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); })(performance.now());
+      });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    nums.forEach(function (el) { io.observe(el); });
+    setTimeout(function () { nums.forEach(function (el) { el.textContent = el.getAttribute('data-count'); }); }, 7000);
+  }
+
+  /* reservation widget */
+  var form = d.getElementById('rsv'), party = 2, out = d.getElementById('party'), sum = d.getElementById('rsv-sum'), note = d.getElementById('rsv-note');
+  var DN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var dayLabels = [];
+  [].slice.call(d.querySelectorAll('#days .chip')).forEach(function (c, i) {
+    var dt = new Date(); dt.setDate(dt.getDate() + i);
+    var top = i === 0 ? 'Today' : DN[dt.getDay()], main = MN[dt.getMonth()] + ' ' + dt.getDate();
+    c.querySelector('span').innerHTML = '<small>' + top + '</small>' + main;
+    dayLabels[i] = i === 0 ? 'Tonight' : DN[dt.getDay()] + ', ' + main;
+  });
+  function upd() {
+    var day = form.querySelector('[name=day]:checked'), time = form.querySelector('[name=time]:checked'), seat = form.querySelector('[name=seat]:checked');
+    out.textContent = party + (party === 1 ? ' guest' : ' guests');
+    sum.textContent = 'Table for ' + party + ' · ' + (dayLabels[+day.value] || 'Tonight') + ' · ' + time.value + ' · ' + seat.value;
+    note.classList.toggle('warn', party >= 8);
+  }
+  form.addEventListener('change', upd);
+  [].slice.call(form.querySelectorAll('[data-step]')).forEach(function (b) {
+    b.addEventListener('click', function () { party = Math.max(1, Math.min(8, party + +b.getAttribute('data-step'))); upd(); });
+  });
+  upd();
+
+  /* today in the hours table */
+  var today = new Date().getDay();
+  [].slice.call(d.querySelectorAll('.hours tr')).forEach(function (r) { if (r.getAttribute('data-days').split(',').indexOf(String(today)) > -1) r.classList.add('today'); });
+
+  /* scrollspy */
+  var links = [].slice.call(d.querySelectorAll('.links a')), secs = links.map(function (a) { return d.querySelector(a.getAttribute('href')); }), tick = false;
+  function spy() { tick = false; var cur = null; secs.forEach(function (s) { if (s && s.getBoundingClientRect().top <= 180) cur = s.id; });
+    links.forEach(function (a) { var on = a.getAttribute('href') === '#' + cur; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); }); }
+  addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true }); spy();
+})();
+</script>
+</body>
+</html>

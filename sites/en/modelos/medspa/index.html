@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Velvet Med Spa · Injectables, facials and laser in Scottsdale, AZ (demo template)</title>
+<meta name="description" content="Demo med spa landing page by Beatus Mídias for a fictional med spa in Scottsdale, AZ: treatments, before and after, membership and free consultation.">
+<meta name="theme-color" content="#1c1020">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%233a1f3d'/%3E%3Ctext x='20' y='28' text-anchor='middle' font-family='Georgia' font-style='italic' font-size='24' fill='%23e8d2b0'%3EV%3C/text%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Bodoni Moda";src:url("fontes/bodoni-moda-latin-opsz-normal.woff2") format("woff2");font-weight:400 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Bodoni Moda";src:url("fontes/bodoni-moda-latin-opsz-italic.woff2") format("woff2");font-weight:400 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Urbanist";src:url("fontes/urbanist-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+:root{
+  --bg:#1c1020;--bg2:#22132a;--plum:#3a1f3d;--plum2:#4b2a4f;--text:#f6edf0;--mut:#cbb8c6;--mut2:#a893a5;
+  --champ:#e8d2b0;--champ2:#cfae82;--rose:#d9a5a0;--line:rgba(255,255,255,.1);--glass:rgba(255,255,255,.055);
+  --serif:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;--sans:"Urbanist",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);--spring:cubic-bezier(.34,1.56,.64,1);--wrap:1200px;
+  --shadow:0 40px 80px -40px rgba(8,2,10,.9),0 2px 0 rgba(255,255,255,.04) inset
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-top:110px;-webkit-text-size-adjust:100%}
+body{background:radial-gradient(1100px 900px at 0 0,rgba(122,59,110,.3),transparent 70%),radial-gradient(900px 700px at 100% 42%,rgba(122,59,110,.16),transparent 70%),radial-gradient(900px 700px at 0 78%,rgba(232,210,176,.06),transparent 70%),var(--bg);color:var(--text);font:400 1.0625rem/1.7 var(--sans);min-height:100dvh;overflow-x:clip}
+svg{display:block;max-width:100%}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:-.015em;text-wrap:balance}
+h1 em,h2 em,h3 em{font-style:italic;color:var(--champ)}
+p{text-wrap:pretty}
+.wrap{width:min(100% - 2.5rem,var(--wrap));margin-inline:auto}
+@media (min-width:1500px){:root{--wrap:1300px}}
+.skip{position:fixed;left:12px;top:-60px;z-index:100;background:var(--champ);color:#2a142c;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;transition:top .2s}
+.skip:focus{top:12px}
+[tabindex="-1"]:focus{outline:none}
+:focus-visible{outline:2px solid var(--champ);outline-offset:3px;border-radius:10px}
+.tag{display:inline-block;vertical-align:middle;font:600 .72rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:5px 9px 4px;border-radius:999px;background:rgba(232,210,176,.14);color:var(--champ);white-space:nowrap;border:1px solid rgba(232,210,176,.22)}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 10px;border-radius:999px;background:var(--glass);border:1px solid var(--line);font-weight:600;font-size:.88rem;color:var(--mut);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--champ);box-shadow:0 0 12px var(--champ)}
+
+/* demo strip + island nav */
+.demo{position:sticky;top:0;z-index:50;background:#120914;color:#e6d8e2;font-size:.8125rem;line-height:1.35;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2px 14px;padding:7px 16px;text-align:center;border-bottom:1px solid var(--line)}
+.demo a{color:var(--champ);font-weight:600;text-underline-offset:3px;padding:4px 0}
+.demo a:hover{color:#fff}
+.thumb .demo{display:none}
+.island-wrap{position:sticky;top:var(--dh,40px);z-index:45;padding:12px 0 0;pointer-events:none}
+.island{pointer-events:auto;display:flex;align-items:center;gap:10px;height:62px;padding:0 8px 0 18px;border-radius:999px;background:rgba(38,20,42,.62);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 20px 40px -24px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.08)}
+.logo{display:flex;align-items:baseline;gap:8px;text-decoration:none;margin-right:auto;min-height:44px;align-items:center}
+.logo b{font:italic 400 1.6rem/1 var(--serif);color:var(--champ);letter-spacing:-.01em}
+.logo small{font-weight:600;font-size:.72rem;letter-spacing:.28em;color:var(--mut);text-transform:uppercase}
+.links{display:none;list-style:none;gap:2px}
+.links a{display:block;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.96rem;color:var(--mut);transition:color .2s,background-color .2s}
+.links a:hover,.links a.active{color:var(--text);background:rgba(255,255,255,.06)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:50px;border:0;border-radius:999px;font:600 1rem/1.1 var(--sans);text-decoration:none;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background-color .25s,color .25s}
+.btn-champ{background:#e6cfa9 linear-gradient(135deg,#f5e7cf 0%,#dcc09a 100%);color:#2a142c;padding:6px 6px 6px 24px;box-shadow:0 16px 32px -16px rgba(232,210,176,.55),inset 0 1px 0 rgba(255,255,255,.6)}
+.btn-champ .ac{width:40px;height:40px;border-radius:50%;background:#2a142c;color:var(--champ);display:grid;place-items:center;transition:transform .35s var(--ease)}
+.btn-champ .ac svg{width:16px;height:16px}
+.btn-champ:hover{transform:translateY(-2px);box-shadow:0 22px 40px -18px rgba(232,210,176,.7),inset 0 1px 0 rgba(255,255,255,.6)}
+.btn-champ:hover .ac{transform:translateX(3px) rotate(-45deg)}
+.btn-ghost{padding:0 22px;color:var(--text);background:var(--glass);border:1px solid var(--line)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.btn-sm{min-height:46px;padding:4px 4px 4px 18px;font-size:.92rem;gap:10px}
+.btn-sm .ac{width:36px;height:36px}
+.burger{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.04);display:grid;place-items:center;cursor:pointer}
+.burger span,.burger span::before,.burger span::after{display:block;width:16px;height:1.6px;background:var(--text);transition:transform .3s var(--ease),opacity .2s}
+.burger span{position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-5px}.burger span::after{top:5px}
+.open .burger span{transform:rotate(45deg)}
+.open .burger span::before{transform:translateY(5px) rotate(90deg)}
+.open .burger span::after{opacity:0}
+.drawer{pointer-events:auto;margin-top:8px;border-radius:28px;background:rgba(38,20,42,.92);border:1px solid var(--line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:10px 22px 18px}
+.drawer a{display:block;padding:12px 0;font:italic 400 1.5rem/1.2 var(--serif);text-decoration:none;border-bottom:1px solid var(--line)}
+.drawer a:last-child{border-bottom:0}
+@media (min-width:980px){.links{display:flex}.burger{display:none}.drawer{display:none!important}}
+@media (max-width:440px){.logo small{display:none}.island{padding-left:16px;gap:6px}.island .btn-sm{padding-left:14px;font-size:.86rem}}
+
+/* hero */
+.hero{position:relative;padding:clamp(40px,7vw,90px) 0 clamp(70px,9vw,120px);overflow:hidden;isolation:isolate}
+.glow{position:absolute;left:0;top:0;width:60vmax;height:60vmax;margin:-30vmax 0 0 -30vmax;border-radius:50%;background:radial-gradient(circle,rgba(232,210,176,.16),transparent 62%);pointer-events:none;z-index:-1;transform:translate3d(70vw,30vh,0)}
+@media (hover:none),(pointer:coarse){.glow{animation:wander 16s ease-in-out infinite alternate}}
+@keyframes wander{0%{transform:translate3d(80vw,20vh,0)}50%{transform:translate3d(30vw,45vh,0)}100%{transform:translate3d(70vw,70vh,0)}}
+.orb{position:absolute;border-radius:50%;pointer-events:none;z-index:-1;filter:blur(2px)}
+.orb.o1{width:380px;height:380px;left:-140px;top:120px;background:radial-gradient(circle at 35% 35%,rgba(160,82,140,.45),transparent 65%)}
+.orb.o2{width:300px;height:300px;right:-80px;bottom:-60px;background:radial-gradient(circle at 40% 40%,rgba(217,165,160,.3),transparent 65%)}
+.hero-grid{display:grid;gap:50px;align-items:center}
+.hero-grid>*{min-width:0}
+@media (min-width:980px){.hero-grid{grid-template-columns:1.1fr .9fr;gap:40px}}
+.hero h1{font-size:clamp(3rem,1.6rem + 5.6vw,6.2rem);line-height:.98;letter-spacing:-.025em;margin:26px 0 24px}
+.hero h1 em{font-weight:400}
+.lede{font-size:clamp(1.06rem,1rem + .35vw,1.25rem);color:var(--mut);max-width:32em}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.proof{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;list-style:none}
+.proof li{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--glass);border:1px solid var(--line);font-size:.9rem;color:var(--mut)}
+.proof svg{width:16px;height:16px;color:var(--champ)}
+.stars{display:inline-flex;gap:2px;color:var(--champ)}
+.stars svg{width:14px;height:14px}
+
+.art{position:relative;max-width:470px;width:100%;margin-inline:auto}
+.arch{position:relative;aspect-ratio:480/600;border-radius:240px 240px 28px 28px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.14)}
+.arch svg{width:100%;height:100%}
+.arch::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 0 0 10px rgba(255,255,255,.04);pointer-events:none}
+.sun{transform-box:fill-box;transform-origin:center;animation:breathe 7s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.04)}}
+.seal{position:absolute;top:-34px;right:-26px;width:150px;height:150px;border:0;background:none;padding:0;cursor:pointer;border-radius:50%;z-index:3}
+.seal svg{width:100%;height:100%;overflow:visible}
+.seal .disc{fill:rgba(30,15,33,.72);stroke:rgba(232,210,176,.5);stroke-width:1}
+.seal text{font-family:var(--sans);font-weight:600;font-size:14.5px;letter-spacing:2.5px;fill:var(--champ);text-transform:uppercase}
+.seal .v{font:italic 400 54px/1 var(--serif);fill:var(--champ);letter-spacing:0;text-transform:none}
+.seal-rot{transform-origin:100px 100px;animation:spin 24s linear infinite}
+.seal:hover .seal-rot{animation-duration:8s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.plan{position:absolute;left:-34px;bottom:44px;z-index:3;width:min(270px,74%);padding:16px 18px;border-radius:22px;background:rgba(40,21,44,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%);box-shadow:0 30px 50px -30px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.12);font-size:.9rem}
+.plan .t{display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--mut);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.plan .r{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+.plan .r:last-child{border-bottom:0;padding-bottom:0}
+.plan .r span:first-child{color:var(--mut)}
+.plan .r b{font-weight:600}
+.plan .tot b{font:400 1.4rem/1 var(--serif);color:var(--champ)}
+@media (max-width:620px){.seal{width:118px;height:118px;top:-30px;right:-6px}.plan{left:-6px;bottom:22px}}
+
+/* motion: hero entrance */
+.anim .hero [data-in]{animation:rise 1s var(--ease) both;animation-delay:calc(var(--i) * 90ms + 100ms)}
+.anim.settled .hero [data-in]{animation:none}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}}
+.anim .art{animation:artIn 1.3s var(--ease) both .25s}
+.anim.settled .art{animation:none}
+@keyframes artIn{from{opacity:0;transform:translateY(30px) scale(.97)}}
+
+/* values strip */
+.values{border-block:1px solid var(--line);background:rgba(255,255,255,.02)}
+.values ul{list-style:none;display:grid;grid-template-columns:1fr 1fr}
+@media (min-width:900px){.values ul{grid-template-columns:repeat(4,1fr)}}
+.values li{padding:20px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:6px;color:var(--mut);font-size:.95rem;line-height:1.45;border-right:1px solid var(--line)}
+@media (min-width:900px){.values li{flex-direction:row;align-items:center;gap:12px;padding:22px 16px}}
+.values li:nth-child(2n){border-right:0}
+@media (min-width:900px){.values li:nth-child(2n){border-right:1px solid var(--line)}.values li:last-child{border-right:0}}
+@media (max-width:899px){.values li:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.values b{font:italic 400 1.6rem/1 var(--serif);color:var(--champ);min-width:1.4em}
+@media (min-width:900px){.values b{font-size:1.9rem}}
+
+/* sections */
+.sec{padding:clamp(80px,10vw,140px) 0;position:relative}
+.h2{font-size:clamp(2.4rem,1.5rem + 3.6vw,4.4rem);margin-top:18px}
+.sub{color:var(--mut);font-size:1.1rem;max-width:34em;margin-top:18px}
+.head{display:grid;gap:10px;margin-bottom:50px}
+.head>.pill{justify-self:start}
+@media (min-width:980px){.head.split{grid-template-columns:1fr 1fr;align-items:end;gap:40px}.head.split .sub{justify-self:end}}
+
+/* double-bezel cards with cursor spotlight */
+.bz{padding:6px;border-radius:32px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);transition:transform .45s var(--ease),border-color .3s}
+.bz-in{position:relative;height:100%;overflow:hidden;border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.spot .bz-in::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .35s;background:radial-gradient(320px circle at var(--mx,50%) var(--my,0%),rgba(232,210,176,.18),transparent 65%)}
+.spot:hover .bz-in::before{opacity:1}
+.spot:hover{transform:translateY(-4px);border-color:rgba(232,210,176,.22)}
+.tr-grid{display:grid;gap:18px}
+@media (min-width:760px){.tr-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1040px){.tr-grid{grid-template-columns:1.1fr 1fr 1fr;grid-auto-rows:minmax(0,auto)}.tr-big{grid-row:span 2}.tr-wide{grid-column:span 2}}
+.tr .bz-in{padding:30px 28px;display:flex;flex-direction:column;gap:14px}
+.tr-ill{width:100%;height:140px;border-radius:20px;background:radial-gradient(120% 100% at 30% 0%,rgba(232,210,176,.14),rgba(255,255,255,.02));border:1px solid var(--line);display:grid;place-items:center}
+.tr-big .tr-ill{height:240px}
+@media (min-width:1040px){.tr-big .tr-ill{height:300px}}
+.areas{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.areas li{padding:6px 12px;border-radius:999px;border:1px solid rgba(232,210,176,.22);color:var(--champ);font-size:.85rem}
+.tr-ill svg{height:78%;width:auto}
+.tr h3{font-size:clamp(1.8rem,1.4rem + 1vw,2.3rem)}
+.tr p{color:var(--mut)}
+.tr-foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
+.from{font-size:.88rem;color:var(--mut2)}
+.from b{font:400 1.7rem/1 var(--serif);color:var(--champ);margin:0 4px}
+.lnk{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;background:none;border:0;cursor:pointer;color:var(--text);font-weight:600;font-size:.95rem;padding:0}
+.lnk svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+.lnk:hover svg{transform:translateX(4px)}
+.also{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;align-items:center}
+.also span{padding:9px 16px;border-radius:999px;border:1px solid var(--line);color:var(--mut);font-size:.92rem}
+.also .note{border:0;padding:0 6px;color:var(--mut2)}
+
+/* before / after */
+.ba-grid{display:grid;gap:40px;align-items:center}
+@media (min-width:980px){.ba-grid{grid-template-columns:1.25fr .75fr;gap:56px}}
+.ba{position:relative;aspect-ratio:1;border-radius:30px;overflow:hidden;--pos:50%;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.12);user-select:none;-webkit-user-select:none}
+.ba svg{position:absolute;inset:0;width:100%;height:100%}
+.ba-after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--pos))}
+@media (min-width:600px){.ba{aspect-ratio:4/3}}
+.ba-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;touch-action:pan-y;z-index:4}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:rgba(255,255,255,.85);z-index:3;pointer-events:none;box-shadow:0 0 18px rgba(255,255,255,.5)}
+.ba-knob{position:absolute;top:50%;left:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(40,21,44,.55);border:1px solid rgba(255,255,255,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:grid;place-items:center;color:#fff;transition:transform .3s var(--spring)}
+.ba-knob svg{position:static;width:26px;height:26px}
+.ba:hover .ba-knob,.ba-range:focus-visible~.ba-line .ba-knob{transform:scale(1.1)}
+.ba-range:focus-visible~.ba-line .ba-knob{outline:2px solid var(--champ);outline-offset:4px}
+.ba-tag{position:absolute;top:16px;z-index:2;padding:7px 14px;border-radius:999px;background:rgba(28,16,32,.55);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;pointer-events:none}
+.ba-tag.l{left:16px}.ba-tag.r{right:16px}
+.ba-cap{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);z-index:2;white-space:nowrap;padding:7px 14px;border-radius:999px;background:rgba(28,16,32,.6);font-size:.85rem;color:#f1e4ea;pointer-events:none}
+@media (max-width:979px){.ba-side{order:-1}}
+.ba-side ul{list-style:none;margin-top:24px;display:grid;gap:14px}
+.ba-side li{display:flex;gap:12px;color:var(--mut)}
+.ba-side li svg{width:20px;height:20px;flex:none;color:var(--champ);margin-top:4px}
+.ba-side .fine{margin-top:22px;font-size:.88rem;color:var(--mut2)}
+
+/* steps */
+.steps{list-style:none;display:grid;gap:16px}
+@media (min-width:760px){.steps{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps .bz-in{padding:26px 24px 28px}
+.steps .n{font:italic 400 2.6rem/1 var(--serif);color:var(--champ);opacity:.9}
+@media (min-width:760px){.steps .n{font-size:3.4rem}}
+.steps h3{font-size:1.5rem;margin:12px 0 8px}
+@media (min-width:760px){.steps h3{margin-top:18px}}
+.steps p{color:var(--mut);font-size:.98rem}
+.steps small{display:inline-block;margin-top:14px;font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mut2)}
+
+/* membership */
+.mem{background:linear-gradient(180deg,transparent,rgba(58,31,61,.45) 30%,rgba(58,31,61,.45) 70%,transparent)}
+.mem-grid{display:grid;gap:50px;align-items:center}
+@media (min-width:980px){.mem-grid{grid-template-columns:1fr 1fr;gap:70px}}
+.card-stage{perspective:1100px;max-width:480px;width:100%;margin-inline:auto}
+.vcard{position:relative;aspect-ratio:1.586;border-radius:24px;overflow:hidden;color:#2a142c;background:#e2c9a0 linear-gradient(125deg,#f7ecd9 0%,#d9bb8f 32%,#f5e6cc 52%,#c49c6a 78%,#ead6b4 100%);box-shadow:0 50px 80px -40px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.7);transform:rotateX(var(--rx,8deg)) rotateY(var(--ry,-14deg));transition:transform .5s var(--ease);transform-style:preserve-3d}
+.vcard::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,0) 0 18px,rgba(255,255,255,.05) 18px 19px)}
+.vcard::after{content:"";position:absolute;top:-20%;bottom:-20%;left:0;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-160%) skewX(-12deg);animation:shine 5.5s ease-in-out infinite 1.5s}
+@keyframes shine{0%{transform:translateX(-160%) skewX(-12deg)}45%,100%{transform:translateX(360%) skewX(-12deg)}}
+.vc-in{position:absolute;inset:0;padding:8% 8%;display:flex;flex-direction:column;justify-content:space-between}
+.vc-top{display:flex;justify-content:space-between;align-items:flex-start}
+.vc-top b{font:italic 400 clamp(1.8rem,1.2rem + 2vw,2.6rem)/1 var(--serif)}
+.vc-top span{font-weight:700;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;margin-top:6px}
+.vc-chip{width:52px;height:40px;border-radius:9px;background:linear-gradient(135deg,#b78f5c,#f1dfbf 50%,#a98050);box-shadow:inset 0 0 0 1px rgba(42,20,44,.25)}
+.vc-bot{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
+.vc-bot small{display:block;font-size:.72rem;letter-spacing:.2em;opacity:.7}
+.perks{list-style:none;display:grid;gap:12px;margin-top:28px}
+.perks li{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:20px;background:var(--glass);border:1px solid var(--line)}
+.perks svg{width:22px;height:22px;flex:none;color:var(--champ);margin-top:2px}
+.perks b{display:block;font-weight:600}
+.perks span{color:var(--mut);font-size:.95rem}
+.price-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-top:26px}
+.price-row b{font:400 3.4rem/1 var(--serif);color:var(--champ)}
+.price-row span{color:var(--mut)}
+
+/* team + safety */
+.safe-grid{display:grid;gap:50px;align-items:center}
+@media (min-width:980px){.safe-grid{grid-template-columns:.95fr 1.05fr;gap:70px}}
+.frames{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.frames figure:nth-child(2){margin-top:60px}
+.fr{aspect-ratio:3/4;border-radius:200px 200px 24px 24px;overflow:hidden;border:1px solid var(--line);position:relative}
+.fr svg{width:100%;height:100%}
+.frames figcaption{margin-top:12px;font-weight:600}
+.frames figcaption span{display:block;font-weight:400;color:var(--mut2);font-size:.9rem}
+.ph-note{margin-top:18px;color:var(--mut2);font-size:.9rem}
+.checks{list-style:none;margin-top:28px;display:grid;gap:0}
+.checks li{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;padding:18px 0;border-top:1px solid var(--line)}
+.checks li:last-child{border-bottom:1px solid var(--line)}
+.checks i{grid-row:span 2;font:italic 400 1.6rem/1 var(--serif);color:var(--champ);width:1.6em}
+.checks b{font-weight:600;font-size:1.06rem}
+.checks span{color:var(--mut);font-size:.97rem}
+
+/* reviews */
+.rv-grid{display:grid;gap:18px}
+@media (min-width:980px){.rv-grid{grid-template-columns:.7fr 1fr 1fr}}
+.rating .bz-in{padding:30px 26px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.rating b{font:400 5rem/1 var(--serif);color:var(--champ)}
+.rating p{color:var(--mut)}
+.rv .bz-in{padding:32px 28px;display:flex;flex-direction:column;gap:22px}
+.rv q{font:italic 400 clamp(1.4rem,1.15rem + .8vw,1.75rem)/1.35 var(--serif);quotes:"\201C" "\201D";flex:1}
+.rv footer{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:600}
+.rv footer>span:first-child{display:flex;align-items:center;gap:12px}
+.mono{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:italic 400 1.1rem/1 var(--serif);color:#2a142c;background:#e2c9a0 linear-gradient(135deg,#f5e7cf,#cfae82)}
+
+/* visit */
+.visit-grid{display:grid;gap:44px;align-items:center}
+@media (min-width:980px){.visit-grid{grid-template-columns:1fr 1fr;gap:60px}}
+.map{border-radius:30px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.map svg{width:100%;height:auto}
+.map text{font-family:var(--sans);font-weight:600}
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+.info{margin-top:26px;display:grid;gap:12px}
+.info .bz-in{padding:20px 22px}
+.addr b{display:block;font:400 1.4rem/1.3 var(--serif)}
+.addr span{color:var(--mut)}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.hours li:last-child{border-bottom:0}
+.hours li span:last-child{color:var(--mut);white-space:nowrap}
+.hours li.today span{color:var(--champ);font-weight:600}
+.hours li.today span:first-child::after{content:"Today";margin-left:8px;font:700 .7rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 8px 3px;border-radius:999px;background:rgba(232,210,176,.16);vertical-align:2px}
+.v-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+/* faq */
+.faq-grid{display:grid;gap:40px}
+@media (min-width:980px){.faq-grid{grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}.faq-side{position:sticky;top:150px}}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:24px 0;min-height:44px;font:400 clamp(1.25rem,1.1rem + .5vw,1.5rem)/1.3 var(--serif)}
+.faq summary::-webkit-details-marker{display:none}
+.pm{position:relative;width:40px;height:40px;flex:none;border-radius:50%;border:1px solid var(--line);background:var(--glass);transition:transform .4s var(--ease),background-color .3s}
+.pm::before,.pm::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:var(--champ);transform:translate(-50%,-50%);transition:transform .4s var(--ease)}
+.pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+details[open] .pm{transform:rotate(180deg);background:rgba(232,210,176,.14)}
+details[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.faq details p{color:var(--mut);padding:0 56px 24px 0}
+
+/* final */
+.final{text-align:center;overflow:hidden}
+.final .wrap{position:relative}
+.final h2{font-size:clamp(2.8rem,1.6rem + 6vw,7rem);line-height:.98;letter-spacing:-.03em}
+.final p{color:var(--mut);font-size:1.15rem;max-width:30em;margin:22px auto 0}
+.final .cta-row{justify-content:center}
+.final .seal{position:relative;top:auto;right:auto;margin:0 auto 30px;width:130px;height:130px}
+.ring{position:absolute;left:50%;top:50%;width:min(1100px,160vw);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(232,210,176,.1);pointer-events:none;z-index:-1}
+.ring.r2{width:min(760px,120vw)}
+
+/* footer */
+.foot{border-top:1px solid var(--line);padding:56px 0 28px;font-size:.95rem;color:var(--mut)}
+.foot-grid{display:grid;gap:30px}
+@media (min-width:860px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.foot h3{font:600 .76rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--mut2);margin-bottom:12px}
+.foot ul{list-style:none}
+.foot a,.linkish{display:inline-flex;align-items:center;min-height:44px;color:var(--text);text-decoration:none;background:none;border:0;cursor:pointer;padding:0;font-size:.95rem}
+.foot a:hover,.linkish:hover{color:var(--champ)}
+.foot-bot{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;font-size:.88rem;color:var(--mut2)}
+.big-word{font:italic 400 clamp(5rem,20vw,16rem)/.8 var(--serif);color:transparent;-webkit-text-stroke:1px rgba(232,210,176,.28);letter-spacing:-.04em;margin-top:40px;user-select:none;white-space:nowrap;overflow:hidden}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:22px;z-index:90;width:max-content;max-width:min(92vw,480px);padding:14px 20px;border-radius:20px;background:rgba(40,21,44,.85);border:1px solid rgba(232,210,176,.3);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:var(--text);font-size:.95rem;line-height:1.5;box-shadow:0 30px 60px -30px rgba(0,0,0,.9);opacity:0;transform:translate(-50%,18px);pointer-events:none;transition:opacity .3s,transform .45s var(--spring)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* reveal */
+.reveal{transition:opacity .9s ease,transform .9s var(--ease);transition-delay:var(--rd,0ms)}
+.js .reveal.hide{opacity:0;transform:translateY(30px)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal.hide{opacity:1;transform:none}
+  .vcard{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.8l2.4 5 5.6.8-4 3.9 1 5.5L10 14.4 5 17l1-5.5-4-3.9 5.6-.8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.5 4.8 4.8L19.5 7"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c.8 5.6 2.4 7.2 8 8-5.6.8-7.2 2.4-8 8-.8-5.6-2.4-7.2-8-8 5.6-.8 7.2-2.4 8-8z"/></symbol>
+  <symbol id="i-lr" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m9 7-5 5 5 5M15 7l5 5-5 5"/></symbol>
+</svg>
+
+<div class="demo" id="demo" role="note"><span>Demo template by Beatus Mídias · fictional brand</span><a href="https://wa.me/5521975340783?text=Hi!%20I%20saw%20the%20med%20spa%20template%20and%20I%20want%20a%20page%20like%20this." target="_blank" rel="noopener">I want a page like this</a></div>
+<div class="island-wrap" id="nav">
+  <div class="wrap">
+    <header class="island">
+      <a class="logo" href="#main" aria-label="Velvet Med Spa, back to top"><b>Velvet</b><small>Med Spa</small></a>
+      <ul class="links">
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <button class="btn btn-champ btn-sm" type="button" data-demo>Free consultation<span class="ac" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><span></span></button>
+    </header>
+    <nav class="drawer" id="drawer" hidden aria-label="Mobile">
+      <a href="#treatments">Treatments</a><a href="#results">Before and after</a><a href="#membership">Membership</a><a href="#visit">Visit us</a><a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</div>
+
+<main id="main">
+  <section class="hero" id="hero" aria-labelledby="hero-h">
+    <div class="glow" id="glow" aria-hidden="true"></div>
+    <div class="orb o1" data-par="0.12" aria-hidden="true"></div>
+    <div class="orb o2" data-par="-0.08" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="pill" data-in style="--i:0">Physician-led med spa in Scottsdale, AZ</p>
+        <h1 id="hero-h" data-in style="--i:1">Skin that looks rested, <em>never overdone.</em></h1>
+        <p class="lede" data-in style="--i:2">Injectables, facials and laser treatments led by a medical team that would rather under-promise. Every plan starts with a free consultation and an honest talk about what you actually need.</p>
+        <div class="cta-row" data-in style="--i:3">
+          <button class="btn btn-champ" type="button" data-demo>Book a free consultation<span class="ac" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+          <a class="btn btn-ghost" href="#treatments">View treatments</a>
+        </div>
+        <ul class="proof" data-in style="--i:4">
+          <li><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>4.9 from 1,100 reviews <span class="tag">example</span></li>
+          <li><svg aria-hidden="true"><use href="#i-spark"/></svg>Medical director on site</li>
+        </ul>
+      </div>
+
+      <div class="art">
+        <div class="arch">
+          <svg viewBox="0 0 480 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration: a desert dusk inside an arched window, with a glowing sun over soft hills">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b1c40"/><stop offset=".45" stop-color="#8a4a6c"/><stop offset=".72" stop-color="#d79a8e"/><stop offset="1" stop-color="#efcfa9"/></linearGradient>
+              <radialGradient id="sunG" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#fff6e6"/><stop offset=".55" stop-color="#f3d7b0"/><stop offset="1" stop-color="#e3a98f"/></radialGradient>
+              <radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset=".4" stop-color="#ffe9c8" stop-opacity=".55"/><stop offset="1" stop-color="#ffe9c8" stop-opacity="0"/></radialGradient>
+              <linearGradient id="h1g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b2d55"/><stop offset="1" stop-color="#2c1530"/></linearGradient>
+              <linearGradient id="h2g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f1f43"/><stop offset="1" stop-color="#1c1020"/></linearGradient>
+            </defs>
+            <rect width="480" height="600" fill="url(#sky)"/>
+            <g fill="#fff" opacity=".7"><circle cx="86" cy="140" r="1.4"/><circle cx="380" cy="96" r="1.8"/><circle cx="300" cy="170" r="1.2"/><circle cx="140" cy="70" r="1.6"/><circle cx="420" cy="210" r="1.2"/><circle cx="60" cy="250" r="1.2"/></g>
+            <circle cx="240" cy="330" r="190" fill="url(#halo)"/>
+            <circle class="sun" cx="240" cy="330" r="104" fill="url(#sunG)"/>
+            <g fill="none" stroke="#fff4e2" stroke-width="1" opacity=".45"><path d="M136 300h208M128 330h224M136 360h208"/></g>
+            <path d="M0 430C70 390 130 380 200 410S330 380 400 400 470 420 480 416V600H0Z" fill="url(#h1g)"/>
+            <path d="M0 492C90 450 170 470 250 486S400 448 480 470V600H0Z" fill="url(#h2g)"/>
+            <path d="M0 430C70 390 130 380 200 410S330 380 400 400 470 420 480 416" fill="none" stroke="#efcfa9" stroke-width="1.2" opacity=".6"/>
+            <path d="M0 492C90 450 170 470 250 486S400 448 480 470" fill="none" stroke="#efcfa9" stroke-width="1" opacity=".4"/>
+            <g fill="#1c1020"><path d="M366 470v-64c0-6 10-6 10 0v64z"/><path d="M366 438h-12c-4 0-6-3-6-6v-18c0-5 8-5 8 0v14h10zM376 430h10v-16c0-5 8-5 8 0v20c0 3-2 6-6 6h-12z"/></g>
+          </svg>
+        </div>
+        <button class="seal" type="button" data-demo aria-label="Book a free consultation">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="sealPath" d="M100 100m-76 0a76 76 0 1 1 152 0a76 76 0 1 1-152 0"/></defs>
+            <circle class="disc" cx="100" cy="100" r="96"/>
+            <g class="seal-rot"><text><textPath href="#sealPath" textLength="474" lengthAdjust="spacing">Free consultation · free consultation · </textPath></text></g>
+            <circle cx="100" cy="100" r="46" fill="none" stroke="rgba(232,210,176,.4)"/>
+            <text class="v" x="100" y="118" text-anchor="middle">V</text>
+          </svg>
+        </button>
+        <div class="plan" aria-label="Example of a written treatment plan">
+          <div class="t"><span>Your plan</span><span class="tag">example</span></div>
+          <div class="r"><span>Forehead and frown lines</span></div>
+          <div class="r"><span>Botox, 24 units</span><b>$288</b></div>
+          <div class="r tot"><span>Total today</span><b>$288</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="values">
+    <ul class="wrap reveal">
+      <li><b>i.</b>Free consultations, no pressure</li>
+      <li><b>ii.</b>Medical director reviews every plan</li>
+      <li><b>iii.</b>Private treatment suites</li>
+      <li><b>iv.</b>Prices in writing before we start</li>
+    </ul>
+  </div>
+
+  <section class="sec" id="treatments" aria-labelledby="tr-h">
+    <div class="wrap">
+      <div class="head split">
+        <div><p class="pill reveal">Treatments</p><h2 class="h2 reveal" id="tr-h">Small changes, <em>done beautifully.</em></h2></div>
+        <p class="sub reveal">Four treatments most of our clients start with. Your provider will suggest the smallest step that gets you there, and nothing you don't need.</p>
+      </div>
+      <div class="tr-grid">
+        <article class="bz spot tr tr-big reveal">
+          <div class="bz-in">
+            <div class="tr-ill" aria-hidden="true"><svg viewBox="0 0 200 200" fill="none" stroke="#e8d2b0" stroke-width="1.4" stroke-linecap="round"><path d="M60 120c10-50 70-50 80 0" opacity=".5"/><path d="M50 128c14-66 86-66 100 0"/><path d="M70 92c18-12 42-12 60 0" opacity=".6"/><path d="M76 76c16-8 32-8 48 0" opacity=".35"/><circle cx="100" cy="150" r="6" fill="#e8d2b0" stroke="none"/><path d="M100 144V40" stroke-dasharray="2 6"/><path d="M92 40h16M100 28v12" /></svg></div>
+            <h3>Botox <em>and</em> neurotoxins</h3>
+            <p>Softens forehead lines, frown lines and crow's feet while you still look like yourself. About 15 minutes, back to your day right after.</p>
+            <ul class="areas" aria-label="Popular areas"><li>Forehead</li><li>Frown lines</li><li>Crow's feet</li><li>Lip flip</li><li>Jaw slimming</li><li>Brow lift</li></ul>
+            <div class="tr-foot"><span class="from">from<b>$12</b>per unit <span class="tag">example</span></span><button class="lnk" type="button" data-demo>Book <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </article>
+        <article class="bz spot tr reveal" style="--rd:80ms">
+          <div class="bz-in">
+            <div class="tr-ill" aria-hidden="true"><svg viewBox="0 0 200 140" fill="none" stroke="#e8d2b0" stroke-width="1.4" stroke-linecap="round"><path d="M40 76c20-22 40-24 60-10 20-14 40-12 60 10"/><path d="M40 76c22 26 98 26 120 0" /><path d="M58 76c14 8 70 8 84 0" opacity=".5"/><circle cx="100" cy="62" r="3" fill="#e8d2b0" stroke="none"/></svg></div>
+            <h3>Dermal fillers</h3>
+            <p>Restores volume to lips, cheeks and under-eyes with a light hand.</p>
+            <div class="tr-foot"><span class="from">from<b>$650</b>per syringe <span class="tag">example</span></span><button class="lnk" type="button" data-demo>Book <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </article>
+        <article class="bz spot tr reveal" style="--rd:160ms">
+          <div class="bz-in">
+            <div class="tr-ill" aria-hidden="true"><svg viewBox="0 0 200 140" fill="none" stroke="#e8d2b0" stroke-width="1.4"><circle cx="100" cy="70" r="40"/><circle cx="100" cy="70" r="26" opacity=".6"/><circle cx="100" cy="70" r="12" opacity=".35"/><g fill="#e8d2b0" stroke="none"><circle cx="150" cy="40" r="3"/><circle cx="160" cy="58" r="2"/><circle cx="46" cy="96" r="2.5"/></g></svg></div>
+            <h3>HydraFacial</h3>
+            <p>Cleanse, exfoliate and hydrate in one glowy, no-downtime session.</p>
+            <div class="tr-foot"><span class="from">from<b>$199</b><span class="tag">example</span></span><button class="lnk" type="button" data-demo>Book <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </article>
+        <article class="bz spot tr tr-wide reveal" style="--rd:240ms">
+          <div class="bz-in">
+            <div class="tr-ill" style="height:120px" aria-hidden="true"><svg viewBox="0 0 320 120" fill="none" stroke="#e8d2b0" stroke-width="1.4" stroke-linecap="round"><path d="M20 90c60-40 220-40 280 0" opacity=".45"/><path d="M160 14v40" stroke-width="2"/><path d="M160 54 120 92M160 54l40 38M160 54v44" opacity=".6" stroke-dasharray="3 5"/><circle cx="160" cy="14" r="5" fill="#e8d2b0" stroke="none"/></svg></div>
+            <h3>Laser hair removal</h3>
+            <p>Smooth skin without the razor. Most clients need six to eight sessions, and we'll patch test at your consultation to choose the right settings for your skin.</p>
+            <div class="tr-foot"><span class="from">from<b>$99</b>per session <span class="tag">example</span></span><button class="lnk" type="button" data-demo>Book <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </article>
+      </div>
+      <div class="also reveal"><span>Chemical peels</span><span>Microneedling</span><span>IPL photofacial</span><span>Lip flip</span><span>Skin boosters</span><span class="note">Prices shown are examples for this demo.</span></div>
+    </div>
+  </section>
+
+  <section class="sec" id="results" aria-labelledby="ba-h" style="padding-top:0">
+    <div class="wrap ba-grid">
+      <div class="reveal">
+        <div class="ba" id="ba">
+          <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="bf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9d7a74"/><stop offset="1" stop-color="#7f605d"/></linearGradient>
+              <filter id="grainB" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="4"/><feColorMatrix values="0 0 0 0 .25 0 0 0 0 .16 0 0 0 0 .15 0 0 0 .55 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+            </defs>
+            <rect width="800" height="600" fill="url(#bf)"/>
+            <rect width="800" height="600" fill="#000" filter="url(#grainB)" opacity=".9"/>
+            <g fill="#5e4241" opacity=".22"><ellipse cx="220" cy="210" rx="70" ry="44"/><ellipse cx="560" cy="380" rx="90" ry="54"/><ellipse cx="380" cy="160" rx="40" ry="26"/><ellipse cx="640" cy="170" rx="56" ry="34"/><ellipse cx="160" cy="430" rx="60" ry="40"/></g>
+            <g fill="none" stroke="#5e4241" stroke-width="2" opacity=".35" stroke-linecap="round"><path d="M260 300c40-10 80-10 120 4M250 330c50-12 100-12 150 6M460 250c30 6 60 18 84 36M470 280c26 8 50 20 70 36"/></g>
+          </svg>
+          <div class="ba-after">
+            <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <defs>
+                <linearGradient id="af" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d3c3"/><stop offset=".6" stop-color="#e7b9a6"/><stop offset="1" stop-color="#d9a593"/></linearGradient>
+                <radialGradient id="glowA" cx="40%" cy="35%" r="50%"><stop offset="0" stop-color="#fff8f0" stop-opacity=".85"/><stop offset="1" stop-color="#fff8f0" stop-opacity="0"/></radialGradient>
+                <filter id="grainA" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="9"/><feColorMatrix values="0 0 0 0 1 0 0 0 0 .95 0 0 0 0 .92 0 0 0 .16 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+              </defs>
+              <rect width="800" height="600" fill="url(#af)"/>
+              <rect width="800" height="600" fill="url(#glowA)"/>
+              <rect width="800" height="600" fill="#fff" filter="url(#grainA)"/>
+              <path d="M420 120c120 40 220 140 260 300" fill="none" stroke="#fff" stroke-width="40" stroke-linecap="round" opacity=".12"/>
+            </svg>
+          </div>
+          <input class="ba-range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Before and after comparison. Use arrow keys to move the divider." aria-valuetext="50 percent after">
+          <div class="ba-line" aria-hidden="true"><span class="ba-knob"><svg><use href="#i-lr"/></svg></span></div>
+          <span class="ba-tag l" aria-hidden="true">Before</span><span class="ba-tag r" aria-hidden="true">After</span>
+          <span class="ba-cap">Your before and after photos go here</span>
+        </div>
+      </div>
+      <div class="ba-side">
+        <p class="pill reveal">Results</p>
+        <h2 class="h2 reveal" id="ba-h">Drag to see the <em>difference.</em></h2>
+        <p class="sub reveal">On your site, this slider shows real client photos, shared with written consent. Here, two drawn textures stand in for them.</p>
+        <ul class="reveal">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Same light, same angle, same camera, before and after</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Photos taken at your consultation and at your two-week check-in</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>No filters and no retouching, ever</li>
+        </ul>
+        <p class="fine reveal">Results vary from person to person. Illustrative composition, not a real client.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="method" aria-labelledby="me-h" style="padding-top:0;padding-bottom:clamp(50px,6vw,80px)">
+    <div class="wrap">
+      <div class="head split">
+        <div><p class="pill reveal">How it works</p><h2 class="h2 reveal" id="me-h">The Velvet <em>method.</em></h2></div>
+        <p class="sub reveal">Four unhurried steps, the same for every client, whether it's your first HydraFacial or your tenth visit.</p>
+      </div>
+      <ol class="steps">
+        <li class="bz spot reveal"><div class="bz-in"><span class="n">01</span><h3>Free consultation</h3><p>Meet your provider, talk through your goals and ask everything. No pressure to book.</p><small>30 minutes</small></div></li>
+        <li class="bz spot reveal" style="--rd:80ms"><div class="bz-in"><span class="n">02</span><h3>A plan in writing</h3><p>What we suggest, what it costs and what to expect, before anything starts.</p><small>Reviewed by our medical director</small></div></li>
+        <li class="bz spot reveal" style="--rd:160ms"><div class="bz-in"><span class="n">03</span><h3>Treatment</h3><p>In a private suite, with numbing, music of your choice and no one rushing you.</p><small>15 to 60 minutes</small></div></li>
+        <li class="bz spot reveal" style="--rd:240ms"><div class="bz-in"><span class="n">04</span><h3>Two-week check-in</h3><p>We look at your results together and fine-tune if needed, at no extra charge.</p><small>Included</small></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec mem" id="membership" aria-labelledby="mb-h" style="padding-top:clamp(56px,7vw,100px)">
+    <div class="wrap mem-grid">
+      <div class="card-stage reveal" id="stage">
+        <div class="vcard" id="vcard" role="img" aria-label="Illustration of the Velvet Society membership card">
+          <div class="vc-in">
+            <div class="vc-top"><b>Velvet</b><span>Society</span></div>
+            <div class="vc-chip"></div>
+            <div class="vc-bot"><span><small>Member</small>Your name here</span><span>Since 2026</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="pill reveal">Membership</p>
+        <h2 class="h2 reveal" id="mb-h">The Velvet <em>Society.</em></h2>
+        <p class="sub reveal">For clients who come in every month or two. One simple monthly fee that turns into treatment credit, plus perks that add up.</p>
+        <div class="price-row reveal"><b>$149</b><span>per month, cancel after 3 months</span><span class="tag">example</span></div>
+        <ul class="perks reveal">
+          <li class="spot"><svg aria-hidden="true"><use href="#i-spark"/></svg><span><b>A monthly HydraFacial or $150 credit</b>Unused credit rolls over for a year.</span></li>
+          <li class="spot"><svg aria-hidden="true"><use href="#i-spark"/></svg><span><b>15% off all injectables</b>Botox, fillers and skin boosters included.</span></li>
+          <li class="spot"><svg aria-hidden="true"><use href="#i-spark"/></svg><span><b>Priority booking and member evenings</b>First pick of Saturday slots and seasonal events.</span></li>
+        </ul>
+        <div class="cta-row reveal"><button class="btn btn-champ" type="button" data-demo>Ask about membership<span class="ac" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="team" aria-labelledby="tm-h" style="padding-top:clamp(50px,6vw,90px)">
+    <div class="wrap safe-grid">
+      <div class="reveal">
+        <div class="frames">
+          <figure><div class="fr"><svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="f1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a2d58"/><stop offset="1" stop-color="#d9a5a0"/></linearGradient></defs><rect width="300" height="400" fill="url(#f1)"/><circle cx="150" cy="170" r="54" fill="#fff" opacity=".14"/><path d="M50 400c0-80 44-130 100-130s100 50 100 130z" fill="#fff" opacity=".14"/><circle cx="230" cy="80" r="40" fill="#efcfa9" opacity=".35"/></svg></div><figcaption>Medical director<span>MD, board-certified</span></figcaption></figure>
+          <figure><div class="fr"><svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="f2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b1c40"/><stop offset="1" stop-color="#b56f7a"/></linearGradient></defs><rect width="300" height="400" fill="url(#f2)"/><circle cx="150" cy="170" r="54" fill="#fff" opacity=".14"/><path d="M50 400c0-80 44-130 100-130s100 50 100 130z" fill="#fff" opacity=".14"/><circle cx="70" cy="90" r="30" fill="#efcfa9" opacity=".3"/></svg></div><figcaption>Nurse injector<span>RN, aesthetic nursing</span></figcaption></figure>
+        </div>
+        <p class="ph-note">Your team photos go here.</p>
+      </div>
+      <div>
+        <p class="pill reveal">Our standards</p>
+        <h2 class="h2 reveal" id="tm-h">Medical first, <em>spa second.</em></h2>
+        <p class="sub reveal">The robes and the candles are nice. What matters more is who is holding the needle, and what they're willing to say no to.</p>
+        <ul class="checks reveal">
+          <li><i>i.</i><b>Licensed medical providers only</b><span>Every injection is done by a nurse practitioner, physician assistant or registered nurse.</span></li>
+          <li><i>ii.</i><b>FDA-approved products, opened in front of you</b><span>You'll see the box, the lot number and the units we use.</span></li>
+          <li><i>iii.</i><b>We'll tell you when you don't need it</b><span>If a treatment won't get you the result you want, we'll say so at the consultation.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="reviews" aria-labelledby="rv-h" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><p class="pill reveal">Reviews</p><h2 class="h2 reveal" id="rv-h">In their <em>own words.</em></h2></div>
+      <div class="rv-grid">
+        <div class="bz rating reveal"><div class="bz-in"><div><b>4.9</b><br><span class="stars" aria-label="Average 4.9 out of 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span></div><p>Average rating across 1,100 reviews. <span class="tag">example</span></p></div></div>
+        <figure class="bz spot rv reveal" style="--rd:80ms"><div class="bz-in"><q>I was terrified of looking frozen. Three weeks later, people just ask if I've been on vacation.</q><footer><span><span class="mono" aria-hidden="true">L</span>Lauren K.</span><span class="tag">example</span></footer></div></figure>
+        <figure class="bz spot rv reveal" style="--rd:160ms"><div class="bz-in"><q>They talked me out of filler I didn't need. That's exactly why I keep coming back.</q><footer><span><span class="mono" aria-hidden="true">M</span>Mia D.</span><span class="tag">example</span></footer></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="vs-h" style="padding-top:0">
+    <div class="wrap visit-grid">
+      <div>
+        <p class="pill reveal">Visit</p>
+        <h2 class="h2 reveal" id="vs-h">Quietly tucked away <em>in Old Town.</em></h2>
+        <div class="info">
+          <div class="bz reveal"><div class="bz-in addr"><b>7120 Palm Lane, Suite 200</b><span>Scottsdale, AZ · free covered parking, elevator access</span></div></div>
+          <div class="bz reveal"><div class="bz-in">
+            <ul class="hours" aria-label="Opening hours">
+              <li data-days="2,3,4,5"><span>Tuesday to Friday</span><span>9 a.m. to 7 p.m.</span></li>
+              <li data-days="6"><span>Saturday</span><span>9 a.m. to 4 p.m.</span></li>
+              <li data-days="0,1"><span>Sunday and Monday</span><span>Closed</span></li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="v-cta reveal">
+          <button class="btn btn-champ" type="button" data-demo>Book a free consultation<span class="ac" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+          <button class="btn btn-ghost" type="button" data-demo="maps">Get directions</button>
+        </div>
+      </div>
+      <div class="map reveal">
+        <svg viewBox="0 0 600 460" role="img" aria-label="Stylized map: the spa sits on Palm Lane in Old Town Scottsdale, near the canal path and a golf course.">
+          <rect width="600" height="460" fill="#26152b"/>
+          <path d="M0 330C120 300 220 340 330 318S520 270 600 290" fill="none" stroke="#7a5a74" stroke-width="16" opacity=".5"/>
+          <path d="M0 330C120 300 220 340 330 318S520 270 600 290" fill="none" stroke="#e8d2b0" stroke-width="1.5" stroke-dasharray="6 8" opacity=".55"/>
+          <path d="M420 0h180v180c-60 20-140 0-180-60z" fill="#33223a"/>
+          <g stroke="#3d2843" stroke-linecap="round" fill="none"><path stroke-width="18" d="M0 150H600M250 0V460"/><path stroke-width="10" d="M0 60H420M0 240H600M120 0V460M380 0V460M500 180V460"/></g>
+          <g fill="#2f1d35" stroke="#3d2843"><rect x="140" y="80" width="90" height="50" rx="8"/><rect x="270" y="170" width="90" height="50" rx="8"/><rect x="140" y="170" width="90" height="56" rx="8"/><rect x="400" y="260" width="80" height="44" rx="8"/><rect x="20" y="170" width="80" height="50" rx="8"/></g>
+          <g font-size="15" fill="#a893a5"><text x="40" y="140">Palm Ln</text><text x="440" y="80">Desert Greens</text><text x="40" y="360" font-style="italic">canal path</text><text x="20" y="48" letter-spacing="2" font-size="13">OLD TOWN</text></g>
+          <g transform="translate(250 150)"><circle class="ping" r="34" fill="#e8d2b0" opacity=".5"/><circle r="22" fill="#e8d2b0"/><text y="8" text-anchor="middle" font-family="Bodoni Moda,Georgia,serif" font-style="italic" font-size="24" fill="#2a142c" font-weight="400">V</text></g>
+          <g transform="translate(286 108)"><rect width="150" height="34" rx="17" fill="rgba(255,255,255,.08)" stroke="rgba(232,210,176,.35)"/><text x="75" y="22" text-anchor="middle" font-size="14" fill="#f6edf0">Velvet Med Spa</text></g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq" id="faq" aria-labelledby="faq-h" style="padding-top:0">
+    <div class="wrap faq-grid">
+      <div class="faq-side">
+        <p class="pill reveal">FAQ</p>
+        <h2 class="h2 reveal" id="faq-h">Before you <em>book.</em></h2>
+        <p class="sub reveal">Still unsure? That's what the free consultation is for. Bring every question.</p>
+      </div>
+      <div class="reveal">
+        <details open><summary>Is the consultation really free?<span class="pm" aria-hidden="true"></span></summary><p>Yes. Thirty minutes with a licensed provider, a written plan with prices, and no obligation to book anything. If you decide to treat the same day, we'll make time for it.</p></details>
+        <details><summary>Will I look “done”?<span class="pm" aria-hidden="true"></span></summary><p>Our style is conservative on purpose. We start with less, check in at two weeks and adjust only if you want more. Most people will notice you look rested, not that you had something done.</p></details>
+        <details><summary>How long do Botox results last?<span class="pm" aria-hidden="true"></span></summary><p>For most people, about three to four months. It depends on the area, the dose and your own metabolism, and we'll talk through what to expect for you.</p></details>
+        <details><summary>Is laser hair removal safe for my skin tone?<span class="pm" aria-hidden="true"></span></summary><p>We use laser settings suited to a wide range of skin tones and always do a patch test at your consultation before the first full session.</p></details>
+        <details><summary>Can I cancel the membership?<span class="pm" aria-hidden="true"></span></summary><p>Yes, any time after the first three months, with no cancellation fee. Any credit you've built up stays available for a year.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec final" aria-labelledby="fin-h" style="padding-top:20px">
+    <span class="ring" aria-hidden="true"></span><span class="ring r2" aria-hidden="true"></span>
+    <div class="wrap">
+      <button class="seal reveal" type="button" data-demo aria-label="Book a free consultation">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <circle class="disc" cx="100" cy="100" r="96"/>
+          <g class="seal-rot"><text><textPath href="#sealPath" textLength="474" lengthAdjust="spacing">Free consultation · free consultation · </textPath></text></g>
+          <circle cx="100" cy="100" r="46" fill="none" stroke="rgba(232,210,176,.4)"/>
+          <text class="v" x="100" y="118" text-anchor="middle">V</text>
+        </svg>
+      </button>
+      <h2 class="reveal" id="fin-h">Your skin, <em>on your terms.</em></h2>
+      <p class="reveal">Start with a free, no-pressure consultation. Leave with a plan and a price, and take all the time you need to decide.</p>
+      <div class="cta-row reveal"><button class="btn btn-champ" type="button" data-demo>Book a free consultation<span class="ac" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><a class="logo" href="#main" aria-label="Velvet Med Spa, back to top"><b>Velvet</b><small>Med Spa</small></a><p style="margin-top:10px;max-width:24em">Physician-led aesthetics in Old Town Scottsdale. Subtle results, honest advice.</p></div>
+      <div><h3>Visit</h3><p>7120 Palm Lane, Suite 200<br>Scottsdale, AZ</p></div>
+      <div><h3>Explore</h3><ul><li><a href="#treatments">Treatments</a></li><li><a href="#results">Before and after</a></li><li><a href="#membership">Membership</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h3>Legal</h3><ul><li><button class="linkish" type="button" data-demo="page">Privacy policy</button></li><li><button class="linkish" type="button" data-demo="page">Medical disclaimer</button></li><li><button class="linkish" type="button" data-demo="page">Accessibility</button></li></ul></div>
+    </div>
+    <p class="big-word" aria-hidden="true">Velvet</p>
+    <div class="foot-bot"><span>© 2026 Velvet Med Spa, a fictional brand. Results vary.</span><span>Demo template by Beatus Mídias</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+  root.classList.add('js');
+  var REDUZ = matchMedia('(prefers-reduced-motion: reduce)').matches, VIS = d.visibilityState === 'visible', HOVER = matchMedia('(hover:hover)').matches;
+  if (/[?&]thumb=1/.test(location.search)) root.classList.add('thumb');
+  if (!REDUZ && VIS) root.classList.add('anim');
+  setTimeout(function () { root.classList.add('settled'); }, 2800);
+  var $$ = function (s, c) { return [].slice.call((c || d).querySelectorAll(s)); };
+  var demo = d.getElementById('demo');
+  function setDH() { root.style.setProperty('--dh', demo.offsetHeight + 'px'); }
+  setDH(); addEventListener('resize', setDH); addEventListener('load', setDH);
+
+  /* toast: business CTAs never open a real number */
+  var toast = d.getElementById('toast'), tt;
+  var MSG = { wa: 'Demo template: on your site, this button opens your WhatsApp with a ready message.', maps: 'Demo template: on your site, this button opens the map with your address.', page: 'Demo template: on your site, this link opens your own policy page.' };
+  d.addEventListener('click', function (e) { var b = e.target.closest('[data-demo]'); if (!b) return; e.preventDefault(); toast.textContent = MSG[b.getAttribute('data-demo')] || MSG.wa; toast.classList.add('show'); clearTimeout(tt); tt = setTimeout(function () { toast.classList.remove('show'); }, 4200); });
+
+  /* in-page anchors: smooth scroll by JS and move focus */
+  d.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]'); if (!a) return;
+    var id = a.getAttribute('href'), t = id.length > 1 && d.querySelector(id); if (!t) return;
+    e.preventDefault(); t.scrollIntoView({ behavior: REDUZ ? 'auto' : 'smooth', block: 'start' });
+    if (history.pushState) history.pushState(null, '', id);
+    if (!t.hasAttribute('tabindex')) t.setAttribute('tabindex', '-1'); t.focus({ preventScroll: true });
+  });
+
+  /* mobile menu */
+  var nav = d.getElementById('nav'), burger = nav.querySelector('.burger'), drawer = d.getElementById('drawer');
+  function setMenu(o) { nav.classList.toggle('open', o); burger.setAttribute('aria-expanded', o); burger.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); drawer.hidden = !o; }
+  burger.addEventListener('click', function () { setMenu(drawer.hidden); });
+  drawer.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !drawer.hidden) { setMenu(false); burger.focus(); } });
+  d.addEventListener('click', function (e) { if (!drawer.hidden && !nav.contains(e.target)) setMenu(false); });
+
+  /* hero light that follows the mouse (transform only) + parallax orbs, capped */
+  var hero = d.getElementById('hero'), glow = d.getElementById('glow'), orbs = $$('[data-par]');
+  if (!REDUZ && HOVER) {
+    var gx = 0, gy = 0, tx = 0, ty = 0, raf = 0;
+    var r0 = hero.getBoundingClientRect(); gx = tx = r0.width * 0.7; gy = ty = r0.height * 0.3;
+    var loop = function () { gx += (tx - gx) * 0.12; gy += (ty - gy) * 0.12; glow.style.transform = 'translate3d(' + gx.toFixed(1) + 'px,' + gy.toFixed(1) + 'px,0)'; raf = (Math.abs(tx - gx) + Math.abs(ty - gy) > 0.5) ? requestAnimationFrame(loop) : 0; };
+    hero.addEventListener('pointermove', function (e) { var r = hero.getBoundingClientRect(); tx = e.clientX - r.left; ty = e.clientY - r.top; if (!raf) raf = requestAnimationFrame(loop); });
+    loop();
+  }
+  if (!REDUZ) {
+    var ptick = false;
+    addEventListener('scroll', function () { if (ptick) return; ptick = true; requestAnimationFrame(function () { ptick = false; var y = Math.min(scrollY, 1600); orbs.forEach(function (o) { o.style.transform = 'translate3d(0,' + (y * +o.getAttribute('data-par')).toFixed(1) + 'px,0)'; }); }); }, { passive: true });
+  }
+
+  /* signature: cursor spotlight on cards (mouse only) */
+  if (HOVER) $$('.spot').forEach(function (c) {
+    c.addEventListener('pointermove', function (e) { var t = c.querySelector('.bz-in') || c, r = t.getBoundingClientRect(); t.style.setProperty('--mx', (e.clientX - r.left) + 'px'); t.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
+  });
+
+  /* membership card tilt (mouse only) */
+  var stage = d.getElementById('stage'), vcard = d.getElementById('vcard');
+  if (!REDUZ && HOVER) {
+    stage.addEventListener('pointermove', function (e) { var r = stage.getBoundingClientRect(), px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5; vcard.style.setProperty('--ry', (px * 20).toFixed(2) + 'deg'); vcard.style.setProperty('--rx', (-py * 16).toFixed(2) + 'deg'); });
+    stage.addEventListener('pointerleave', function () { vcard.style.removeProperty('--ry'); vcard.style.removeProperty('--rx'); });
+  }
+
+  /* before / after slider: native range for keyboard + drag anywhere */
+  var ba = d.getElementById('ba'), rng = d.getElementById('ba-range');
+  function setPos(v) { ba.style.setProperty('--pos', v + '%'); rng.setAttribute('aria-valuetext', Math.round(100 - v) + ' percent after'); }
+  rng.addEventListener('input', function () { setPos(+rng.value); });
+  setPos(50);
+  if (!REDUZ && 'IntersectionObserver' in window) {
+    var hinted = false, io2 = new IntersectionObserver(function (en) {
+      if (!en[0].isIntersecting || hinted) return; hinted = true; io2.disconnect();
+      var t0 = null; (function step(t) { t0 = t0 || t; var p = Math.min(1, (t - t0) / 1800); var v = 50 - Math.sin(p * Math.PI * 2) * 18 * (1 - p * 0.4); if (p >= 1) v = 50; if (!ba.matches(':active')) { rng.value = v; setPos(v); } if (p < 1) requestAnimationFrame(step); })(performance.now());
+    }, { threshold: 0.6 });
+    io2.observe(ba);
+  }
+
+  /* reveal by TOP position */
+  var els = $$('.reveal');
+  if (!REDUZ && VIS) {
+    var vh = innerHeight;
+    els.forEach(function (el) { if (el.getBoundingClientRect().top > vh * 0.92) el.classList.add('hide'); });
+    var sweep = function () { els.forEach(function (el) { if (el.classList.contains('hide') && el.getBoundingClientRect().top < innerHeight * 0.92) el.classList.remove('hide'); }); };
+    addEventListener('scroll', sweep, { passive: true }); addEventListener('resize', sweep); addEventListener('load', sweep);
+    setTimeout(function () { els.forEach(function (el) { el.classList.remove('hide'); }); }, 6000);
+  }
+
+  /* today in hours */
+  var today = String(new Date().getDay());
+  $$('.hours li').forEach(function (li) { if (li.getAttribute('data-days').split(',').indexOf(today) > -1) li.classList.add('today'); });
+
+  /* scrollspy */
+  var links = $$('.links a'), secs = links.map(function (a) { return d.querySelector(a.getAttribute('href')); }), tick = false;
+  function spy() { tick = false; var cur = null; secs.forEach(function (s) { if (s && s.getBoundingClientRect().top <= 180) cur = s.id; });
+    links.forEach(function (a) { var on = a.getAttribute('href') === '#' + cur; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); }); }
+  addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(spy); } }, { passive: true }); spy();
+})();
+</script>
+</body>
+</html>
