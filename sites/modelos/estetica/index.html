@@ -10,9 +10,9 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231b120f'/%3E%3Cpath d='M19 52V31a13 13 0 0 1 26 0v21' fill='none' stroke='%23e8d0a2' stroke-width='4'/%3E%3C/svg%3E">
 <script>if(/[?&]thumb=1/.test(location.search))document.documentElement.classList.add('thumb');</script>
 <style>
-@font-face{font-family:"Instrument Serif";src:url("fontes/instrument-serif-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:"Instrument Serif";src:url("fontes/instrument-serif-latin-400-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:"Plus Jakarta Sans";src:url("fontes/plus-jakarta-sans-latin-wght-normal.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url("/sites/modelos/estetica/fontes/instrument-serif-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url("/sites/modelos/estetica/fontes/instrument-serif-latin-400-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url("/sites/modelos/estetica/fontes/plus-jakarta-sans-latin-wght-normal.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
 :root{
   --bar:34px;
   --esp:#1b120f;--esp2:#231713;--esp3:#2e201a;
@@ -29,7 +29,7 @@ html.thumb .demo{display:none}
 html{scroll-padding-top:calc(var(--bar) + 92px);-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--esp);color:var(--cream);font:400 1rem/1.7 var(--sans);isolation:isolate;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(60vmax 50vmax at 8% 0%,rgba(215,162,145,.16),transparent 70%),radial-gradient(50vmax 45vmax at 100% 100%,rgba(232,208,162,.10),transparent 70%)}
-body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(/sites/modelos/estetica/%23n)'/%3E%3C/svg%3E")}
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em;margin:0;text-wrap:balance}
 h1 em,h2 em,h3 em{font-style:italic;color:var(--champ)}
 p{margin:0;text-wrap:pretty}

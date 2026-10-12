@@ -10,9 +10,9 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230e0d10'/%3E%3Cpath d='M5 17q11-11 22 0q-11 11-22 0z' fill='none' stroke='%23ff2e88' stroke-width='2.4'/%3E%3Ccircle cx='16' cy='17' r='4' fill='%23ff2e88'/%3E%3C/svg%3E">
 <script>if(/[?&]thumb=1/.test(location.search))document.documentElement.classList.add('thumb');</script>
 <style>
-@font-face{font-family:"Anton";src:url("fontes/anton-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Cormorant";src:url("fontes/cormorant-latin-wght-italic.woff2") format("woff2");font-weight:300 700;font-style:italic;font-display:swap}
-@font-face{font-family:"Outfit";src:url("fontes/outfit-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Anton";src:url("/sites/modelos/beleza/fontes/anton-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Cormorant";src:url("/sites/modelos/beleza/fontes/cormorant-latin-wght-italic.woff2") format("woff2");font-weight:300 700;font-style:italic;font-display:swap}
+@font-face{font-family:"Outfit";src:url("/sites/modelos/beleza/fontes/outfit-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap}
 :root{
   --ink:#0e0d10; --ink-2:#18161b; --ink-3:#242128; --off:#f2ede6; --off-2:#e6dfd5; --mute:#a7a1a9; --mute-d:#5d5761;
   --pink:#ff2e88; --pink-ink:#c2005c; --lilac:#a98bff;
@@ -26,7 +26,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--demo-h) + var(--head-h) + 10px);-webkit-text-size-adjust:100%}
 body{background:var(--ink);color:var(--off);font:400 17px/1.6 var(--sans);overflow-x:hidden;padding-top:var(--demo-h)}
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:300;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:300;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(/sites/modelos/beleza/%23n)'/%3E%3C/svg%3E")}
 svg{display:block;max-width:100%}
 a{color:inherit}
 button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}

@@ -10,10 +10,10 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f4efe4'/%3E%3Crect x='4' y='4' width='56' height='56' fill='none' stroke='%2314213d' stroke-width='2'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='26' font-style='italic' fill='%2314213d'%3EA%26L%3C/text%3E%3C/svg%3E">
 <script>if(/[?&]thumb=1/.test(location.search))document.documentElement.classList.add('thumb');</script>
 <style>
-@font-face{font-family:"Newsreader";src:url("fontes/newsreader-latin-opsz-normal.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
-@font-face{font-family:"Newsreader";src:url("fontes/newsreader-latin-wght-italic.woff2") format("woff2");font-weight:200 800;font-style:italic;font-display:swap}
-@font-face{font-family:"Geist";src:url("fontes/geist-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap}
-@font-face{font-family:"Geist Mono";src:url("fontes/geist-mono-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Newsreader";src:url("/sites/modelos/advocacia/fontes/newsreader-latin-opsz-normal.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Newsreader";src:url("/sites/modelos/advocacia/fontes/newsreader-latin-wght-italic.woff2") format("woff2");font-weight:200 800;font-style:italic;font-display:swap}
+@font-face{font-family:"Geist";src:url("/sites/modelos/advocacia/fontes/geist-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url("/sites/modelos/advocacia/fontes/geist-mono-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap}
 :root{
   --bar:34px;--hdr:68px;
   --paper:#f4efe4;--paper2:#ece5d6;--card:#f8f4ea;
@@ -29,7 +29,7 @@ html.thumb .demo{display:none}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-padding-top:calc(var(--bar) + var(--hdr) + 20px);-webkit-text-size-adjust:100%}
 body{margin:0;padding-top:var(--bar);background:var(--paper);color:var(--ink);font:400 1.0625rem/1.7 var(--sans);-webkit-font-smoothing:antialiased;isolation:isolate}
-body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.32;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .48 0 0 0 0 .36 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.32;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .48 0 0 0 0 .36 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(/sites/modelos/advocacia/%23n)'/%3E%3C/svg%3E")}
 h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.015em;text-wrap:balance}
 h1 em,h2 em,h3 em{font-style:italic}
 p{margin:0;text-wrap:pretty}
