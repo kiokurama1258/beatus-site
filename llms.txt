@@ -347,6 +347,9 @@ Calculadoras e geradores abertos, sem cadastro. Índice em [Ferramentas](https:/
 - [Calculadora do custo das faltas na clínica](https://beatusmidias.com.br/calculadora-faltas-clinica/): Quanto a agenda furada leva do faturamento por mês e por ano, e quanto dá para recuperar.
 - [Calculadora da taxa do iFood](https://beatusmidias.com.br/calculadora-taxa-ifood/): Quanto o aplicativo leva do seu faturamento por mês e por ano, e quanto voltaria pelo canal próprio.
 
+## Lojas de iPhone e celulares
+- [Tráfego pago para lojas de iPhone](https://beatusmidias.com.br/trafego-pago-para-lojas-de-iphone/): anúncio no Meta e no Google, IA que responde o orçamento no WhatsApp e custo por iPhone vendido
+
 ## Delivery (Maricá, Niterói e Rio de Janeiro)
 - [Tráfego pago para delivery](https://beatusmidias.com.br/delivery/): campanha por raio de entrega, pedido direto no WhatsApp com IA, custo por pedido medido.
 - [Delivery em Maricá](https://beatusmidias.com.br/delivery/marica/), [Niterói](https://beatusmidias.com.br/delivery/niteroi/) e [Rio de Janeiro](https://beatusmidias.com.br/delivery/rio-de-janeiro/)
@@ -361,6 +364,11 @@ Calculadoras e geradores abertos, sem cadastro. Índice em [Ferramentas](https:/
 - [Lojas de pneus](https://beatusmidias.com.br/lojas-de-pneus/), [Oficinas mecânicas](https://beatusmidias.com.br/oficinas-mecanicas/), [Lojas de ferragens e ferramentas](https://beatusmidias.com.br/lojas-de-ferragens-e-ferramentas/), [Limpeza de sofá e estofados](https://beatusmidias.com.br/lavagem-de-estofados-e-tapetes/), [Eletricistas](https://beatusmidias.com.br/eletricistas/)
 
 ## Matérias recentes
+- [Criativo para loja de iPhone: 7 anúncios que geram conversa](https://beatusmidias.com.br/blog/criativo-para-loja-de-iphone/): Sete criativos para anúncio de loja de iPhone que geram conversa no WhatsApp, onde rodar cada um e o que evitar para não ter anúncio reprovado nem cliente desconfiado.
+- [Quanto investir em tráfego pago para loja de iPhone](https://beatusmidias.com.br/blog/quanto-investir-trafego-pago-loja-de-iphone/): Como calcular quanto investir em anúncio para loja de iPhone a partir da margem por aparelho, do custo por conversa e da taxa de fechamento, com exemplos marcados.
+- [Como vender iPhone no boleto sem levar calote](https://beatusmidias.com.br/blog/como-vender-iphone-no-boleto/): Como vender iPhone parcelado no boleto ou na promissória com menos risco: entrada, análise de crédito, contrato, o que o CDC exige informar e como anunciar sem atrair mau pagador.
+- [WhatsApp para loja de iPhone: do preço à venda](https://beatusmidias.com.br/blog/whatsapp-para-loja-de-iphone/): Como atender loja de iPhone pelo WhatsApp para vender mais: tempo de resposta, roteiro de perguntas, orçamento completo, avaliação da troca, IA e acompanhamento.
+- [Google Meu Negócio para loja de iPhone: como aparecer no mapa](https://beatusmidias.com.br/blog/google-meu-negocio-para-loja-de-iphone/): Como configurar o Google Meu Negócio da loja de iPhone para aparecer em loja de iPhone perto de mim: categoria, nome, produtos, fotos, avaliações e o que não fazer.
 - [Funil de vendas no WhatsApp: como montar](https://beatusmidias.com.br/blog/funil-de-vendas-no-whatsapp/): Como montar um funil de vendas no WhatsApp: etapas, critério de passagem, etiquetas, quem atende cada fase e o que medir para não perder cliente na conversa.
 - [Como vender mais pneus na sua loja](https://beatusmidias.com.br/blog/como-vender-mais-pneus/)
 - [Google Ads para loja de pneus: como anunciar por medida](https://beatusmidias.com.br/blog/google-ads-para-loja-de-pneus/)
