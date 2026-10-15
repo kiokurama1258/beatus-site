@@ -509,8 +509,36 @@ html[lang="en"] .h1{font-size:clamp(2.3rem,9.4vw,4.3rem)}
 }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://beatusmidias.com/#org", "name": "Beatus Mídias", "url": "https://beatusmidias.com", "logo": "https://beatusmidias.com.br/assets/logo-tinta-160.png", "email": "hello@beatusmidias.com", "sameAs": ["https://www.instagram.com/beatusmidias/", "https://beatusmidias.com.br"]}, {"@type": "Service", "name": "Landing page design", "serviceType": "Website and landing page design", "provider": {"@id": "https://beatusmidias.com/#org"}, "areaServed": {"@type": "Country", "name": "United States"}, "offers": [{"@type": "Offer", "name": "Landing page", "priceCurrency": "USD", "price": "200"}, {"@type": "Offer", "name": "Full website", "description": "Custom quote based on size"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you build on WordPress and Elementor?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We also build in custom HTML, which is usually lighter and faster. We will recommend the best option for your case."}}, {"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "A landing page is $200 flat. A multi-page website is quoted based on its size. The price is agreed before we start."}}, {"@type": "Question", "name": "Are hosting and domain included?", "acceptedAnswer": {"@type": "Answer", "text": "No. You pay the provider you choose directly. We tell you where to sign up and set everything up."}}, {"@type": "Question", "name": "Do I need copy and photos ready?", "acceptedAnswer": {"@type": "Answer", "text": "No. We write the copy with you and can use the photos from your Instagram."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "We agree on the timeline before we start, based on the size of the page."}}, {"@type": "Question", "name": "Can I see the page before it goes live?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You get a working preview and can ask for changes."}}, {"@type": "Question", "name": "Is the page ready for ads?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with the Meta Pixel, the Google tag and contact events installed."}}, {"@type": "Question", "name": "Do you work with businesses in the US?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work remotely and in English, mostly over WhatsApp and email."}}, {"@type": "Question", "name": "Does it work for an online store?", "acceptedAnswer": {"@type": "Answer", "text": "No. E-commerce needs a different setup, and we can point you in the right direction."}}, {"@type": "Question", "name": "How do I pay?", "acceptedAnswer": {"@type": "Answer", "text": "We agree on it with you over WhatsApp or email."}}]}]}</script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function(){
+  var c = null;
+  try { c = localStorage.getItem('beatus_consent'); } catch(e) {}
+  if (c === 'granted') {
+    gtag('consent','default',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});
+  } else {
+    gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'});
+  }
+})();
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-586Z8BLT');</script>
+<!-- End Google Tag Manager -->
+<style>
+#beatus-cookies{display:none;position:fixed;right:16px;bottom:16px;z-index:9999;width:min(392px,calc(100vw - 32px));background:#1d1d1d;color:#fff;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px 18px;box-shadow:0 12px 32px -12px rgba(0,0,0,.55);font-family:var(--sans)}
+#beatus-cookies p{margin:0 0 12px;font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.82)}
+#beatus-cookies a{color:#f0a0b0}
+#beatus-cookies .bc-btns{display:flex;gap:8px}
+#beatus-cookies button{flex:1;min-height:44px;font-size:14px;border-radius:999px;cursor:pointer}
+#bc-aceitar{background:var(--wine);color:#fff;border:0;font-weight:700}
+#bc-recusar{background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.3);font-weight:600}
+html.bc-open .wa{bottom:calc(var(--bc-h,0px) + 28px)}
+@media (max-width:640px){#beatus-cookies{left:0;right:0;bottom:0;width:100%;border-width:1px 0 0;border-radius:16px 16px 0 0;padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px))}html.bc-open .wa{bottom:calc(var(--bc-h,0px) + 12px)}}
+</style>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-586Z8BLT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="skip" href="#content">Skip to content</a>
 
 <header class="hdr" id="top">
@@ -983,6 +1011,24 @@ html[lang="en"] .h1{font-size:clamp(2.3rem,9.4vw,4.3rem)}
       new IntersectionObserver(function(en,io){if(!en[0].isIntersecting)return;io.disconnect();var t0=null;(function st(t){t0=t0||t;var p=Math.min(1,(t-t0)/1500);el.textContent=pre+Math.round(to*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(st);})(performance.now());},{rootMargin:'0px 0px -10% 0px'}).observe(el);
     });
   }
+})();
+</script>
+<!-- Cookie banner (LGPD) -->
+<div id="beatus-cookies" role="dialog" aria-live="polite" aria-label="Cookie notice">
+  <p>We use cookies to understand how this page is used and to measure our ads. Your choice. <a href="https://beatusmidias.com.br/politica-de-privacidade/">Privacy Policy</a>.</p>
+  <div class="bc-btns"><button id="bc-aceitar" type="button">Accept</button><button id="bc-recusar" type="button">Decline</button></div>
+</div>
+<script>
+(function(){
+  var d=document,de=d.documentElement,box=d.getElementById('beatus-cookies'),salvo=null;
+  try{salvo=localStorage.getItem('beatus_consent');}catch(e){}
+  function abrir(){if(!box||box.style.display==='block')return;box.style.display='block';de.classList.add('bc-open');de.style.setProperty('--bc-h',box.offsetHeight+'px');removeEventListener('scroll',rolou);}
+  function rolou(){if((scrollY||0)>240)abrir();}
+  if(!salvo&&box){addEventListener('scroll',rolou,{passive:true});setTimeout(abrir,6000);}
+  function decidir(v){try{localStorage.setItem('beatus_consent',v);}catch(e){}if(typeof gtag==='function'){var g=v==='granted'?'granted':'denied';gtag('consent','update',{'ad_storage':g,'ad_user_data':g,'ad_personalization':g,'analytics_storage':g});}if(box)box.style.display='none';de.classList.remove('bc-open');}
+  d.getElementById('bc-aceitar').addEventListener('click',function(){decidir('granted');});
+  d.getElementById('bc-recusar').addEventListener('click',function(){decidir('denied');});
+  d.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="wa.me"],a[href*="api.whatsapp.com"]'):null;if(!a)return;var s=a.closest('section[id],header,footer');window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'click_whatsapp',cta_local:a.getAttribute('data-cta')||(s?(s.id||s.tagName.toLowerCase()):'outro'),pagina:'sites_en'});},true);
 })();
 </script>
 </body>
