@@ -105,6 +105,22 @@ html.bc-open #barra-compra{display:none}
   #beatus-cookies{left:0;right:0;bottom:0;width:100%;border-width:1px 0 0;border-radius:16px 16px 0 0;padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px))}
 }
 
+/* topo com vídeo vertical */
+.hero{max-width:1180px;margin:0 auto;padding:48px 24px 72px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);grid-template-areas:"top vid" "rest vid";gap:28px 64px;align-items:start}
+.h-top{grid-area:top}.h-vid{grid-area:vid}.h-rest{grid-area:rest;display:flex;flex-direction:column;gap:22px}
+.vbox{position:relative;width:100%;max-width:440px;margin:0 auto;aspect-ratio:9/16;max-height:min(82vh,782px);border-radius:26px;overflow:hidden;background:#5c0a22;box-shadow:0 40px 80px -40px rgba(27,16,20,.6)}
+.vbox video{display:block;width:100%;height:100%;object-fit:cover}
+.som{position:absolute;left:50%;bottom:25%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:12px;background:#fff;color:#ac002f;border:0;border-radius:999px;padding:16px 26px;font:800 18px/1 'Satoshi',Arial,sans-serif;cursor:pointer;box-shadow:0 14px 30px -10px rgba(0,0,0,.55);animation:pulso 1.8s ease-in-out infinite;white-space:nowrap}
+.som:hover{background:#ac002f;color:#fff}
+.som.off{display:none}
+@keyframes pulso{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.55),0 14px 30px -10px rgba(0,0,0,.55)}50%{box-shadow:0 0 0 14px rgba(255,255,255,0),0 14px 30px -10px rgba(0,0,0,.55)}}
+.vleg{margin:12px 4px 0;font-size:14px;color:#6b5a60;text-align:center}
+@media (max-width:860px){
+  .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "vid" "rest";padding:32px 20px 56px;gap:24px}
+  .vbox{max-width:min(100%,420px);max-height:none}
+}
+@media (prefers-reduced-motion:reduce){.som{animation:none}}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://beatusmidias.com.br/#org", "name": "Beatus Mídias", "url": "https://beatusmidias.com.br", "logo": "https://beatusmidias.com.br/assets/logo-tinta-160.png"}, {"@type": "Course", "@id": "https://beatusmidias.com.br/recomendado-pela-ia/#curso", "name": "Recomendado pela IA", "description": "Mini-curso em 7 módulos com guia de 40 pontos, planilha de diagnóstico e mensagens prontas para deixar um negócio local pronto para ser encontrado e indicado pelo ChatGPT, pelo Gemini e pelo Google.", "inLanguage": "pt-BR", "provider": {"@id": "https://beatusmidias.com.br/#org"}, "author": {"@type": "Person", "name": "Bruno Vasconcellos", "jobTitle": "Fundador da Beatus Mídias"}, "offers": {"@type": "Offer", "price": "67.00", "priceCurrency": "BRL", "availability": "https://schema.org/InStock", "url": "https://beatusmidias.com.br/recomendado-pela-ia/", "category": "Paid"}, "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT5H"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Vocês garantem que a minha empresa vai aparecer no ChatGPT?", "acceptedAnswer": {"@type": "Answer", "text": "Não, e ninguém pode garantir. A IA monta a resposta a partir de fontes públicas e não existe espaço pago dentro dela. O kit mostra como deixar o seu perfil, o seu site e a sua reputação prontos para serem lidos e confirmados, que é o que aumenta a chance de ser indicado."}}, {"@type": "Question", "name": "Preciso entender de tecnologia?", "acceptedAnswer": {"@type": "Answer", "text": "Não. A maior parte do trabalho é feita no próprio perfil do Google e em mensagens para clientes e parceiros. A parte técnica do site vem com um teste de um minuto e uma mensagem pronta para mandar a quem cuida dele."}}, {"@type": "Question", "name": "Não tenho site. O kit serve para mim?", "acceptedAnswer": {"@type": "Answer", "text": "Serve. Perfil do Google, consistência dos dados, avaliações e menções funcionam sem site, e são a maior parte do método. O módulo de site mostra o que ele precisa ter, para quando você tiver um."}}, {"@type": "Question", "name": "Em quanto tempo vejo resultado?", "acceptedAnswer": {"@type": "Answer", "text": "Correções no perfil do Google costumam aparecer em dias ou semanas. Nas IAs, em semanas ou meses, porque os modelos atualizam o que sabem em ciclos. Por isso o kit traz um monitor mensal: você acompanha a evolução com as mesmas perguntas, todo mês."}}, {"@type": "Question", "name": "Por que tão barato?", "acceptedAnswer": {"@type": "Answer", "text": "Porque a maior parte desse trabalho você consegue fazer sozinho, e a gente prefere que muitos negócios façam o básico bem feito. Se depois você quiser que a Beatus implante tudo por você, a opção existe dentro da área de membros. Não é obrigatória."}}, {"@type": "Question", "name": "Funciona para o meu tipo de negócio e a minha cidade?", "acceptedAnswer": {"@type": "Answer", "text": "Funciona para negócios que atendem clientes de uma região: saúde, alimentação, serviços, comércio e escritórios. Os exemplos são do Rio de Janeiro, mas o método vale para qualquer cidade."}}, {"@type": "Question", "name": "E se eu não gostar?", "acceptedAnswer": {"@type": "Answer", "text": "Você tem 7 dias de garantia. Peça o reembolso pela própria Hotmart e recebe 100% do valor de volta, sem precisar se explicar."}}]}]}</script>
 </head>
@@ -122,10 +138,19 @@ html.bc-open #barra-compra{display:none}
 </header>
 
 <main id="conteudo">
-<section id="topo" style="max-width: 1180px; margin: 0 auto; padding: 56px 24px 72px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
-<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
+<section id="topo" class="hero">
+<div class="h-top">
 <span style="font-size: 14px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #ac002f;">Para donos de negócio local</span>
-<h1 style="margin: 0; font-family: 'Clash Display', Georgia, serif; font-weight: 600; font-size: clamp(38px, 5.2vw, 70px); line-height: 0.98; letter-spacing: -0.025em; text-wrap: balance;">Seu cliente perguntou para a IA. Ela indicou o seu concorrente.</h1>
+<h1 style="margin: 14px 0 0; font-family: 'Clash Display', Georgia, serif; font-weight: 600; font-size: clamp(38px, 5vw, 68px); line-height: 0.98; letter-spacing: -0.025em; text-wrap: balance;">Seu cliente perguntou para a IA. Ela indicou o seu concorrente.</h1>
+</div>
+<div class="h-vid">
+<div class="vbox">
+<video id="video-hero" src="video-recomendado-pela-ia-916.mp4" poster="img/poster-video-916.jpg" autoplay muted loop playsinline preload="auto" aria-label="Vídeo: por que a IA indica o seu concorrente e como o Recomendado pela IA resolve isso"></video>
+<button type="button" id="ativar-som" class="som"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M19 5a10 10 0 0 1 0 14"></path></svg><span>Toque para ouvir</span></button>
+</div>
+<p class="vleg">1 minuto: o problema, o que tem no curso e o que aconteceu na Beatus.</p>
+</div>
+<div class="h-rest">
 <div style="display: flex; flex-direction: column; gap: 10px; font-size: 18px; color: #4a3d42;">
 <div style="display: flex; gap: 10px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ac002f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 4px;"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><span>Ele não liga para você. Liga para quem a IA indicou.</span></div>
 <div style="display: flex; gap: 10px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ac002f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 4px;"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg><span>Essa perda não aparece em relatório nenhum. O telefone só não toca.</span></div>
@@ -141,14 +166,8 @@ html.bc-open #barra-compra{display:none}
 <span style="font-size: 15px; line-height: 1.45; color: #4a3d42;">Aplicamos o método na própria Beatus e fechamos <strong style="color: #ac002f;">+R$ 12 mil em contratos em 30 dias</strong>, inclusive com dentistas no exterior.</span>
 </div>
 </div>
-
-<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
-<div style="border-radius: 22px; overflow: hidden; background: #5c0a22; box-shadow: 0 40px 80px -40px rgba(27,16,20,0.55); aspect-ratio: 16 / 9;">
-<video id="video-hero" src="video-recomendado-pela-ia.mp4" poster="img/poster-video.jpg" controls playsinline preload="none" aria-label="Vídeo: por que a IA indica o seu concorrente e como o Recomendado pela IA resolve isso" style="display: block; width: 100%; height: 100%; object-fit: cover;"></video>
-</div>
-<p style="margin: 0 4px; font-size: 14px; color: #6b5a60;">Assista em 1 minuto: o problema, o que tem no curso e o que aconteceu na Beatus. Com legenda.</p>
-</div>
 </section>
+
 
 <section class="faixa" style="background: #ac002f; color: #ffffff; overflow: hidden; padding: 18px 0;" aria-label="Exemplos de perguntas que clientes fazem para a IA">
 <div class="esteira" style="display: flex; width: max-content; gap: 40px; font-family: 'Clash Display', Georgia, serif; font-weight: 500; font-size: 22px; white-space: nowrap;">
@@ -380,7 +399,7 @@ html.bc-open #barra-compra{display:none}
    - Pixel próprio do curso (PIXEL_CURSO). Vazio = não carrega nada.
    - Eventos só para esse pixel (trackSingle), para não misturar com o pixel da Beatus que o GTM dispara.
    - PageView e ViewContent (R$ 67) ao abrir; CliqueCheckout ao clicar em comprar;
-     VideoAssistido com percentual 0, 25, 50, 75 e 95 no vídeo do topo.
+     VideoSomAtivado quando a pessoa liga o som e VideoAssistido com 25, 50, 75 e 95% assistido com som.
    - InitiateCheckout e Purchase ficam com o pixel configurado no checkout da Hotmart.
    - Links do checkout levam UTM, fbclid, src e sck para a Hotmart (aparecem nos relatórios de venda).
    - Respeita o banner de cookies: com "Recusar", o pixel não carrega (ou é revogado). */
@@ -435,22 +454,27 @@ html.bc-open #barra-compra{display:none}
     dl('bm_checkout_clique', { content_name: PRODUTO.content_name, value: PRODUTO.value, currency: PRODUTO.currency, link_local: onde });
   }, true);
 
-  /* 4. vídeo do topo */
-  var v = d.getElementById('video-hero'), marcas = [25,50,75,95], feitos = {};
+  /* 4. vídeo do topo: começa mudo com legenda; "Toque para ouvir" reinicia com som */
+  var v = d.getElementById('video-hero'), som = d.getElementById('ativar-som'), marcas = [25,50,75,95], feitos = {}, comSom = false;
   if (v) {
-    v.addEventListener('play', function(){
-      if (feitos[0]) return; feitos[0] = 1;
-      px('VideoAssistido', { percentual: 0, content_name: PRODUTO.content_name });
-      dl('bm_video', { video_percentual: 0, content_name: 'Video hero' });
-    });
+    var tentar = v.play && v.play(); if (tentar && tentar.catch) tentar.catch(function(){});
+    function ativar(){
+      comSom = true; v.muted = false; v.loop = false; v.currentTime = 0; v.controls = true;
+      var pr = v.play(); if (pr && pr.catch) pr.catch(function(){});
+      if (som) som.classList.add('off');
+      px('VideoSomAtivado', { content_name: PRODUTO.content_name });
+      dl('bm_video', { video_percentual: 0, content_name: 'Video hero', video_som: 1 });
+    }
+    if (som) som.addEventListener('click', ativar);
+    v.addEventListener('click', function(){ if (!comSom) ativar(); });
     v.addEventListener('timeupdate', function(){
-      if (!v.duration) return;
+      if (!comSom || !v.duration) return;
       var p = v.currentTime / v.duration * 100;
       marcas.forEach(function(m){
         if (p >= m && !feitos[m]) {
           feitos[m] = 1;
           px('VideoAssistido', { percentual: m, content_name: PRODUTO.content_name });
-          dl('bm_video', { video_percentual: m, content_name: 'Video hero' });
+          dl('bm_video', { video_percentual: m, content_name: 'Video hero', video_som: 1 });
         }
       });
     });
