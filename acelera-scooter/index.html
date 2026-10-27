@@ -44,7 +44,7 @@ function gtag(){dataLayer.push(arguments);}
 <!-- End Google Tag Manager -->
 <!-- rastreio-bm -->
 <script src="/assets/rastreio.js"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://beatusmidias.com.br/#org","name":"Beatus Mídias","url":"https://beatusmidias.com.br","logo":"https://beatusmidias.com.br/assets/logo-tinta-160.png"},{"@type":"Course","@id":"https://beatusmidias.com.br/acelera-scooter/#curso","name":"Acelera Scooter: Meta Ads para loja de scooter elétrica","description":"Curso em 7 módulos e 19 aulas para donos de loja de scooter e bike elétrica anunciarem no Instagram e no Facebook: estrutura da conta, campanha de WhatsApp e de formulário na tela, criativos, atendimento, test ride, remarketing e escala. Com 40 roteiros, planilha do funil e guia com checklist.","inLanguage":"pt-BR","provider":{"@id":"https://beatusmidias.com.br/#org"},"offers":{"@type":"Offer","price":"147.00","priceCurrency":"BRL","availability":"https://schema.org/InStock","url":"https://beatusmidias.com.br/acelera-scooter/","category":"Paid"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT4H"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Preciso entender de anúncio para fazer o curso?","acceptedAnswer":{"@type":"Answer","text":"Não. O curso começa pela estrutura (portfólio empresarial, conta de anúncios e pixel) e mostra a campanha de WhatsApp e a de formulário sendo criadas do zero, na tela."}},{"@type":"Question","name":"Quanto preciso investir em anúncio?","acceptedAnswer":{"@type":"Answer","text":"O curso trabalha com um período de teste de 14 dias. Um ponto de partida comum para loja local é de R$ 30 a R$ 50 por dia, e a planilha do funil calcula quanto a sua loja pode pagar por conversa."}},{"@type":"Question","name":"Vocês garantem vendas?","acceptedAnswer":{"@type":"Answer","text":"Não, e ninguém pode garantir. O anúncio entrega a conversa; a venda depende do atendimento, do test ride e da oferta. Por isso o curso cobre os quatro passos, do anúncio ao test ride."}},{"@type":"Question","name":"E se eu não gostar?","acceptedAnswer":{"@type":"Answer","text":"Você tem 7 dias de garantia. Peça o reembolso pela própria Hotmart e recebe 100% do valor de volta."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://beatusmidias.com.br/#org","name":"Beatus Mídias","url":"https://beatusmidias.com.br","logo":"https://beatusmidias.com.br/assets/logo-tinta-160.png"},{"@type":"Course","@id":"https://beatusmidias.com.br/acelera-scooter/#curso","name":"Acelera Scooter: Meta Ads para loja de scooter elétrica","description":"Curso em 7 módulos e 19 aulas para donos de loja de scooter e bike elétrica anunciarem no Instagram e no Facebook: estrutura da conta, campanha de WhatsApp e de formulário na tela, criativos, atendimento, test ride, remarketing e escala. Com 40 roteiros, planilha do funil e guia com checklist.","inLanguage":"pt-BR","provider":{"@id":"https://beatusmidias.com.br/#org"},"author":{"@type":"Person","name":"Bruno Vasconcellos","jobTitle":"Fundador da Beatus Mídias"},"offers":{"@type":"Offer","price":"147.00","priceCurrency":"BRL","availability":"https://schema.org/InStock","url":"https://beatusmidias.com.br/acelera-scooter/","category":"Paid"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT4H"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Preciso entender de anúncio para fazer o curso?","acceptedAnswer":{"@type":"Answer","text":"Não. O curso começa pela estrutura (portfólio empresarial, conta de anúncios e pixel) e mostra a campanha de WhatsApp e a de formulário sendo criadas do zero, na tela."}},{"@type":"Question","name":"Quanto preciso investir em anúncio?","acceptedAnswer":{"@type":"Answer","text":"O curso trabalha com um período de teste de 14 dias. Um ponto de partida comum para loja local é de R$ 30 a R$ 50 por dia, e a planilha do funil calcula quanto a sua loja pode pagar por conversa."}},{"@type":"Question","name":"Vocês garantem vendas?","acceptedAnswer":{"@type":"Answer","text":"Não, e ninguém pode garantir. O anúncio entrega a conversa; a venda depende do atendimento, do test ride e da oferta. Por isso o curso cobre os quatro passos, do anúncio ao test ride."}},{"@type":"Question","name":"E se eu não gostar?","acceptedAnswer":{"@type":"Answer","text":"Você tem 7 dias de garantia. Peça o reembolso pela própria Hotmart e recebe 100% do valor de volta."}}]}]}</script>
 <style>
 @font-face{font-family:'Clash Display';src:url('/sites/fontes/ClashDisplay-Variable.woff2') format('woff2');font-weight:200 700;font-display:swap}
 @font-face{font-family:'Satoshi';src:url('/sites/fontes/Satoshi-Variable.woff2') format('woff2');font-weight:300 900;font-display:swap}
@@ -259,6 +259,22 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .beatus .bn strong{display:block;white-space:nowrap;font-family:'Clash Display',Georgia,serif;font-weight:600;font-size:clamp(26px,2.6vw,36px);line-height:1;color:var(--pink)}
 .beatus .bn span{display:block;margin-top:8px;font-size:15px;color:var(--mute)}
 @media (max-width:860px){.beatus{grid-template-columns:minmax(0,1fr);gap:36px}}
+
+
+/* professor */
+.prof{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:64px;align-items:center}
+.foto{position:relative;align-self:end;margin-bottom:-96px}
+.foto img{position:relative;z-index:1;width:100%;max-width:420px;margin:0 auto;-webkit-mask-image:linear-gradient(#000 82%,transparent);mask-image:linear-gradient(#000 82%,transparent)}
+.halo{position:absolute;left:50%;top:14%;width:110%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(172,0,47,.65),rgba(172,0,47,.0) 68%)}
+.halo:after{content:"";position:absolute;inset:12%;border-radius:50%;border:2px solid rgba(247,168,189,.18)}
+.crach{position:absolute;z-index:2;left:0;bottom:120px;background:rgba(20,6,11,.88);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(247,168,189,.3);border-radius:16px;padding:12px 16px}
+.crach b{display:block;font-family:'Clash Display',Georgia,serif;font-weight:600;font-size:19px}
+.crach span{display:block;font-size:13.5px;color:var(--pink)}
+.prof .bn{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:32px;max-width:560px}
+.prof .bn div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 16px}
+.prof .bn strong{display:block;white-space:nowrap;font-family:'Clash Display',Georgia,serif;font-weight:600;font-size:clamp(24px,2.4vw,34px);line-height:1;color:var(--pink)}
+.prof .bn span{display:block;margin-top:8px;font-size:14px;color:var(--mute)}
+@media (max-width:960px){.prof{grid-template-columns:minmax(0,1fr);gap:24px}.foto{max-width:340px;margin:0 auto -72px;order:2}.prof .bn{grid-template-columns:repeat(2,minmax(0,1fr))}.crach{bottom:90px}}
 
 /* oferta */
 .oferta{background:radial-gradient(ellipse at 50% 0%,rgba(172,0,47,.35),rgba(20,6,11,0) 60%),var(--bg)}
@@ -579,18 +595,23 @@ html.bc-open #barra-compra{display:none}
 </section>
 
 <!-- 9. beatus -->
-<section class="sec" id="beatus" style="background:var(--bg2)">
-  <div class="wrap beatus">
+<section class="sec" id="beatus" style="background:var(--bg2);overflow:hidden">
+  <div class="wrap prof">
+    <div class="foto rv">
+      <div class="halo" aria-hidden="true"></div>
+      <img src="img/bruno-vasconcellos.webp" width="720" height="989" loading="lazy" alt="Bruno Vasconcellos, fundador da Beatus Mídias">
+      <div class="crach"><b>Bruno Vasconcellos</b><span>Fundador da Beatus Mídias</span></div>
+    </div>
     <div class="rv">
       <span class="eyebrow">Quem ensina</span>
       <h2 style="margin-top:18px">Feito por quem <span class="hl">roda a conta</span> todo dia.</h2>
-      <p class="lead">A Beatus Mídias é uma agência do Rio de Janeiro, com base em Niterói e Maricá, que cuida de tráfego pago, CRM com IA e atendimento para negócios locais, incluindo loja de scooter elétrica. O curso é o mesmo processo que a equipe usa com os clientes, gravado em aulas curtas e tutoriais na tela.</p>
-    </div>
-    <div class="bn rv">
-      <div><strong>+R$ 280 mi</strong><span>gerados para clientes</span></div>
-      <div><strong>+80</strong><span>clientes atendidos</span></div>
-      <div><strong>5 anos</strong><span>de mercado</span></div>
-      <div><strong>+R$ 400 mil</strong><span>investidos em mídia</span></div>
+      <p class="lead">Eu sou o Bruno Vasconcellos, fundador da Beatus Mídias, agência do Rio de Janeiro com base em Niterói e Maricá. A gente cuida de tráfego pago, CRM com IA e atendimento para negócios locais, incluindo loja de scooter elétrica. O Acelera Scooter é o mesmo processo que a minha equipe usa com os clientes, gravado em aulas curtas e tutoriais na tela.</p>
+      <div class="bn">
+        <div><strong>+R$ 280 mi</strong><span>gerados para clientes</span></div>
+        <div><strong>+80</strong><span>clientes atendidos</span></div>
+        <div><strong>5 anos</strong><span>de mercado</span></div>
+        <div><strong>+R$ 400 mil</strong><span>investidos em mídia</span></div>
+      </div>
     </div>
   </div>
 </section>
