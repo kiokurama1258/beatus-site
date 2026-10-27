@@ -67,7 +67,6 @@ p{margin:0}
 .skip:focus{top:12px}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--pink2);outline-offset:3px;border-radius:8px}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--pink)}
-.eyebrow:before{content:"";width:28px;height:2px;background:var(--pink2);border-radius:2px}
 .sec{padding:96px 0;position:relative}
 .sec h2{font-size:clamp(34px,4.6vw,58px)}
 .sec .lead{font-size:clamp(18px,1.6vw,21px);color:var(--mute);max-width:720px;margin-top:20px}
@@ -77,9 +76,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .btn svg{transition:transform .18s ease}
 .btn:hover svg{transform:translateX(4px)}
 .btn.sm{font-size:15px;padding:11px 20px;min-height:44px;box-shadow:none}
-.micro{font-size:14px;color:var(--mute2);margin-top:14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.micro{font-size:14px;color:var(--mute2);margin-top:14px;display:flex;flex-wrap:wrap;gap:6px 12px}
 .micro span{display:inline-flex;align-items:center;gap:7px}
-.micro span:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}
+.micro span+span:before{content:"·";margin-right:12px;color:var(--mute2)}
 
 /* fundo */
 .glow{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
@@ -130,12 +129,12 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 @media (max-width:860px){.faixa .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.faixa .it:nth-child(3){border-left:0}.faixa .it:nth-child(n+3){border-top:1px solid var(--line)}}
 
 /* dores */
-.dores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:48px}
-.dor{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px 30px 32px;position:relative;overflow:hidden}
+.dores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px;margin-top:36px}
+.dor{border-top:1px solid var(--line);padding:28px 0 30px}
 .dor .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(255,90,110,.12);color:var(--red);font-size:26px;margin-bottom:20px}
-.dor h3{font-size:26px;line-height:1.12}
+.dor h3{font-size:25px;line-height:1.18;font-weight:500;letter-spacing:-.01em}
 .dor p{color:var(--mute);margin-top:12px;font-size:17px}
-@media (max-width:760px){.dores{grid-template-columns:minmax(0,1fr)}.dor{padding:26px 22px}}
+@media (max-width:760px){.dores{grid-template-columns:minmax(0,1fr)}.dor{padding:22px 0 24px}}
 
 /* funil */
 .funil{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:52px;counter-reset:f}
@@ -146,7 +145,6 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .passo p{font-size:15.5px;color:var(--mute);margin-top:10px;line-height:1.5}
 .passo .tag{display:inline-block;margin-top:16px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);color:var(--mute)}
 .passo.on .tag{background:#fff;color:var(--crimson)}
-.passo:not(:last-child):after{content:"";position:absolute;right:-12px;top:50%;width:10px;height:10px;border-top:2px solid var(--pink2);border-right:2px solid var(--pink2);transform:translateY(-50%) rotate(45deg);z-index:2}
 .funil-nota{margin-top:30px;font-size:19px;color:var(--mute);max-width:820px}
 .funil-nota strong{color:#fff}
 @media (max-width:900px){.funil{grid-template-columns:repeat(2,minmax(0,1fr))}.passo:nth-child(2):after{display:none}}
@@ -286,7 +284,7 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .ohead p{color:rgba(255,255,255,.82);margin-top:6px;font-size:17px}
 .obody{padding:32px 40px 40px}
 .inclui{list-style:none;padding:0;margin:0;display:grid;gap:0}
-.inclui li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px dashed rgba(255,255,255,.14);font-size:17px}
+.inclui li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:17px}
 .inclui li span:first-child{display:flex;gap:12px;align-items:flex-start}
 .inclui li span:first-child:before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:var(--green);color:#043;font-size:12px;font-weight:900;display:grid;place-items:center;margin-top:2px}
 .inclui li em{font-style:normal;color:var(--mute2);font-size:14px;white-space:nowrap;padding-top:3px}
@@ -385,10 +383,10 @@ html.bc-open #barra-compra{display:none}
 
 <!-- 1. topo -->
 <section class="hero" id="topo">
-  <div class="glow"></div><div class="grid-bg"></div>
+  <div class="glow"></div>
   <div class="wrap rel">
     <div class="h-txt">
-      <span class="eyebrow">Para loja de scooter e bike elétrica</span>
+      <span class="eyebrow">Curso para loja de scooter e bike elétrica</span>
       <h1>Seu anúncio enche o WhatsApp de <em>“quanto custa?”</em> e ninguém aparece no test ride?</h1>
       <p class="sub">O <strong style="color:#fff">Acelera Scooter</strong> é o método que a Beatus Mídias usa nas lojas de scooter que atende: anúncio para quem mora perto e está pesquisando, conversa que vira visita e test ride que vira venda. Tudo passo a passo, com o Gerenciador aberto na tela.</p>
     </div>
@@ -429,14 +427,13 @@ html.bc-open #barra-compra{display:none}
 <section class="sec" id="dor">
   <div class="wrap">
     <div class="rv">
-      <span class="eyebrow">Se isso parece a sua loja</span>
-      <h2 style="margin-top:18px">O problema quase nunca é a scooter. <span class="hl">É o caminho até a loja.</span></h2>
+      <h2>O que eu mais escuto de dono de loja de scooter</h2>
     </div>
     <div class="dores">
-      <div class="dor rv"><div class="ic" aria-hidden="true">👍</div><h3>Impulsionou o post e só veio curtida</h3><p>O botão impulsionar entrega alcance para gente que nunca vai comprar. Curtida não paga o aluguel da loja.</p></div>
-      <div class="dor rv"><div class="ic" aria-hidden="true">💬</div><h3>WhatsApp cheio de curioso</h3><p>Gente de outra cidade, pergunta de preço e sumiço. O vendedor cansa e o cliente bom se perde no meio da fila.</p></div>
-      <div class="dor rv"><div class="ic" aria-hidden="true">⏳</div><h3>Resposta demorada esfria o cliente</h3><p>Scooter é compra pensada. Quem pergunta e espera horas já está conversando com a loja do lado.</p></div>
-      <div class="dor rv"><div class="ic" aria-hidden="true">📈</div><h3>Dobrou o orçamento e o custo explodiu</h3><p>Aumentar a verba de uma vez reinicia o aprendizado e deixa cada conversa mais cara. Escalar tem ritmo.</p></div>
+      <div class="dor rv"><h3>“Impulsionei o post e só veio curtida.”</h3><p>O impulsionar entrega o post para quem gosta de ver scooter, não para quem vai comprar. Curtida não paga o aluguel da loja.</p></div>
+      <div class="dor rv"><h3>“O WhatsApp enche, mas é tudo curioso.”</h3><p>Gente de outra cidade, pergunta de preço e some. O vendedor cansa e o cliente bom se perde no meio da fila.</p></div>
+      <div class="dor rv"><h3>“Respondi no dia seguinte e o cliente já tinha comprado.”</h3><p>Scooter é compra pensada. Quem pergunta e fica horas sem resposta vai conversar com a loja do lado.</p></div>
+      <div class="dor rv"><h3>“Dobrei a verba e o custo foi lá em cima.”</h3><p>Aumentar o orçamento de uma vez faz a Meta reaprender a campanha, e cada conversa sai mais cara por uns dias.</p></div>
     </div>
   </div>
 </section>
@@ -445,8 +442,7 @@ html.bc-open #barra-compra{display:none}
 <section class="sec" id="caminho" style="padding-top:24px">
   <div class="wrap">
     <div class="rv">
-      <span class="eyebrow">O que ninguém te contou</span>
-      <h2 style="margin-top:18px">Venda de scooter tem 4 passos. <span class="hl">O anúncio só controla o primeiro.</span></h2>
+      <h2>A venda acontece no test ride, não no anúncio</h2>
     </div>
     <div class="funil">
       <div class="passo rv"><div class="n">01</div><h3>Anúncio</h3><p>Gera a conversa com quem mora perto e está pesquisando.</p><span class="tag">Meta Ads</span></div>
@@ -454,7 +450,7 @@ html.bc-open #barra-compra{display:none}
       <div class="passo rv"><div class="n">03</div><h3>Visita</h3><p>Confirmação um dia antes e lembrete uma hora antes.</p><span class="tag">Agenda</span></div>
       <div class="passo on rv"><div class="n">04</div><h3>Test ride</h3><p>Onde a venda acontece. Depois, follow-up de 7 dias.</p><span class="tag">Venda</span></div>
     </div>
-    <p class="funil-nota rv">Por isso o curso não para no Gerenciador. <strong>Você aprende a montar a campanha e também o que fazer com cada conversa até a scooter sair da loja.</strong></p>
+    <p class="funil-nota rv">Por isso o curso vai além do Gerenciador: você aprende a montar a campanha e também o que fazer com cada conversa até a scooter sair da loja.</p>
   </div>
 </section>
 
@@ -462,8 +458,7 @@ html.bc-open #barra-compra{display:none}
 <section class="sec caso" id="caso">
   <div class="wrap">
     <div class="rv">
-      <span class="eyebrow">Caso real</span>
-      <h2 style="margin-top:18px">Números de uma loja de scooter elétrica <span class="hl">atendida pela Beatus.</span></h2>
+      <h2>Uma loja de scooter que a gente atende</h2>
     </div>
     <div class="caso-box rv">
       <div class="nums">
@@ -474,7 +469,7 @@ html.bc-open #barra-compra{display:none}
       </div>
       <div class="caso-txt">
         <p>A campanha de maior volume trouxe 4.144 conversas a R$ 1,77 cada. Na aula 7.1 você vê a conta aberta, o que funcionou e o que mudaríamos.<small>Dados da conta de anúncios de um cliente da Beatus. É o resultado de uma loja, não uma promessa: o seu depende da região, da oferta e do atendimento.</small></p>
-        <a class="btn" data-checkout data-cta="cta-caso" href="https://pay.hotmart.com/T108147330M?checkoutMode=10">Quero esse método</a>
+        <a class="btn" data-checkout data-cta="cta-caso" href="https://pay.hotmart.com/T108147330M?checkoutMode=10">Quero aprender a fazer</a>
       </div>
     </div>
   </div>
@@ -484,8 +479,7 @@ html.bc-open #barra-compra{display:none}
 <section class="sec" id="metodo">
   <div class="wrap">
     <div class="rv">
-      <span class="eyebrow">Por dentro da Beatus</span>
-      <h2 style="margin-top:18px">Como a gente faz o tráfego pago <span class="hl">dar resultado</span> em loja de scooter.</h2>
+      <h2>Como a gente trabalha nas lojas que atende</h2>
     </div>
     <div class="metodo">
       <div class="pilares">
@@ -494,7 +488,7 @@ html.bc-open #barra-compra{display:none}
           <p>Raio de 15 a 30 km da loja, criativo diferente para cada perfil de cliente (quem quer economizar, quem trabalha sobre duas rodas, quem compra para outra pessoa) e a dúvida da placa respondida no próprio anúncio.</p>
         </div>
         <div class="pilar rv">
-          <div class="top"><span class="nn">2</span><h3>Todo lead cai no nosso CRM com IA</h3><span class="ia">IA</span></div>
+          <div class="top"><span class="nn">2</span><h3>Todo lead cai no nosso CRM com IA</h3></div>
           <p>A inteligência artificial responde na hora, separa quem quer comprar de quem só está curioso e agenda o test ride. O vendedor recebe o cliente pronto.</p>
           <div class="mock" role="img" aria-label="Exemplo do CRM com IA: leads separados em novo, qualificado pela IA, test ride agendado e vendido">
             <div class="mh"><div><b>CRM Beatus</b><small>Loja de scooter · exemplo</small></div><span class="live">● IA respondendo agora</span></div>
@@ -507,7 +501,7 @@ html.bc-open #barra-compra{display:none}
           </div>
         </div>
         <div class="pilar rv">
-          <div class="top"><span class="nn">3</span><h3>Uma segunda IA monitora as vendas todo dia</h3><span class="ia">IA</span></div>
+          <div class="top"><span class="nn">3</span><h3>Uma segunda IA monitora as vendas todo dia</h3></div>
           <p>Mostra qual anúncio trouxe venda de verdade e onde o lead está esfriando. Assim o dinheiro sai do que só dá curtida e vai para o que vende.</p>
           <div class="mock" role="img" aria-label="Exemplo da IA de vendas mostrando vendas por anúncio e alertas">
             <div class="mh"><div><b>Vendas por anúncio</b><small>Últimos 30 dias · exemplo</small></div><span class="live">● atualizado hoje</span></div>
@@ -534,9 +528,8 @@ html.bc-open #barra-compra{display:none}
 <section class="sec" id="conteudo-curso" style="background:linear-gradient(180deg,var(--bg),var(--bg2))">
   <div class="wrap">
     <div class="rv">
-      <span class="eyebrow">O que tem dentro</span>
-      <h2 style="margin-top:18px">7 módulos, do primeiro anúncio <span class="hl">à scooter vendida.</span></h2>
-      <p class="lead">Aulas curtas, narradas e com a tela aberta. Cada aula termina com uma tarefa para aplicar na loja na mesma semana.</p>
+      <h2>O que tem no curso</h2>
+      <p class="lead">São 7 módulos com aulas curtas e a tela aberta. No fim de cada aula tem uma tarefa para você aplicar na loja.</p>
     </div>
     <div class="mods">
       <details class="mod rv" open><summary><span class="mn">1</span><span class="mt"><strong>Antes de anunciar</strong><span>3 aulas · o que muda na venda de scooter</span></span><span class="mais" aria-hidden="true">+</span></summary>
@@ -561,8 +554,7 @@ html.bc-open #barra-compra{display:none}
 <section class="sec" id="materiais">
   <div class="wrap">
     <div class="rv">
-      <span class="eyebrow">Leva junto</span>
-      <h2 style="margin-top:18px">Material pronto para usar <span class="hl">já nesta semana.</span></h2>
+      <h2>Materiais que vêm junto</h2>
     </div>
     <div class="mats">
       <div class="mat rv"><div class="cap"><img src="img/pack.webp" width="909" height="1287" loading="lazy" alt="Capa do Pack de 40 roteiros"><img class="b" src="img/pack-pagina.webp" width="909" height="1287" loading="lazy" alt=""></div>
@@ -578,7 +570,7 @@ html.bc-open #barra-compra{display:none}
 <!-- 8. pra quem -->
 <section class="sec" id="pra-quem" style="padding-top:24px">
   <div class="wrap">
-    <div class="rv"><span class="eyebrow">Seja honesto com você</span><h2 style="margin-top:18px">Para quem é <span class="hl">(e para quem não é).</span></h2></div>
+    <div class="rv"><h2>Para quem é o curso</h2></div>
     <div class="quem">
       <div class="lst sim rv"><h3>É para você se</h3><ul>
         <li>Tem loja de scooter, bike ou patinete elétrico e quer vender pelo Instagram e pelo Facebook</li>
@@ -603,8 +595,7 @@ html.bc-open #barra-compra{display:none}
       <div class="crach"><b>Bruno Vasconcellos</b><span>Fundador da Beatus Mídias</span></div>
     </div>
     <div class="rv">
-      <span class="eyebrow">Quem ensina</span>
-      <h2 style="margin-top:18px">Feito por quem <span class="hl">roda a conta</span> todo dia.</h2>
+      <h2>Prazer, Bruno</h2>
       <p class="lead">Eu sou o Bruno Vasconcellos, fundador da Beatus Mídias, agência do Rio de Janeiro com base em Niterói e Maricá. A gente cuida de tráfego pago, CRM com IA e atendimento para negócios locais, incluindo loja de scooter elétrica. O Acelera Scooter é o mesmo processo que a minha equipe usa com os clientes, gravado em aulas curtas e tutoriais na tela.</p>
       <div class="bn">
         <div><strong>+R$ 280 mi</strong><span>gerados para clientes</span></div>
@@ -620,8 +611,7 @@ html.bc-open #barra-compra{display:none}
 <section class="sec oferta" id="oferta">
   <div class="wrap">
     <div class="rv" style="text-align:center">
-      <span class="eyebrow">Acesso completo</span>
-      <h2 style="margin-top:18px">Tudo o que você precisa para <span class="hl">acelerar a loja.</span></h2>
+      <h2>Quanto custa</h2>
     </div>
     <div class="ocard rv">
       <div class="ohead"><small>Curso · Beatus Mídias</small><h3>Acelera Scooter</h3><p>Meta Ads para loja de scooter elétrica, do anúncio ao test ride.</p></div>
@@ -635,7 +625,7 @@ html.bc-open #barra-compra{display:none}
           <li><span>Guia e checklist do curso</span><em>PDF</em></li>
         </ul>
         <div class="preco">
-          <div class="de">Tudo isso por</div>
+          <div class="de">À vista</div>
           <div class="val"><sup>R$</sup>147</div>
           <div class="parc">ou 12x de R$ 15,20 no cartão</div>
         </div>
@@ -643,7 +633,7 @@ html.bc-open #barra-compra{display:none}
           <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <div class="pag"><span>Pix</span><span>Cartão em até 12x</span><span>Boleto</span><span>Pagamento seguro pela Hotmart</span></div>
         <div class="garantia"><div class="selo"><div><span><b>7</b><i>dias</i></span></div></div><p><strong>Garantia incondicional de 7 dias.</strong> Assista, baixe os materiais, teste. Se achar que não é para a sua loja, peça o reembolso pela Hotmart e recebe 100% de volta, sem precisar se explicar.</p></div>
-        <p class="ancora">Uma scooter vendida a mais paga o curso várias vezes.</p>
+        <p class="ancora">Se o curso te ajudar a vender uma scooter a mais, ele já se pagou.</p>
       </div>
     </div>
   </div>
@@ -652,7 +642,7 @@ html.bc-open #barra-compra{display:none}
 <!-- 11. faq -->
 <section class="sec" id="duvidas" style="padding-top:40px">
   <div class="wrap">
-    <div class="rv" style="text-align:center"><span class="eyebrow">Dúvidas</span><h2 style="margin-top:18px">Perguntas frequentes</h2></div>
+    <div class="rv" style="text-align:center"><h2>Perguntas frequentes</h2></div>
     <div class="faq">
       <details><summary>Preciso entender de anúncio para fazer o curso?<span class="mais" aria-hidden="true">+</span></summary><p>Não. O curso começa pela estrutura (portfólio empresarial, conta de anúncios e pixel) e mostra a campanha de WhatsApp e a de formulário sendo criadas do zero, na tela. É só ir repetindo na sua conta.</p></details>
       <details><summary>Quanto preciso investir em anúncio?<span class="mais" aria-hidden="true">+</span></summary><p>O curso trabalha com um período de teste de 14 dias. Um ponto de partida comum para loja local é de R$ 30 a R$ 50 por dia, e a planilha do funil calcula quanto a sua loja pode pagar por conversa antes de você aumentar.</p></details>
@@ -671,8 +661,8 @@ html.bc-open #barra-compra{display:none}
 <section class="final" id="final" style="position:relative">
   <div class="glow"></div>
   <div class="wrap rel">
-    <h2 class="rv">Cada dia com o anúncio errado é uma conversa <span class="hl">indo para a loja do lado.</span></h2>
-    <p class="lead rv">Monte a campanha certa, atenda do jeito certo e leve mais gente para o test ride.</p>
+    <h2 class="rv">Bora colocar mais gente na sua loja?</h2>
+    <p class="lead rv">Você monta a campanha comigo, aula por aula, e começa a rodar ainda esta semana.</p>
     <div class="rv" style="margin-top:34px"><a class="btn" data-checkout data-cta="cta-final" href="https://pay.hotmart.com/T108147330M?checkoutMode=10">Começar o Acelera Scooter
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <div class="micro" style="justify-content:center"><span>R$ 147 ou 12x de R$ 15,20</span><span>7 dias de garantia</span></div></div>
