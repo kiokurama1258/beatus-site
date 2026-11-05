@@ -366,6 +366,22 @@ html.bc-open #barra-compra{display:none}
 }
 @media (max-width:960px){.side{order:2}}
 @media (max-width:640px){body{font-size:17px}.sec{padding:72px 0}.wrap{padding:0 20px}}
+
+/* pré-checkout */
+#pc{position:fixed;inset:0;z-index:100000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(10,2,5,.72);backdrop-filter:blur(6px)}
+#pc.on{display:flex}
+#pc .box{width:100%;max-width:460px;background:#1c0810;border:1px solid rgba(247,168,189,.25);border-radius:24px;padding:30px 26px 24px;box-shadow:0 40px 90px rgba(0,0,0,.6);position:relative;max-height:calc(100vh - 32px);overflow:auto}
+#pc h2{font-family:'Clash Display',Georgia,serif;font-weight:600;font-size:26px;line-height:1.15;margin:0 0 6px}
+#pc .lead{font-size:15.5px;color:rgba(255,255,255,.75);margin:0 0 18px}
+#pc label{display:block;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--pink);margin:14px 0 6px}
+#pc input{width:100%;font:inherit;font-size:17px;color:#fff;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.18);border-radius:14px;padding:14px 16px;outline:none}
+#pc input:focus{border-color:var(--pink2)}
+#pc input[aria-invalid=true]{border-color:#ff6b8a}
+#pc .err{color:#ff9db1;font-size:14px;min-height:18px;margin-top:8px}
+#pc .btn{width:100%;margin-top:14px}
+#pc .lgpd{font-size:12.5px;color:rgba(255,255,255,.6);margin:14px 0 0;line-height:1.45}
+#pc .x{position:absolute;top:10px;right:12px;width:40px;height:40px;border:0;background:none;color:rgba(255,255,255,.7);font-size:26px;cursor:pointer;border-radius:50%}
+#pc .safe{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.65);margin-top:12px}
 </style>
 </head>
 <body>
@@ -851,6 +867,78 @@ html.bc-open #barra-compra{display:none}
 
   decorar();
   carregarPixel();
+})(window, document);
+</script>
+
+<div id="pc" role="dialog" aria-modal="true" aria-labelledby="pc-t" aria-hidden="true">
+  <form class="box" id="pc-f" novalidate>
+    <button class="x" type="button" id="pc-x" aria-label="Fechar">×</button>
+    <h2 id="pc-t">Falta só um passo</h2>
+    <p class="lead">Preencha para ir ao pagamento seguro da Hotmart. Seus dados já vão preenchidos lá.</p>
+    <label for="pc-nome">Nome</label>
+    <input id="pc-nome" name="nome" autocomplete="name" required maxlength="80">
+    <label for="pc-email">E-mail</label>
+    <input id="pc-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="120">
+    <label for="pc-wa">WhatsApp com DDD</label>
+    <input id="pc-wa" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(21) 9 0000-0000" required maxlength="20">
+    <div class="err" id="pc-err" role="alert"></div>
+    <button class="btn" type="submit">Ir para o pagamento
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="safe"><span>R$ 147 ou 12x de R$ 15,20</span><span>7 dias de garantia</span></div>
+    <p class="lgpd">Ao continuar, você aceita receber mensagens sobre o Acelera Scooter por WhatsApp e e-mail. Você pode cancelar a qualquer momento respondendo SAIR. <a href="https://beatusmidias.com.br/politica-de-privacidade/" target="_blank" rel="noopener">Política de privacidade</a>.</p>
+  </form>
+</div>
+
+<script>
+/* Pré-checkout: nome, e-mail e WhatsApp antes da Hotmart.
+   - Envia o lead para o n8n (recuperação de vendas) e abre o checkout já preenchido.
+   - Se o envio falhar, a pessoa segue para o checkout do mesmo jeito. */
+(function(w,d){
+  var WEBHOOK = 'https://secretaria.beatusmidias.com.br/webhook/acelera-precheckout';
+  var m = d.getElementById('pc'), f = d.getElementById('pc-f'), err = d.getElementById('pc-err');
+  var destino = null, onde = 'link';
+  function salvo(){ try { return JSON.parse(localStorage.getItem('bm_pc_acelera') || 'null'); } catch(e){ return null; } }
+  function guardar(o){ try { localStorage.setItem('bm_pc_acelera', JSON.stringify(o)); } catch(e){} }
+  function abrir(href, cta){
+    destino = href; onde = cta || 'link';
+    var s = salvo(); if (s){ f.nome.value = s.nome || ''; f.email.value = s.email || ''; f.whatsapp.value = s.whatsapp || ''; }
+    m.classList.add('on'); m.setAttribute('aria-hidden','false');
+    setTimeout(function(){ (f.nome.value ? f.email : f.nome).focus(); }, 30);
+    if (w.bmEvento) w.bmEvento('bm_precheckout_aberto', { link_local: onde });
+  }
+  function fechar(){ m.classList.remove('on'); m.setAttribute('aria-hidden','true'); }
+  d.getElementById('pc-x').addEventListener('click', fechar);
+  m.addEventListener('click', function(e){ if (e.target === m) fechar(); });
+  d.addEventListener('keydown', function(e){ if (e.key === 'Escape' && m.classList.contains('on')) fechar(); });
+  d.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a[data-checkout]') : null;
+    if (!a || e.ctrlKey || e.metaKey) return;
+    e.preventDefault();
+    setTimeout(function(){ abrir(a.href, a.getAttribute('data-cta')); }, 0);
+  });
+  function digitos(v){ return String(v || '').replace(/\D/g,''); }
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nome = f.nome.value.trim(), email = f.email.value.trim(), tel = digitos(f.whatsapp.value);
+    if (tel.length > 11 && tel.indexOf('55') === 0) tel = tel.slice(2);
+    var ok = true;
+    [[f.nome, nome.length >= 2], [f.email, /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)], [f.whatsapp, tel.length === 10 || tel.length === 11]].forEach(function(p){
+      p[0].setAttribute('aria-invalid', p[1] ? 'false' : 'true'); if (!p[1]) ok = false;
+    });
+    if (!ok){ err.textContent = 'Confira os campos marcados. O WhatsApp precisa ter DDD.'; return; }
+    err.textContent = '';
+    guardar({ nome: nome, email: email, whatsapp: f.whatsapp.value });
+    var u = new URL(destino || 'https://pay.hotmart.com/T108147330M?checkoutMode=10');
+    u.searchParams.set('name', nome); u.searchParams.set('email', email);
+    u.searchParams.set('phoneac', tel.slice(0,2)); u.searchParams.set('phonenumber', tel.slice(2));
+    var o = (w.bmOrigem && w.bmOrigem()) || {}, q = new URLSearchParams(location.search), utm = {};
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'].forEach(function(p){ var v = q.get(p) || o[p]; if (v) utm[p] = String(v).slice(0,150); });
+    var dados = { produto: 'acelera-scooter', nome: nome, email: email, whatsapp: '55' + tel, cta: onde, pagina: location.href.split('?')[0], origem: utm, enviado_em: new Date().toISOString() };
+    try { fetch(WEBHOOK, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=UTF-8' }, body: JSON.stringify(dados) }); } catch(x){}
+    if (w.bmEvento) w.bmEvento('bm_precheckout_enviado', { link_local: onde });
+    try { if (w.fbq) w.fbq('trackSingle', '1126425543696329', 'Lead', { content_name: 'Acelera Scooter', value: 147, currency: 'BRL' }); } catch(x){}
+    setTimeout(function(){ location.href = u.toString(); }, 350);
+  });
 })(window, document);
 </script>
 </body>
