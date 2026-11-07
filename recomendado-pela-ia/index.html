@@ -145,7 +145,7 @@ html.bc-open #barra-compra{display:none}
 </div>
 <div class="h-vid">
 <div class="vbox">
-<video id="video-hero" src="video-recomendado-pela-ia-916.mp4" poster="img/poster-video-916.jpg" autoplay muted loop playsinline preload="auto" aria-label="Vídeo: por que a IA indica o seu concorrente e como o Recomendado pela IA resolve isso"></video>
+<video id="video-hero" poster="img/poster-video-916.jpg" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="Vídeo: por que a IA indica o seu concorrente e como o Recomendado pela IA resolve isso"><source src="video-recomendado-pela-ia-916-v2.mp4" type="video/mp4"></video>
 <button type="button" id="ativar-som" class="som"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M19 5a10 10 0 0 1 0 14"></path></svg><span>Toque para ouvir</span></button>
 </div>
 <p class="vleg">1 minuto: o problema, o que tem no curso e o que aconteceu na Beatus.</p>
@@ -459,7 +459,14 @@ html.bc-open #barra-compra{display:none}
   /* 4. vídeo do topo: começa mudo com legenda; "Toque para ouvir" reinicia com som */
   var v = d.getElementById('video-hero'), som = d.getElementById('ativar-som'), marcas = [25,50,75,95], feitos = {}, comSom = false;
   if (v) {
+    v.muted = true; v.defaultMuted = true;
     var tentar = v.play && v.play(); if (tentar && tentar.catch) tentar.catch(function(){});
+    /* celular: se o vídeo falhar ou travar sem dados, recarrega uma vez */
+    var recarregou = false;
+    function recarregar(){ if (recarregou) return; recarregou = true; try { v.load(); var p2 = v.play(); if (p2 && p2.catch) p2.catch(function(){}); } catch(e) {} }
+    v.addEventListener('error', recarregar, true);
+    var fonte = v.querySelector('source'); if (fonte) fonte.addEventListener('error', recarregar);
+    setTimeout(function(){ if (v.readyState === 0 && !d.hidden) recarregar(); }, 8000);
     function ativar(){
       comSom = true; v.muted = false; v.loop = false; v.currentTime = 0; v.controls = true;
       var pr = v.play(); if (pr && pr.catch) pr.catch(function(){});
